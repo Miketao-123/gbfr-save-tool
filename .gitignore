@@ -12,8 +12,10 @@ HernessAPI.txt
 # --- 构建产物（PyInstaller） ---
 build/
 dist/
+!save_tool/dist/
 save_tool/build/
-save_tool/dist/
+save_tool/dist/*
+!save_tool/dist/GBFR存档修改器.exe
 
 # --- Python 缓存与临时目录 ---
 __pycache__/
