@@ -1,0 +1,8 @@
+﻿
+Name                           Value                                                                                   
+----                           -----                                                                                   
+GBFR存档修改器.exe                  C96142BBCA5A7677294E4DFB9C4023DEFAA35665B3AE544CA678A2B5776A3BCE  size=13576144         
+GBFR存档修改器_原版备份.exe             2E16B5387D69D0D2DBFDF7A2FBBB95365A303ED3757224249F3EDB1EC7AFC8C6  size=13558347         
+
+
+

@@ -1,0 +1,44 @@
+# ============================================================
+# GBFR 存档修改器 — Git 忽略规则
+# 原则：排除敏感文件、可再生成的构建产物、超大文件、个人存档数据
+# ============================================================
+
+# --- 本机工具/工作区目录 ---
+.dsh/
+
+# --- 敏感文件（绝不提交） ---
+HernessAPI.txt
+
+# --- 构建产物（PyInstaller） ---
+build/
+dist/
+save_tool/build/
+save_tool/dist/
+
+# --- Python 缓存与临时目录 ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+_pylibs/
+_pytmp/
+.venv/
+venv/
+
+# --- 存档与个人游戏数据（绝不上传） ---
+SaveData1.dat
+SaveData1.dat.*
+save_tool/_test_save.dat.*
+
+# --- 超大/可再生成的上游数据（可从上一步数据工具重新下载） ---
+save_tool/GBFRDataTools_filelist.txt
+save_tool/_gbfr-save-editor.tar.gz
+
+# --- 下载的第三方二进制工具（不随仓库分发） ---
+GBFR PE Patch Tool.exe
+
+# --- 系统/编辑器杂项 ---
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*.log

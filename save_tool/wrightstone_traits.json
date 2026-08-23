@@ -1,0 +1,1118 @@
+{
+ "schemaVersion": 1,
+ "traits": [
+  {
+   "internalId": "SKILL_000_00",
+   "hash": "0x50079A1C",
+   "displayName": "ATK",
+   "category": null,
+   "maxLevel": 50
+  },
+  {
+   "internalId": "SKILL_001_00",
+   "hash": "0xF372F096",
+   "displayName": "HP",
+   "category": null,
+   "maxLevel": 50
+  },
+  {
+   "internalId": "SKILL_003_00",
+   "hash": "0x8D78A19B",
+   "displayName": "Critical Hit Rate",
+   "category": null,
+   "maxLevel": 45
+  },
+  {
+   "internalId": "SKILL_004_00",
+   "hash": "0xCEB700EE",
+   "displayName": "Stun Power",
+   "category": null,
+   "maxLevel": 45
+  },
+  {
+   "internalId": "SKILL_005_00",
+   "hash": "0x3F488339",
+   "displayName": "Enmity",
+   "category": null,
+   "maxLevel": 30
+  },
+  {
+   "internalId": "SKILL_006_00",
+   "hash": "0x2FC8FBFF",
+   "displayName": "Stamina",
+   "category": null,
+   "maxLevel": 30
+  },
+  {
+   "internalId": "SKILL_008_00",
+   "hash": "0x1C360C63",
+   "displayName": "Charged Attack DMG",
+   "category": null,
+   "maxLevel": 30
+  },
+  {
+   "internalId": "SKILL_009_00",
+   "hash": "0x3FEC5F80",
+   "displayName": "Linked Together",
+   "category": null,
+   "maxLevel": 30
+  },
+  {
+   "internalId": "SKILL_012_00",
+   "hash": "0x8D078597",
+   "displayName": "Throw DMG",
+   "category": null,
+   "maxLevel": 30
+  },
+  {
+   "internalId": "SKILL_013_00",
+   "hash": "0xC0979A17",
+   "displayName": "Critical Hit DMG",
+   "category": null,
+   "maxLevel": 30
+  },
+  {
+   "internalId": "SKILL_014_00",
+   "hash": "0x6B694D6D",
+   "displayName": "Weak Point DMG",
+   "category": null,
+   "maxLevel": 45
+  },
+  {
+   "internalId": "SKILL_017_00",
+   "hash": "0xA7A45F28",
+   "displayName": "Combo Finisher DMG",
+   "category": null,
+   "maxLevel": 30
+  },
+  {
+   "internalId": "SKILL_018_00",
+   "hash": "0xB360801D",
+   "displayName": "Concentrated Fire",
+   "category": null,
+   "maxLevel": 30
+  },
+  {
+   "internalId": "SKILL_020_00",
+   "hash": "0xDC584F60",
+   "displayName": "DMG Cap",
+   "category": null,
+   "maxLevel": 65
+  },
+  {
+   "internalId": "SKILL_024_00",
+   "hash": "0xF17850B9",
+   "displayName": "Combo Booster",
+   "category": null,
+   "maxLevel": 30
+  },
+  {
+   "internalId": "SKILL_027_00",
+   "hash": "0x71F11A9B",
+   "displayName": "Tyranny",
+   "category": null,
+   "maxLevel": 30
+  },
+  {
+   "internalId": "SKILL_028_00",
+   "hash": "0xC35B111B",
+   "displayName": "Lucky Charge",
+   "category": null,
+   "maxLevel": 20
+  },
+  {
+   "internalId": "SKILL_029_00",
+   "hash": "0x4F1A3683",
+   "displayName": "Injury to Insult",
+   "category": null,
+   "maxLevel": 30
+  },
+  {
+   "internalId": "SKILL_030_00",
+   "hash": "0xA9D17F55",
+   "displayName": "Overdrive Assassin",
+   "category": null,
+   "maxLevel": 30
+  },
+  {
+   "internalId": "SKILL_031_00",
+   "hash": "0xAC9674C1",
+   "displayName": "Break Assassin",
+   "category": null,
+   "maxLevel": 30
+  },
+  {
+   "internalId": "SKILL_036_00",
+   "hash": "0xE6CDBA9C",
+   "displayName": "Garrison",
+   "category": null,
+   "maxLevel": 45
+  },
+  {
+   "internalId": "SKILL_045_00",
+   "hash": "0xE69A4694",
+   "displayName": "Guts",
+   "category": "support_trait",
+   "maxLevel": 20
+  },
+  {
+   "internalId": "SKILL_060_00",
+   "hash": "0x0AA20846",
+   "displayName": "Improved Guard",
+   "category": null,
+   "maxLevel": 30
+  },
+  {
+   "internalId": "SKILL_061_00",
+   "hash": "0x3C2B57B0",
+   "displayName": "Guard Payback",
+   "category": null,
+   "maxLevel": 30
+  },
+  {
+   "internalId": "SKILL_063_00",
+   "hash": "0x8B3BF60C",
+   "displayName": "Improved Dodge",
+   "category": "support_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_064_00",
+   "hash": "0x7C2E4D64",
+   "displayName": "Dodge Payback",
+   "category": null,
+   "maxLevel": 30
+  },
+  {
+   "internalId": "SKILL_066_00",
+   "hash": "0x6085DA25",
+   "displayName": "Regen",
+   "category": "support_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_067_00",
+   "hash": "0x7CCFF74F",
+   "displayName": "Drain",
+   "category": "support_trait",
+   "maxLevel": 45
+  },
+  {
+   "internalId": "SKILL_068_00",
+   "hash": "0x95F3FA86",
+   "displayName": "Autorevive",
+   "category": "support_trait",
+   "maxLevel": 20
+  },
+  {
+   "internalId": "SKILL_069_00",
+   "hash": "0x318D12E9",
+   "displayName": "Quick Cooldown",
+   "category": "support_trait",
+   "maxLevel": 45
+  },
+  {
+   "internalId": "SKILL_070_00",
+   "hash": "0x05F2ECDC",
+   "displayName": "Cascade",
+   "category": "support_trait",
+   "maxLevel": 20
+  },
+  {
+   "internalId": "SKILL_072_00",
+   "hash": "0xB5FF9FD3",
+   "displayName": "Uplift",
+   "category": "support_trait",
+   "maxLevel": 45
+  },
+  {
+   "internalId": "SKILL_073_00",
+   "hash": "0x24883AF3",
+   "displayName": "Potion Hoarder",
+   "category": "support_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_077_00",
+   "hash": "0xDC607D75",
+   "displayName": "Low Profile",
+   "category": "support_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_078_00",
+   "hash": "0x6018372B",
+   "displayName": "Provoke",
+   "category": "support_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_083_00",
+   "hash": "0xEAE321EB",
+   "displayName": "Skilled Assault",
+   "category": null,
+   "maxLevel": 30
+  },
+  {
+   "internalId": "SKILL_085_00",
+   "hash": "0xE0ABFDFE",
+   "displayName": "Aegis",
+   "category": null,
+   "maxLevel": 45
+  },
+  {
+   "internalId": "SKILL_087_00",
+   "hash": "0xB6E31F76",
+   "displayName": "Firm Stance",
+   "category": "support_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_094_00",
+   "hash": "0x0053599E",
+   "displayName": "Steady Focus",
+   "category": "support_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_096_00",
+   "hash": "0x1470F860",
+   "displayName": "Steel Nerves",
+   "category": null,
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_104_00",
+   "hash": "0x09AA7DB5",
+   "displayName": "Nimble Defense",
+   "category": null,
+   "maxLevel": 30
+  },
+  {
+   "internalId": "SKILL_106_00",
+   "hash": "0xD2C8E10A",
+   "displayName": "Nimble Onslaught",
+   "category": "support_trait",
+   "maxLevel": 30
+  },
+  {
+   "internalId": "SKILL_107_00",
+   "hash": "0x29B292A8",
+   "displayName": "Precise Resilience",
+   "category": null,
+   "maxLevel": 30
+  },
+  {
+   "internalId": "SKILL_109_00",
+   "hash": "0x7EDD69D0",
+   "displayName": "Precise Wrath",
+   "category": "support_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_110_00",
+   "hash": "0x8F502F0D",
+   "displayName": "Life on the Line",
+   "category": null,
+   "maxLevel": 30
+  },
+  {
+   "internalId": "SKILL_111_00",
+   "hash": "0x84078CB0",
+   "displayName": "Quick Charge",
+   "category": null,
+   "maxLevel": 30
+  },
+  {
+   "internalId": "SKILL_114_00",
+   "hash": "0xCD030268",
+   "displayName": "Fearless Drive",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_114_01",
+   "hash": "0xA38510E2",
+   "displayName": "Fearless Spirit",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_114_02",
+   "hash": "0xDADE14DC",
+   "displayName": "Fearless Heart",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_115_00",
+   "hash": "0x3BFED918",
+   "displayName": "Guardian\\u0027s Conviction",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_115_01",
+   "hash": "0xF8496336",
+   "displayName": "Guardian\\u0027s Honor",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_115_02",
+   "hash": "0x9AFDFA9E",
+   "displayName": "Guardian\\u0027s Warpath",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_116_00",
+   "hash": "0x151E4674",
+   "displayName": "Helmsman\\u0027s Navigation",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_116_01",
+   "hash": "0xA374FDF0",
+   "displayName": "Helmsman\\u0027s Tenacity",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_116_02",
+   "hash": "0xD76F4D24",
+   "displayName": "Helmsman\\u0027s Warpath",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_117_00",
+   "hash": "0xB48EEF48",
+   "displayName": "Mage\\u0027s Aspiration",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_117_01",
+   "hash": "0x11AAE5F5",
+   "displayName": "Mage\\u0027s Savvy",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_117_02",
+   "hash": "0xC00163B3",
+   "displayName": "Mage\\u0027s Warpath",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_118_00",
+   "hash": "0xAA83F548",
+   "displayName": "Veteran\\u0027s Insight",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_118_01",
+   "hash": "0x921B6B0C",
+   "displayName": "Veteran\\u0027s Vision",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_118_02",
+   "hash": "0x0E42BE1B",
+   "displayName": "Veteran\\u0027s Warpath",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_119_00",
+   "hash": "0x23D0F67F",
+   "displayName": "Rose\\u0027s Blooming",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_119_01",
+   "hash": "0xC2A4C7A9",
+   "displayName": "Rose\\u0027s Profusion",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_119_02",
+   "hash": "0x8519AD4A",
+   "displayName": "Rose\\u0027s Warpath",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_120_00",
+   "hash": "0xD908223D",
+   "displayName": "Phantasm\\u0027s Harmony",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_120_01",
+   "hash": "0x7351D602",
+   "displayName": "Phantasm\\u0027s Concord",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_120_02",
+   "hash": "0xA339D642",
+   "displayName": "Phantasm\\u0027s Warpath",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_121_00",
+   "hash": "0x8CDF9382",
+   "displayName": "White Dragon\\u0027s Oath",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_121_01",
+   "hash": "0xD1012D8C",
+   "displayName": "White Dragon\\u0027s Glory",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_121_02",
+   "hash": "0x6316CBEB",
+   "displayName": "White Dragon\\u0027s Warpath",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_122_00",
+   "hash": "0x2E65A774",
+   "displayName": "Hero\\u0027s Creed",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_122_01",
+   "hash": "0x16EFF868",
+   "displayName": "Hero\\u0027s Will",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_122_02",
+   "hash": "0xD8F66C1C",
+   "displayName": "Hero\\u0027s Warpath",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_123_00",
+   "hash": "0xE60A735C",
+   "displayName": "Lord\\u0027s Procession",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_123_01",
+   "hash": "0x6FF05223",
+   "displayName": "Lord\\u0027s Ambition",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_123_02",
+   "hash": "0xBA504607",
+   "displayName": "Lord\\u0027s Warpath",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_124_00",
+   "hash": "0x86CBCDC4",
+   "displayName": "Dragonslayer\\u0027s Dominance",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_124_01",
+   "hash": "0x05FA4599",
+   "displayName": "Dragonslayer\\u0027s Ingenuity",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_124_02",
+   "hash": "0xC7D379F1",
+   "displayName": "Dragonslayer\\u0027s Warpath",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_125_00",
+   "hash": "0x9A9DC170",
+   "displayName": "Holy Knight\\u0027s Luster",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_125_01",
+   "hash": "0x522E2388",
+   "displayName": "Holy Knight\\u0027s Grandeur",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_125_02",
+   "hash": "0xB85202BC",
+   "displayName": "Holy Knight\\u0027s Warpath",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_126_00",
+   "hash": "0x0CD6C625",
+   "displayName": "Swordmaster\\u0027s Prowess",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_126_01",
+   "hash": "0xA3B49220",
+   "displayName": "Swordmaster\\u0027s Art",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_126_02",
+   "hash": "0xDAEFBB27",
+   "displayName": "Swordmaster\\u0027s Warpath",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_127_00",
+   "hash": "0x29B07BEB",
+   "displayName": "Butterfly\\u0027s Grace",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_127_01",
+   "hash": "0xA63B89CD",
+   "displayName": "Butterfly\\u0027s Valor",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_127_02",
+   "hash": "0xFDD1AD24",
+   "displayName": "Butterfly\\u0027s Warpath",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_128_00",
+   "hash": "0x5463232F",
+   "displayName": "Eternal Rage\\u0027s Mettle",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_128_01",
+   "hash": "0x451D814C",
+   "displayName": "Eternal Rage\\u0027s Ethos",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_128_02",
+   "hash": "0x0F026CF0",
+   "displayName": "Eternal Rage\\u0027s Warpath",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_129_00",
+   "hash": "0xEC3CF174",
+   "displayName": "Founder\\u0027s Strategy",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_129_01",
+   "hash": "0xAF513A9D",
+   "displayName": "Founder\\u0027s Truth",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_129_02",
+   "hash": "0xE6B92E34",
+   "displayName": "Founder\\u0027s Warpath",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_130_00",
+   "hash": "0x93A2093C",
+   "displayName": "Versalis Foundation",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_130_01",
+   "hash": "0x7AD0C010",
+   "displayName": "Versalis Ignition",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_130_02",
+   "hash": "0xB064A634",
+   "displayName": "Versalis Heart",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_131_00",
+   "hash": "0x6EBFA176",
+   "displayName": "Crimson\\u0027s Clout",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_131_01",
+   "hash": "0xF1D5DBD0",
+   "displayName": "Crimson\\u0027s Flight",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_131_02",
+   "hash": "0x4F135217",
+   "displayName": "Crimson\\u0027s Warpath",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_132_00",
+   "hash": "0x7440E869",
+   "displayName": "Ebony\\u0027s Presence",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_132_01",
+   "hash": "0xCD124165",
+   "displayName": "Ebony\\u0027s Poise",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_132_02",
+   "hash": "0xD7F9BB88",
+   "displayName": "Ebony\\u0027s Warpath",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_133_00",
+   "hash": "0x0FBA47E8",
+   "displayName": "Fortifying Vigor",
+   "category": null,
+   "maxLevel": 50
+  },
+  {
+   "internalId": "SKILL_134_00",
+   "hash": "0xA4D6B880",
+   "displayName": "Instilling Vigor",
+   "category": null,
+   "maxLevel": 50
+  },
+  {
+   "internalId": "SKILL_135_00",
+   "hash": "0xCDEB73F6",
+   "displayName": "Gilding Vigor",
+   "category": null,
+   "maxLevel": 50
+  },
+  {
+   "internalId": "SKILL_140_00",
+   "hash": "0x082033CB",
+   "displayName": "Crabby Resonance",
+   "category": null,
+   "maxLevel": 45
+  },
+  {
+   "internalId": "SKILL_141_00",
+   "hash": "0x1B0D9897",
+   "displayName": "Crabvestment Returns",
+   "category": null,
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_142_00",
+   "hash": "0x9AD8B5E6",
+   "displayName": "Seven Net",
+   "category": null,
+   "maxLevel": 6
+  },
+  {
+   "internalId": "SKILL_144_00",
+   "hash": "0x74AA75D6",
+   "displayName": "Stronghold",
+   "category": null,
+   "maxLevel": 30
+  },
+  {
+   "internalId": "SKILL_145_00",
+   "hash": "0xDC225C96",
+   "displayName": "Power Hungry",
+   "category": null,
+   "maxLevel": 30
+  },
+  {
+   "internalId": "SKILL_146_00",
+   "hash": "0x4C588C27",
+   "displayName": "War Elemental",
+   "category": null,
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_150_00",
+   "hash": "0xAF794A87",
+   "displayName": "Untouchable",
+   "category": "special_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_151_00",
+   "hash": "0x57AB5B10",
+   "displayName": "Supplementary DMG",
+   "category": null,
+   "maxLevel": 45
+  },
+  {
+   "internalId": "SKILL_152_00",
+   "hash": "0x82CE278D",
+   "displayName": "Less Is More",
+   "category": null,
+   "maxLevel": 30
+  },
+  {
+   "internalId": "SKILL_153_00",
+   "hash": "0x1568E0E4",
+   "displayName": "Head Start",
+   "category": null,
+   "maxLevel": 30
+  },
+  {
+   "internalId": "SKILL_154_00",
+   "hash": "0x70395731",
+   "displayName": "Berserker",
+   "category": null,
+   "maxLevel": 30
+  },
+  {
+   "internalId": "SKILL_156_00",
+   "hash": "0xCD18A77D",
+   "displayName": "Potent Greens",
+   "category": null,
+   "maxLevel": 30
+  },
+  {
+   "internalId": "SKILL_158_00",
+   "hash": "0xA8A3163B",
+   "displayName": "Glass Cannon",
+   "category": null,
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_159_00",
+   "hash": "0xEC1C6779",
+   "displayName": "Flight over Fight",
+   "category": null,
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_160_00",
+   "hash": "0xDBE1D775",
+   "displayName": "Alpha",
+   "category": "opus_trait",
+   "maxLevel": 30
+  },
+  {
+   "internalId": "SKILL_161_00",
+   "hash": "0x8D2ADB6E",
+   "displayName": "Beta",
+   "category": "opus_trait",
+   "maxLevel": 30
+  },
+  {
+   "internalId": "SKILL_162_00",
+   "hash": "0x5C862E13",
+   "displayName": "Gamma",
+   "category": "opus_trait",
+   "maxLevel": 30
+  },
+  {
+   "internalId": "SKILL_164_00",
+   "hash": "0xD3B8C21F",
+   "displayName": "Crabmiration",
+   "category": null,
+   "maxLevel": 45
+  },
+  {
+   "internalId": "SKILL_166_00",
+   "hash": "0x48A95B8D",
+   "displayName": "Greater Aegis",
+   "category": null,
+   "maxLevel": 30
+  },
+  {
+   "internalId": "SKILL_166_50",
+   "hash": "0x40223C28",
+   "displayName": "Catastrophe",
+   "category": null,
+   "maxLevel": 30
+  },
+  {
+   "internalId": "SKILL_167_00",
+   "hash": "0xF71F8997",
+   "displayName": "Auto Potion",
+   "category": null,
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_170_00",
+   "hash": "0x77C809F5",
+   "displayName": "Spirit Edge\\u0027s Rally",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_170_01",
+   "hash": "0x9230E3F5",
+   "displayName": "Spirit Edge\\u0027s Fury",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_170_02",
+   "hash": "0x7B4FC47A",
+   "displayName": "Spirit Edge\\u0027s Warpath",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_170_03",
+   "hash": "0xEF05EC4D",
+   "displayName": "Seven-Star Boundary",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_171_00",
+   "hash": "0xE85FF8E0",
+   "displayName": "Dark Huntress\\u0027s Volley",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_171_01",
+   "hash": "0x8572B8AF",
+   "displayName": "Dark Huntress\\u0027s Surge",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_171_02",
+   "hash": "0x81B293D9",
+   "displayName": "Dark Huntress\\u0027s Warpath",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_171_03",
+   "hash": "0x281214AB",
+   "displayName": "Two-Crown Boundary",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_172_00",
+   "hash": "0xD40D1E9B",
+   "displayName": "Supreme Primarch\\u0027s Awe",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_172_01",
+   "hash": "0x15806DFC",
+   "displayName": "Supreme Primarch\\u0027s Nimbus",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_172_02",
+   "hash": "0x4E5F6706",
+   "displayName": "Supreme Primarch\\u0027s Warpath",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_172_03",
+   "hash": "0x1A2EF59E",
+   "displayName": "Ain",
+   "category": "character_trait",
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_233_00",
+   "hash": "0xEE85CD1F",
+   "displayName": "Berserker Echo",
+   "category": null,
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_234_00",
+   "hash": "0x3D8153A1",
+   "displayName": "Spartan Echo",
+   "category": null,
+   "maxLevel": 15
+  },
+  {
+   "internalId": "SKILL_235_00",
+   "hash": "0x51C115D2",
+   "displayName": "Super Ultimate Perfect Dodge",
+   "category": null,
+   "maxLevel": 15
+  },
+  {
+   "internalId": "WRIGHTSTONE_EXTRA_BLIGHT_RESISTANCE",
+   "hash": "0x9702860F",
+   "displayName": "Blight Resistance",
+   "category": "wrightstone_trait",
+   "maxLevel": 20
+  },
+  {
+   "internalId": "WRIGHTSTONE_EXTRA_FAST_LEARNER",
+   "hash": "0xF687C5EF",
+   "displayName": "Fast Learner",
+   "category": "wrightstone_trait",
+   "maxLevel": 20
+  },
+  {
+   "internalId": "WRIGHTSTONE_EXTRA_RUPIE_TYCOON",
+   "hash": "0xC86F3082",
+   "displayName": "Rupie Tycoon",
+   "category": "wrightstone_trait",
+   "maxLevel": 20
+  },
+  {
+   "internalId": "WRIGHTSTONE_EXTRA_PATH_TO_MASTERY",
+   "hash": "0x5E422AE5",
+   "displayName": "Path to Mastery",
+   "category": "wrightstone_trait",
+   "maxLevel": 20
+  },
+  {
+   "internalId": "WRIGHTSTONE_EXTRA_PARALYSIS_RESISTANCE",
+   "hash": "0x2242921F",
+   "displayName": "Paralysis Resistance",
+   "category": "wrightstone_trait",
+   "maxLevel": 20
+  },
+  {
+   "internalId": "WRIGHTSTONE_EXTRA_SKYBOUND_ARTS_SEAL_RESISTANCE",
+   "hash": "0xCFB48782",
+   "displayName": "Skybound Arts Seal Resistance",
+   "category": "wrightstone_trait",
+   "maxLevel": 20
+  },
+  {
+   "internalId": "WRIGHTSTONE_EXTRA_SKILL_SEAL_RESISTANCE",
+   "hash": "0x50B453DD",
+   "displayName": "Skill Seal Resistance",
+   "category": "wrightstone_trait",
+   "maxLevel": 20
+  },
+  {
+   "internalId": "WRIGHTSTONE_EXTRA_FROZEN_RESISTANCE",
+   "hash": "0xFB572681",
+   "displayName": "Frozen Resistance",
+   "category": "wrightstone_trait",
+   "maxLevel": 20
+  },
+  {
+   "internalId": "WRIGHTSTONE_EXTRA_SANDTOMB_RESISTANCE",
+   "hash": "0xD54F8CA7",
+   "displayName": "Sandtomb Resistance",
+   "category": "wrightstone_trait",
+   "maxLevel": 20
+  },
+  {
+   "internalId": "WRIGHTSTONE_EXTRA_HEALING_CAP",
+   "hash": "0x9389CC06",
+   "displayName": "Healing Cap",
+   "category": "wrightstone_trait",
+   "maxLevel": 20
+  },
+  {
+   "internalId": "WRIGHTSTONE_EXTRA_DEF_DOWN_RESISTANCE",
+   "hash": "0x66DE60B1",
+   "displayName": "DEF Down Resistance",
+   "category": "wrightstone_trait",
+   "maxLevel": 20
+  },
+  {
+   "internalId": "WRIGHTSTONE_EXTRA_STUN_RESISTANCE",
+   "hash": "0x3759A5B9",
+   "displayName": "Stun Resistance",
+   "category": "wrightstone_trait",
+   "maxLevel": 20
+  },
+  {
+   "internalId": "WRIGHTSTONE_EXTRA_POISON_RESISTANCE",
+   "hash": "0x973B49AF",
+   "displayName": "Poison Resistance",
+   "category": "wrightstone_trait",
+   "maxLevel": 20
+  },
+  {
+   "internalId": "WRIGHTSTONE_EXTRA_ANOMALY_RESISTANCE",
+   "hash": "0xDD4A701E",
+   "displayName": "Anomaly Resistance",
+   "category": "wrightstone_trait",
+   "maxLevel": 20
+  },
+  {
+   "internalId": "WRIGHTSTONE_EXTRA_WATERPRISON_RESISTANCE",
+   "hash": "0x1DC9D7E7",
+   "displayName": "Waterprison Resistance",
+   "category": "wrightstone_trait",
+   "maxLevel": 20
+  },
+  {
+   "internalId": "WRIGHTSTONE_EXTRA_BURN_RESISTANCE",
+   "hash": "0x7C84A6B3",
+   "displayName": "Burn Resistance",
+   "category": "wrightstone_trait",
+   "maxLevel": 20
+  },
+  {
+   "internalId": "WRIGHTSTONE_EXTRA_SLOW_RESISTANCE",
+   "hash": "0xA2FA9685",
+   "displayName": "Slow Resistance",
+   "category": "wrightstone_trait",
+   "maxLevel": 20
+  }
+ ]
+}

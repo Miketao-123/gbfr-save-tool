@@ -1,0 +1,8812 @@
+{
+ "sigil_info": {
+  "2508557155": {
+   "name": "Attack Power I",
+   "cn": "攻击力",
+   "primary": 1342675484,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "1033604719": {
+   "name": "Attack Power II",
+   "cn": "攻击力Ⅱ",
+   "primary": 1342675484,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "2779909180": {
+   "name": "Attack Power III",
+   "cn": "攻击力Ⅲ",
+   "primary": 1342675484,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "271579050": {
+   "name": "Attack Power IV",
+   "cn": "攻击力Ⅳ",
+   "primary": 1342675484,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3191637276": {
+   "name": "Attack Power V",
+   "cn": "攻击力Ⅴ",
+   "primary": 1342675484,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2800638090": {
+   "name": "Health I",
+   "cn": "体力",
+   "primary": 4084396182,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "3279751178": {
+   "name": "Health II",
+   "cn": "体力Ⅱ",
+   "primary": 4084396182,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "1493151402": {
+   "name": "Health III",
+   "cn": "体力Ⅲ",
+   "primary": 4084396182,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "2451290478": {
+   "name": "Health IV",
+   "cn": "体力Ⅳ",
+   "primary": 4084396182,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "1585376964": {
+   "name": "Health V",
+   "cn": "体力Ⅴ",
+   "primary": 4084396182,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2194580314": {
+   "name": "Critical Hit Rate I",
+   "cn": "暴击率",
+   "primary": 2373493147,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "1125103953": {
+   "name": "Critical Hit Rate II",
+   "cn": "暴击率Ⅱ",
+   "primary": 2373493147,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "3542879407": {
+   "name": "Critical Hit Rate III",
+   "cn": "暴击率Ⅲ",
+   "primary": 2373493147,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "4057589981": {
+   "name": "Critical Hit Rate IV",
+   "cn": "暴击率Ⅳ",
+   "primary": 2373493147,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "2810538530": {
+   "name": "Critical Hit Rate V",
+   "cn": "暴击率Ⅴ",
+   "primary": 2373493147,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "87551755": {
+   "name": "Stun Power I",
+   "cn": "昏厥",
+   "primary": 3468099822,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "509017753": {
+   "name": "Stun Power II",
+   "cn": "昏厥Ⅱ",
+   "primary": 3468099822,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "280175219": {
+   "name": "Stun Power III",
+   "cn": "昏厥Ⅲ",
+   "primary": 3468099822,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "899764163": {
+   "name": "Stun Power IV",
+   "cn": "昏厥Ⅳ",
+   "primary": 3468099822,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3782102484": {
+   "name": "Stun Power V",
+   "cn": "昏厥Ⅴ",
+   "primary": 3468099822,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1422851356": {
+   "name": "Enmity I",
+   "cn": "背水",
+   "primary": 1061716793,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "1169436708": {
+   "name": "Enmity II",
+   "cn": "背水Ⅱ",
+   "primary": 1061716793,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "103302397": {
+   "name": "Enmity III",
+   "cn": "背水Ⅲ",
+   "primary": 1061716793,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "900119261": {
+   "name": "Enmity IV",
+   "cn": "背水Ⅳ",
+   "primary": 1061716793,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "4136087995": {
+   "name": "Enmity V",
+   "cn": "背水Ⅴ",
+   "primary": 1061716793,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "4226902404": {
+   "name": "Stamina I",
+   "cn": "热血",
+   "primary": 801700863,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "395791290": {
+   "name": "Stamina II",
+   "cn": "热血Ⅱ",
+   "primary": 801700863,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "1964124322": {
+   "name": "Stamina III",
+   "cn": "热血Ⅲ",
+   "primary": 801700863,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "3173840021": {
+   "name": "Stamina IV",
+   "cn": "热血Ⅳ",
+   "primary": 801700863,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "1756489864": {
+   "name": "Stamina V",
+   "cn": "热血Ⅴ",
+   "primary": 801700863,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3597897231": {
+   "name": "Charged Attack I",
+   "cn": "蓄力攻击",
+   "primary": 473304163,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "2480502607": {
+   "name": "Charged Attack II",
+   "cn": "蓄力攻击Ⅱ",
+   "primary": 473304163,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "3428694067": {
+   "name": "Charged Attack III",
+   "cn": "蓄力攻击Ⅲ",
+   "primary": 473304163,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "1212203810": {
+   "name": "Charged Attack IV",
+   "cn": "蓄力攻击Ⅳ",
+   "primary": 473304163,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "4220286015": {
+   "name": "Charged Attack V",
+   "cn": "蓄力攻击Ⅴ",
+   "primary": 473304163,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "538210636": {
+   "name": "Linked Together I",
+   "cn": "协同攻击",
+   "primary": 1072455552,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "2191452283": {
+   "name": "Linked Together II",
+   "cn": "协同攻击Ⅱ",
+   "primary": 1072455552,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "3332381102": {
+   "name": "Linked Together III",
+   "cn": "协同攻击Ⅲ",
+   "primary": 1072455552,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "2944381453": {
+   "name": "Linked Together IV",
+   "cn": "协同攻击Ⅳ",
+   "primary": 1072455552,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "435176797": {
+   "name": "Linked Together V",
+   "cn": "协同攻击Ⅴ",
+   "primary": 1072455552,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2062282641": {
+   "name": "Throw I",
+   "cn": "投掷",
+   "primary": 2366080407,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "1774144172": {
+   "name": "Throw II",
+   "cn": "投掷Ⅱ",
+   "primary": 2366080407,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "2004891765": {
+   "name": "Throw III",
+   "cn": "投掷Ⅲ",
+   "primary": 2366080407,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "2217393131": {
+   "name": "Throw IV",
+   "cn": "投掷Ⅳ",
+   "primary": 2366080407,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3293752067": {
+   "name": "Throw V",
+   "cn": "投掷Ⅴ",
+   "primary": 2366080407,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3044071882": {
+   "name": "Critical Damage I",
+   "cn": "暴击伤害",
+   "primary": 3231160855,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "3918625473": {
+   "name": "Critical Damage II",
+   "cn": "暴击伤害Ⅱ",
+   "primary": 3231160855,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "3059035048": {
+   "name": "Critical Damage III",
+   "cn": "暴击伤害Ⅲ",
+   "primary": 3231160855,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "80750819": {
+   "name": "Critical Damage IV",
+   "cn": "暴击伤害Ⅳ",
+   "primary": 3231160855,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3813127523": {
+   "name": "Critical Damage V",
+   "cn": "暴击伤害Ⅴ",
+   "primary": 3231160855,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2034039493": {
+   "name": "Exploiter I",
+   "cn": "弱点攻击",
+   "primary": 1802063213,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "2833024189": {
+   "name": "Exploiter II",
+   "cn": "弱点攻击Ⅱ",
+   "primary": 1802063213,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "103729941": {
+   "name": "Exploiter III",
+   "cn": "弱点攻击Ⅲ",
+   "primary": 1802063213,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "1616306631": {
+   "name": "Exploiter IV",
+   "cn": "弱点攻击Ⅳ",
+   "primary": 1802063213,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "4151344300": {
+   "name": "Exploiter V",
+   "cn": "弱点攻击Ⅴ",
+   "primary": 1802063213,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "4156045046": {
+   "name": "Combo Finisher I",
+   "cn": "连击收招",
+   "primary": 2812567336,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "4198347235": {
+   "name": "Combo Finisher II",
+   "cn": "连击收招Ⅱ",
+   "primary": 2812567336,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "3646531282": {
+   "name": "Combo Finisher III",
+   "cn": "连击收招Ⅲ",
+   "primary": 2812567336,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "3770090182": {
+   "name": "Combo Finisher IV",
+   "cn": "连击收招Ⅳ",
+   "primary": 2812567336,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3352907209": {
+   "name": "Combo Finisher V",
+   "cn": "连击收招Ⅴ",
+   "primary": 2812567336,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1653461215": {
+   "name": "Concentrated Fire I",
+   "cn": "集中炮火",
+   "primary": 3009445917,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "3417037657": {
+   "name": "Concentrated Fire II",
+   "cn": "集中炮火Ⅱ",
+   "primary": 3009445917,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "2999384410": {
+   "name": "Concentrated Fire III",
+   "cn": "集中炮火Ⅲ",
+   "primary": 3009445917,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "2400931268": {
+   "name": "Concentrated Fire IV",
+   "cn": "集中炮火Ⅳ",
+   "primary": 3009445917,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "994632935": {
+   "name": "Concentrated Fire V",
+   "cn": "集中炮火Ⅴ",
+   "primary": 3009445917,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3333536742": {
+   "name": "Damage Cap I",
+   "cn": "伤害上限",
+   "primary": 3696775008,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "1318620495": {
+   "name": "Damage Cap II",
+   "cn": "伤害上限Ⅱ",
+   "primary": 3696775008,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "3054331798": {
+   "name": "Damage Cap III",
+   "cn": "伤害上限Ⅲ",
+   "primary": 3696775008,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "3549682210": {
+   "name": "Damage Cap IV",
+   "cn": "伤害上限Ⅳ",
+   "primary": 3696775008,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "4000524161": {
+   "name": "Damage Cap V",
+   "cn": "伤害上限Ⅴ",
+   "primary": 3696775008,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2421976447": {
+   "name": "Combo Booster I",
+   "cn": "连击加成",
+   "primary": 4051194041,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "2446083776": {
+   "name": "Combo Booster II",
+   "cn": "连击加成Ⅱ",
+   "primary": 4051194041,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "3596081977": {
+   "name": "Combo Booster III",
+   "cn": "连击加成Ⅲ",
+   "primary": 4051194041,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "399415879": {
+   "name": "Combo Booster IV",
+   "cn": "连击加成Ⅳ",
+   "primary": 4051194041,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "2057516470": {
+   "name": "Combo Booster V",
+   "cn": "连击加成Ⅴ",
+   "primary": 4051194041,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2046098750": {
+   "name": "Tyranny I",
+   "cn": "暴君",
+   "primary": 1911626395,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "2426026731": {
+   "name": "Tyranny II",
+   "cn": "暴君Ⅱ",
+   "primary": 1911626395,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "2753578387": {
+   "name": "Tyranny III",
+   "cn": "暴君Ⅲ",
+   "primary": 1911626395,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "3754033721": {
+   "name": "Tyranny IV",
+   "cn": "暴君Ⅳ",
+   "primary": 1911626395,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "1920162311": {
+   "name": "Tyranny V",
+   "cn": "暴君Ⅴ",
+   "primary": 1911626395,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1124989060": {
+   "name": "Lucky Charge I",
+   "cn": "蓄力会心",
+   "primary": 3277525275,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "5037804": {
+   "name": "Lucky Charge II",
+   "cn": "蓄力会心Ⅱ",
+   "primary": 3277525275,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "1736888132": {
+   "name": "Lucky Charge III",
+   "cn": "蓄力会心Ⅲ",
+   "primary": 3277525275,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "2388329835": {
+   "name": "Lucky Charge IV",
+   "cn": "蓄力会心Ⅳ",
+   "primary": 3277525275,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "2591374849": {
+   "name": "Lucky Charge V",
+   "cn": "蓄力会心Ⅴ",
+   "primary": 3277525275,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2756012115": {
+   "name": "Injury to Insult I",
+   "cn": "弱化状态特效",
+   "primary": 1327117955,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "2558093535": {
+   "name": "Injury to Insult II",
+   "cn": "弱化状态特效Ⅱ",
+   "primary": 1327117955,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "4290415344": {
+   "name": "Injury to Insult III",
+   "cn": "弱化状态特效Ⅲ",
+   "primary": 1327117955,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "318484487": {
+   "name": "Injury to Insult IV",
+   "cn": "弱化状态特效Ⅳ",
+   "primary": 1327117955,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "2682495245": {
+   "name": "Injury to Insult V",
+   "cn": "弱化状态特效Ⅴ",
+   "primary": 1327117955,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1865217631": {
+   "name": "Overdrive Assassin I",
+   "cn": "OVERDRIVE特效",
+   "primary": 2849079125,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "748015336": {
+   "name": "Overdrive Assassin II",
+   "cn": "OVERDRIVE特效Ⅱ",
+   "primary": 2849079125,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "874595287": {
+   "name": "Overdrive Assassin III",
+   "cn": "OVERDRIVE特效Ⅲ",
+   "primary": 2849079125,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "3091182478": {
+   "name": "Overdrive Assassin IV",
+   "cn": "OVERDRIVE特效Ⅳ",
+   "primary": 2849079125,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "4004955340": {
+   "name": "Overdrive Assassin V",
+   "cn": "OVERDRIVE特效Ⅴ",
+   "primary": 2849079125,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3797285586": {
+   "name": "Break Assassin I",
+   "cn": "破防特效",
+   "primary": 2895541441,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "1895214595": {
+   "name": "Break Assassin II",
+   "cn": "破防特效Ⅱ",
+   "primary": 2895541441,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "3365099893": {
+   "name": "Break Assassin III",
+   "cn": "破防特效Ⅲ",
+   "primary": 2895541441,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "824024249": {
+   "name": "Break Assassin IV",
+   "cn": "破防特效Ⅳ",
+   "primary": 2895541441,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "4154871856": {
+   "name": "Break Assassin V",
+   "cn": "破防特效Ⅴ",
+   "primary": 2895541441,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1944409423": {
+   "name": "Garrison I",
+   "cn": "坚守",
+   "primary": 3872242332,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "3689676205": {
+   "name": "Garrison II",
+   "cn": "坚守Ⅱ",
+   "primary": 3872242332,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "2629405889": {
+   "name": "Garrison III",
+   "cn": "坚守Ⅲ",
+   "primary": 3872242332,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "2489614757": {
+   "name": "Garrison IV",
+   "cn": "坚守Ⅳ",
+   "primary": 3872242332,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "2720311344": {
+   "name": "Garrison V",
+   "cn": "坚守Ⅴ",
+   "primary": 3872242332,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3412011457": {
+   "name": "Stout Heart",
+   "cn": "霸体",
+   "primary": 2712200093,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1492530215": {
+   "name": "Guts I",
+   "cn": "豪胆",
+   "primary": 3868870292,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "3637949312": {
+   "name": "Guts II",
+   "cn": "豪胆Ⅱ",
+   "primary": 3868870292,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "950651615": {
+   "name": "Guts III",
+   "cn": "豪胆Ⅲ",
+   "primary": 3868870292,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "3845983800": {
+   "name": "Guts IV",
+   "cn": "豪胆Ⅳ",
+   "primary": 3868870292,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3128408050": {
+   "name": "Guts V",
+   "cn": "豪胆Ⅴ",
+   "primary": 3868870292,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2970207273": {
+   "name": "Poison Resistance I",
+   "cn": "中毒抗性",
+   "primary": 2537245103,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "2520992909": {
+   "name": "Poison Resistance II",
+   "cn": "中毒抗性Ⅱ",
+   "primary": 2537245103,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "3615423430": {
+   "name": "Poison Resistance III",
+   "cn": "中毒抗性Ⅲ",
+   "primary": 2537245103,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "1245305981": {
+   "name": "Poison Resistance IV",
+   "cn": "中毒抗性Ⅳ",
+   "primary": 2537245103,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "1545190320": {
+   "name": "Poison Resistance V",
+   "cn": "中毒抗性Ⅴ",
+   "primary": 2537245103,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "956397031": {
+   "name": "Burn Resistance I",
+   "cn": "灼热抗性",
+   "primary": 2089068211,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "2837178390": {
+   "name": "Burn Resistance II",
+   "cn": "灼热抗性Ⅱ",
+   "primary": 2089068211,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "254523570": {
+   "name": "Burn Resistance III",
+   "cn": "灼热抗性Ⅲ",
+   "primary": 2089068211,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "1036310552": {
+   "name": "Burn Resistance IV",
+   "cn": "灼热抗性Ⅳ",
+   "primary": 2089068211,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "2893554340": {
+   "name": "Burn Resistance V",
+   "cn": "灼热抗性Ⅴ",
+   "primary": 2089068211,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "700335986": {
+   "name": "Sandtomb Resistance I",
+   "cn": "泥沙抗性",
+   "primary": 3578760359,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "3592858783": {
+   "name": "Sandtomb Resistance II",
+   "cn": "泥沙抗性Ⅱ",
+   "primary": 3578760359,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "667296594": {
+   "name": "Sandtomb Resistance III",
+   "cn": "泥沙抗性Ⅲ",
+   "primary": 3578760359,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "2640701110": {
+   "name": "Sandtomb Resistance IV",
+   "cn": "泥沙抗性Ⅳ",
+   "primary": 3578760359,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "1925949200": {
+   "name": "Sandtomb Resistance V",
+   "cn": "泥沙抗性Ⅴ",
+   "primary": 3578760359,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "255356814": {
+   "name": "Glaciate Resistance I",
+   "cn": "冰冻抗性",
+   "primary": 4216792705,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "3619911793": {
+   "name": "Glaciate Resistance II",
+   "cn": "冰冻抗性Ⅱ",
+   "primary": 4216792705,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "1320853546": {
+   "name": "Glaciate Resistance III",
+   "cn": "冰冻抗性Ⅲ",
+   "primary": 4216792705,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "1202718105": {
+   "name": "Glaciate Resistance IV",
+   "cn": "冰冻抗性Ⅳ",
+   "primary": 4216792705,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3248747646": {
+   "name": "Glaciate Resistance V",
+   "cn": "冰冻抗性Ⅴ",
+   "primary": 4216792705,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "613155094": {
+   "name": "Dizzy Resistance I",
+   "cn": "昏迷抗性",
+   "primary": 928622009,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "3212617179": {
+   "name": "Dizzy Resistance II",
+   "cn": "昏迷抗性Ⅱ",
+   "primary": 928622009,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "1061542876": {
+   "name": "Dizzy Resistance III",
+   "cn": "昏迷抗性Ⅲ",
+   "primary": 928622009,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "2860072418": {
+   "name": "Dizzy Resistance IV",
+   "cn": "昏迷抗性Ⅳ",
+   "primary": 928622009,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "736082580": {
+   "name": "Dizzy Resistance V",
+   "cn": "昏迷抗性Ⅴ",
+   "primary": 928622009,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3530821179": {
+   "name": "Paralysis Resistance I",
+   "cn": "麻痹抗性",
+   "primary": 574788127,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "3912987462": {
+   "name": "Paralysis Resistance II",
+   "cn": "麻痹抗性Ⅱ",
+   "primary": 574788127,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "4090021494": {
+   "name": "Paralysis Resistance III",
+   "cn": "麻痹抗性Ⅲ",
+   "primary": 574788127,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "427301047": {
+   "name": "Paralysis Resistance IV",
+   "cn": "麻痹抗性Ⅳ",
+   "primary": 574788127,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "4221290185": {
+   "name": "Paralysis Resistance V",
+   "cn": "麻痹抗性Ⅴ",
+   "primary": 574788127,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "747996681": {
+   "name": "Skill Sealed Resistance I",
+   "cn": "能力封印抗性",
+   "primary": 1353995229,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "1623899611": {
+   "name": "Skill Sealed Resistance II",
+   "cn": "能力封印抗性Ⅱ",
+   "primary": 1353995229,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "2565378015": {
+   "name": "Skill Sealed Resistance III",
+   "cn": "能力封印抗性Ⅲ",
+   "primary": 1353995229,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "1922329169": {
+   "name": "Skill Sealed Resistance IV",
+   "cn": "能力封印抗性Ⅳ",
+   "primary": 1353995229,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "858972557": {
+   "name": "Skill Sealed Resistance V",
+   "cn": "能力封印抗性Ⅴ",
+   "primary": 1353995229,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2716191001": {
+   "name": "SBA Sealed Resistance I",
+   "cn": "奥义封印抗性",
+   "primary": 3484714882,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "2494772592": {
+   "name": "SBA Sealed Resistance II",
+   "cn": "奥义封印抗性Ⅱ",
+   "primary": 3484714882,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "3922966218": {
+   "name": "SBA Sealed Resistance III",
+   "cn": "奥义封印抗性Ⅲ",
+   "primary": 3484714882,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "1471601061": {
+   "name": "SBA Sealed Resistance IV",
+   "cn": "奥义封印抗性Ⅳ",
+   "primary": 3484714882,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3746195054": {
+   "name": "SBA Sealed Resistance V",
+   "cn": "奥义封印抗性Ⅴ",
+   "primary": 3484714882,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2541901295": {
+   "name": "Improved Guard I",
+   "cn": "格挡性能",
+   "primary": 178391110,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "1992813417": {
+   "name": "Improved Guard II",
+   "cn": "格挡性能Ⅱ",
+   "primary": 178391110,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "2675183893": {
+   "name": "Improved Guard III",
+   "cn": "格挡性能Ⅲ",
+   "primary": 178391110,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "4050197212": {
+   "name": "Improved Guard IV",
+   "cn": "格挡性能Ⅳ",
+   "primary": 178391110,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3603074613": {
+   "name": "Improved Guard V",
+   "cn": "格挡性能Ⅴ",
+   "primary": 178391110,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "4226959634": {
+   "name": "Guard Payback I",
+   "cn": "格挡仇火",
+   "primary": 1009473456,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "3276385617": {
+   "name": "Guard Payback II",
+   "cn": "格挡仇火Ⅱ",
+   "primary": 1009473456,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "2338748250": {
+   "name": "Guard Payback III",
+   "cn": "格挡仇火Ⅲ",
+   "primary": 1009473456,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "619522534": {
+   "name": "Guard Payback IV",
+   "cn": "格挡仇火Ⅳ",
+   "primary": 1009473456,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "2704068251": {
+   "name": "Guard Payback V",
+   "cn": "格挡仇火Ⅴ",
+   "primary": 1009473456,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "545977749": {
+   "name": "Improved Dodge",
+   "cn": "躲避性能",
+   "primary": 2335962636,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1284779733": {
+   "name": "Dodge Payback I",
+   "cn": "躲避仇火",
+   "primary": 2083409252,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "4104965234": {
+   "name": "Dodge Payback II",
+   "cn": "躲避仇火Ⅱ",
+   "primary": 2083409252,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "2986443431": {
+   "name": "Dodge Payback III",
+   "cn": "躲避仇火Ⅲ",
+   "primary": 2083409252,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "502584145": {
+   "name": "Dodge Payback IV",
+   "cn": "躲避仇火Ⅳ",
+   "primary": 2083409252,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "2220274083": {
+   "name": "Dodge Payback V",
+   "cn": "躲避仇火Ⅴ",
+   "primary": 2083409252,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "4143171683": {
+   "name": "Improved Healing I",
+   "cn": "回复性能",
+   "primary": 2475281414,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "2817692351": {
+   "name": "Improved Healing II",
+   "cn": "回复性能Ⅱ",
+   "primary": 2475281414,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "2044154735": {
+   "name": "Improved Healing III",
+   "cn": "回复性能Ⅲ",
+   "primary": 2475281414,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "3756533603": {
+   "name": "Improved Healing IV",
+   "cn": "回复性能Ⅳ",
+   "primary": 2475281414,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3799718993": {
+   "name": "Improved Healing V",
+   "cn": "回复性能Ⅴ",
+   "primary": 2475281414,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1921768038": {
+   "name": "Regen I",
+   "cn": "自愈",
+   "primary": 1619384869,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "1210301363": {
+   "name": "Regen II",
+   "cn": "自愈Ⅱ",
+   "primary": 1619384869,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "1054690335": {
+   "name": "Regen III",
+   "cn": "自愈Ⅲ",
+   "primary": 1619384869,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "3195638385": {
+   "name": "Regen IV",
+   "cn": "自愈Ⅳ",
+   "primary": 1619384869,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3381510728": {
+   "name": "Regen V",
+   "cn": "自愈Ⅴ",
+   "primary": 1619384869,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "723812068": {
+   "name": "Drain I",
+   "cn": "HP吸收",
+   "primary": 2094004047,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "188378313": {
+   "name": "Drain II",
+   "cn": "HP吸收Ⅱ",
+   "primary": 2094004047,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "3547810579": {
+   "name": "Drain III",
+   "cn": "HP吸收Ⅲ",
+   "primary": 2094004047,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "4047677036": {
+   "name": "Drain IV",
+   "cn": "HP吸收Ⅳ",
+   "primary": 2094004047,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3550420089": {
+   "name": "Drain V",
+   "cn": "HP吸收Ⅴ",
+   "primary": 2094004047,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1695877635": {
+   "name": "Autorevive I",
+   "cn": "自动复活",
+   "primary": 2515794566,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "2432414911": {
+   "name": "Autorevive II",
+   "cn": "自动复活Ⅱ",
+   "primary": 2515794566,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "3809489286": {
+   "name": "Autorevive III",
+   "cn": "自动复活Ⅲ",
+   "primary": 2515794566,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "4073455570": {
+   "name": "Autorevive IV",
+   "cn": "自动复活Ⅳ",
+   "primary": 2515794566,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "1588757190": {
+   "name": "Autorevive V",
+   "cn": "自动复活Ⅴ",
+   "primary": 2515794566,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1882418432": {
+   "name": "Quick Cooldown I",
+   "cn": "迅捷能力",
+   "primary": 831329001,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "1935108519": {
+   "name": "Quick Cooldown II",
+   "cn": "迅捷能力Ⅱ",
+   "primary": 831329001,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "1330646975": {
+   "name": "Quick Cooldown III",
+   "cn": "迅捷能力Ⅲ",
+   "primary": 831329001,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "3000275619": {
+   "name": "Quick Cooldown IV",
+   "cn": "迅捷能力Ⅳ",
+   "primary": 831329001,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "752623584": {
+   "name": "Quick Cooldown V",
+   "cn": "迅捷能力Ⅴ",
+   "primary": 831329001,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3503692970": {
+   "name": "Cascade I",
+   "cn": "怒涛",
+   "primary": 99806428,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "2903124705": {
+   "name": "Cascade II",
+   "cn": "怒涛Ⅱ",
+   "primary": 99806428,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "3950241584": {
+   "name": "Cascade III",
+   "cn": "怒涛Ⅲ",
+   "primary": 99806428,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "646770117": {
+   "name": "Cascade IV",
+   "cn": "怒涛Ⅳ",
+   "primary": 99806428,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3086523075": {
+   "name": "Cascade V",
+   "cn": "怒涛Ⅴ",
+   "primary": 99806428,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1329053296": {
+   "name": "Uplift I",
+   "cn": "激昂",
+   "primary": 3053428691,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "3093060667": {
+   "name": "Uplift II",
+   "cn": "激昂Ⅱ",
+   "primary": 3053428691,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "124795530": {
+   "name": "Uplift III",
+   "cn": "激昂Ⅲ",
+   "primary": 3053428691,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "371290077": {
+   "name": "Uplift IV",
+   "cn": "激昂Ⅳ",
+   "primary": 3053428691,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "2285076692": {
+   "name": "Uplift V",
+   "cn": "激昂Ⅴ",
+   "primary": 3053428691,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1752928910": {
+   "name": "Potion Hoarder I",
+   "cn": "药水携带数",
+   "primary": 612907763,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "3649220181": {
+   "name": "Potion Hoarder II",
+   "cn": "药水携带数Ⅱ",
+   "primary": 612907763,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "3352372445": {
+   "name": "Potion Hoarder III",
+   "cn": "药水携带数Ⅲ",
+   "primary": 612907763,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "2524163001": {
+   "name": "Potion Hoarder IV",
+   "cn": "药水携带数Ⅳ",
+   "primary": 612907763,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "2112492923": {
+   "name": "Potion Hoarder V",
+   "cn": "药水携带数Ⅴ",
+   "primary": 612907763,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3241638229": {
+   "name": "Low Profile I",
+   "cn": "匿踪",
+   "primary": 3697311093,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "2021995850": {
+   "name": "Low Profile II",
+   "cn": "匿踪Ⅱ",
+   "primary": 3697311093,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "2997915405": {
+   "name": "Low Profile III",
+   "cn": "匿踪Ⅲ",
+   "primary": 3697311093,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "3425277274": {
+   "name": "Low Profile IV",
+   "cn": "匿踪Ⅳ",
+   "primary": 3697311093,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "1353733888": {
+   "name": "Low Profile V",
+   "cn": "匿踪Ⅴ",
+   "primary": 3697311093,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2461194335": {
+   "name": "Provoke I",
+   "cn": "挑衅",
+   "primary": 1612199723,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "1987119186": {
+   "name": "Provoke II",
+   "cn": "挑衅Ⅱ",
+   "primary": 1612199723,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "2121725325": {
+   "name": "Provoke III",
+   "cn": "挑衅Ⅲ",
+   "primary": 1612199723,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "1287915210": {
+   "name": "Provoke IV",
+   "cn": "挑衅Ⅳ",
+   "primary": 1612199723,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "1313411578": {
+   "name": "Provoke V",
+   "cn": "挑衅Ⅴ",
+   "primary": 1612199723,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1806275021": {
+   "name": "Fast Learner I",
+   "cn": "获得经验值",
+   "primary": 4136093167,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "1763866338": {
+   "name": "Fast Learner II",
+   "cn": "获得经验值Ⅱ",
+   "primary": 4136093167,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "4166740656": {
+   "name": "Fast Learner III",
+   "cn": "获得经验值Ⅲ",
+   "primary": 4136093167,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "269372189": {
+   "name": "Fast Learner IV",
+   "cn": "获得经验值Ⅳ",
+   "primary": 4136093167,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3785222062": {
+   "name": "Fast Learner V",
+   "cn": "获得经验值Ⅴ",
+   "primary": 4136093167,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2577707687": {
+   "name": "Rupie Tycoon I",
+   "cn": "获得金币",
+   "primary": 3362730114,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "2372115980": {
+   "name": "Rupie Tycoon II",
+   "cn": "获得金币Ⅱ",
+   "primary": 3362730114,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "3853877543": {
+   "name": "Rupie Tycoon III",
+   "cn": "获得金币Ⅲ",
+   "primary": 3362730114,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "1790220108": {
+   "name": "Rupie Tycoon IV",
+   "cn": "获得金币Ⅳ",
+   "primary": 3362730114,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3098022381": {
+   "name": "Rupie Tycoon V",
+   "cn": "获得金币Ⅴ",
+   "primary": 3362730114,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1265978682": {
+   "name": "Skilled Assault I",
+   "cn": "能力伤害",
+   "primary": 3940753899,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "2559710923": {
+   "name": "Skilled Assault II",
+   "cn": "能力伤害Ⅱ",
+   "primary": 3940753899,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "3995450767": {
+   "name": "Skilled Assault III",
+   "cn": "能力伤害Ⅲ",
+   "primary": 3940753899,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "3779344691": {
+   "name": "Skilled Assault IV",
+   "cn": "能力伤害Ⅳ",
+   "primary": 3940753899,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "243490925": {
+   "name": "Skilled Assault V",
+   "cn": "能力伤害Ⅴ",
+   "primary": 3940753899,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "4111097826": {
+   "name": "Aegis I",
+   "cn": "守护",
+   "primary": 3769368062,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "1630589735": {
+   "name": "Aegis II",
+   "cn": "守护Ⅱ",
+   "primary": 3769368062,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "1268315450": {
+   "name": "Aegis III",
+   "cn": "守护Ⅲ",
+   "primary": 3769368062,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "937964872": {
+   "name": "Aegis IV",
+   "cn": "守护Ⅳ",
+   "primary": 3769368062,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3877314532": {
+   "name": "Aegis V",
+   "cn": "守护Ⅴ",
+   "primary": 3769368062,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3072194150": {
+   "name": "Slow Resistance I",
+   "cn": "缓速抗性",
+   "primary": 2734331525,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "3584177513": {
+   "name": "Slow Resistance II",
+   "cn": "缓速抗性Ⅱ",
+   "primary": 2734331525,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "967019308": {
+   "name": "Slow Resistance III",
+   "cn": "缓速抗性Ⅲ",
+   "primary": 2734331525,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "1660867825": {
+   "name": "Slow Resistance IV",
+   "cn": "缓速抗性Ⅳ",
+   "primary": 2734331525,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3436354347": {
+   "name": "Slow Resistance V",
+   "cn": "缓速抗性Ⅴ",
+   "primary": 2734331525,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2434360473": {
+   "name": "Firm Stance I",
+   "cn": "不动",
+   "primary": 3068338038,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "573677351": {
+   "name": "Firm Stance II",
+   "cn": "不动Ⅱ",
+   "primary": 3068338038,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "3568479674": {
+   "name": "Firm Stance III",
+   "cn": "不动Ⅲ",
+   "primary": 3068338038,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "2508556534": {
+   "name": "Firm Stance IV",
+   "cn": "不动Ⅳ",
+   "primary": 3068338038,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "2161905592": {
+   "name": "Firm Stance V",
+   "cn": "不动Ⅴ",
+   "primary": 3068338038,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2026304003": {
+   "name": "Blight Resistance I",
+   "cn": "灾祸抗性",
+   "primary": 2533525007,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "196945910": {
+   "name": "Blight Resistance II",
+   "cn": "灾祸抗性Ⅱ",
+   "primary": 2533525007,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "2142495701": {
+   "name": "Blight Resistance III",
+   "cn": "灾祸抗性Ⅲ",
+   "primary": 2533525007,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "1807111665": {
+   "name": "Blight Resistance IV",
+   "cn": "灾祸抗性Ⅳ",
+   "primary": 2533525007,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "388490935": {
+   "name": "Blight Resistance V",
+   "cn": "灾祸抗性Ⅴ",
+   "primary": 2533525007,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "452187356": {
+   "name": "Steady Focus I",
+   "cn": "蓄力强化",
+   "primary": 5462430,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "1975048919": {
+   "name": "Steady Focus II",
+   "cn": "蓄力强化Ⅱ",
+   "primary": 5462430,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "2106585838": {
+   "name": "Steady Focus III",
+   "cn": "蓄力强化Ⅲ",
+   "primary": 5462430,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "3713990440": {
+   "name": "Steady Focus IV",
+   "cn": "蓄力强化Ⅳ",
+   "primary": 5462430,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3973260487": {
+   "name": "Steady Focus V",
+   "cn": "蓄力强化Ⅴ",
+   "primary": 5462430,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3956021564": {
+   "name": "Steel Nerves I",
+   "cn": "坚持",
+   "primary": 342947936,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "4102019625": {
+   "name": "Steel Nerves II",
+   "cn": "坚持Ⅱ",
+   "primary": 342947936,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "3708944414": {
+   "name": "Steel Nerves III",
+   "cn": "坚持Ⅲ",
+   "primary": 342947936,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "2722686417": {
+   "name": "Steel Nerves IV",
+   "cn": "坚持Ⅳ",
+   "primary": 342947936,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "757897705": {
+   "name": "Steel Nerves V",
+   "cn": "坚持Ⅴ",
+   "primary": 342947936,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "4073213263": {
+   "name": "Natural Defenses",
+   "cn": "全弱化效果抗性",
+   "primary": 246244832,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2738549046": {
+   "name": "Nimble Defense I",
+   "cn": "凝神",
+   "primary": 162168245,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "3545468157": {
+   "name": "Nimble Defense II",
+   "cn": "凝神Ⅱ",
+   "primary": 162168245,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "1244884254": {
+   "name": "Nimble Defense III",
+   "cn": "凝神Ⅲ",
+   "primary": 162168245,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "3188662895": {
+   "name": "Nimble Defense IV",
+   "cn": "凝神Ⅳ",
+   "primary": 162168245,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "438458435": {
+   "name": "Nimble Defense V",
+   "cn": "凝神Ⅴ",
+   "primary": 162168245,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "469200130": {
+   "name": "Nimble Onslaught I",
+   "cn": "明镜止水",
+   "primary": 3536380170,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "1205505077": {
+   "name": "Nimble Onslaught II",
+   "cn": "明镜止水Ⅱ",
+   "primary": 3536380170,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "910487340": {
+   "name": "Nimble Onslaught III",
+   "cn": "明镜止水Ⅲ",
+   "primary": 3536380170,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "2177592427": {
+   "name": "Nimble Onslaught IV",
+   "cn": "明镜止水Ⅳ",
+   "primary": 3536380170,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "67455415": {
+   "name": "Nimble Onslaught V",
+   "cn": "明镜止水Ⅴ",
+   "primary": 3536380170,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3326556135": {
+   "name": "Precise Resilience I",
+   "cn": "抗争",
+   "primary": 699568808,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "3311365343": {
+   "name": "Precise Resilience II",
+   "cn": "抗争Ⅱ",
+   "primary": 699568808,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "3825577120": {
+   "name": "Precise Resilience III",
+   "cn": "抗争Ⅲ",
+   "primary": 699568808,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "1245098879": {
+   "name": "Precise Resilience IV",
+   "cn": "抗争Ⅳ",
+   "primary": 699568808,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3841743606": {
+   "name": "Precise Resilience V",
+   "cn": "抗争Ⅴ",
+   "primary": 699568808,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3559533943": {
+   "name": "Precise Wrath I",
+   "cn": "怒发冲冠",
+   "primary": 2128439760,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "1130738687": {
+   "name": "Precise Wrath II",
+   "cn": "怒发冲冠Ⅱ",
+   "primary": 2128439760,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "3943738531": {
+   "name": "Precise Wrath III",
+   "cn": "怒发冲冠Ⅲ",
+   "primary": 2128439760,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "4077553398": {
+   "name": "Precise Wrath IV",
+   "cn": "怒发冲冠Ⅳ",
+   "primary": 2128439760,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "1185653696": {
+   "name": "Precise Wrath V",
+   "cn": "怒发冲冠Ⅴ",
+   "primary": 2128439760,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2802691930": {
+   "name": "Life on the Line I",
+   "cn": "奋不顾身",
+   "primary": 2404396813,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "2861830227": {
+   "name": "Life on the Line II",
+   "cn": "奋不顾身Ⅱ",
+   "primary": 2404396813,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "3842483523": {
+   "name": "Life on the Line III",
+   "cn": "奋不顾身Ⅲ",
+   "primary": 2404396813,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "290476348": {
+   "name": "Life on the Line IV",
+   "cn": "奋不顾身Ⅳ",
+   "primary": 2404396813,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "895064204": {
+   "name": "Life on the Line V",
+   "cn": "奋不顾身Ⅴ",
+   "primary": 2404396813,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3209533322": {
+   "name": "Quick Charge I",
+   "cn": "快速蓄力",
+   "primary": 2215087280,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "2287400789": {
+   "name": "Quick Charge II",
+   "cn": "快速蓄力Ⅱ",
+   "primary": 2215087280,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "287494166": {
+   "name": "Quick Charge III",
+   "cn": "快速蓄力Ⅲ",
+   "primary": 2215087280,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "4287258763": {
+   "name": "Quick Charge IV",
+   "cn": "快速蓄力Ⅳ",
+   "primary": 2215087280,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "156432709": {
+   "name": "Quick Charge V",
+   "cn": "快速蓄力Ⅴ",
+   "primary": 2215087280,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "172035032": {
+   "name": "Fearless Drive",
+   "cn": "英勇神速",
+   "primary": 3439526504,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2473459200": {
+   "name": "Fearless Spirit",
+   "cn": "英勇灵气",
+   "primary": 2743406818,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2603305871": {
+   "name": "Fearless Heart",
+   "cn": "英勇之心",
+   "primary": 3671987420,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3153155694": {
+   "name": "Guardian's Conviction",
+   "cn": "守护者的决心",
+   "primary": 1006557464,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3184302729": {
+   "name": "Guardian's Honor",
+   "cn": "守护者的骄傲",
+   "primary": 4165559094,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1645882007": {
+   "name": "Guardian's Warpath",
+   "cn": "守护者的战气",
+   "primary": 2600336030,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3875941401": {
+   "name": "Helmsman's Navigation",
+   "cn": "舵手的指引",
+   "primary": 354305652,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1830348764": {
+   "name": "Helmsman's Tenacity",
+   "cn": "舵手的坚持",
+   "primary": 2742353392,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "395400303": {
+   "name": "Helmsman's Warpath",
+   "cn": "舵手的战气",
+   "primary": 3614395684,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1004266672": {
+   "name": "Mage's Aspiration",
+   "cn": "魔法师的心愿",
+   "primary": 3029266248,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "954106322": {
+   "name": "Mage's Savvy",
+   "cn": "魔法师的伶利",
+   "primary": 296412661,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2755787601": {
+   "name": "Mage's Warpath",
+   "cn": "魔法师的战气",
+   "primary": 3221316531,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "4283960054": {
+   "name": "Veteran's Insight",
+   "cn": "老兵的智慧",
+   "primary": 2860774728,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2000289469": {
+   "name": "Veteran's Vision",
+   "cn": "老兵的天眼",
+   "primary": 2451270412,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2088681555": {
+   "name": "Veteran's Warpath",
+   "cn": "老兵的战气",
+   "primary": 239255067,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "23346932": {
+   "name": "Rose's Blooming",
+   "cn": "玫瑰早绽",
+   "primary": 600897151,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1915766681": {
+   "name": "Rose's Profusion",
+   "cn": "玫瑰缤纷",
+   "primary": 3265578921,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2982223883": {
+   "name": "Rose's Warpath",
+   "cn": "玫瑰的战气",
+   "primary": 2233052490,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "448453709": {
+   "name": "Holy Knight's Luster",
+   "cn": "圣骑士的剑辉",
+   "primary": 2594029936,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2987990806": {
+   "name": "Holy Knight's Grandeur",
+   "cn": "圣骑士的威光",
+   "primary": 1378755464,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "885485713": {
+   "name": "Holy Knight's Warpath",
+   "cn": "圣骑士的战气",
+   "primary": 3092382396,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "299832547": {
+   "name": "Eternal Rage's Mettle",
+   "cn": "古今无双的气概",
+   "primary": 1415783215,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "231935685": {
+   "name": "Eternal Rage's Ethos",
+   "cn": "古今无双的强者",
+   "primary": 1159561548,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2217767143": {
+   "name": "Eternal Rage's Warpath",
+   "cn": "古今无双的战气",
+   "primary": 251817200,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "4254675227": {
+   "name": "Phantasm's Concord",
+   "cn": "幽幻之谊",
+   "primary": 3641188925,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "556499445": {
+   "name": "Phantasm's Harmony",
+   "cn": "幽幻之应",
+   "primary": 1934743042,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1081314525": {
+   "name": "Phantasm's Warpath",
+   "cn": "幽幻的战气",
+   "primary": 2738476610,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1604978915": {
+   "name": "Butterfly's Grace",
+   "cn": "斩姬梦幻",
+   "primary": 699431915,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1985196377": {
+   "name": "Butterfly's Valor",
+   "cn": "斩姬武艺",
+   "primary": 2788919757,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "4145664405": {
+   "name": "Butterfly's Warpath",
+   "cn": "斩姬的战气",
+   "primary": 4258376996,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1451760745": {
+   "name": "White Dragon's Oath",
+   "cn": "白龙的誓约",
+   "primary": 2363462530,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2138997419": {
+   "name": "White Dragon's Glory",
+   "cn": "白龙的荣耀",
+   "primary": 3506515340,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3849363521": {
+   "name": "White Dragon's Warpath",
+   "cn": "白龙的战气",
+   "primary": 1662438379,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3547121808": {
+   "name": "Hero's Creed",
+   "cn": "勇士的信念",
+   "primary": 778413940,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "968237191": {
+   "name": "Hero's Will",
+   "cn": "勇士的毅力",
+   "primary": 384825448,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1032687881": {
+   "name": "Hero's Warpath",
+   "cn": "勇士的战气",
+   "primary": 3640028188,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1176994517": {
+   "name": "Lord's Procession",
+   "cn": "王者行进",
+   "primary": 3859444572,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1967050653": {
+   "name": "Lord's Ambition",
+   "cn": "王者一心",
+   "primary": 1878020643,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1300006450": {
+   "name": "Lord's Warpath",
+   "cn": "王者的战气",
+   "primary": 3125822983,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "110118617": {
+   "name": "Dragonslayer's Dominance",
+   "cn": "屠龙者的威猛",
+   "primary": 2261503428,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "838410191": {
+   "name": "Dragonslayer's Ingenuity",
+   "cn": "屠龙者的才智",
+   "primary": 100287897,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1158383148": {
+   "name": "Dragonslayer's Warpath",
+   "cn": "屠龙者的战气",
+   "primary": 3352525297,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3329131011": {
+   "name": "Founder's Strategy",
+   "cn": "极致谋略",
+   "primary": 3963416948,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2160905603": {
+   "name": "Founder's Truth",
+   "cn": "极致真理",
+   "primary": 2941336221,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1605911268": {
+   "name": "Founder's Warpath",
+   "cn": "极致的战气",
+   "primary": 3870895668,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1480389647": {
+   "name": "Swordmaster's Prowess",
+   "cn": "变幻自如的迅刃",
+   "primary": 215402021,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1683672805": {
+   "name": "Swordmaster's Art",
+   "cn": "变幻自如的妖剑士",
+   "primary": 2746520096,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3561523741": {
+   "name": "Swordmaster's Warpath",
+   "cn": "变幻自如的战气",
+   "primary": 3673144103,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1282070928": {
+   "name": "Crimson's Clout",
+   "cn": "真红烈焰",
+   "primary": 1858052470,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1882595057": {
+   "name": "Crimson's Flight",
+   "cn": "真红翔舞",
+   "primary": 4057324496,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1718928953": {
+   "name": "Crimson's Warpath",
+   "cn": "真红的战气",
+   "primary": 1326666263,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1768040123": {
+   "name": "Ebony's Presence",
+   "cn": "冥暗刚刃",
+   "primary": 1950410857,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2151638205": {
+   "name": "Ebony's Poise",
+   "cn": "冥暗自若",
+   "primary": 3440525669,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1493965256": {
+   "name": "Ebony's Warpath",
+   "cn": "冥暗的战气",
+   "primary": 3623467912,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "671652503": {
+   "name": "Versalis Foundation",
+   "cn": "异能增长",
+   "primary": 2476869948,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2237560595": {
+   "name": "Versalis Ignition",
+   "cn": "异能战意",
+   "primary": 2060501008,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2849506516": {
+   "name": "Versalis Heart",
+   "cn": "异能之心",
+   "primary": 2959386164,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1380835868": {
+   "name": "Spirit Edge's Rally",
+   "cn": "剑圣的炼气",
+   "primary": 2009598453,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "934311996": {
+   "name": "Spirit Edge's Fury",
+   "cn": "剑圣的闪刃",
+   "primary": 2452677621,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1740760547": {
+   "name": "Spirit Edge's Warpath",
+   "cn": "剑圣的战气",
+   "primary": 2068825210,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1029588600": {
+   "name": "Dark Huntress's Volley",
+   "cn": "魔眼的万箭",
+   "primary": 3898603744,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2267888377": {
+   "name": "Dark Huntress's Surge",
+   "cn": "魔眼的凛翔",
+   "primary": 2238888111,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2959295748": {
+   "name": "Dark Huntress's Warpath",
+   "cn": "魔眼的战气",
+   "primary": 2175964121,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3386424727": {
+   "name": "Supreme Primarch's Awe",
+   "cn": "天司长的灵威",
+   "primary": 3557629595,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2874113366": {
+   "name": "Supreme Primarch's Nimbus",
+   "cn": "天司长的风雅",
+   "primary": 360738300,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3437561831": {
+   "name": "Supreme Primarch's Warpath",
+   "cn": "天司长的战气",
+   "primary": 1314875142,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3192656806": {
+   "name": "Gladiator's Frenzy",
+   "cn": "狼王的激昂",
+   "primary": 501304421,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2976398045": {
+   "name": "Gladiator's Top",
+   "cn": "狼王的大转轮",
+   "primary": 647327525,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1167567016": {
+   "name": "Gladiator's Warpath",
+   "cn": "狼王的战气",
+   "primary": 3684800360,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2441409403": {
+   "name": "Bladequeen's Serenade",
+   "cn": "刃姬的小夜曲",
+   "primary": 2069563421,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "611992051": {
+   "name": "Bladequeen's Circuit",
+   "cn": "刃姬的轮舞曲",
+   "primary": 2597196811,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1804733858": {
+   "name": "Bladequeen's Warpath",
+   "cn": "刃姬的战气",
+   "primary": 2032559190,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3583301957": {
+   "name": "Ultramarine's Flash",
+   "cn": "群青的剑光",
+   "primary": 3514225250,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3821873461": {
+   "name": "Ultramarine's Adversity",
+   "cn": "群青的逆境",
+   "primary": 1176145415,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3035424700": {
+   "name": "Ultramarine's Warpath",
+   "cn": "群青的战气",
+   "primary": 3109276702,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "29049707": {
+   "name": "Thunderwolf's Recharge",
+   "cn": "雷狼的弹匣",
+   "primary": 2104875268,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2568570117": {
+   "name": "Thunderwolf's Acuity",
+   "cn": "雷狼的慧眼",
+   "primary": 3191080121,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1637982873": {
+   "name": "Thunderwolf's Warpath",
+   "cn": "雷狼的战气",
+   "primary": 1051936215,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2047264763": {
+   "name": "Enchantress's Blessing",
+   "cn": "转世的恩宠",
+   "primary": 1194869320,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1555186783": {
+   "name": "Enchantress's Rhythm",
+   "cn": "转世的跃动",
+   "primary": 813117847,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3674581093": {
+   "name": "Enchantress's Warpath",
+   "cn": "转世的战气",
+   "primary": 2155570820,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2574829143": {
+   "name": "The Black's Mark",
+   "cn": "黑龙的咒印",
+   "primary": 108106290,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2497479182": {
+   "name": "The Black's Impulse",
+   "cn": "黑龙的折跃",
+   "primary": 3985476312,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1092219035": {
+   "name": "The Black's Warpath",
+   "cn": "黑龙的战气",
+   "primary": 1431905071,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2885319154": {
+   "name": "Fortifying Vigor",
+   "cn": "强健甘露",
+   "primary": 263866344,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "1453746353": {
+   "name": "Instilling Vigor",
+   "cn": "修炼甘露",
+   "primary": 2765535360,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "3778388058": {
+   "name": "Gilding Vigor",
+   "cn": "幸运甘露",
+   "primary": 3454759926,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "595372577": {
+   "name": "Held Under Resistance I",
+   "cn": "水牢抗性",
+   "primary": 499767271,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "3750384379": {
+   "name": "Held Under Resistance II",
+   "cn": "水牢抗性Ⅱ",
+   "primary": 499767271,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "2756374464": {
+   "name": "Held Under Resistance III",
+   "cn": "水牢抗性Ⅲ",
+   "primary": 499767271,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "3057525274": {
+   "name": "Held Under Resistance IV",
+   "cn": "水牢抗性Ⅳ",
+   "primary": 499767271,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3444278215": {
+   "name": "Held Under Resistance V",
+   "cn": "水牢抗性Ⅴ",
+   "primary": 499767271,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2806786195": {
+   "name": "Darkflame Resistance I",
+   "cn": "异能耐受",
+   "primary": 3712643102,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "2580036471": {
+   "name": "Darkflame Resistance II",
+   "cn": "异能耐受Ⅱ",
+   "primary": 3712643102,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "2562930784": {
+   "name": "Darkflame Resistance III",
+   "cn": "异能耐受Ⅲ",
+   "primary": 3712643102,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "1003110357": {
+   "name": "Darkflame Resistance IV",
+   "cn": "异能耐受Ⅳ",
+   "primary": 3712643102,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "1287979805": {
+   "name": "Darkflame Resistance V",
+   "cn": "异能耐受Ⅴ",
+   "primary": 3712643102,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2103204418": {
+   "name": "Attack Down Resistance I",
+   "cn": "攻击DOWN抗性",
+   "primary": 1274208657,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "4244177737": {
+   "name": "Attack Down Resistance II",
+   "cn": "攻击DOWN抗性Ⅱ",
+   "primary": 1274208657,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "964309328": {
+   "name": "Attack Down Resistance III",
+   "cn": "攻击DOWN抗性Ⅲ",
+   "primary": 1274208657,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "2736851844": {
+   "name": "Attack Down Resistance IV",
+   "cn": "攻击DOWN抗性Ⅳ",
+   "primary": 1274208657,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3904414836": {
+   "name": "Attack Down Resistance V",
+   "cn": "攻击DOWN抗性Ⅴ",
+   "primary": 1274208657,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1066387060": {
+   "name": "Defense Down Resistance I",
+   "cn": "防御DOWN抗性",
+   "primary": 1725849777,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "2114783274": {
+   "name": "Defense Down Resistance II",
+   "cn": "防御DOWN抗性Ⅱ",
+   "primary": 1725849777,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "1301688088": {
+   "name": "Defense Down Resistance III",
+   "cn": "防御DOWN抗性Ⅲ",
+   "primary": 1725849777,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "1536398903": {
+   "name": "Defense Down Resistance IV",
+   "cn": "防御DOWN抗性Ⅳ",
+   "primary": 1725849777,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "2187819690": {
+   "name": "Defense Down Resistance V",
+   "cn": "防御DOWN抗性Ⅴ",
+   "primary": 1725849777,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "474822628": {
+   "name": "Crabby Resonance",
+   "cn": "钳蟹的共鸣",
+   "primary": 136328139,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "4177457924": {
+   "name": "Crabvestment Returns",
+   "cn": "钳蟹的报恩",
+   "primary": 453875863,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "4098058191": {
+   "name": "Seven Net",
+   "cn": "7net",
+   "primary": 2597893606,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "3955359376": {
+   "name": "Stronghold I",
+   "cn": "刚健",
+   "primary": 1957328342,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "750178521": {
+   "name": "Stronghold II",
+   "cn": "刚健Ⅱ",
+   "primary": 1957328342,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "485185706": {
+   "name": "Stronghold III",
+   "cn": "刚健Ⅲ",
+   "primary": 1957328342,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "2171873353": {
+   "name": "Stronghold IV",
+   "cn": "刚健Ⅳ",
+   "primary": 1957328342,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3738493828": {
+   "name": "Stronghold V",
+   "cn": "刚健Ⅴ",
+   "primary": 1957328342,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2158419248": {
+   "name": "Power Hungry I",
+   "cn": "修罗",
+   "primary": 3693239446,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "2776018971": {
+   "name": "Power Hungry II",
+   "cn": "修罗Ⅱ",
+   "primary": 3693239446,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "2495796659": {
+   "name": "Power Hungry III",
+   "cn": "修罗Ⅲ",
+   "primary": 3693239446,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "756581719": {
+   "name": "Power Hungry IV",
+   "cn": "修罗Ⅳ",
+   "primary": 3693239446,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "178746206": {
+   "name": "Power Hungry V",
+   "cn": "修罗Ⅴ",
+   "primary": 3693239446,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3666949793": {
+   "name": "War Elemental",
+   "cn": "属性克制转换",
+   "primary": 1280871463,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2587105433": {
+   "name": "Path to Mastery I",
+   "cn": "获得MSP",
+   "primary": 1581394661,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "1952562541": {
+   "name": "Path to Mastery II",
+   "cn": "获得MSPⅡ",
+   "primary": 1581394661,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "731175126": {
+   "name": "Path to Mastery III",
+   "cn": "获得MSPⅢ",
+   "primary": 1581394661,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "302800280": {
+   "name": "Path to Mastery IV",
+   "cn": "获得MSPⅣ",
+   "primary": 1581394661,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "2192769269": {
+   "name": "Path to Mastery V",
+   "cn": "获得MSPⅤ",
+   "primary": 1581394661,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "788966448": {
+   "name": "Untouchable",
+   "cn": "躲避距离",
+   "primary": 2943961735,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2929236422": {
+   "name": "Supplementary Damage I",
+   "cn": "追击",
+   "primary": 1470847760,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "1998979540": {
+   "name": "Supplementary Damage II",
+   "cn": "追击Ⅱ",
+   "primary": 1470847760,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "18144657": {
+   "name": "Supplementary Damage III",
+   "cn": "追击Ⅲ",
+   "primary": 1470847760,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "2865209881": {
+   "name": "Supplementary Damage IV",
+   "cn": "追击Ⅳ",
+   "primary": 1470847760,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "1119554588": {
+   "name": "Supplementary Damage V",
+   "cn": "追击Ⅴ",
+   "primary": 1470847760,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "256510562": {
+   "name": "Less Is More I",
+   "cn": "身无长技",
+   "primary": 2194548621,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "794483398": {
+   "name": "Less Is More II",
+   "cn": "身无长技Ⅱ",
+   "primary": 2194548621,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "1443426174": {
+   "name": "Less Is More III",
+   "cn": "身无长技Ⅲ",
+   "primary": 2194548621,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "1423323103": {
+   "name": "Less Is More IV",
+   "cn": "身无长技Ⅳ",
+   "primary": 2194548621,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "2510066286": {
+   "name": "Less Is More V",
+   "cn": "身无长技Ⅴ",
+   "primary": 2194548621,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1972196130": {
+   "name": "Head Start I",
+   "cn": "先发制人",
+   "primary": 359194852,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "2386501319": {
+   "name": "Head Start II",
+   "cn": "先发制人Ⅱ",
+   "primary": 359194852,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "3471433030": {
+   "name": "Head Start III",
+   "cn": "先发制人Ⅲ",
+   "primary": 359194852,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "1866942893": {
+   "name": "Head Start IV",
+   "cn": "先发制人Ⅳ",
+   "primary": 359194852,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "868785948": {
+   "name": "Head Start V",
+   "cn": "先发制人Ⅴ",
+   "primary": 359194852,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2589585900": {
+   "name": "Berserker I",
+   "cn": "穷寇心",
+   "primary": 1882806065,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "2316337681": {
+   "name": "Berserker II",
+   "cn": "穷寇心Ⅱ",
+   "primary": 1882806065,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "2325705588": {
+   "name": "Berserker III",
+   "cn": "穷寇心Ⅲ",
+   "primary": 1882806065,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "4229571937": {
+   "name": "Berserker IV",
+   "cn": "穷寇心Ⅳ",
+   "primary": 1882806065,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "761494821": {
+   "name": "Berserker V",
+   "cn": "穷寇心Ⅴ",
+   "primary": 1882806065,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1801004074": {
+   "name": "Potent Greens",
+   "cn": "万能药",
+   "primary": 3440945021,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "249686487": {
+   "name": "Roll of the Die",
+   "cn": "骰子剑",
+   "primary": 859723874,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1964522493": {
+   "name": "Glass Cannon I",
+   "cn": "刀上舞",
+   "primary": 2829260347,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "3063205334": {
+   "name": "Glass Cannon II",
+   "cn": "刀上舞Ⅱ",
+   "primary": 2829260347,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "990108687": {
+   "name": "Glass Cannon III",
+   "cn": "刀上舞Ⅲ",
+   "primary": 2829260347,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "2072788486": {
+   "name": "Glass Cannon IV",
+   "cn": "刀上舞Ⅳ",
+   "primary": 2829260347,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "229840632": {
+   "name": "Glass Cannon V",
+   "cn": "刀上舞Ⅴ",
+   "primary": 2829260347,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "4080232501": {
+   "name": "Flight over Fight",
+   "cn": "摇曳步",
+   "primary": 3961284473,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2451411160": {
+   "name": "Alpha+",
+   "cn": "α秘纹＋",
+   "primary": 3689011061,
+   "secondary": 3696775008,
+   "rarity": 5
+  },
+  "3996352483": {
+   "name": "Beta+",
+   "cn": "β秘纹＋",
+   "primary": 2368396142,
+   "secondary": 3696775008,
+   "rarity": 5
+  },
+  "1144547182": {
+   "name": "Gamma+",
+   "cn": "γ秘纹＋",
+   "primary": 1552297491,
+   "secondary": 3696775008,
+   "rarity": 5
+  },
+  "2196891620": {
+   "name": "Crabmiration",
+   "cn": "终极钳蟹因子",
+   "primary": 3552100895,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "4046148708": {
+   "name": "Greater Aegis I",
+   "cn": "金刚",
+   "primary": 1219058573,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "2611944813": {
+   "name": "Greater Aegis II",
+   "cn": "金刚Ⅱ",
+   "primary": 1219058573,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "634214515": {
+   "name": "Greater Aegis III",
+   "cn": "金刚Ⅲ",
+   "primary": 1219058573,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "1890087381": {
+   "name": "Greater Aegis IV",
+   "cn": "金刚Ⅳ",
+   "primary": 1219058573,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3224267754": {
+   "name": "Greater Aegis V",
+   "cn": "金刚Ⅴ",
+   "primary": 1219058573,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "4216361714": {
+   "name": "Auto Potion",
+   "cn": "自动药水",
+   "primary": 4146039191,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2896690010": {
+   "name": "0xACA7FB5A",
+   "cn": "",
+   "primary": 3402018802,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "2198936139": {
+   "name": "0x83111A4B",
+   "cn": "",
+   "primary": 3402018802,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "1124630929": {
+   "name": "0x43088191",
+   "cn": "",
+   "primary": 3402018802,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "1941405007": {
+   "name": "0x73B77D4F",
+   "cn": "",
+   "primary": 3402018802,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "602380557": {
+   "name": "0x23E7990D",
+   "cn": "",
+   "primary": 3402018802,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3170443136": {
+   "name": "Berserker Echo",
+   "cn": "狂战士",
+   "primary": 4001746207,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "879680883": {
+   "name": "Spartan Echo",
+   "cn": "斯巴达",
+   "primary": 1031885729,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2475939383": {
+   "name": "Super Ultimate Perfect Dodge",
+   "cn": "超终极精准躲避",
+   "primary": 1371608530,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1253893576": {
+   "name": "0x4ABCE5C8",
+   "cn": "",
+   "primary": 3273093624,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1229145750": {
+   "name": "Immortal Shell",
+   "cn": "可怕的漆黑钳蟹因子",
+   "primary": 3212377084,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1710244362": {
+   "name": "In a Pinch",
+   "cn": "漆黑之谊",
+   "primary": 1190015254,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2995366317": {
+   "name": "Sumo Force",
+   "cn": "相扑斗力",
+   "primary": 2311482059,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3446387846": {
+   "name": "Celestial Nyx I",
+   "cn": "天星之炼",
+   "primary": 233342880,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "1961811097": {
+   "name": "Celestial Nyx II",
+   "cn": "天星之炼Ⅱ",
+   "primary": 233342880,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "1925554749": {
+   "name": "Celestial Nyx III",
+   "cn": "天星之炼Ⅲ",
+   "primary": 233342880,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "1594454419": {
+   "name": "Celestial Nyx IV",
+   "cn": "天星之炼Ⅳ",
+   "primary": 233342880,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "1456576197": {
+   "name": "Celestial Nyx V",
+   "cn": "天星之炼Ⅴ",
+   "primary": 233342880,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1267125249": {
+   "name": "Celestial Lumen I",
+   "cn": "天星之煌",
+   "primary": 2809291152,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "3015756093": {
+   "name": "Celestial Lumen II",
+   "cn": "天星之煌Ⅱ",
+   "primary": 2809291152,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "309891606": {
+   "name": "Celestial Lumen III",
+   "cn": "天星之煌Ⅲ",
+   "primary": 2809291152,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "2417454469": {
+   "name": "Celestial Lumen IV",
+   "cn": "天星之煌Ⅳ",
+   "primary": 2809291152,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "1929423207": {
+   "name": "Celestial Lumen V",
+   "cn": "天星之煌Ⅴ",
+   "primary": 2809291152,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2215395738": {
+   "name": "Celestial Terra I",
+   "cn": "天星之界",
+   "primary": 2452806679,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "2884781653": {
+   "name": "Celestial Terra II",
+   "cn": "天星之界Ⅱ",
+   "primary": 2452806679,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "2415225079": {
+   "name": "Celestial Terra III",
+   "cn": "天星之界Ⅲ",
+   "primary": 2452806679,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "443825684": {
+   "name": "Celestial Terra IV",
+   "cn": "天星之界Ⅳ",
+   "primary": 2452806679,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "2271578735": {
+   "name": "Celestial Terra V",
+   "cn": "天星之界Ⅴ",
+   "primary": 2452806679,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3430800981": {
+   "name": "Celestial Incendo I",
+   "cn": "天星之焰",
+   "primary": 920880269,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "2844820983": {
+   "name": "Celestial Incendo II",
+   "cn": "天星之焰Ⅱ",
+   "primary": 920880269,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "2520321743": {
+   "name": "Celestial Incendo III",
+   "cn": "天星之焰Ⅲ",
+   "primary": 920880269,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "584877825": {
+   "name": "Celestial Incendo IV",
+   "cn": "天星之焰Ⅳ",
+   "primary": 920880269,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "1429663330": {
+   "name": "Celestial Incendo V",
+   "cn": "天星之焰Ⅴ",
+   "primary": 920880269,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1037272337": {
+   "name": "Celestial Aqua I",
+   "cn": "天星之雪",
+   "primary": 2828591747,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "432288910": {
+   "name": "Celestial Aqua II",
+   "cn": "天星之雪Ⅱ",
+   "primary": 2828591747,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "1493636569": {
+   "name": "Celestial Aqua III",
+   "cn": "天星之雪Ⅲ",
+   "primary": 2828591747,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "3531608486": {
+   "name": "Celestial Aqua IV",
+   "cn": "天星之雪Ⅳ",
+   "primary": 2828591747,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "2363590009": {
+   "name": "Celestial Aqua V",
+   "cn": "天星之雪Ⅴ",
+   "primary": 2828591747,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1404908095": {
+   "name": "Fatebreaker I",
+   "cn": "浪迹天涯",
+   "primary": 3492412936,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "2246598033": {
+   "name": "Fatebreaker II",
+   "cn": "浪迹天涯Ⅱ",
+   "primary": 3492412936,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "3705671131": {
+   "name": "Fatebreaker III",
+   "cn": "浪迹天涯Ⅲ",
+   "primary": 3492412936,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "3833682200": {
+   "name": "Fatebreaker IV",
+   "cn": "浪迹天涯Ⅳ",
+   "primary": 3492412936,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "1343845326": {
+   "name": "Fatebreaker V",
+   "cn": "浪迹天涯Ⅴ",
+   "primary": 3492412936,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2209695291": {
+   "name": "Celestial Ventus I",
+   "cn": "天星之止息",
+   "primary": 1931609893,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "2706090446": {
+   "name": "Celestial Ventus II",
+   "cn": "天星之止息Ⅱ",
+   "primary": 1931609893,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "2990673086": {
+   "name": "Celestial Ventus III",
+   "cn": "天星之止息Ⅲ",
+   "primary": 1931609893,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "2135898351": {
+   "name": "Celestial Ventus IV",
+   "cn": "天星之止息Ⅳ",
+   "primary": 1931609893,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "855666627": {
+   "name": "Celestial Ventus V",
+   "cn": "天星之止息Ⅴ",
+   "primary": 1931609893,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3784099727": {
+   "name": "Divergence I",
+   "cn": "分歧",
+   "primary": 4067143333,
+   "secondary": 2289754288,
+   "rarity": 1
+  },
+  "2585159": {
+   "name": "Divergence II",
+   "cn": "分歧Ⅱ",
+   "primary": 4067143333,
+   "secondary": 2289754288,
+   "rarity": 2
+  },
+  "3180046085": {
+   "name": "Divergence III",
+   "cn": "分歧Ⅲ",
+   "primary": 4067143333,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "2060049556": {
+   "name": "Divergence IV",
+   "cn": "分歧Ⅳ",
+   "primary": 4067143333,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "2824027363": {
+   "name": "Divergence V",
+   "cn": "分歧Ⅴ",
+   "primary": 4067143333,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "4051931910": {
+   "name": "Attack Power III+",
+   "cn": "攻击力Ⅲ＋",
+   "primary": 1342675484,
+   "secondary": 801700863,
+   "rarity": 3
+  },
+  "2452096239": {
+   "name": "Attack Power IV+",
+   "cn": "攻击力Ⅳ＋",
+   "primary": 1342675484,
+   "secondary": 801700863,
+   "rarity": 4
+  },
+  "148533881": {
+   "name": "Attack Power V+",
+   "cn": "攻击力Ⅴ＋",
+   "primary": 1342675484,
+   "secondary": 801700863,
+   "rarity": 5
+  },
+  "2378113050": {
+   "name": "Health III+",
+   "cn": "体力Ⅲ＋",
+   "primary": 4084396182,
+   "secondary": 801700863,
+   "rarity": 3
+  },
+  "2311736752": {
+   "name": "Health IV+",
+   "cn": "体力Ⅳ＋",
+   "primary": 4084396182,
+   "secondary": 801700863,
+   "rarity": 4
+  },
+  "3048357634": {
+   "name": "Health V+",
+   "cn": "体力Ⅴ＋",
+   "primary": 4084396182,
+   "secondary": 801700863,
+   "rarity": 5
+  },
+  "1011757007": {
+   "name": "Critical Hit Rate III+",
+   "cn": "暴击率Ⅲ＋",
+   "primary": 2373493147,
+   "secondary": 801700863,
+   "rarity": 3
+  },
+  "2338616592": {
+   "name": "Critical Hit Rate IV+",
+   "cn": "暴击率Ⅳ＋",
+   "primary": 2373493147,
+   "secondary": 801700863,
+   "rarity": 4
+  },
+  "1167971010": {
+   "name": "Critical Hit Rate V+",
+   "cn": "暴击率Ⅴ＋",
+   "primary": 2373493147,
+   "secondary": 801700863,
+   "rarity": 5
+  },
+  "3882104372": {
+   "name": "Stun Power III+",
+   "cn": "昏厥Ⅲ＋",
+   "primary": 3468099822,
+   "secondary": 801700863,
+   "rarity": 3
+  },
+  "3327368373": {
+   "name": "Stun Power IV+",
+   "cn": "昏厥Ⅳ＋",
+   "primary": 3468099822,
+   "secondary": 801700863,
+   "rarity": 4
+  },
+  "968796571": {
+   "name": "Stun Power V+",
+   "cn": "昏厥Ⅴ＋",
+   "primary": 3468099822,
+   "secondary": 801700863,
+   "rarity": 5
+  },
+  "1397461954": {
+   "name": "Enmity III+",
+   "cn": "背水Ⅲ＋",
+   "primary": 1061716793,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "103157142": {
+   "name": "Enmity IV+",
+   "cn": "背水Ⅳ＋",
+   "primary": 1061716793,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "4062351526": {
+   "name": "Enmity V+",
+   "cn": "背水Ⅴ＋",
+   "primary": 1061716793,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "2319305393": {
+   "name": "Stamina III+",
+   "cn": "热血Ⅲ＋",
+   "primary": 801700863,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "445911613": {
+   "name": "Stamina IV+",
+   "cn": "热血Ⅳ＋",
+   "primary": 801700863,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "1269097644": {
+   "name": "Stamina V+",
+   "cn": "热血Ⅴ＋",
+   "primary": 801700863,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "2399349244": {
+   "name": "Charged Attack III+",
+   "cn": "蓄力攻击Ⅲ＋",
+   "primary": 473304163,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "3501472928": {
+   "name": "Charged Attack IV+",
+   "cn": "蓄力攻击Ⅳ＋",
+   "primary": 473304163,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "480801511": {
+   "name": "Charged Attack V+",
+   "cn": "蓄力攻击Ⅴ＋",
+   "primary": 473304163,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "3550743591": {
+   "name": "Linked Together III+",
+   "cn": "协同攻击Ⅲ＋",
+   "primary": 1072455552,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "312353354": {
+   "name": "Linked Together IV+",
+   "cn": "协同攻击Ⅳ＋",
+   "primary": 1072455552,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "3158593875": {
+   "name": "Linked Together V+",
+   "cn": "协同攻击Ⅴ＋",
+   "primary": 1072455552,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "907887812": {
+   "name": "Throw III+",
+   "cn": "投掷Ⅲ＋",
+   "primary": 2366080407,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "3162067337": {
+   "name": "Throw IV+",
+   "cn": "投掷Ⅳ＋",
+   "primary": 2366080407,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "2359810497": {
+   "name": "Throw V+",
+   "cn": "投掷Ⅴ＋",
+   "primary": 2366080407,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "2130349069": {
+   "name": "Critical Damage III+",
+   "cn": "暴击伤害Ⅲ＋",
+   "primary": 3231160855,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "1594979397": {
+   "name": "Critical Damage IV+",
+   "cn": "暴击伤害Ⅳ＋",
+   "primary": 3231160855,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "1661855197": {
+   "name": "Critical Damage V+",
+   "cn": "暴击伤害Ⅴ＋",
+   "primary": 3231160855,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "2499216700": {
+   "name": "Exploiter III+",
+   "cn": "弱点攻击Ⅲ＋",
+   "primary": 1802063213,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "386325356": {
+   "name": "Exploiter IV+",
+   "cn": "弱点攻击Ⅳ＋",
+   "primary": 1802063213,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "316077369": {
+   "name": "Exploiter V+",
+   "cn": "弱点攻击Ⅴ＋",
+   "primary": 1802063213,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "681771525": {
+   "name": "Combo Finisher III+",
+   "cn": "连击收招Ⅲ＋",
+   "primary": 2812567336,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "3559768956": {
+   "name": "Combo Finisher IV+",
+   "cn": "连击收招Ⅳ＋",
+   "primary": 2812567336,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "2325117550": {
+   "name": "Combo Finisher V+",
+   "cn": "连击收招Ⅴ＋",
+   "primary": 2812567336,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "2184230690": {
+   "name": "Concentrated Fire III+",
+   "cn": "集中炮火Ⅲ＋",
+   "primary": 3009445917,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "3856229990": {
+   "name": "Concentrated Fire IV+",
+   "cn": "集中炮火Ⅳ＋",
+   "primary": 3009445917,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "3493394514": {
+   "name": "Concentrated Fire V+",
+   "cn": "集中炮火Ⅴ＋",
+   "primary": 3009445917,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "4186376912": {
+   "name": "Damage Cap III+",
+   "cn": "伤害上限Ⅲ＋",
+   "primary": 3696775008,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "211188273": {
+   "name": "Damage Cap IV+",
+   "cn": "伤害上限Ⅳ＋",
+   "primary": 3696775008,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "2966117476": {
+   "name": "Damage Cap V+",
+   "cn": "伤害上限Ⅴ＋",
+   "primary": 3696775008,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "1137562108": {
+   "name": "0x43CDD1FC",
+   "cn": "",
+   "primary": 3696775008,
+   "secondary": 4084396182,
+   "rarity": 5
+  },
+  "3361135017": {
+   "name": "0xC856D9A9",
+   "cn": "",
+   "primary": 3696775008,
+   "secondary": 2094004047,
+   "rarity": 5
+  },
+  "920766460": {
+   "name": "0x36E1C7FC",
+   "cn": "",
+   "primary": 3696775008,
+   "secondary": 3053428691,
+   "rarity": 5
+  },
+  "2620431226": {
+   "name": "0x9C309B7A",
+   "cn": "",
+   "primary": 3696775008,
+   "secondary": 3536380170,
+   "rarity": 5
+  },
+  "3291373724": {
+   "name": "0xC42E609C",
+   "cn": "",
+   "primary": 3696775008,
+   "secondary": 3769368062,
+   "rarity": 5
+  },
+  "1912575594": {
+   "name": "Combo Booster III+",
+   "cn": "连击加成Ⅲ＋",
+   "primary": 4051194041,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "2190491262": {
+   "name": "Combo Booster IV+",
+   "cn": "连击加成Ⅳ＋",
+   "primary": 4051194041,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "2828835017": {
+   "name": "Combo Booster V+",
+   "cn": "连击加成Ⅴ＋",
+   "primary": 4051194041,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "1342071525": {
+   "name": "Tyranny III+",
+   "cn": "暴君Ⅲ＋",
+   "primary": 1911626395,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "1177233363": {
+   "name": "Tyranny IV+",
+   "cn": "暴君Ⅳ＋",
+   "primary": 1911626395,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "2647142493": {
+   "name": "Tyranny V+",
+   "cn": "暴君Ⅴ＋",
+   "primary": 1911626395,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "2881532187": {
+   "name": "0xABC0B11B",
+   "cn": "",
+   "primary": 1911626395,
+   "secondary": 99806428,
+   "rarity": 5
+  },
+  "321475265": {
+   "name": "Lucky Charge III+",
+   "cn": "蓄力会心Ⅲ＋",
+   "primary": 3277525275,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "3542990982": {
+   "name": "Lucky Charge IV+",
+   "cn": "蓄力会心Ⅳ＋",
+   "primary": 3277525275,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "544561593": {
+   "name": "Lucky Charge V+",
+   "cn": "蓄力会心Ⅴ＋",
+   "primary": 3277525275,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "3511330644": {
+   "name": "Injury to Insult III+",
+   "cn": "弱化状态特效Ⅲ＋",
+   "primary": 1327117955,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "1979601125": {
+   "name": "Injury to Insult IV+",
+   "cn": "弱化状态特效Ⅳ＋",
+   "primary": 1327117955,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "4182467353": {
+   "name": "Injury to Insult V+",
+   "cn": "弱化状态特效Ⅴ＋",
+   "primary": 1327117955,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "4093674198": {
+   "name": "Overdrive Assassin III+",
+   "cn": "OVERDRIVE特效Ⅲ＋",
+   "primary": 2849079125,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "3755345428": {
+   "name": "Overdrive Assassin IV+",
+   "cn": "OVERDRIVE特效Ⅳ＋",
+   "primary": 2849079125,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "3691624657": {
+   "name": "Overdrive Assassin V+",
+   "cn": "OVERDRIVE特效Ⅴ＋",
+   "primary": 2849079125,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "2925353551": {
+   "name": "Break Assassin III+",
+   "cn": "破防特效Ⅲ＋",
+   "primary": 2895541441,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "900516924": {
+   "name": "Break Assassin IV+",
+   "cn": "破防特效Ⅳ＋",
+   "primary": 2895541441,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "1363476045": {
+   "name": "Break Assassin V+",
+   "cn": "破防特效Ⅴ＋",
+   "primary": 2895541441,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "2560655074": {
+   "name": "0x98A07EE2",
+   "cn": "",
+   "primary": 3868870292,
+   "secondary": 99806428,
+   "rarity": 5
+  },
+  "861774501": {
+   "name": "0x335DA2A5",
+   "cn": "",
+   "primary": 3868870292,
+   "secondary": 2373493147,
+   "rarity": 5
+  },
+  "1112561348": {
+   "name": "0x425056C4",
+   "cn": "",
+   "primary": 2089068211,
+   "secondary": 3696775008,
+   "rarity": 5
+  },
+  "683089491": {
+   "name": "0x28B71E53",
+   "cn": "",
+   "primary": 3578760359,
+   "secondary": 1219058573,
+   "rarity": 5
+  },
+  "3712557606": {
+   "name": "Guard Payback III+",
+   "cn": "格挡仇火Ⅲ＋",
+   "primary": 1009473456,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "4223219945": {
+   "name": "Guard Payback IV+",
+   "cn": "格挡仇火Ⅳ＋",
+   "primary": 1009473456,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "1303510465": {
+   "name": "Guard Payback V+",
+   "cn": "格挡仇火Ⅴ＋",
+   "primary": 1009473456,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "3856837963": {
+   "name": "0xE5E2AD4B",
+   "cn": "",
+   "primary": 2335962636,
+   "secondary": 3872242332,
+   "rarity": 5
+  },
+  "1955451411": {
+   "name": "0x748DD213",
+   "cn": "",
+   "primary": 2335962636,
+   "secondary": 831329001,
+   "rarity": 5
+  },
+  "46256900": {
+   "name": "0x02C1D304",
+   "cn": "",
+   "primary": 2335962636,
+   "secondary": 3536380170,
+   "rarity": 5
+  },
+  "4104511661": {
+   "name": "Dodge Payback III+",
+   "cn": "躲避仇火Ⅲ＋",
+   "primary": 2083409252,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "2555510072": {
+   "name": "Dodge Payback IV+",
+   "cn": "躲避仇火Ⅳ＋",
+   "primary": 2083409252,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "1616318857": {
+   "name": "Dodge Payback V+",
+   "cn": "躲避仇火Ⅴ＋",
+   "primary": 2083409252,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "4087058401": {
+   "name": "0xF39B8FE1",
+   "cn": "",
+   "primary": 2515794566,
+   "secondary": 801700863,
+   "rarity": 5
+  },
+  "3900381557": {
+   "name": "0xE87B1975",
+   "cn": "",
+   "primary": 99806428,
+   "secondary": 162168245,
+   "rarity": 5
+  },
+  "1225749252": {
+   "name": "0x490F7304",
+   "cn": "",
+   "primary": 612907763,
+   "secondary": 3468099822,
+   "rarity": 5
+  },
+  "398346305": {
+   "name": "Skilled Assault III+",
+   "cn": "能力伤害Ⅲ＋",
+   "primary": 3940753899,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "2977722887": {
+   "name": "Skilled Assault IV+",
+   "cn": "能力伤害Ⅳ＋",
+   "primary": 3940753899,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "2758321128": {
+   "name": "Skilled Assault V+",
+   "cn": "能力伤害Ⅴ＋",
+   "primary": 3940753899,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "895789645": {
+   "name": "Life on the Line III+",
+   "cn": "奋不顾身Ⅲ＋",
+   "primary": 2404396813,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "1450225354": {
+   "name": "Life on the Line IV+",
+   "cn": "奋不顾身Ⅳ＋",
+   "primary": 2404396813,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "1082966965": {
+   "name": "Life on the Line V+",
+   "cn": "奋不顾身Ⅴ＋",
+   "primary": 2404396813,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "2831579447": {
+   "name": "Quick Charge III+",
+   "cn": "快速蓄力Ⅲ＋",
+   "primary": 2215087280,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "3337035017": {
+   "name": "Quick Charge IV+",
+   "cn": "快速蓄力Ⅳ＋",
+   "primary": 2215087280,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "1903409471": {
+   "name": "Quick Charge V+",
+   "cn": "快速蓄力Ⅴ＋",
+   "primary": 2215087280,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "2705624504": {
+   "name": "0xA1448DB8",
+   "cn": "",
+   "primary": 1957328342,
+   "secondary": 4084396182,
+   "rarity": 3
+  },
+  "2054481996": {
+   "name": "0x7A74E84C",
+   "cn": "",
+   "primary": 1957328342,
+   "secondary": 4084396182,
+   "rarity": 4
+  },
+  "1820694588": {
+   "name": "0x6C85983C",
+   "cn": "",
+   "primary": 1957328342,
+   "secondary": 4084396182,
+   "rarity": 5
+  },
+  "2972594217": {
+   "name": "0xB12E3029",
+   "cn": "",
+   "primary": 1957328342,
+   "secondary": 1911626395,
+   "rarity": 5
+  },
+  "696058871": {
+   "name": "0x297D03F7",
+   "cn": "",
+   "primary": 1957328342,
+   "secondary": 99806428,
+   "rarity": 5
+  },
+  "896689244": {
+   "name": "0x3572645C",
+   "cn": "",
+   "primary": 3693239446,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "1549178693": {
+   "name": "0x5C569745",
+   "cn": "",
+   "primary": 3693239446,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "1623015585": {
+   "name": "0x60BD40A1",
+   "cn": "",
+   "primary": 3693239446,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "4079095760": {
+   "name": "0xF3220FD0",
+   "cn": "",
+   "primary": 2943961735,
+   "secondary": 4084396182,
+   "rarity": 5
+  },
+  "1063161816": {
+   "name": "0x3F5E8FD8",
+   "cn": "",
+   "primary": 1470847760,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "420242797": {
+   "name": "0x190C656D",
+   "cn": "",
+   "primary": 1470847760,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "483513191": {
+   "name": "0x1CD1D367",
+   "cn": "",
+   "primary": 1470847760,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "3760801040": {
+   "name": "0xE0294510",
+   "cn": "",
+   "primary": 1470847760,
+   "secondary": 3769368062,
+   "rarity": 5
+  },
+  "506379321": {
+   "name": "0x1E2EBC39",
+   "cn": "",
+   "primary": 1470847760,
+   "secondary": 1581394661,
+   "rarity": 5
+  },
+  "2424450481": {
+   "name": "0x90822DB1",
+   "cn": "",
+   "primary": 1470847760,
+   "secondary": 3468099822,
+   "rarity": 5
+  },
+  "2546944093": {
+   "name": "0x97CF485D",
+   "cn": "",
+   "primary": 3440945021,
+   "secondary": 1470847760,
+   "rarity": 5
+  },
+  "964039535": {
+   "name": "0x3976136F",
+   "cn": "",
+   "primary": 2194548621,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "3129606697": {
+   "name": "0xBA8A0229",
+   "cn": "",
+   "primary": 2194548621,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "4174350356": {
+   "name": "0xF8CF8814",
+   "cn": "",
+   "primary": 2194548621,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "833606714": {
+   "name": "0x31AFD43A",
+   "cn": "",
+   "primary": 359194852,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "3456021374": {
+   "name": "0xCDFEB37E",
+   "cn": "",
+   "primary": 359194852,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "196398298": {
+   "name": "0x0BB4CCDA",
+   "cn": "",
+   "primary": 359194852,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "1948835700": {
+   "name": "0x7428DF74",
+   "cn": "",
+   "primary": 1882806065,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "245502021": {
+   "name": "0x0EA21045",
+   "cn": "",
+   "primary": 1882806065,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "45758371": {
+   "name": "0x02BA37A3",
+   "cn": "",
+   "primary": 1882806065,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "3846633625": {
+   "name": "0xE546F899",
+   "cn": "",
+   "primary": 859723874,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "3196890901": {
+   "name": "0xBE8CAF15",
+   "cn": "",
+   "primary": 2829260347,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "4544440": {
+   "name": "0x004557B8",
+   "cn": "",
+   "primary": 2829260347,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "1232201979": {
+   "name": "0x4971E8FB",
+   "cn": "",
+   "primary": 2829260347,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "2818067515": {
+   "name": "0xA7F84C3B",
+   "cn": "",
+   "primary": 3961284473,
+   "secondary": 4084396182,
+   "rarity": 5
+  },
+  "1944371294": {
+   "name": "0x73E4C05E",
+   "cn": "",
+   "primary": 1219058573,
+   "secondary": 2094004047,
+   "rarity": 5
+  },
+  "717519168": {
+   "name": "0x2AC47940",
+   "cn": "",
+   "primary": 4001746207,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "100533073": {
+   "name": "0x05FE0351",
+   "cn": "",
+   "primary": 1031885729,
+   "secondary": 4084396182,
+   "rarity": 5
+  },
+  "1114296846": {
+   "name": "Crabs Are Forever+",
+   "cn": "永恒钳蟹因子＋",
+   "primary": 136328139,
+   "secondary": 3552100895,
+   "rarity": 5
+  },
+  "1024194763": {
+   "name": "0x3D0BF8CB",
+   "cn": "",
+   "primary": 1280871463,
+   "secondary": 162168245,
+   "rarity": 5
+  },
+  "3465297046": {
+   "name": "0xCE8C3C96",
+   "cn": "",
+   "primary": 1280871463,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "1862062726": {
+   "name": "0x6EFCD286",
+   "cn": "",
+   "primary": 1280871463,
+   "secondary": 1072455552,
+   "rarity": 5
+  },
+  "1878208650": {
+   "name": "0x6FF3308A",
+   "cn": "",
+   "primary": 1280871463,
+   "secondary": 4067143333,
+   "rarity": 5
+  },
+  "620295215": {
+   "name": "0x24F8F42F",
+   "cn": "",
+   "primary": 3273093624,
+   "secondary": 453875863,
+   "rarity": 5
+  },
+  "1724590266": {
+   "name": "Immortal Shell+",
+   "cn": "可怕的漆黑钳蟹因子＋",
+   "primary": 3212377084,
+   "secondary": 453875863,
+   "rarity": 5
+  },
+  "1987602537": {
+   "name": "In a Pinch+",
+   "cn": "漆黑之谊＋",
+   "primary": 1190015254,
+   "secondary": 453875863,
+   "rarity": 5
+  },
+  "409208813": {
+   "name": "0x186407ED",
+   "cn": "",
+   "primary": 233342880,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "2966329675": {
+   "name": "0xB0CE994B",
+   "cn": "",
+   "primary": 233342880,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "1075924024": {
+   "name": "0x40214C38",
+   "cn": "",
+   "primary": 233342880,
+   "secondary": 3868870292,
+   "rarity": 5
+  },
+  "4284428409": {
+   "name": "0xFF5F3079",
+   "cn": "",
+   "primary": 233342880,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "3726222723": {
+   "name": "0xDE19A583",
+   "cn": "",
+   "primary": 233342880,
+   "secondary": 3468099822,
+   "rarity": 5
+  },
+  "2981600228": {
+   "name": "0xB1B79BE4",
+   "cn": "",
+   "primary": 233342880,
+   "secondary": 3872242332,
+   "rarity": 5
+  },
+  "1943747539": {
+   "name": "0x73DB3BD3",
+   "cn": "",
+   "primary": 2809291152,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "723780079": {
+   "name": "0x2B2401EF",
+   "cn": "",
+   "primary": 2809291152,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "2576510632": {
+   "name": "0x99926EA8",
+   "cn": "",
+   "primary": 2809291152,
+   "secondary": 2515794566,
+   "rarity": 5
+  },
+  "2586116135": {
+   "name": "0x9A250027",
+   "cn": "",
+   "primary": 2809291152,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "511153889": {
+   "name": "0x1E7796E1",
+   "cn": "",
+   "primary": 2809291152,
+   "secondary": 2373493147,
+   "rarity": 5
+  },
+  "3267983868": {
+   "name": "0xC2C979FC",
+   "cn": "",
+   "primary": 2809291152,
+   "secondary": 2094004047,
+   "rarity": 5
+  },
+  "3301053373": {
+   "name": "0xC4C213BD",
+   "cn": "",
+   "primary": 2452806679,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "909510289": {
+   "name": "0x36360691",
+   "cn": "",
+   "primary": 2452806679,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "7227214": {
+   "name": "0x006E474E",
+   "cn": "",
+   "primary": 2452806679,
+   "secondary": 2094004047,
+   "rarity": 5
+  },
+  "2079681391": {
+   "name": "0x7BF56B6F",
+   "cn": "",
+   "primary": 2452806679,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "1386995782": {
+   "name": "0x52ABE046",
+   "cn": "",
+   "primary": 2452806679,
+   "secondary": 178391110,
+   "rarity": 5
+  },
+  "2095372316": {
+   "name": "0x7CE4D81C",
+   "cn": "",
+   "primary": 2452806679,
+   "secondary": 1957328342,
+   "rarity": 5
+  },
+  "475007666": {
+   "name": "0x1C500AB2",
+   "cn": "",
+   "primary": 920880269,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "3940783841": {
+   "name": "0xEAE396E1",
+   "cn": "",
+   "primary": 920880269,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "3620925806": {
+   "name": "0xD7D2F16E",
+   "cn": "",
+   "primary": 920880269,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "1706550728": {
+   "name": "0x65B7E5C8",
+   "cn": "",
+   "primary": 920880269,
+   "secondary": 342947936,
+   "rarity": 5
+  },
+  "289887294": {
+   "name": "0x1147543E",
+   "cn": "",
+   "primary": 2828591747,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "2802602608": {
+   "name": "0xA70C5270",
+   "cn": "",
+   "primary": 2828591747,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "4222711695": {
+   "name": "0xFBB1778F",
+   "cn": "",
+   "primary": 2828591747,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "4229545766": {
+   "name": "0xFC19BF26",
+   "cn": "",
+   "primary": 2828591747,
+   "secondary": 3053428691,
+   "rarity": 5
+  },
+  "2990690572": {
+   "name": "0xB242510C",
+   "cn": "",
+   "primary": 3492412936,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "1360651252": {
+   "name": "0x5119E3F4",
+   "cn": "",
+   "primary": 3492412936,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "79535979": {
+   "name": "0x04BD9F6B",
+   "cn": "",
+   "primary": 3492412936,
+   "secondary": 1072455552,
+   "rarity": 5
+  },
+  "442448338": {
+   "name": "0x1A5F39D2",
+   "cn": "",
+   "primary": 3492412936,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "706938082": {
+   "name": "0x2A2304E2",
+   "cn": "",
+   "primary": 3492412936,
+   "secondary": 3696775008,
+   "rarity": 5
+  },
+  "2614277134": {
+   "name": "0x9BD2B40E",
+   "cn": "",
+   "primary": 1931609893,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "2104623655": {
+   "name": "0x7D720227",
+   "cn": "",
+   "primary": 1931609893,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "1879658875": {
+   "name": "0x7009517B",
+   "cn": "",
+   "primary": 1931609893,
+   "secondary": 2083409252,
+   "rarity": 5
+  },
+  "2303953888": {
+   "name": "0x89538BE0",
+   "cn": "",
+   "primary": 1931609893,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "3587139429": {
+   "name": "0xD5CF6765",
+   "cn": "",
+   "primary": 1931609893,
+   "secondary": 1619384869,
+   "rarity": 5
+  },
+  "1640274960": {
+   "name": "0x61C49C10",
+   "cn": "",
+   "primary": 1931609893,
+   "secondary": 2475281414,
+   "rarity": 5
+  },
+  "144227157": {
+   "name": "0x0898BB55",
+   "cn": "",
+   "primary": 4067143333,
+   "secondary": 1342675484,
+   "rarity": 3
+  },
+  "2724651093": {
+   "name": "0xA266E055",
+   "cn": "",
+   "primary": 4067143333,
+   "secondary": 1342675484,
+   "rarity": 4
+  },
+  "4057528148": {
+   "name": "0xF1D8F754",
+   "cn": "",
+   "primary": 4067143333,
+   "secondary": 1470847760,
+   "rarity": 5
+  },
+  "2161099505": {
+   "name": "0x80CFC2F1",
+   "cn": "",
+   "primary": 4067143333,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "3852189194": {
+   "name": "0xE59BBE0A",
+   "cn": "",
+   "primary": 4067143333,
+   "secondary": 2373493147,
+   "rarity": 5
+  },
+  "2256469997": {
+   "name": "Attack Power III+",
+   "cn": "攻击力Ⅲ＋",
+   "primary": 1342675484,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "2564816032": {
+   "name": "Attack Power IV+",
+   "cn": "攻击力Ⅳ＋",
+   "primary": 1342675484,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "763309680": {
+   "name": "Attack Power V+",
+   "cn": "攻击力Ⅴ＋",
+   "primary": 1342675484,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2440220672": {
+   "name": "Health III+",
+   "cn": "体力Ⅲ＋",
+   "primary": 4084396182,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "3581972382": {
+   "name": "Health IV+",
+   "cn": "体力Ⅳ＋",
+   "primary": 4084396182,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3912165432": {
+   "name": "Health V+",
+   "cn": "体力Ⅴ＋",
+   "primary": 4084396182,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "835863012": {
+   "name": "Critical Hit Rate III+",
+   "cn": "暴击率Ⅲ＋",
+   "primary": 2373493147,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "2518361932": {
+   "name": "Critical Hit Rate IV+",
+   "cn": "暴击率Ⅳ＋",
+   "primary": 2373493147,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "196723080": {
+   "name": "Critical Hit Rate V+",
+   "cn": "暴击率Ⅴ＋",
+   "primary": 2373493147,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1573658480": {
+   "name": "Stun Power III+",
+   "cn": "昏厥Ⅲ＋",
+   "primary": 3468099822,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "2136857113": {
+   "name": "Stun Power IV+",
+   "cn": "昏厥Ⅳ＋",
+   "primary": 3468099822,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "2031986925": {
+   "name": "Stun Power V+",
+   "cn": "昏厥Ⅴ＋",
+   "primary": 3468099822,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "901582721": {
+   "name": "Enmity III+",
+   "cn": "背水Ⅲ＋",
+   "primary": 1061716793,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "2964133341": {
+   "name": "Enmity IV+",
+   "cn": "背水Ⅳ＋",
+   "primary": 1061716793,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "2734824286": {
+   "name": "Enmity V+",
+   "cn": "背水Ⅴ＋",
+   "primary": 1061716793,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2838620666": {
+   "name": "Stamina III+",
+   "cn": "热血Ⅲ＋",
+   "primary": 801700863,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "1969418250": {
+   "name": "Stamina IV+",
+   "cn": "热血Ⅳ＋",
+   "primary": 801700863,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3896853593": {
+   "name": "Stamina V+",
+   "cn": "热血Ⅴ＋",
+   "primary": 801700863,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2510558053": {
+   "name": "Charged Attack III+",
+   "cn": "蓄力攻击Ⅲ＋",
+   "primary": 473304163,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "3518449605": {
+   "name": "Charged Attack IV+",
+   "cn": "蓄力攻击Ⅳ＋",
+   "primary": 473304163,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "46563166": {
+   "name": "Charged Attack V+",
+   "cn": "蓄力攻击Ⅴ＋",
+   "primary": 473304163,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1758482554": {
+   "name": "Linked Together III+",
+   "cn": "协同攻击Ⅲ＋",
+   "primary": 1072455552,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "3586795391": {
+   "name": "Linked Together IV+",
+   "cn": "协同攻击Ⅳ＋",
+   "primary": 1072455552,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "1508193115": {
+   "name": "Linked Together V+",
+   "cn": "协同攻击Ⅴ＋",
+   "primary": 1072455552,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2551505307": {
+   "name": "Throw III+",
+   "cn": "投掷Ⅲ＋",
+   "primary": 2366080407,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "4045919327": {
+   "name": "Throw IV+",
+   "cn": "投掷Ⅳ＋",
+   "primary": 2366080407,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3031293381": {
+   "name": "Throw V+",
+   "cn": "投掷Ⅴ＋",
+   "primary": 2366080407,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "922006666": {
+   "name": "Critical Damage III+",
+   "cn": "暴击伤害Ⅲ＋",
+   "primary": 3231160855,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "3317116134": {
+   "name": "Critical Damage IV+",
+   "cn": "暴击伤害Ⅳ＋",
+   "primary": 3231160855,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "2637206446": {
+   "name": "Critical Damage V+",
+   "cn": "暴击伤害Ⅴ＋",
+   "primary": 3231160855,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2926325508": {
+   "name": "Exploiter III+",
+   "cn": "弱点攻击Ⅲ＋",
+   "primary": 1802063213,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "540518893": {
+   "name": "Exploiter IV+",
+   "cn": "弱点攻击Ⅳ＋",
+   "primary": 1802063213,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3215606910": {
+   "name": "Exploiter V+",
+   "cn": "弱点攻击Ⅴ＋",
+   "primary": 1802063213,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "238806636": {
+   "name": "Combo Finisher III+",
+   "cn": "连击收招Ⅲ＋",
+   "primary": 2812567336,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "327770376": {
+   "name": "Combo Finisher IV+",
+   "cn": "连击收招Ⅳ＋",
+   "primary": 2812567336,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "319097004": {
+   "name": "Combo Finisher V+",
+   "cn": "连击收招Ⅴ＋",
+   "primary": 2812567336,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1134177692": {
+   "name": "Concentrated Fire III+",
+   "cn": "集中炮火Ⅲ＋",
+   "primary": 3009445917,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "3146182517": {
+   "name": "Concentrated Fire IV+",
+   "cn": "集中炮火Ⅳ＋",
+   "primary": 3009445917,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3083096922": {
+   "name": "Concentrated Fire V+",
+   "cn": "集中炮火Ⅴ＋",
+   "primary": 3009445917,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3842094962": {
+   "name": "Damage Cap III+",
+   "cn": "伤害上限Ⅲ＋",
+   "primary": 3696775008,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "2714322882": {
+   "name": "Damage Cap IV+",
+   "cn": "伤害上限Ⅳ＋",
+   "primary": 3696775008,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "1423501828": {
+   "name": "Damage Cap V+",
+   "cn": "伤害上限Ⅴ＋",
+   "primary": 3696775008,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2648865601": {
+   "name": "Combo Booster III+",
+   "cn": "连击加成Ⅲ＋",
+   "primary": 4051194041,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "4031524060": {
+   "name": "Combo Booster IV+",
+   "cn": "连击加成Ⅳ＋",
+   "primary": 4051194041,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "1782261331": {
+   "name": "Combo Booster V+",
+   "cn": "连击加成Ⅴ＋",
+   "primary": 4051194041,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2881517938": {
+   "name": "Tyranny III+",
+   "cn": "暴君Ⅲ＋",
+   "primary": 1911626395,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "3247978941": {
+   "name": "Tyranny IV+",
+   "cn": "暴君Ⅳ＋",
+   "primary": 1911626395,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "2761097132": {
+   "name": "Tyranny V+",
+   "cn": "暴君Ⅴ＋",
+   "primary": 1911626395,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2166196842": {
+   "name": "Lucky Charge III+",
+   "cn": "蓄力会心Ⅲ＋",
+   "primary": 3277525275,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "1858721467": {
+   "name": "Lucky Charge IV+",
+   "cn": "蓄力会心Ⅳ＋",
+   "primary": 3277525275,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "2183456480": {
+   "name": "Lucky Charge V+",
+   "cn": "蓄力会心Ⅴ＋",
+   "primary": 3277525275,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3529102807": {
+   "name": "Injury to Insult III+",
+   "cn": "弱化状态特效Ⅲ＋",
+   "primary": 1327117955,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "4061322084": {
+   "name": "Injury to Insult IV+",
+   "cn": "弱化状态特效Ⅳ＋",
+   "primary": 1327117955,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3279554626": {
+   "name": "Injury to Insult V+",
+   "cn": "弱化状态特效Ⅴ＋",
+   "primary": 1327117955,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "470885322": {
+   "name": "Overdrive Assassin III+",
+   "cn": "OVERDRIVE特效Ⅲ＋",
+   "primary": 2849079125,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "2561587315": {
+   "name": "Overdrive Assassin IV+",
+   "cn": "OVERDRIVE特效Ⅳ＋",
+   "primary": 2849079125,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "963887556": {
+   "name": "Overdrive Assassin V+",
+   "cn": "OVERDRIVE特效Ⅴ＋",
+   "primary": 2849079125,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "311556042": {
+   "name": "Break Assassin III+",
+   "cn": "破防特效Ⅲ＋",
+   "primary": 2895541441,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "228692990": {
+   "name": "Break Assassin IV+",
+   "cn": "破防特效Ⅳ＋",
+   "primary": 2895541441,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "273471210": {
+   "name": "Break Assassin V+",
+   "cn": "破防特效Ⅴ＋",
+   "primary": 2895541441,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2740423016": {
+   "name": "Garrison IV+",
+   "cn": "坚守Ⅳ＋",
+   "primary": 3872242332,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "941342308": {
+   "name": "Garrison V+",
+   "cn": "坚守Ⅴ＋",
+   "primary": 3872242332,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2702236702": {
+   "name": "Improved Guard IV+",
+   "cn": "格挡性能Ⅳ＋",
+   "primary": 178391110,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3090343847": {
+   "name": "Improved Guard V+",
+   "cn": "格挡性能Ⅴ＋",
+   "primary": 178391110,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "861623760": {
+   "name": "Guard Payback III+",
+   "cn": "格挡仇火Ⅲ＋",
+   "primary": 1009473456,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "1905222391": {
+   "name": "Guard Payback IV+",
+   "cn": "格挡仇火Ⅳ＋",
+   "primary": 1009473456,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "1378620344": {
+   "name": "Guard Payback V+",
+   "cn": "格挡仇火Ⅴ＋",
+   "primary": 1009473456,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3901891745": {
+   "name": "Improved Dodge+",
+   "cn": "躲避性能＋",
+   "primary": 2335962636,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "910986777": {
+   "name": "Dodge Payback III+",
+   "cn": "躲避仇火Ⅲ＋",
+   "primary": 2083409252,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "3262494831": {
+   "name": "Dodge Payback IV+",
+   "cn": "躲避仇火Ⅳ＋",
+   "primary": 2083409252,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "2725782414": {
+   "name": "Dodge Payback V+",
+   "cn": "躲避仇火Ⅴ＋",
+   "primary": 2083409252,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3948882144": {
+   "name": "Skilled Assault III+",
+   "cn": "能力伤害Ⅲ＋",
+   "primary": 3940753899,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "3234409828": {
+   "name": "Skilled Assault IV+",
+   "cn": "能力伤害Ⅳ＋",
+   "primary": 3940753899,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "713401538": {
+   "name": "Skilled Assault V+",
+   "cn": "能力伤害Ⅴ＋",
+   "primary": 3940753899,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1917218620": {
+   "name": "Aegis IV+",
+   "cn": "守护Ⅳ＋",
+   "primary": 3769368062,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "2619578842": {
+   "name": "Aegis V+",
+   "cn": "守护Ⅴ＋",
+   "primary": 3769368062,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2004886275": {
+   "name": "Steel Nerves IV+",
+   "cn": "坚持Ⅳ＋",
+   "primary": 342947936,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3986821482": {
+   "name": "Steel Nerves V+",
+   "cn": "坚持Ⅴ＋",
+   "primary": 342947936,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2959894182": {
+   "name": "Nimble Defense IV+",
+   "cn": "凝神Ⅳ＋",
+   "primary": 162168245,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "2763540896": {
+   "name": "Nimble Defense V+",
+   "cn": "凝神Ⅴ＋",
+   "primary": 162168245,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1603830070": {
+   "name": "Precise Resilience IV+",
+   "cn": "抗争Ⅳ＋",
+   "primary": 699568808,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "490406010": {
+   "name": "Precise Resilience V+",
+   "cn": "抗争Ⅴ＋",
+   "primary": 699568808,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "230042488": {
+   "name": "Life on the Line III+",
+   "cn": "奋不顾身Ⅲ＋",
+   "primary": 2404396813,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "1388130562": {
+   "name": "Life on the Line IV+",
+   "cn": "奋不顾身Ⅳ＋",
+   "primary": 2404396813,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "4128302009": {
+   "name": "Life on the Line V+",
+   "cn": "奋不顾身Ⅴ＋",
+   "primary": 2404396813,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1767816238": {
+   "name": "Quick Charge III+",
+   "cn": "快速蓄力Ⅲ＋",
+   "primary": 2215087280,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "2442570121": {
+   "name": "Quick Charge IV+",
+   "cn": "快速蓄力Ⅳ＋",
+   "primary": 2215087280,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "2442488633": {
+   "name": "Quick Charge V+",
+   "cn": "快速蓄力Ⅴ＋",
+   "primary": 2215087280,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3943717784": {
+   "name": "Stronghold III+",
+   "cn": "刚健Ⅲ＋",
+   "primary": 1957328342,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "374241130": {
+   "name": "Stronghold IV+",
+   "cn": "刚健Ⅳ＋",
+   "primary": 1957328342,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3572217910": {
+   "name": "Stronghold V+",
+   "cn": "刚健Ⅴ＋",
+   "primary": 1957328342,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "336079733": {
+   "name": "Power Hungry III+",
+   "cn": "修罗Ⅲ＋",
+   "primary": 3693239446,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "252105260": {
+   "name": "Power Hungry IV+",
+   "cn": "修罗Ⅳ＋",
+   "primary": 3693239446,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "4056612774": {
+   "name": "Power Hungry V+",
+   "cn": "修罗Ⅴ＋",
+   "primary": 3693239446,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "763695146": {
+   "name": "0x2D85102A",
+   "cn": "",
+   "primary": 1280871463,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1232361780": {
+   "name": "Untouchable+",
+   "cn": "躲避距离＋",
+   "primary": 2943961735,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1240198123": {
+   "name": "0x49EBEBEB",
+   "cn": "",
+   "primary": 2943961735,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "802526812": {
+   "name": "Supplementary Damage III+",
+   "cn": "追击Ⅲ＋",
+   "primary": 1470847760,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "2025452971": {
+   "name": "Supplementary Damage IV+",
+   "cn": "追击Ⅳ＋",
+   "primary": 1470847760,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "56249821": {
+   "name": "Supplementary Damage V+",
+   "cn": "追击Ⅴ＋",
+   "primary": 1470847760,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1926771000": {
+   "name": "Less Is More III+",
+   "cn": "身无长技Ⅲ＋",
+   "primary": 2194548621,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "589383597": {
+   "name": "Less Is More IV+",
+   "cn": "身无长技Ⅳ＋",
+   "primary": 2194548621,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "1396519803": {
+   "name": "Less Is More V+",
+   "cn": "身无长技Ⅴ＋",
+   "primary": 2194548621,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2931797493": {
+   "name": "Head Start III+",
+   "cn": "先发制人Ⅲ＋",
+   "primary": 359194852,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "4277047704": {
+   "name": "Head Start IV+",
+   "cn": "先发制人Ⅳ＋",
+   "primary": 359194852,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3194708616": {
+   "name": "Head Start V+",
+   "cn": "先发制人Ⅴ＋",
+   "primary": 359194852,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1473432306": {
+   "name": "Berserker III+",
+   "cn": "穷寇心Ⅲ＋",
+   "primary": 1882806065,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "253665265": {
+   "name": "Berserker IV+",
+   "cn": "穷寇心Ⅳ＋",
+   "primary": 1882806065,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "2212823150": {
+   "name": "Berserker V+",
+   "cn": "穷寇心Ⅴ＋",
+   "primary": 1882806065,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2590047216": {
+   "name": "0x9A60FBF0",
+   "cn": "",
+   "primary": 3440945021,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2983461232": {
+   "name": "Roll of the Die+",
+   "cn": "骰子剑＋",
+   "primary": 859723874,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1840449493": {
+   "name": "0x6DB307D5",
+   "cn": "",
+   "primary": 859723874,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1158941412": {
+   "name": "Glass Cannon III+",
+   "cn": "刀上舞Ⅲ＋",
+   "primary": 2829260347,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "1632761334": {
+   "name": "Glass Cannon IV+",
+   "cn": "刀上舞Ⅳ＋",
+   "primary": 2829260347,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "490771525": {
+   "name": "Glass Cannon V+",
+   "cn": "刀上舞Ⅴ＋",
+   "primary": 2829260347,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "172380603": {
+   "name": "Flight over Fight+",
+   "cn": "摇曳步＋",
+   "primary": 3961284473,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2384507404": {
+   "name": "0x8E20B20C",
+   "cn": "",
+   "primary": 3961284473,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1487019959": {
+   "name": "Greater Aegis III+",
+   "cn": "金刚Ⅲ＋",
+   "primary": 1219058573,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "2157030590": {
+   "name": "Greater Aegis IV+",
+   "cn": "金刚Ⅳ＋",
+   "primary": 1219058573,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "1864173680": {
+   "name": "Greater Aegis V+",
+   "cn": "金刚Ⅴ＋",
+   "primary": 1219058573,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1007637601": {
+   "name": "0x3C0F5461",
+   "cn": "",
+   "primary": 4146039191,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3333754858": {
+   "name": "0xC6B50FEA",
+   "cn": "",
+   "primary": 3402018802,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "2347926281": {
+   "name": "0x8BF28309",
+   "cn": "",
+   "primary": 3402018802,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3038183510": {
+   "name": "0xB5170056",
+   "cn": "",
+   "primary": 3402018802,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "858692400": {
+   "name": "Berserker Echo+",
+   "cn": "狂战士＋",
+   "primary": 4001746207,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2582165650": {
+   "name": "0x99E8B892",
+   "cn": "",
+   "primary": 4001746207,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2475537957": {
+   "name": "Spartan Echo+",
+   "cn": "斯巴达＋",
+   "primary": 1031885729,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1256664222": {
+   "name": "0x4AE72C9E",
+   "cn": "",
+   "primary": 1031885729,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3152556466": {
+   "name": "Super Ultimate Perfect Dodge+",
+   "cn": "超终极精准躲避＋",
+   "primary": 1371608530,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "288372184": {
+   "name": "0x113035D8",
+   "cn": "",
+   "primary": 1371608530,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "4182638694": {
+   "name": "Celestial Nyx III+",
+   "cn": "天星之炼Ⅲ＋",
+   "primary": 233342880,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "1352229665": {
+   "name": "Celestial Nyx IV+",
+   "cn": "天星之炼Ⅳ＋",
+   "primary": 233342880,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "2340455872": {
+   "name": "Celestial Nyx V+",
+   "cn": "天星之炼Ⅴ＋",
+   "primary": 233342880,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2430873141": {
+   "name": "Celestial Lumen III+",
+   "cn": "天星之煌Ⅲ＋",
+   "primary": 2809291152,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "589216418": {
+   "name": "Celestial Lumen IV+",
+   "cn": "天星之煌Ⅳ＋",
+   "primary": 2809291152,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "541664821": {
+   "name": "Celestial Lumen V+",
+   "cn": "天星之煌Ⅴ＋",
+   "primary": 2809291152,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "128166873": {
+   "name": "Celestial Terra III+",
+   "cn": "天星之界Ⅲ＋",
+   "primary": 2452806679,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "2342272271": {
+   "name": "Celestial Terra IV+",
+   "cn": "天星之界Ⅳ＋",
+   "primary": 2452806679,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3533494496": {
+   "name": "Celestial Terra V+",
+   "cn": "天星之界Ⅴ＋",
+   "primary": 2452806679,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "368449713": {
+   "name": "Celestial Incendo III+",
+   "cn": "天星之焰Ⅲ＋",
+   "primary": 920880269,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "1404126605": {
+   "name": "Celestial Incendo IV+",
+   "cn": "天星之焰Ⅳ＋",
+   "primary": 920880269,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "1946557196": {
+   "name": "Celestial Incendo V+",
+   "cn": "天星之焰Ⅴ＋",
+   "primary": 920880269,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "900596302": {
+   "name": "Celestial Aqua III+",
+   "cn": "天星之雪Ⅲ＋",
+   "primary": 2828591747,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "2880372278": {
+   "name": "Celestial Aqua IV+",
+   "cn": "天星之雪Ⅳ＋",
+   "primary": 2828591747,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "3779990936": {
+   "name": "Celestial Aqua V+",
+   "cn": "天星之雪Ⅴ＋",
+   "primary": 2828591747,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "661108706": {
+   "name": "Fatebreaker III+",
+   "cn": "浪迹天涯Ⅲ＋",
+   "primary": 3492412936,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "2796208735": {
+   "name": "Fatebreaker IV+",
+   "cn": "浪迹天涯Ⅳ＋",
+   "primary": 3492412936,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "1543000017": {
+   "name": "Fatebreaker V+",
+   "cn": "浪迹天涯Ⅴ＋",
+   "primary": 3492412936,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2176030253": {
+   "name": "Celestial Ventus III+",
+   "cn": "天星之止息Ⅲ＋",
+   "primary": 1931609893,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "1243994130": {
+   "name": "Celestial Ventus IV+",
+   "cn": "天星之止息Ⅳ＋",
+   "primary": 1931609893,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "2466314971": {
+   "name": "Celestial Ventus V+",
+   "cn": "天星之止息Ⅴ＋",
+   "primary": 1931609893,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2425181714": {
+   "name": "Divergence III+",
+   "cn": "分歧Ⅲ＋",
+   "primary": 4067143333,
+   "secondary": 2289754288,
+   "rarity": 3
+  },
+  "1297269596": {
+   "name": "Divergence IV+",
+   "cn": "分歧Ⅳ＋",
+   "primary": 4067143333,
+   "secondary": 2289754288,
+   "rarity": 4
+  },
+  "2068491056": {
+   "name": "Divergence V+",
+   "cn": "分歧Ⅴ＋",
+   "primary": 4067143333,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "652070201": {
+   "name": "Stout Heart+",
+   "cn": "霸体＋",
+   "primary": 3402018802,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2443976157": {
+   "name": "Guts V+",
+   "cn": "豪胆Ⅴ＋",
+   "primary": 3868870292,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "393207852": {
+   "name": "Poison Resistance V+",
+   "cn": "中毒抗性Ⅴ＋",
+   "primary": 2537245103,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "670056586": {
+   "name": "Burn Resistance V+",
+   "cn": "灼热抗性Ⅴ＋",
+   "primary": 2089068211,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1632613712": {
+   "name": "Sandtomb Resistance V+",
+   "cn": "泥沙抗性Ⅴ＋",
+   "primary": 3578760359,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "4017146486": {
+   "name": "Glaciate Resistance V+",
+   "cn": "冰冻抗性Ⅴ＋",
+   "primary": 4216792705,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "549247771": {
+   "name": "Dizzy Resistance V+",
+   "cn": "昏迷抗性Ⅴ＋",
+   "primary": 928622009,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1791174562": {
+   "name": "Paralysis Resistance V+",
+   "cn": "麻痹抗性Ⅴ＋",
+   "primary": 574788127,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "432754361": {
+   "name": "Skill Sealed Resistance V+",
+   "cn": "能力封印抗性Ⅴ＋",
+   "primary": 1353995229,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1178638797": {
+   "name": "SBA Sealed Resistance V+",
+   "cn": "奥义封印抗性Ⅴ＋",
+   "primary": 3484714882,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2115217197": {
+   "name": "Improved Healing V+",
+   "cn": "回复性能Ⅴ＋",
+   "primary": 2475281414,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "510247888": {
+   "name": "Regen V+",
+   "cn": "自愈Ⅴ＋",
+   "primary": 1619384869,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2512948815": {
+   "name": "Drain V+",
+   "cn": "HP吸收Ⅴ＋",
+   "primary": 2094004047,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "761214007": {
+   "name": "Autorevive V+",
+   "cn": "自动复活Ⅴ＋",
+   "primary": 2515794566,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1703976452": {
+   "name": "Quick Cooldown V+",
+   "cn": "迅捷能力Ⅴ＋",
+   "primary": 831329001,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1875979873": {
+   "name": "Cascade V+",
+   "cn": "怒涛Ⅴ＋",
+   "primary": 99806428,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3855218309": {
+   "name": "Uplift V+",
+   "cn": "激昂Ⅴ＋",
+   "primary": 3053428691,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "600329858": {
+   "name": "Potion Hoarder V+",
+   "cn": "药水携带数Ⅴ＋",
+   "primary": 612907763,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "4281122000": {
+   "name": "Low Profile V+",
+   "cn": "匿踪Ⅴ＋",
+   "primary": 3697311093,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3325857247": {
+   "name": "Provoke V+",
+   "cn": "挑衅Ⅴ＋",
+   "primary": 1612199723,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3618356682": {
+   "name": "Fast Learner V+",
+   "cn": "获得经验值Ⅴ＋",
+   "primary": 4136093167,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2657252765": {
+   "name": "Rupie Tycoon V+",
+   "cn": "获得金币Ⅴ＋",
+   "primary": 3362730114,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "571563889": {
+   "name": "Slow Resistance V+",
+   "cn": "缓速抗性Ⅴ＋",
+   "primary": 2734331525,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2982986257": {
+   "name": "Firm Stance V+",
+   "cn": "不动Ⅴ＋",
+   "primary": 3068338038,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2856701229": {
+   "name": "Blight Resistance V+",
+   "cn": "灾祸抗性Ⅴ＋",
+   "primary": 2533525007,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "189099503": {
+   "name": "Steady Focus V+",
+   "cn": "蓄力强化Ⅴ＋",
+   "primary": 5462430,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "693246457": {
+   "name": "Nimble Onslaught V+",
+   "cn": "明镜止水Ⅴ＋",
+   "primary": 3536380170,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3463209679": {
+   "name": "Precise Wrath V+",
+   "cn": "怒发冲冠Ⅴ＋",
+   "primary": 2128439760,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "4015852822": {
+   "name": "Held Under Resistance V+",
+   "cn": "水牢抗性Ⅴ＋",
+   "primary": 499767271,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3540458885": {
+   "name": "Darkflame Resistance V+",
+   "cn": "异能耐受Ⅴ＋",
+   "primary": 3712643102,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1922147321": {
+   "name": "Attack Down Resistance V+",
+   "cn": "攻击DOWN抗性Ⅴ＋",
+   "primary": 1274208657,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1346946374": {
+   "name": "Defense Down Resistance V+",
+   "cn": "防御DOWN抗性Ⅴ＋",
+   "primary": 1725849777,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "6368016": {
+   "name": "War Elemental+",
+   "cn": "属性克制转换＋",
+   "primary": 1280871463,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "775115235": {
+   "name": "Path to Mastery V+",
+   "cn": "获得MSPⅤ＋",
+   "primary": 1581394661,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2639226583": {
+   "name": "Auto Potion+",
+   "cn": "自动药水＋",
+   "primary": 3402018802,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1252295703": {
+   "name": "Potent Greens+",
+   "cn": "万能药＋",
+   "primary": 3402018802,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3142174966": {
+   "name": "0xBB49C8F6",
+   "cn": "",
+   "primary": 3868870292,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3122067241": {
+   "name": "0xBA16F729",
+   "cn": "",
+   "primary": 2475281414,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2205891940": {
+   "name": "0x837B3D64",
+   "cn": "",
+   "primary": 1619384869,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1000568373": {
+   "name": "0x3BA37635",
+   "cn": "",
+   "primary": 2094004047,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3544212764": {
+   "name": "0xD340651C",
+   "cn": "",
+   "primary": 2515794566,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2876252300": {
+   "name": "0xAB70208C",
+   "cn": "",
+   "primary": 831329001,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1824156429": {
+   "name": "0x6CBA6B0D",
+   "cn": "",
+   "primary": 99806428,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "78389889": {
+   "name": "0x04AC2281",
+   "cn": "",
+   "primary": 3053428691,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1053913010": {
+   "name": "0x3ED16FB2",
+   "cn": "",
+   "primary": 612907763,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "866942836": {
+   "name": "0x33AC7F74",
+   "cn": "",
+   "primary": 3697311093,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "143707496": {
+   "name": "0x0890CD68",
+   "cn": "",
+   "primary": 1612199723,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "471231164": {
+   "name": "0x1C166ABC",
+   "cn": "",
+   "primary": 4136093167,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2565029774": {
+   "name": "0x98E33F8E",
+   "cn": "",
+   "primary": 3362730114,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3037114968": {
+   "name": "0xB506B258",
+   "cn": "",
+   "primary": 5462430,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "645506288": {
+   "name": "0x2679A4F0",
+   "cn": "",
+   "primary": 3536380170,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2160675364": {
+   "name": "0x80C94A24",
+   "cn": "",
+   "primary": 2128439760,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1879381913": {
+   "name": "0x70051799",
+   "cn": "",
+   "primary": 1581394661,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1386668697": {
+   "name": "Fearless Soul+",
+   "cn": "英勇之魂＋",
+   "primary": 3439526504,
+   "secondary": 2743406818,
+   "rarity": 5
+  },
+  "2597993984": {
+   "name": "Guardian's Awakening+",
+   "cn": "守护者之觉醒＋",
+   "primary": 1006557464,
+   "secondary": 4165559094,
+   "rarity": 5
+  },
+  "2561069641": {
+   "name": "Helmsman's Awakening+",
+   "cn": "舵手之觉醒＋",
+   "primary": 354305652,
+   "secondary": 2742353392,
+   "rarity": 5
+  },
+  "3803414757": {
+   "name": "Mage's Awakening+",
+   "cn": "魔法师之觉醒＋",
+   "primary": 3029266248,
+   "secondary": 296412661,
+   "rarity": 5
+  },
+  "465473948": {
+   "name": "Veteran's Awakening+",
+   "cn": "老兵之觉醒＋",
+   "primary": 2860774728,
+   "secondary": 2451270412,
+   "rarity": 5
+  },
+  "2614217764": {
+   "name": "Rose's Awakening+",
+   "cn": "玫瑰之觉醒＋",
+   "primary": 600897151,
+   "secondary": 3265578921,
+   "rarity": 5
+  },
+  "2934932291": {
+   "name": "Holy Knight's Awakening+",
+   "cn": "圣骑士之觉醒＋",
+   "primary": 2594029936,
+   "secondary": 1378755464,
+   "rarity": 5
+  },
+  "3457603211": {
+   "name": "Eternal Rage's Awakening+",
+   "cn": "古今无双之觉醒＋",
+   "primary": 1415783215,
+   "secondary": 1159561548,
+   "rarity": 5
+  },
+  "3024168797": {
+   "name": "Phantasm's Awakening+",
+   "cn": "幽幻之觉醒＋",
+   "primary": 3641188925,
+   "secondary": 1934743042,
+   "rarity": 5
+  },
+  "441954033": {
+   "name": "Butterfly's Awakening+",
+   "cn": "斩姬之觉醒＋",
+   "primary": 699431915,
+   "secondary": 2788919757,
+   "rarity": 5
+  },
+  "3785038181": {
+   "name": "White Dragon's Awakening+",
+   "cn": "白龙之觉醒＋",
+   "primary": 2363462530,
+   "secondary": 3506515340,
+   "rarity": 5
+  },
+  "1732009359": {
+   "name": "Hero's Awakening+",
+   "cn": "勇士之觉醒＋",
+   "primary": 778413940,
+   "secondary": 384825448,
+   "rarity": 5
+  },
+  "38218819": {
+   "name": "Lord's Awakening+",
+   "cn": "王者之觉醒＋",
+   "primary": 3859444572,
+   "secondary": 1878020643,
+   "rarity": 5
+  },
+  "2877510803": {
+   "name": "Dragonslayer's Awakening+",
+   "cn": "屠龙者之觉醒＋",
+   "primary": 2261503428,
+   "secondary": 100287897,
+   "rarity": 5
+  },
+  "45217984": {
+   "name": "Founder's Awakening+",
+   "cn": "极致之觉醒＋",
+   "primary": 3963416948,
+   "secondary": 2941336221,
+   "rarity": 5
+  },
+  "295380136": {
+   "name": "Swordmaster's Awakening+",
+   "cn": "变幻自如之觉醒＋",
+   "primary": 215402021,
+   "secondary": 2746520096,
+   "rarity": 5
+  },
+  "1325520586": {
+   "name": "Crimson's Awakening+",
+   "cn": "真红之觉醒＋",
+   "primary": 1858052470,
+   "secondary": 4057324496,
+   "rarity": 5
+  },
+  "3841558233": {
+   "name": "Ebony's Awakening+",
+   "cn": "冥暗之觉醒＋",
+   "primary": 1950410857,
+   "secondary": 3440525669,
+   "rarity": 5
+  },
+  "2945351294": {
+   "name": "Versalis Soul+",
+   "cn": "异能之魂＋",
+   "primary": 2476869948,
+   "secondary": 2060501008,
+   "rarity": 5
+  },
+  "1789807503": {
+   "name": "Spirit Edge's Awakening+",
+   "cn": "剑圣之觉醒＋",
+   "primary": 2009598453,
+   "secondary": 2452677621,
+   "rarity": 5
+  },
+  "2395713699": {
+   "name": "Dark Huntress's Awakening+",
+   "cn": "魔眼之觉醒＋",
+   "primary": 3898603744,
+   "secondary": 2238888111,
+   "rarity": 5
+  },
+  "3099872606": {
+   "name": "Supreme Primarch's Awakening+",
+   "cn": "天司长之觉醒＋",
+   "primary": 3557629595,
+   "secondary": 360738300,
+   "rarity": 5
+  },
+  "2304424950": {
+   "name": "Gladiator's Awakening+",
+   "cn": "狼王之觉醒＋",
+   "primary": 501304421,
+   "secondary": 647327525,
+   "rarity": 5
+  },
+  "3634652401": {
+   "name": "Bladequeen's Awakening+",
+   "cn": "刃姬之觉醒＋",
+   "primary": 2069563421,
+   "secondary": 2597196811,
+   "rarity": 5
+  },
+  "2513190072": {
+   "name": "Ultramarine's Awakening+",
+   "cn": "群青之觉醒＋",
+   "primary": 3514225250,
+   "secondary": 1176145415,
+   "rarity": 5
+  },
+  "596983764": {
+   "name": "Thunderwolf's Awakening+",
+   "cn": "雷狼之觉醒＋",
+   "primary": 2104875268,
+   "secondary": 3191080121,
+   "rarity": 5
+  },
+  "1513492136": {
+   "name": "Enchantress's Awakening+",
+   "cn": "转世之觉醒＋",
+   "primary": 1194869320,
+   "secondary": 813117847,
+   "rarity": 5
+  },
+  "2829110271": {
+   "name": "The Black's Awakening+",
+   "cn": "黑龙之觉醒＋",
+   "primary": 108106290,
+   "secondary": 3985476312,
+   "rarity": 5
+  },
+  "871372816": {
+   "name": "Fearless Drive+",
+   "cn": "英勇神速＋",
+   "primary": 3439526504,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "940194984": {
+   "name": "Fearless Spirit+",
+   "cn": "英勇灵气＋",
+   "primary": 2743406818,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "118741288": {
+   "name": "Fearless Heart+",
+   "cn": "英勇之心＋",
+   "primary": 3671987420,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1377830059": {
+   "name": "Guardian's Conviction+",
+   "cn": "守护者的决心＋",
+   "primary": 1006557464,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "816050922": {
+   "name": "Guardian's Honor+",
+   "cn": "守护者的骄傲＋",
+   "primary": 4165559094,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2887211300": {
+   "name": "Guardian's Warpath+",
+   "cn": "守护者的战气＋",
+   "primary": 2600336030,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2668164759": {
+   "name": "Helmsman's Navigation+",
+   "cn": "舵手的指引＋",
+   "primary": 354305652,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3565862362": {
+   "name": "Helmsman's Tenacity+",
+   "cn": "舵手的坚持＋",
+   "primary": 2742353392,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3159608868": {
+   "name": "Helmsman's Warpath+",
+   "cn": "舵手的战气＋",
+   "primary": 3614395684,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2642992801": {
+   "name": "Mage's Aspiration+",
+   "cn": "魔法师的心愿＋",
+   "primary": 3029266248,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "4139842725": {
+   "name": "Mage's Savvy+",
+   "cn": "魔法师的伶利＋",
+   "primary": 296412661,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1139960465": {
+   "name": "Mage's Warpath+",
+   "cn": "魔法师的战气＋",
+   "primary": 3221316531,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1691760675": {
+   "name": "Veteran's Insight+",
+   "cn": "老兵的智慧＋",
+   "primary": 2860774728,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "95201426": {
+   "name": "Veteran's Vision+",
+   "cn": "老兵的天眼＋",
+   "primary": 2451270412,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3400417180": {
+   "name": "Veteran's Warpath+",
+   "cn": "老兵的战气＋",
+   "primary": 239255067,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "30516942": {
+   "name": "Rose's Blooming+",
+   "cn": "玫瑰早绽＋",
+   "primary": 600897151,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "568397495": {
+   "name": "Rose's Profusion+",
+   "cn": "玫瑰缤纷＋",
+   "primary": 3265578921,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1365141820": {
+   "name": "Rose's Warpath+",
+   "cn": "玫瑰的战气＋",
+   "primary": 2233052490,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2700693353": {
+   "name": "Holy Knight's Luster+",
+   "cn": "圣骑士的剑辉＋",
+   "primary": 2594029936,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2089124042": {
+   "name": "Holy Knight's Grandeur+",
+   "cn": "圣骑士的威光＋",
+   "primary": 1378755464,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1277712474": {
+   "name": "Holy Knight's Warpath+",
+   "cn": "圣骑士的战气＋",
+   "primary": 3092382396,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2100400119": {
+   "name": "Eternal Rage's Mettle+",
+   "cn": "古今无双的气概＋",
+   "primary": 1415783215,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1825185783": {
+   "name": "Eternal Rage's Ethos+",
+   "cn": "古今无双的强者＋",
+   "primary": 1159561548,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "812237566": {
+   "name": "Eternal Rage's Warpath+",
+   "cn": "古今无双的战气＋",
+   "primary": 251817200,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3765693029": {
+   "name": "Phantasm's Concord+",
+   "cn": "幽幻之谊＋",
+   "primary": 3641188925,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3211872906": {
+   "name": "Phantasm's Harmony+",
+   "cn": "幽幻之应＋",
+   "primary": 1934743042,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3835091074": {
+   "name": "Phantasm's Warpath+",
+   "cn": "幽幻的战气＋",
+   "primary": 2738476610,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2974014182": {
+   "name": "Butterfly's Grace+",
+   "cn": "斩姬梦幻＋",
+   "primary": 699431915,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2826510479": {
+   "name": "Butterfly's Valor+",
+   "cn": "斩姬武艺＋",
+   "primary": 2788919757,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3472038036": {
+   "name": "Butterfly's Warpath+",
+   "cn": "斩姬的战气＋",
+   "primary": 4258376996,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2245505845": {
+   "name": "White Dragon's Oath+",
+   "cn": "白龙的誓约＋",
+   "primary": 2363462530,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3050978944": {
+   "name": "White Dragon's Glory+",
+   "cn": "白龙的荣耀＋",
+   "primary": 3506515340,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2318932416": {
+   "name": "White Dragon's Warpath+",
+   "cn": "白龙的战气＋",
+   "primary": 1662438379,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2640037311": {
+   "name": "Hero's Creed+",
+   "cn": "勇士的信念＋",
+   "primary": 778413940,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "4221267413": {
+   "name": "Hero's Will+",
+   "cn": "勇士的毅力＋",
+   "primary": 384825448,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2760948447": {
+   "name": "Hero's Warpath+",
+   "cn": "勇士的战气＋",
+   "primary": 3640028188,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3044168306": {
+   "name": "Lord's Procession+",
+   "cn": "王者行进＋",
+   "primary": 3859444572,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3228518152": {
+   "name": "Lord's Ambition+",
+   "cn": "王者一心＋",
+   "primary": 1878020643,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1289544283": {
+   "name": "Lord's Warpath+",
+   "cn": "王者的战气＋",
+   "primary": 3125822983,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3233092238": {
+   "name": "Dragonslayer's Dominance+",
+   "cn": "屠龙者的威猛＋",
+   "primary": 2261503428,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3169710176": {
+   "name": "Dragonslayer's Ingenuity+",
+   "cn": "屠龙者的才智＋",
+   "primary": 100287897,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3793371504": {
+   "name": "Dragonslayer's Warpath+",
+   "cn": "屠龙者的战气＋",
+   "primary": 3352525297,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "348490737": {
+   "name": "Founder's Strategy+",
+   "cn": "极致谋略＋",
+   "primary": 3963416948,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "343778699": {
+   "name": "Founder's Truth+",
+   "cn": "极致真理＋",
+   "primary": 2941336221,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1727115560": {
+   "name": "Founder's Warpath+",
+   "cn": "极致的战气＋",
+   "primary": 3870895668,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3881977617": {
+   "name": "Swordmaster's Prowess+",
+   "cn": "变幻自如的迅刃＋",
+   "primary": 215402021,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1231363209": {
+   "name": "Swordmaster's Art+",
+   "cn": "变幻自如的妖剑士＋",
+   "primary": 2746520096,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1993634155": {
+   "name": "Swordmaster's Warpath+",
+   "cn": "变幻自如的战气＋",
+   "primary": 3673144103,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3075219579": {
+   "name": "Crimson's Clout+",
+   "cn": "真红烈焰＋",
+   "primary": 1858052470,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1154778233": {
+   "name": "Crimson's Flight+",
+   "cn": "真红翔舞＋",
+   "primary": 4057324496,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3219096460": {
+   "name": "Crimson's Warpath+",
+   "cn": "真红的战气＋",
+   "primary": 1326666263,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "4212101175": {
+   "name": "Ebony's Presence+",
+   "cn": "冥暗刚刃＋",
+   "primary": 1950410857,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2778502675": {
+   "name": "Ebony's Poise+",
+   "cn": "冥暗自若＋",
+   "primary": 3440525669,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3014345715": {
+   "name": "Ebony's Warpath+",
+   "cn": "冥暗的战气＋",
+   "primary": 3623467912,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3112832802": {
+   "name": "Versalis Foundation+",
+   "cn": "异能增长＋",
+   "primary": 2476869948,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3936948658": {
+   "name": "Versalis Ignition+",
+   "cn": "异能战意＋",
+   "primary": 2060501008,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2565465839": {
+   "name": "Versalis Heart+",
+   "cn": "异能之心＋",
+   "primary": 2959386164,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "316658448": {
+   "name": "Spirit Edge's Rally+",
+   "cn": "剑圣的炼气＋",
+   "primary": 2009598453,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2929560031": {
+   "name": "Spirit Edge's Fury+",
+   "cn": "剑圣的闪刃＋",
+   "primary": 2452677621,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2675096288": {
+   "name": "Spirit Edge's Warpath+",
+   "cn": "剑圣的战气＋",
+   "primary": 2068825210,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3947551085": {
+   "name": "Dark Huntress's Volley+",
+   "cn": "魔眼的万箭＋",
+   "primary": 3898603744,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3689219015": {
+   "name": "Dark Huntress's Surge+",
+   "cn": "魔眼的凛翔＋",
+   "primary": 2238888111,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2911678203": {
+   "name": "Dark Huntress's Warpath+",
+   "cn": "魔眼的战气＋",
+   "primary": 2175964121,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1050940235": {
+   "name": "Supreme Primarch's Awe+",
+   "cn": "天司长的灵威＋",
+   "primary": 3557629595,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2117751459": {
+   "name": "Supreme Primarch's Nimbus+",
+   "cn": "天司长的风雅＋",
+   "primary": 360738300,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1566126045": {
+   "name": "Supreme Primarch's Warpath+",
+   "cn": "天司长的战气＋",
+   "primary": 1314875142,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "674086896": {
+   "name": "Gladiator's Frenzy+",
+   "cn": "狼王的激昂＋",
+   "primary": 501304421,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "4061398193": {
+   "name": "Gladiator's Top+",
+   "cn": "狼王的大转轮＋",
+   "primary": 647327525,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1101795458": {
+   "name": "Gladiator's Warpath+",
+   "cn": "狼王的战气＋",
+   "primary": 3684800360,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3969908343": {
+   "name": "Bladequeen's Serenade+",
+   "cn": "刃姬的小夜曲＋",
+   "primary": 2069563421,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2530672222": {
+   "name": "Bladequeen's Circuit+",
+   "cn": "刃姬的轮舞曲＋",
+   "primary": 2597196811,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3950407047": {
+   "name": "Bladequeen's Warpath+",
+   "cn": "刃姬的战气＋",
+   "primary": 2032559190,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2663826797": {
+   "name": "Ultramarine's Flash+",
+   "cn": "群青的剑光＋",
+   "primary": 3514225250,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3557916659": {
+   "name": "Ultramarine's Adversity+",
+   "cn": "群青的逆境＋",
+   "primary": 1176145415,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1374259836": {
+   "name": "Ultramarine's Warpath+",
+   "cn": "群青的战气＋",
+   "primary": 3109276702,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "4184122570": {
+   "name": "Thunderwolf's Recharge+",
+   "cn": "雷狼的弹匣＋",
+   "primary": 2104875268,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "439720807": {
+   "name": "Thunderwolf's Acuity+",
+   "cn": "雷狼的慧眼＋",
+   "primary": 3191080121,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3636860167": {
+   "name": "Thunderwolf's Warpath+",
+   "cn": "雷狼的战气＋",
+   "primary": 1051936215,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "1680875153": {
+   "name": "Enchantress's Blessing+",
+   "cn": "转世的恩宠＋",
+   "primary": 1194869320,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3123234844": {
+   "name": "Enchantress's Rhythm+",
+   "cn": "转世的跃动＋",
+   "primary": 813117847,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "762364797": {
+   "name": "Enchantress's Warpath+",
+   "cn": "转世的战气＋",
+   "primary": 2155570820,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "86221314": {
+   "name": "The Black's Mark+",
+   "cn": "黑龙的咒印＋",
+   "primary": 108106290,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "119797740": {
+   "name": "The Black's Impulse+",
+   "cn": "黑龙的折跃＋",
+   "primary": 3985476312,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "2596089253": {
+   "name": "The Black's Warpath+",
+   "cn": "黑龙的战气＋",
+   "primary": 1431905071,
+   "secondary": 2289754288,
+   "rarity": 5
+  },
+  "3302852154": {
+   "name": "Seven-Star Boundary+",
+   "cn": "涯之七星＋",
+   "primary": 4010142797,
+   "secondary": 1619384869,
+   "rarity": 5
+  },
+  "1138615773": {
+   "name": "Two-Crown Boundary+",
+   "cn": "涯之二王＋",
+   "primary": 672273579,
+   "secondary": 1619384869,
+   "rarity": 5
+  },
+  "4045828149": {
+   "name": "Ain+",
+   "cn": "无态＋",
+   "primary": 439285150,
+   "secondary": 1619384869,
+   "rarity": 5
+  },
+  "3983629957": {
+   "name": "0xED715E85",
+   "cn": "",
+   "primary": 4084396182,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "2718959081": {
+   "name": "0xA21005E9",
+   "cn": "",
+   "primary": 2373493147,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "1753920028": {
+   "name": "0x688AB21C",
+   "cn": "",
+   "primary": 3468099822,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "3282354668": {
+   "name": "0xC3A4C1EC",
+   "cn": "",
+   "primary": 1061716793,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "3991735191": {
+   "name": "0xEDED0B97",
+   "cn": "",
+   "primary": 801700863,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "3428841112": {
+   "name": "0xCC5FF698",
+   "cn": "",
+   "primary": 3696775008,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "3144543800": {
+   "name": "0xBB6DEE38",
+   "cn": "",
+   "primary": 1911626395,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "1630233688": {
+   "name": "0x612B6458",
+   "cn": "",
+   "primary": 3868870292,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "3991903920": {
+   "name": "0xEDEF9EB0",
+   "cn": "",
+   "primary": 2335962636,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "3815094609": {
+   "name": "0xE365B951",
+   "cn": "",
+   "primary": 1619384869,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "849104412": {
+   "name": "0x329C4E1C",
+   "cn": "",
+   "primary": 2094004047,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "2662819771": {
+   "name": "0x9EB767BB",
+   "cn": "",
+   "primary": 2515794566,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "2963184995": {
+   "name": "0xB09E9D63",
+   "cn": "",
+   "primary": 99806428,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "3990058763": {
+   "name": "0xEDD3770B",
+   "cn": "",
+   "primary": 3053428691,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "2034850696": {
+   "name": "0x79495B88",
+   "cn": "",
+   "primary": 612907763,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "3877330133": {
+   "name": "0xE71B5CD5",
+   "cn": "",
+   "primary": 3769368062,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "69040928": {
+   "name": "0x041D7B20",
+   "cn": "",
+   "primary": 342947936,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "520167987": {
+   "name": "0x1F012233",
+   "cn": "",
+   "primary": 162168245,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "1507746183": {
+   "name": "0x59DE6187",
+   "cn": "",
+   "primary": 3536380170,
+   "secondary": 1342675484,
+   "rarity": 5
+  },
+  "532726181": {
+   "name": "0x1FC0C1A5",
+   "cn": "",
+   "primary": 3769368062,
+   "secondary": 3872242332,
+   "rarity": 5
+  },
+  "895712150": {
+   "name": "Aegis V+",
+   "cn": "守护Ⅴ＋",
+   "primary": 3769368062,
+   "secondary": 1957328342,
+   "rarity": 5
+  },
+  "4204787777": {
+   "name": "Regen V+",
+   "cn": "自愈Ⅴ＋",
+   "primary": 1619384869,
+   "secondary": 2094004047,
+   "rarity": 5
+  },
+  "3465191539": {
+   "name": "Supplementary Damage V+",
+   "cn": "追击Ⅴ＋",
+   "primary": 1470847760,
+   "secondary": 801700863,
+   "rarity": 5
+  },
+  "2658773553": {
+   "name": "Improved Guard V+",
+   "cn": "格挡性能Ⅴ＋",
+   "primary": 178391110,
+   "secondary": 2335962636,
+   "rarity": 5
+  },
+  "2888751524": {
+   "name": "Flight over Fight+",
+   "cn": "摇曳步＋",
+   "primary": 3961284473,
+   "secondary": 162168245,
+   "rarity": 5
+  },
+  "406111146": {
+   "name": "Damage Cap V+",
+   "cn": "伤害上限Ⅴ＋",
+   "primary": 3696775008,
+   "secondary": 1470847760,
+   "rarity": 5
+  },
+  "1706507071": {
+   "name": "Potion Hoarder V+",
+   "cn": "药水携带数Ⅴ＋",
+   "primary": 612907763,
+   "secondary": 2515794566,
+   "rarity": 5
+  },
+  "766892393": {
+   "name": "0x2DB5D969",
+   "cn": "",
+   "primary": 3402018802,
+   "secondary": 2289754288,
+   "rarity": 5
+  }
+ },
+ "trait_info": {
+  "505212110": {
+   "name": "Catastrophe Nova",
+   "cn": "浩劫新星",
+   "max_level": 35
+  },
+  "4067143333": {
+   "name": "Divergence",
+   "cn": "分歧",
+   "max_level": 15
+  },
+  "1931609893": {
+   "name": "Celestial Ventus",
+   "cn": "天星之止息",
+   "max_level": 15
+  },
+  "3492412936": {
+   "name": "Fatebreaker",
+   "cn": "浪迹天涯",
+   "max_level": 15
+  },
+  "2828591747": {
+   "name": "Celestial Aqua",
+   "cn": "天星之雪",
+   "max_level": 15
+  },
+  "920880269": {
+   "name": "Celestial Incendo",
+   "cn": "天星之焰",
+   "max_level": 15
+  },
+  "2452806679": {
+   "name": "Celestial Terra",
+   "cn": "天星之界",
+   "max_level": 15
+  },
+  "2809291152": {
+   "name": "Celestial Lumen",
+   "cn": "天星之煌",
+   "max_level": 15
+  },
+  "233342880": {
+   "name": "Celestial Nyx",
+   "cn": "天星之炼",
+   "max_level": 15
+  },
+  "2030206920": {
+   "name": "Unbound Master",
+   "cn": "超凡破限",
+   "max_level": 55
+  },
+  "1063789971": {
+   "name": "Unbound Exertion",
+   "cn": "超凡奥秘",
+   "max_level": 15
+  },
+  "34453299": {
+   "name": "Unbound Technique",
+   "cn": "超凡技艺",
+   "max_level": 15
+  },
+  "3151461427": {
+   "name": "Unbound Strike",
+   "cn": "超凡强击",
+   "max_level": 15
+  },
+  "22138782": {
+   "name": "DMG Cap Cardinal",
+   "cn": "伤害上限·红天",
+   "max_level": 15
+  },
+  "2935927228": {
+   "name": "DMG Cap Cobalt",
+   "cn": "伤害上限·苍天",
+   "max_level": 15
+  },
+  "593331951": {
+   "name": "Supernova",
+   "cn": "超新星",
+   "max_level": 15
+  },
+  "4294496100": {
+   "name": "DMG Cap Sage",
+   "cn": "伤害上限·疾天",
+   "max_level": 15
+  },
+  "997306130": {
+   "name": "DMG Cap Ecru",
+   "cn": "伤害上限·轰天",
+   "max_level": 15
+  },
+  "2311482059": {
+   "name": "Sumo Force",
+   "cn": "相扑斗力",
+   "max_level": 5
+  },
+  "1190015254": {
+   "name": "In a Pinch",
+   "cn": "漆黑之谊",
+   "max_level": 15
+  },
+  "3212377084": {
+   "name": "Immortal Shell",
+   "cn": "可怕的漆黑钳蟹因子",
+   "max_level": 20
+  },
+  "3273093624": {
+   "name": "0xC31771F8",
+   "cn": "",
+   "max_level": 15
+  },
+  "1431905071": {
+   "name": "The Black's Warpath",
+   "cn": "黑龙的战气",
+   "max_level": 15
+  },
+  "3985476312": {
+   "name": "The Black's Impulse",
+   "cn": "黑龙的折跃",
+   "max_level": 15
+  },
+  "108106290": {
+   "name": "The Black's Mark",
+   "cn": "黑龙的咒印",
+   "max_level": 15
+  },
+  "2155570820": {
+   "name": "Enchantress's Warpath",
+   "cn": "转世的战气",
+   "max_level": 15
+  },
+  "813117847": {
+   "name": "Enchantress's Rhythm",
+   "cn": "转世的跃动",
+   "max_level": 15
+  },
+  "1194869320": {
+   "name": "Enchantress's Blessing",
+   "cn": "转世的恩宠",
+   "max_level": 15
+  },
+  "1051936215": {
+   "name": "Thunderwolf's Warpath",
+   "cn": "雷狼的战气",
+   "max_level": 15
+  },
+  "3191080121": {
+   "name": "Thunderwolf's Acuity",
+   "cn": "雷狼的慧眼",
+   "max_level": 15
+  },
+  "2104875268": {
+   "name": "Thunderwolf's Recharge",
+   "cn": "雷狼的弹匣",
+   "max_level": 15
+  },
+  "3109276702": {
+   "name": "Ultramarine's Warpath",
+   "cn": "群青的战气",
+   "max_level": 15
+  },
+  "1176145415": {
+   "name": "Ultramarine's Adversity",
+   "cn": "群青的逆境",
+   "max_level": 15
+  },
+  "3514225250": {
+   "name": "Ultramarine's Flash",
+   "cn": "群青的剑光",
+   "max_level": 15
+  },
+  "2032559190": {
+   "name": "Bladequeen's Warpath",
+   "cn": "刃姬的战气",
+   "max_level": 15
+  },
+  "2597196811": {
+   "name": "Bladequeen's Circuit",
+   "cn": "刃姬的轮舞曲",
+   "max_level": 15
+  },
+  "2069563421": {
+   "name": "Bladequeen's Serenade",
+   "cn": "刃姬的小夜曲",
+   "max_level": 15
+  },
+  "3684800360": {
+   "name": "Gladiator's Warpath",
+   "cn": "狼王的战气",
+   "max_level": 15
+  },
+  "647327525": {
+   "name": "Gladiator's Top",
+   "cn": "狼王的大转轮",
+   "max_level": 15
+  },
+  "501304421": {
+   "name": "Gladiator's Frenzy",
+   "cn": "狼王的激昂",
+   "max_level": 15
+  },
+  "3557629595": {
+   "name": "Supreme Primarch's Awe",
+   "cn": "天司长的灵威",
+   "max_level": 15
+  },
+  "360738300": {
+   "name": "Supreme Primarch's Nimbus",
+   "cn": "天司长的风雅",
+   "max_level": 15
+  },
+  "1314875142": {
+   "name": "Supreme Primarch's Warpath",
+   "cn": "天司长的战气",
+   "max_level": 15
+  },
+  "439285150": {
+   "name": "Ain",
+   "cn": "无态",
+   "max_level": 15
+  },
+  "1371608530": {
+   "name": "Super Ultimate Perfect Dodge",
+   "cn": "超终极精准躲避",
+   "max_level": 15
+  },
+  "1031885729": {
+   "name": "Spartan Echo",
+   "cn": "斯巴达",
+   "max_level": 15
+  },
+  "4001746207": {
+   "name": "Berserker Echo",
+   "cn": "狂战士",
+   "max_level": 15
+  },
+  "631183515": {
+   "name": "0x259F189B",
+   "cn": "",
+   "max_level": 15
+  },
+  "3980020129": {
+   "name": "0xED3A49A1",
+   "cn": "",
+   "max_level": 15
+  },
+  "3540284198": {
+   "name": "0xD3047326",
+   "cn": "",
+   "max_level": 15
+  },
+  "2432048579": {
+   "name": "0x90F61DC3",
+   "cn": "",
+   "max_level": 15
+  },
+  "4146039191": {
+   "name": "Auto Potion",
+   "cn": "自动药水",
+   "max_level": 15
+  },
+  "1219058573": {
+   "name": "Greater Aegis",
+   "cn": "金刚",
+   "max_level": 30
+  },
+  "3416279598": {
+   "name": "0xCBA04A2E",
+   "cn": "",
+   "max_level": 1
+  },
+  "3552100895": {
+   "name": "Crabmiration",
+   "cn": "终极钳蟹因子",
+   "max_level": 45
+  },
+  "3623467912": {
+   "name": "Ebony's Warpath",
+   "cn": "冥暗的战气",
+   "max_level": 15
+  },
+  "1326666263": {
+   "name": "Crimson's Warpath",
+   "cn": "真红的战气",
+   "max_level": 15
+  },
+  "2959386164": {
+   "name": "Versalis Heart",
+   "cn": "异能之心",
+   "max_level": 15
+  },
+  "3870895668": {
+   "name": "Founder's Warpath",
+   "cn": "极致的战气",
+   "max_level": 15
+  },
+  "251817200": {
+   "name": "Eternal Rage's Warpath",
+   "cn": "古今无双的战气",
+   "max_level": 15
+  },
+  "4258376996": {
+   "name": "Butterfly's Warpath",
+   "cn": "斩姬的战气",
+   "max_level": 15
+  },
+  "3673144103": {
+   "name": "Swordmaster's Warpath",
+   "cn": "变幻自如的战气",
+   "max_level": 15
+  },
+  "3092382396": {
+   "name": "Holy Knight's Warpath",
+   "cn": "圣骑士的战气",
+   "max_level": 15
+  },
+  "3352525297": {
+   "name": "Dragonslayer's Warpath",
+   "cn": "屠龙者的战气",
+   "max_level": 15
+  },
+  "3125822983": {
+   "name": "Lord's Warpath",
+   "cn": "王者的战气",
+   "max_level": 15
+  },
+  "3640028188": {
+   "name": "Hero's Warpath",
+   "cn": "勇士的战气",
+   "max_level": 15
+  },
+  "1662438379": {
+   "name": "White Dragon's Warpath",
+   "cn": "白龙的战气",
+   "max_level": 15
+  },
+  "2738476610": {
+   "name": "Phantasm's Warpath",
+   "cn": "幽幻的战气",
+   "max_level": 15
+  },
+  "2233052490": {
+   "name": "Rose's Warpath",
+   "cn": "玫瑰的战气",
+   "max_level": 15
+  },
+  "239255067": {
+   "name": "Veteran's Warpath",
+   "cn": "老兵的战气",
+   "max_level": 15
+  },
+  "3221316531": {
+   "name": "Mage's Warpath",
+   "cn": "魔法师的战气",
+   "max_level": 15
+  },
+  "3614395684": {
+   "name": "Helmsman's Warpath",
+   "cn": "舵手的战气",
+   "max_level": 15
+  },
+  "2600336030": {
+   "name": "Guardian's Warpath",
+   "cn": "守护者的战气",
+   "max_level": 15
+  },
+  "3671987420": {
+   "name": "Fearless Heart",
+   "cn": "英勇之心",
+   "max_level": 15
+  },
+  "672273579": {
+   "name": "Two-Crown Boundary",
+   "cn": "涯之二王",
+   "max_level": 15
+  },
+  "2175964121": {
+   "name": "Dark Huntress's Warpath",
+   "cn": "魔眼的战气",
+   "max_level": 15
+  },
+  "2238888111": {
+   "name": "Dark Huntress's Surge",
+   "cn": "魔眼的凛翔",
+   "max_level": 15
+  },
+  "3898603744": {
+   "name": "Dark Huntress's Volley",
+   "cn": "魔眼的万箭",
+   "max_level": 15
+  },
+  "4010142797": {
+   "name": "Seven-Star Boundary",
+   "cn": "涯之七星",
+   "max_level": 15
+  },
+  "2068825210": {
+   "name": "Spirit Edge's Warpath",
+   "cn": "剑圣的战气",
+   "max_level": 15
+  },
+  "2452677621": {
+   "name": "Spirit Edge's Fury",
+   "cn": "剑圣的闪刃",
+   "max_level": 15
+  },
+  "2009598453": {
+   "name": "Spirit Edge's Rally",
+   "cn": "剑圣的炼气",
+   "max_level": 15
+  },
+  "1552297491": {
+   "name": "Gamma",
+   "cn": "γ秘纹",
+   "max_level": 30
+  },
+  "2368396142": {
+   "name": "Beta",
+   "cn": "β秘纹",
+   "max_level": 30
+  },
+  "3689011061": {
+   "name": "Alpha",
+   "cn": "α秘纹",
+   "max_level": 30
+  },
+  "3961284473": {
+   "name": "Flight over Fight",
+   "cn": "摇曳步",
+   "max_level": 15
+  },
+  "2829260347": {
+   "name": "Glass Cannon",
+   "cn": "刀上舞",
+   "max_level": 30
+  },
+  "859723874": {
+   "name": "Roll of the Die",
+   "cn": "骰子剑",
+   "max_level": 15
+  },
+  "3440945021": {
+   "name": "Potent Greens",
+   "cn": "万能药",
+   "max_level": 30
+  },
+  "1882806065": {
+   "name": "Berserker",
+   "cn": "穷寇心",
+   "max_level": 30
+  },
+  "359194852": {
+   "name": "Head Start",
+   "cn": "先发制人",
+   "max_level": 30
+  },
+  "2194548621": {
+   "name": "Less Is More",
+   "cn": "身无长技",
+   "max_level": 30
+  },
+  "1470847760": {
+   "name": "Supplementary DMG",
+   "cn": "追击",
+   "max_level": 45
+  },
+  "2943961735": {
+   "name": "Untouchable",
+   "cn": "躲避距离",
+   "max_level": 15
+  },
+  "1581394661": {
+   "name": "Path to Mastery",
+   "cn": "获得MSP",
+   "max_level": 45
+  },
+  "1280871463": {
+   "name": "War Elemental",
+   "cn": "属性克制转换",
+   "max_level": 15
+  },
+  "2597893606": {
+   "name": "Seven Net",
+   "cn": "7net",
+   "max_level": 6
+  },
+  "1075985448": {
+   "name": "Catastrophe",
+   "cn": "浩劫",
+   "max_level": 25
+  },
+  "1957328342": {
+   "name": "Stronghold",
+   "cn": "刚健",
+   "max_level": 30
+  },
+  "3693239446": {
+   "name": "Power Hungry",
+   "cn": "修罗",
+   "max_level": 30
+  },
+  "1061716793": {
+   "name": "Enmity",
+   "cn": "背水",
+   "max_level": 30
+  },
+  "4051194041": {
+   "name": "Combo Booster",
+   "cn": "连击加成",
+   "max_level": 30
+  },
+  "2895541441": {
+   "name": "Break Assassin",
+   "cn": "破防特效",
+   "max_level": 30
+  },
+  "473304163": {
+   "name": "Charged Attack DMG",
+   "cn": "蓄力攻击",
+   "max_level": 30
+  },
+  "1802063213": {
+   "name": "Weak Point DMG",
+   "cn": "弱点攻击",
+   "max_level": 45
+  },
+  "2812567336": {
+   "name": "Combo Finisher DMG",
+   "cn": "连击收招",
+   "max_level": 30
+  },
+  "1911626395": {
+   "name": "Tyranny",
+   "cn": "暴君",
+   "max_level": 30
+  },
+  "2849079125": {
+   "name": "Overdrive Assassin",
+   "cn": "OVERDRIVE特效",
+   "max_level": 30
+  },
+  "2089068211": {
+   "name": "Burn Resistance",
+   "cn": "灼热抗性",
+   "max_level": 30
+  },
+  "2537245103": {
+   "name": "Poison Resistance",
+   "cn": "中毒抗性",
+   "max_level": 30
+  },
+  "3578760359": {
+   "name": "Sandtomb Resistance",
+   "cn": "泥沙抗性",
+   "max_level": 30
+  },
+  "4216792705": {
+   "name": "Glaciate Resistance",
+   "cn": "冰冻抗性",
+   "max_level": 30
+  },
+  "928622009": {
+   "name": "Dizzy Resistance",
+   "cn": "昏迷抗性",
+   "max_level": 30
+  },
+  "574788127": {
+   "name": "Paralysis Resistance",
+   "cn": "麻痹抗性",
+   "max_level": 30
+  },
+  "1353995229": {
+   "name": "Skill Sealed Resistance",
+   "cn": "能力封印抗性",
+   "max_level": 30
+  },
+  "3484714882": {
+   "name": "SBA Sealed Resistance",
+   "cn": "奥义封印抗性",
+   "max_level": 30
+  },
+  "178391110": {
+   "name": "Improved Guard",
+   "cn": "格挡性能",
+   "max_level": 30
+  },
+  "1009473456": {
+   "name": "Guard Payback",
+   "cn": "格挡仇火",
+   "max_level": 30
+  },
+  "2335962636": {
+   "name": "Improved Dodge",
+   "cn": "躲避性能",
+   "max_level": 15
+  },
+  "2083409252": {
+   "name": "Dodge Payback",
+   "cn": "躲避仇火",
+   "max_level": 30
+  },
+  "3697311093": {
+   "name": "Low Profile",
+   "cn": "匿踪",
+   "max_level": 20
+  },
+  "1612199723": {
+   "name": "Provoke",
+   "cn": "挑衅",
+   "max_level": 20
+  },
+  "2734331525": {
+   "name": "Slow Resistance",
+   "cn": "缓速抗性",
+   "max_level": 30
+  },
+  "3068338038": {
+   "name": "Firm Stance",
+   "cn": "不动",
+   "max_level": 30
+  },
+  "2533525007": {
+   "name": "Blight Resistance",
+   "cn": "灾祸抗性",
+   "max_level": 30
+  },
+  "499767271": {
+   "name": "Held Under Resistance",
+   "cn": "水牢抗性",
+   "max_level": 30
+  },
+  "3712643102": {
+   "name": "Darkflame Resistance",
+   "cn": "异能耐受",
+   "max_level": 30
+  },
+  "1274208657": {
+   "name": "ATK↓ Resistance",
+   "cn": "攻击DOWN抗性",
+   "max_level": 30
+  },
+  "1725849777": {
+   "name": "DEF↓ Resistance",
+   "cn": "防御DOWN抗性",
+   "max_level": 30
+  },
+  "342947936": {
+   "name": "Steel Nerves",
+   "cn": "坚持",
+   "max_level": 15
+  },
+  "162168245": {
+   "name": "Nimble Defense",
+   "cn": "凝神",
+   "max_level": 30
+  },
+  "699568808": {
+   "name": "Precise Resilience",
+   "cn": "抗争",
+   "max_level": 30
+  },
+  "3439526504": {
+   "name": "Fearless Drive",
+   "cn": "英勇神速",
+   "max_level": 15
+  },
+  "2743406818": {
+   "name": "Fearless Spirit",
+   "cn": "英勇灵气",
+   "max_level": 15
+  },
+  "1006557464": {
+   "name": "Guardian's Conviction",
+   "cn": "守护者的决心",
+   "max_level": 15
+  },
+  "4165559094": {
+   "name": "Guardian's Honor",
+   "cn": "守护者的骄傲",
+   "max_level": 15
+  },
+  "354305652": {
+   "name": "Helmsman's Navigation",
+   "cn": "舵手的指引",
+   "max_level": 15
+  },
+  "296412661": {
+   "name": "Mage's Savvy",
+   "cn": "魔法师的伶利",
+   "max_level": 15
+  },
+  "2742353392": {
+   "name": "Helmsman's Tenacity",
+   "cn": "舵手的坚持",
+   "max_level": 15
+  },
+  "3029266248": {
+   "name": "Mage's Aspiration",
+   "cn": "魔法师的心愿",
+   "max_level": 15
+  },
+  "2860774728": {
+   "name": "Veteran's Insight",
+   "cn": "老兵的智慧",
+   "max_level": 15
+  },
+  "2451270412": {
+   "name": "Veteran's Vision",
+   "cn": "老兵的天眼",
+   "max_level": 15
+  },
+  "600897151": {
+   "name": "Rose's Blooming",
+   "cn": "玫瑰早绽",
+   "max_level": 15
+  },
+  "3265578921": {
+   "name": "Rose's Profusion",
+   "cn": "玫瑰缤纷",
+   "max_level": 15
+  },
+  "3641188925": {
+   "name": "Phantasm's Concord",
+   "cn": "幽幻之谊",
+   "max_level": 15
+  },
+  "1934743042": {
+   "name": "Phantasm's Harmony",
+   "cn": "幽幻之应",
+   "max_level": 15
+  },
+  "2363462530": {
+   "name": "White Dragon's Oath",
+   "cn": "白龙的誓约",
+   "max_level": 15
+  },
+  "3506515340": {
+   "name": "White Dragon's Glory",
+   "cn": "白龙的荣耀",
+   "max_level": 15
+  },
+  "778413940": {
+   "name": "Hero's Creed",
+   "cn": "勇士的信念",
+   "max_level": 15
+  },
+  "384825448": {
+   "name": "Hero's Will",
+   "cn": "勇士的毅力",
+   "max_level": 15
+  },
+  "3859444572": {
+   "name": "Lord's Procession",
+   "cn": "王者行进",
+   "max_level": 15
+  },
+  "1878020643": {
+   "name": "Lord's Ambition",
+   "cn": "王者一心",
+   "max_level": 15
+  },
+  "2261503428": {
+   "name": "Dragonslayer's Dominance",
+   "cn": "屠龙者的威猛",
+   "max_level": 15
+  },
+  "100287897": {
+   "name": "Dragonslayer's Ingenuity",
+   "cn": "屠龙者的才智",
+   "max_level": 15
+  },
+  "2594029936": {
+   "name": "Holy Knight's Luster",
+   "cn": "圣骑士的剑辉",
+   "max_level": 15
+  },
+  "1378755464": {
+   "name": "Holy Knight's Grandeur",
+   "cn": "圣骑士的威光",
+   "max_level": 15
+  },
+  "215402021": {
+   "name": "Swordmaster's Prowess",
+   "cn": "变幻自如的迅刃",
+   "max_level": 15
+  },
+  "2746520096": {
+   "name": "Swordmaster's Art",
+   "cn": "变幻自如的妖剑士",
+   "max_level": 15
+  },
+  "699431915": {
+   "name": "Butterfly's Grace",
+   "cn": "斩姬梦幻",
+   "max_level": 15
+  },
+  "2788919757": {
+   "name": "Butterfly's Valor",
+   "cn": "斩姬武艺",
+   "max_level": 15
+  },
+  "1415783215": {
+   "name": "Eternal Rage's Mettle",
+   "cn": "古今无双的气概",
+   "max_level": 15
+  },
+  "1159561548": {
+   "name": "Eternal Rage's Ethos",
+   "cn": "古今无双的强者",
+   "max_level": 15
+  },
+  "3963416948": {
+   "name": "Founder's Strategy",
+   "cn": "极致谋略",
+   "max_level": 15
+  },
+  "2941336221": {
+   "name": "Founder's Truth",
+   "cn": "极致真理",
+   "max_level": 15
+  },
+  "2476869948": {
+   "name": "Versalis Foundation",
+   "cn": "异能增长",
+   "max_level": 15
+  },
+  "2060501008": {
+   "name": "Versalis Ignition",
+   "cn": "异能战意",
+   "max_level": 15
+  },
+  "1858052470": {
+   "name": "Crimson's Clout",
+   "cn": "真红烈焰",
+   "max_level": 15
+  },
+  "4057324496": {
+   "name": "Crimson's Flight",
+   "cn": "真红翔舞",
+   "max_level": 15
+  },
+  "1950410857": {
+   "name": "Ebony's Presence",
+   "cn": "冥暗刚刃",
+   "max_level": 15
+  },
+  "3440525669": {
+   "name": "Ebony's Poise",
+   "cn": "冥暗自若",
+   "max_level": 15
+  },
+  "801700863": {
+   "name": "Stamina",
+   "cn": "热血",
+   "max_level": 30
+  },
+  "1072455552": {
+   "name": "Linked Together",
+   "cn": "协同攻击",
+   "max_level": 30
+  },
+  "2366080407": {
+   "name": "Throw DMG",
+   "cn": "投掷",
+   "max_level": 30
+  },
+  "3009445917": {
+   "name": "Concentrated Fire",
+   "cn": "集中炮火",
+   "max_level": 30
+  },
+  "3277525275": {
+   "name": "Lucky Charge",
+   "cn": "蓄力会心",
+   "max_level": 20
+  },
+  "3872242332": {
+   "name": "Garrison",
+   "cn": "坚守",
+   "max_level": 45
+  },
+  "2475281414": {
+   "name": "Improved Healing",
+   "cn": "回复性能",
+   "max_level": 30
+  },
+  "99806428": {
+   "name": "Cascade",
+   "cn": "怒涛",
+   "max_level": 20
+  },
+  "612907763": {
+   "name": "Potion Hoarder",
+   "cn": "药水携带数",
+   "max_level": 15
+  },
+  "4136093167": {
+   "name": "Fast Learner",
+   "cn": "获得经验值",
+   "max_level": 45
+  },
+  "3362730114": {
+   "name": "Rupie Tycoon",
+   "cn": "获得金币",
+   "max_level": 45
+  },
+  "3940753899": {
+   "name": "Skilled Assault",
+   "cn": "能力伤害",
+   "max_level": 30
+  },
+  "2712200093": {
+   "name": "Stout Heart",
+   "cn": "霸体",
+   "max_level": 15
+  },
+  "3868870292": {
+   "name": "Guts",
+   "cn": "豪胆",
+   "max_level": 20
+  },
+  "5462430": {
+   "name": "Steady Focus",
+   "cn": "蓄力强化",
+   "max_level": 15
+  },
+  "2404396813": {
+   "name": "Life on the Line",
+   "cn": "奋不顾身",
+   "max_level": 30
+  },
+  "2215087280": {
+   "name": "Quick Charge",
+   "cn": "快速蓄力",
+   "max_level": 30
+  },
+  "3500263141": {
+   "name": "0xD0A1C6E5",
+   "cn": "",
+   "max_level": 15
+  },
+  "1474865471": {
+   "name": "Sigil Booster",
+   "cn": "因子强化",
+   "max_level": 2
+  },
+  "2373493147": {
+   "name": "Critical Hit Rate",
+   "cn": "暴击率",
+   "max_level": 45
+  },
+  "3468099822": {
+   "name": "Stun Power",
+   "cn": "昏厥",
+   "max_level": 45
+  },
+  "3231160855": {
+   "name": "Critical Hit DMG",
+   "cn": "暴击伤害",
+   "max_level": 30
+  },
+  "3696775008": {
+   "name": "DMG Cap",
+   "cn": "伤害上限",
+   "max_level": 65
+  },
+  "1327117955": {
+   "name": "Injury to Insult",
+   "cn": "弱化状态特效",
+   "max_level": 30
+  },
+  "1619384869": {
+   "name": "Regen",
+   "cn": "自愈",
+   "max_level": 45
+  },
+  "2094004047": {
+   "name": "Drain",
+   "cn": "HP吸收",
+   "max_level": 45
+  },
+  "2515794566": {
+   "name": "Autorevive",
+   "cn": "自动复活",
+   "max_level": 20
+  },
+  "831329001": {
+   "name": "Quick Cooldown",
+   "cn": "迅捷能力",
+   "max_level": 45
+  },
+  "3769368062": {
+   "name": "Aegis",
+   "cn": "守护",
+   "max_level": 45
+  },
+  "1059866670": {
+   "name": "Supplements",
+   "cn": "强化效果延长",
+   "max_level": 30
+  },
+  "246244832": {
+   "name": "Natural Defenses",
+   "cn": "全弱化效果抗性",
+   "max_level": 15
+  },
+  "3536380170": {
+   "name": "Nimble Onslaught",
+   "cn": "明镜止水",
+   "max_level": 30
+  },
+  "2128439760": {
+   "name": "Precise Wrath",
+   "cn": "怒发冲冠",
+   "max_level": 30
+  },
+  "1342675484": {
+   "name": "ATK",
+   "cn": "攻击力",
+   "max_level": 50
+  },
+  "4084396182": {
+   "name": "HP",
+   "cn": "体力",
+   "max_level": 50
+  },
+  "3053428691": {
+   "name": "Uplift",
+   "cn": "激昂",
+   "max_level": 45
+  },
+  "1920590968": {
+   "name": "0x7279E478",
+   "cn": "",
+   "max_level": 50
+  },
+  "2609938956": {
+   "name": "0x9B90820C",
+   "cn": "",
+   "max_level": 1
+  },
+  "1834667356": {
+   "name": "0x6D5ACD5C",
+   "cn": "",
+   "max_level": 50
+  },
+  "2561468416": {
+   "name": "0x98ACE800",
+   "cn": "",
+   "max_level": 50
+  },
+  "1413488146": {
+   "name": "0x54401E12",
+   "cn": "",
+   "max_level": 50
+  },
+  "1030848632": {
+   "name": "0x3D718078",
+   "cn": "",
+   "max_level": 50
+  },
+  "240724676": {
+   "name": "0x0E592AC4",
+   "cn": "",
+   "max_level": 1
+  },
+  "2723457932": {
+   "name": "0xA254AB8C",
+   "cn": "",
+   "max_level": 50
+  },
+  "3199521257": {
+   "name": "0xBEB4D1E9",
+   "cn": "",
+   "max_level": 20
+  },
+  "3402018802": {
+   "name": "0xCAC6AFF2",
+   "cn": "",
+   "max_level": 1
+  },
+  "696436579": {
+   "name": "0x2982C763",
+   "cn": "",
+   "max_level": 50
+  },
+  "4261597231": {
+   "name": "0xFE02D02F",
+   "cn": "",
+   "max_level": 50
+  },
+  "3163604644": {
+   "name": "0xBC90C6A4",
+   "cn": "",
+   "max_level": 1
+  },
+  "2575988941": {
+   "name": "0x998A78CD",
+   "cn": "",
+   "max_level": 1
+  },
+  "3794678696": {
+   "name": "0xE22E33A8",
+   "cn": "",
+   "max_level": 1
+  },
+  "2174991284": {
+   "name": "0x81A3BBB4",
+   "cn": "",
+   "max_level": 1
+  },
+  "3347353246": {
+   "name": "0xC7848E9E",
+   "cn": "",
+   "max_level": 1
+  },
+  "3593126152": {
+   "name": "0xD62AC108",
+   "cn": "",
+   "max_level": 1
+  },
+  "3254202179": {
+   "name": "0xC1F72F43",
+   "cn": "",
+   "max_level": 50
+  },
+  "4137488502": {
+   "name": "0xF69D1076",
+   "cn": "",
+   "max_level": 20
+  },
+  "2716046842": {
+   "name": "0xA1E395FA",
+   "cn": "",
+   "max_level": 50
+  },
+  "1262488321": {
+   "name": "0x4B400B01",
+   "cn": "",
+   "max_level": 50
+  },
+  "1826216888": {
+   "name": "0x6CD9DBB8",
+   "cn": "",
+   "max_level": 50
+  },
+  "1208391236": {
+   "name": "0x48069644",
+   "cn": "",
+   "max_level": 50
+  },
+  "116903646": {
+   "name": "0x06F7CEDE",
+   "cn": "",
+   "max_level": 1
+  },
+  "1889216950": {
+   "name": "0x709B29B6",
+   "cn": "",
+   "max_level": 1
+  },
+  "4176936334": {
+   "name": "0xF8F6FD8E",
+   "cn": "",
+   "max_level": 1
+  },
+  "3812147424": {
+   "name": "0xE338C0E0",
+   "cn": "",
+   "max_level": 1
+  },
+  "1752302261": {
+   "name": "0x687202B5",
+   "cn": "",
+   "max_level": 1
+  },
+  "3584241795": {
+   "name": "0xD5A33083",
+   "cn": "",
+   "max_level": 1
+  },
+  "318837236": {
+   "name": "0x130111F4",
+   "cn": "",
+   "max_level": 1
+  },
+  "4076708701": {
+   "name": "0xF2FDA35D",
+   "cn": "",
+   "max_level": 50
+  },
+  "3131056344": {
+   "name": "0xBAA020D8",
+   "cn": "",
+   "max_level": 50
+  },
+  "3769084039": {
+   "name": "0xE0A7A887",
+   "cn": "",
+   "max_level": 50
+  },
+  "3895712106": {
+   "name": "0xE833D96A",
+   "cn": "",
+   "max_level": 50
+  },
+  "1037734138": {
+   "name": "0x3DDA90FA",
+   "cn": "",
+   "max_level": 50
+  },
+  "2128510976": {
+   "name": "0x7EDE8000",
+   "cn": "",
+   "max_level": 50
+  },
+  "3116918209": {
+   "name": "0xB9C865C1",
+   "cn": "",
+   "max_level": 50
+  },
+  "672577048": {
+   "name": "0x2816B618",
+   "cn": "",
+   "max_level": 50
+  },
+  "2472379623": {
+   "name": "0x935D84E7",
+   "cn": "",
+   "max_level": 50
+  },
+  "3252432714": {
+   "name": "0xC1DC2F4A",
+   "cn": "",
+   "max_level": 50
+  },
+  "276891751": {
+   "name": "0x10810867",
+   "cn": "",
+   "max_level": 50
+  },
+  "3350506164": {
+   "name": "0xC7B4AAB4",
+   "cn": "",
+   "max_level": 50
+  },
+  "486727549": {
+   "name": "0x1D02DF7D",
+   "cn": "",
+   "max_level": 50
+  },
+  "2441731667": {
+   "name": "0x9189DE53",
+   "cn": "",
+   "max_level": 50
+  },
+  "843017225": {
+   "name": "0x323F6C09",
+   "cn": "",
+   "max_level": 50
+  },
+  "1934383313": {
+   "name": "0x734C58D1",
+   "cn": "",
+   "max_level": 50
+  },
+  "1376339515": {
+   "name": "0x5209463B",
+   "cn": "",
+   "max_level": 50
+  },
+  "2107235286": {
+   "name": "0x7D99DBD6",
+   "cn": "",
+   "max_level": 50
+  },
+  "1382624881": {
+   "name": "0x52692E71",
+   "cn": "",
+   "max_level": 50
+  },
+  "263866344": {
+   "name": "0x0FBA47E8",
+   "cn": "",
+   "max_level": 50
+  },
+  "2765535360": {
+   "name": "0xA4D6B880",
+   "cn": "",
+   "max_level": 50
+  },
+  "3454759926": {
+   "name": "0xCDEB73F6",
+   "cn": "",
+   "max_level": 50
+  },
+  "136328139": {
+   "name": "Crabby Resonance",
+   "cn": "钳蟹的共鸣",
+   "max_level": 45
+  },
+  "453875863": {
+   "name": "0x1B0D9897",
+   "cn": "",
+   "max_level": 15
+  }
+ },
+ "trait_max": {
+  "505212110": 35,
+  "4067143333": 15,
+  "1931609893": 15,
+  "3492412936": 15,
+  "2828591747": 15,
+  "920880269": 15,
+  "2452806679": 15,
+  "2809291152": 15,
+  "233342880": 15,
+  "2030206920": 55,
+  "1063789971": 15,
+  "34453299": 15,
+  "3151461427": 15,
+  "22138782": 15,
+  "2935927228": 15,
+  "593331951": 15,
+  "4294496100": 15,
+  "997306130": 15,
+  "2311482059": 5,
+  "1190015254": 15,
+  "3212377084": 20,
+  "3273093624": 15,
+  "1431905071": 15,
+  "3985476312": 15,
+  "108106290": 15,
+  "2155570820": 15,
+  "813117847": 15,
+  "1194869320": 15,
+  "1051936215": 15,
+  "3191080121": 15,
+  "2104875268": 15,
+  "3109276702": 15,
+  "1176145415": 15,
+  "3514225250": 15,
+  "2032559190": 15,
+  "2597196811": 15,
+  "2069563421": 15,
+  "3684800360": 15,
+  "647327525": 15,
+  "501304421": 15,
+  "3557629595": 15,
+  "360738300": 15,
+  "1314875142": 15,
+  "439285150": 15,
+  "1371608530": 15,
+  "1031885729": 15,
+  "4001746207": 15,
+  "631183515": 15,
+  "3980020129": 15,
+  "3540284198": 15,
+  "2432048579": 15,
+  "4146039191": 15,
+  "1219058573": 30,
+  "3416279598": 1,
+  "3552100895": 45,
+  "3623467912": 15,
+  "1326666263": 15,
+  "2959386164": 15,
+  "3870895668": 15,
+  "251817200": 15,
+  "4258376996": 15,
+  "3673144103": 15,
+  "3092382396": 15,
+  "3352525297": 15,
+  "3125822983": 15,
+  "3640028188": 15,
+  "1662438379": 15,
+  "2738476610": 15,
+  "2233052490": 15,
+  "239255067": 15,
+  "3221316531": 15,
+  "3614395684": 15,
+  "2600336030": 15,
+  "3671987420": 15,
+  "672273579": 15,
+  "2175964121": 15,
+  "2238888111": 15,
+  "3898603744": 15,
+  "4010142797": 15,
+  "2068825210": 15,
+  "2452677621": 15,
+  "2009598453": 15,
+  "1552297491": 30,
+  "2368396142": 30,
+  "3689011061": 30,
+  "3961284473": 15,
+  "2829260347": 30,
+  "859723874": 15,
+  "3440945021": 30,
+  "1882806065": 30,
+  "359194852": 30,
+  "2194548621": 30,
+  "1470847760": 45,
+  "2943961735": 15,
+  "1581394661": 45,
+  "1280871463": 15,
+  "2597893606": 6,
+  "1075985448": 25,
+  "1957328342": 30,
+  "3693239446": 30,
+  "1061716793": 30,
+  "4051194041": 30,
+  "2895541441": 30,
+  "473304163": 30,
+  "1802063213": 45,
+  "2812567336": 30,
+  "1911626395": 30,
+  "2849079125": 30,
+  "2089068211": 30,
+  "2537245103": 30,
+  "3578760359": 30,
+  "4216792705": 30,
+  "928622009": 30,
+  "574788127": 30,
+  "1353995229": 30,
+  "3484714882": 30,
+  "178391110": 30,
+  "1009473456": 30,
+  "2335962636": 15,
+  "2083409252": 30,
+  "3697311093": 20,
+  "1612199723": 20,
+  "2734331525": 30,
+  "3068338038": 30,
+  "2533525007": 30,
+  "499767271": 30,
+  "3712643102": 30,
+  "1274208657": 30,
+  "1725849777": 30,
+  "342947936": 15,
+  "162168245": 30,
+  "699568808": 30,
+  "3439526504": 15,
+  "2743406818": 15,
+  "1006557464": 15,
+  "4165559094": 15,
+  "354305652": 15,
+  "296412661": 15,
+  "2742353392": 15,
+  "3029266248": 15,
+  "2860774728": 15,
+  "2451270412": 15,
+  "600897151": 15,
+  "3265578921": 15,
+  "3641188925": 15,
+  "1934743042": 15,
+  "2363462530": 15,
+  "3506515340": 15,
+  "778413940": 15,
+  "384825448": 15,
+  "3859444572": 15,
+  "1878020643": 15,
+  "2261503428": 15,
+  "100287897": 15,
+  "2594029936": 15,
+  "1378755464": 15,
+  "215402021": 15,
+  "2746520096": 15,
+  "699431915": 15,
+  "2788919757": 15,
+  "1415783215": 15,
+  "1159561548": 15,
+  "3963416948": 15,
+  "2941336221": 15,
+  "2476869948": 15,
+  "2060501008": 15,
+  "1858052470": 15,
+  "4057324496": 15,
+  "1950410857": 15,
+  "3440525669": 15,
+  "801700863": 30,
+  "1072455552": 30,
+  "2366080407": 30,
+  "3009445917": 30,
+  "3277525275": 20,
+  "3872242332": 45,
+  "2475281414": 30,
+  "99806428": 20,
+  "612907763": 15,
+  "4136093167": 45,
+  "3362730114": 45,
+  "3940753899": 30,
+  "2712200093": 15,
+  "3868870292": 20,
+  "5462430": 15,
+  "2404396813": 30,
+  "2215087280": 30,
+  "3500263141": 15,
+  "1474865471": 2,
+  "2373493147": 45,
+  "3468099822": 45,
+  "3231160855": 30,
+  "3696775008": 65,
+  "1327117955": 30,
+  "1619384869": 45,
+  "2094004047": 45,
+  "2515794566": 20,
+  "831329001": 45,
+  "3769368062": 45,
+  "1059866670": 30,
+  "246244832": 15,
+  "3536380170": 30,
+  "2128439760": 30,
+  "1342675484": 50,
+  "4084396182": 50,
+  "3053428691": 45,
+  "1920590968": 50,
+  "2609938956": 1,
+  "1834667356": 50,
+  "2561468416": 50,
+  "1413488146": 50,
+  "1030848632": 50,
+  "240724676": 1,
+  "2723457932": 50,
+  "3199521257": 20,
+  "3402018802": 1,
+  "696436579": 50,
+  "4261597231": 50,
+  "3163604644": 1,
+  "2575988941": 1,
+  "3794678696": 1,
+  "2174991284": 1,
+  "3347353246": 1,
+  "3593126152": 1,
+  "3254202179": 50,
+  "4137488502": 20,
+  "2716046842": 50,
+  "1262488321": 50,
+  "1826216888": 50,
+  "1208391236": 50,
+  "116903646": 1,
+  "1889216950": 1,
+  "4176936334": 1,
+  "3812147424": 1,
+  "1752302261": 1,
+  "3584241795": 1,
+  "318837236": 1,
+  "4076708701": 50,
+  "3131056344": 50,
+  "3769084039": 50,
+  "3895712106": 50,
+  "1037734138": 50,
+  "2128510976": 50,
+  "3116918209": 50,
+  "672577048": 50,
+  "2472379623": 50,
+  "3252432714": 50,
+  "276891751": 50,
+  "3350506164": 50,
+  "486727549": 50,
+  "2441731667": 50,
+  "843017225": 50,
+  "1934383313": 50,
+  "1376339515": 50,
+  "2107235286": 50,
+  "1382624881": 50,
+  "263866344": 50,
+  "2765535360": 50,
+  "3454759926": 50,
+  "136328139": 45,
+  "453875863": 15
+ }
+}

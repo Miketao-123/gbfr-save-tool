@@ -1,0 +1,26 @@
+# 统一换行符：避免跨电脑/跨平台出现无意义 diff
+* text=auto
+*.py text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.spec text eol=lf
+*.csv text eol=lf
+*.headers text eol=lf
+
+# 二进制 / msgpack 数据，不做换行转换
+*.msg binary
+*.dat binary
+*.exe binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.bin binary
+*.pyz binary
+*.pkg binary
+*.zip binary
+*.gz binary
+*.7z binary
+*.tar binary

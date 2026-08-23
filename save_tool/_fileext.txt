@@ -1,0 +1,64 @@
+
+ File Extensions ¶ 
+ Extension
+ Name
+ Can be viewed with
+ Can be edited with
+ .bk2 
+ Bink Video 
+ RAD Video Tools 
+ .bnk 
+ Wwise Bank
+ Wwiser 
+ .bxm 
+ Binary XML
+ GBFRDataTools 
+ GBFRDataTools 
+ .est 
+ PlatinumGames Est VFX file
+ .evtb 
+ Event Timeline Data - FlatBuffer
+ .gtp/gts 
+ Granite Streamed Texture
+ GraniteTextureReader 
+ N/A
+ .layout2 
+ Map Layout 2 - FlatBuffer 
+ Flatbuffers 
+ .msg 
+ MessagePack 
+ MsgPack2Json 
+ MsgPack2Json 
+ *_ingame.msg 
+ RelinkToolkit2 
+ RelinkToolkit2 
+ .minfo 
+ Model Info - FlatBuffer 
+ Flatbuffers 
+ .mmat 
+ Model Material - FlatBuffer 
+ Flatbuffers 
+ .mmesh 
+ Model Mesh Buffer
+ GBFRBlenderImporter 
+ .mot 
+ Motion (Animations)
+ GBFR2Blender2GBFR 
+ GBFR2Blender2GBFR 
+ .pck 
+ Wwise Pack
+ QuickBMS + wwise_pck_extractor.bms 
+ .tbl 
+ System Database Table
+ GBFRDataTools 
+ GBFRDataTools 
+ .wtb/.texture 
+ Texture (UI mainly)
+ GBFRDataTools 
+ F-SERVO 
+ Tip
+ More 010 Editor templates are available here (Cygames formats) and here (PlatinumGames formats).
+ May 23, 2026 
+ February 10, 2024 
+ GitHub 
+ 

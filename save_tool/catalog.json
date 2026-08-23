@@ -1,0 +1,7733 @@
+{
+ "items": {
+  "3676131125": {
+   "id": "ITEM_01_0000",
+   "en": "Cobblestone",
+   "cn": "圆石"
+  },
+  "3588791240": {
+   "id": "ITEM_01_0001",
+   "en": "Whorlshroom",
+   "cn": "旋风菇"
+  },
+  "3740104235": {
+   "id": "ITEM_01_0002",
+   "en": "Tempestone",
+   "cn": "飓风石"
+  },
+  "3025265753": {
+   "id": "ITEM_01_0003",
+   "en": "Valley Bloom",
+   "cn": "白谷草"
+  },
+  "3943484813": {
+   "id": "ITEM_01_0010",
+   "en": "Charred Lumber",
+   "cn": "烧焦的木材"
+  },
+  "476571749": {
+   "id": "ITEM_01_0011",
+   "en": "Damaged Tail Fin",
+   "cn": "残缺的尾翼"
+  },
+  "4096831893": {
+   "id": "ITEM_01_0012",
+   "en": "Machine Unit",
+   "cn": "动力组件"
+  },
+  "3285806162": {
+   "id": "ITEM_01_0013",
+   "en": "High-Grade Scrap",
+   "cn": "优质的废弃元件"
+  },
+  "3767762011": {
+   "id": "ITEM_01_0020",
+   "en": "Ice Spire",
+   "cn": "霜柱"
+  },
+  "760283653": {
+   "id": "ITEM_01_0021",
+   "en": "Snow Pillow",
+   "cn": "雪枕"
+  },
+  "486123110": {
+   "id": "ITEM_01_0022",
+   "en": "Frosted Flower",
+   "cn": "冰中花"
+  },
+  "3711932792": {
+   "id": "ITEM_01_0023",
+   "en": "Eternal Snowflake",
+   "cn": "永冻冰晶"
+  },
+  "543977153": {
+   "id": "ITEM_01_0030",
+   "en": "Desert Ash",
+   "cn": "沙漠矿尘"
+  },
+  "2456636137": {
+   "id": "ITEM_01_0031",
+   "en": "Red-Hot Cactus",
+   "cn": "铁火仙人掌"
+  },
+  "3943308744": {
+   "id": "ITEM_01_0032",
+   "en": "Fornax Stone",
+   "cn": "锻炉石"
+  },
+  "84693544": {
+   "id": "ITEM_01_0033",
+   "en": "Electromagnetic Sand",
+   "cn": "电磁砂核"
+  },
+  "1364032160": {
+   "id": "ITEM_01_0040",
+   "en": "Magma Worm",
+   "cn": "岩浆虫"
+  },
+  "1972916426": {
+   "id": "ITEM_01_0041",
+   "en": "Salamander Egg",
+   "cn": "火蜥蜴蛋"
+  },
+  "653950371": {
+   "id": "ITEM_01_0042",
+   "en": "Vermillion Powder",
+   "cn": "星晶砂"
+  },
+  "3261320412": {
+   "id": "ITEM_01_0043",
+   "en": "Phondam Sulfur",
+   "cn": "枫达慕硫磺"
+  },
+  "1919251967": {
+   "id": "ITEM_01_0050",
+   "en": "Busted Manikin",
+   "cn": "假人残骸"
+  },
+  "3269776007": {
+   "id": "ITEM_01_0051",
+   "en": "Aviaeth Prayer Book",
+   "cn": "星旅祈祷书"
+  },
+  "2042775542": {
+   "id": "ITEM_01_0052",
+   "en": "Patalena Glass",
+   "cn": "帕塔莱纳之晶"
+  },
+  "164079422": {
+   "id": "ITEM_01_0053",
+   "en": "Bloomsword Hilt",
+   "cn": "花剑护手"
+  },
+  "2039658224": {
+   "id": "ITEM_01_0060",
+   "en": "Welkin Reflection",
+   "cn": "碧虚记忆"
+  },
+  "808575972": {
+   "id": "ITEM_01_0061",
+   "en": "Dark Liquid",
+   "cn": "黑暗液体"
+  },
+  "4276813007": {
+   "id": "ITEM_01_0062",
+   "en": "Disast Ore",
+   "cn": "灾祸之石"
+  },
+  "1850319121": {
+   "id": "ITEM_01_0063",
+   "en": "Astral Matter",
+   "cn": "星界物质"
+  },
+  "2501506410": {
+   "id": "ITEM_02_0000",
+   "en": "Wind Shard",
+   "cn": "风之碎片"
+  },
+  "337572775": {
+   "id": "ITEM_02_0001",
+   "en": "Wind Orb",
+   "cn": "风之宝珠"
+  },
+  "1558896572": {
+   "id": "ITEM_02_0002",
+   "en": "Cyclone Orb",
+   "cn": "烈空宝珠"
+  },
+  "2471681747": {
+   "id": "ITEM_02_0010",
+   "en": "Water Shard",
+   "cn": "水之碎片"
+  },
+  "2339759498": {
+   "id": "ITEM_02_0011",
+   "en": "Water Orb",
+   "cn": "水之宝珠"
+  },
+  "446969901": {
+   "id": "ITEM_02_0012",
+   "en": "Frost Orb",
+   "cn": "雾冰宝珠"
+  },
+  "2384246061": {
+   "id": "ITEM_02_0020",
+   "en": "Earth Shard",
+   "cn": "土之碎片"
+  },
+  "2624145509": {
+   "id": "ITEM_02_0021",
+   "en": "Earth Orb",
+   "cn": "土之宝珠"
+  },
+  "676932786": {
+   "id": "ITEM_02_0022",
+   "en": "Rumbling Orb",
+   "cn": "大地宝珠"
+  },
+  "3079325823": {
+   "id": "ITEM_02_0030",
+   "en": "Fire Shard",
+   "cn": "炎之碎片"
+  },
+  "2457344843": {
+   "id": "ITEM_02_0031",
+   "en": "Fire Orb",
+   "cn": "炎之宝珠"
+  },
+  "953347280": {
+   "id": "ITEM_02_0032",
+   "en": "Inferno Orb",
+   "cn": "红莲宝珠"
+  },
+  "2879797801": {
+   "id": "ITEM_02_0040",
+   "en": "Dark Shard",
+   "cn": "暗之碎片"
+  },
+  "546286052": {
+   "id": "ITEM_02_0041",
+   "en": "Dark Orb",
+   "cn": "暗之宝珠"
+  },
+  "4142809192": {
+   "id": "ITEM_02_0042",
+   "en": "Abysm Orb",
+   "cn": "地狱宝珠"
+  },
+  "4201872265": {
+   "id": "ITEM_02_0050",
+   "en": "Light Shard",
+   "cn": "光之碎片"
+  },
+  "1809802857": {
+   "id": "ITEM_02_0051",
+   "en": "Light Orb",
+   "cn": "光之宝珠"
+  },
+  "365164038": {
+   "id": "ITEM_02_0052",
+   "en": "Shining Orb",
+   "cn": "煌光宝珠"
+  },
+  "3511718361": {
+   "id": "ITEM_03_0000",
+   "en": "Furycane Anima",
+   "cn": "胡拉坎之魂"
+  },
+  "1327385619": {
+   "id": "ITEM_03_0001",
+   "en": "Furycane Omega Anima",
+   "cn": "胡拉坎玛格纳之魂"
+  },
+  "1922924464": {
+   "id": "ITEM_03_0002",
+   "en": "Vitality Hoof",
+   "cn": "生机之蹄"
+  },
+  "1245792300": {
+   "id": "ITEM_03_0003",
+   "en": "Vitality Lush Hoof",
+   "cn": "生机之翠蹄"
+  },
+  "2170236644": {
+   "id": "ITEM_04_0000",
+   "en": "Managarmr Anima",
+   "cn": "玛纳加尔姆之魂"
+  },
+  "437340931": {
+   "id": "ITEM_04_0001",
+   "en": "Managarmr Omega Anima",
+   "cn": "玛纳加尔姆玛格纳之魂"
+  },
+  "389566932": {
+   "id": "ITEM_04_0002",
+   "en": "Sequestered Mane",
+   "cn": "隔绝之鬃"
+  },
+  "2960663592": {
+   "id": "ITEM_04_0003",
+   "en": "Sequestered Flood Mane",
+   "cn": "隔绝之苍鬃"
+  },
+  "3158391680": {
+   "id": "ITEM_05_0000",
+   "en": "Excavallion Anima",
+   "cn": "艾卡利翁之魂"
+  },
+  "335344645": {
+   "id": "ITEM_05_0001",
+   "en": "Excavallion Omega Anima",
+   "cn": "艾卡利翁玛格纳之魂"
+  },
+  "3128532516": {
+   "id": "ITEM_05_0002",
+   "en": "Fortified Hearth",
+   "cn": "镇守之炉"
+  },
+  "1159691642": {
+   "id": "ITEM_06_0000",
+   "en": "Vulkan Bolla Anima",
+   "cn": "伏尔甘博拉之魂"
+  },
+  "3846705512": {
+   "id": "ITEM_06_0001",
+   "en": "Vulkan Bolla Omega Anima",
+   "cn": "伏尔甘博拉玛格纳之魂"
+  },
+  "1280092791": {
+   "id": "ITEM_06_0002",
+   "en": "Dreaded Tail",
+   "cn": "畏惧之尾"
+  },
+  "905382371": {
+   "id": "ITEM_06_0003",
+   "en": "Dreaded Temper Tail",
+   "cn": "畏惧之赤尾"
+  },
+  "1129076351": {
+   "id": "ITEM_07_0000",
+   "en": "Angra Mainyu Anima",
+   "cn": "安格拉·曼纽之魂"
+  },
+  "3980101421": {
+   "id": "ITEM_07_0001",
+   "en": "Angra Mainyu Omega Anima",
+   "cn": "安格拉·曼纽玛格纳之魂"
+  },
+  "1580023139": {
+   "id": "ITEM_07_0002",
+   "en": "Calamitous Hand",
+   "cn": "灾祸之爪"
+  },
+  "1133596962": {
+   "id": "ITEM_08_0000",
+   "en": "Damascus Ingot",
+   "cn": "大马士革钢"
+  },
+  "3227297441": {
+   "id": "ITEM_09_0000",
+   "en": "Protector's Pride",
+   "cn": "守护者的荣耀"
+  },
+  "1800282498": {
+   "id": "ITEM_09_0001",
+   "en": "Id Anamnesis",
+   "cn": "伊德的记忆"
+  },
+  "3813701298": {
+   "id": "ITEM_09_0002",
+   "en": "Destrudo",
+   "cn": "决死本能"
+  },
+  "1164782515": {
+   "id": "ITEM_09_0003",
+   "en": "Mortido",
+   "cn": "自毁本能"
+  },
+  "3347313565": {
+   "id": "ITEM_09_0010",
+   "en": "Alpha Wolf's Valor",
+   "cn": "狼王的勇武"
+  },
+  "2570090035": {
+   "id": "ITEM_09_0011",
+   "en": "Gallanza Anamnesis",
+   "cn": "伽兰查的记忆"
+  },
+  "258689567": {
+   "id": "ITEM_09_0012",
+   "en": "Silver Wolf Clovis",
+   "cn": "白狼枪尖"
+  },
+  "1846797170": {
+   "id": "ITEM_09_0013",
+   "en": "Silver Wolf Trefoil",
+   "cn": "白狼混沌尖"
+  },
+  "3742913372": {
+   "id": "ITEM_09_0020",
+   "en": "Bladecaller's Gambit",
+   "cn": "刃姬的谋略"
+  },
+  "3026792994": {
+   "id": "ITEM_09_0021",
+   "en": "Maglielle Anamnesis",
+   "cn": "玛琪拉菲菈的记忆"
+  },
+  "1707607949": {
+   "id": "ITEM_09_0022",
+   "en": "Cutthroat Fang",
+   "cn": "刃重耳钉"
+  },
+  "1277287490": {
+   "id": "ITEM_09_0023",
+   "en": "Fellowship Fang",
+   "cn": "刃重混沌钉"
+  },
+  "2374534712": {
+   "id": "ITEM_09_0030",
+   "en": "Blue-Sky Spirit",
+   "cn": "苍天之魂"
+  },
+  "2587739929": {
+   "id": "ITEM_09_0050",
+   "en": "Blue-Sky Flare",
+   "cn": "苍天烽火"
+  },
+  "1752642500": {
+   "id": "ITEM_10_0000",
+   "en": "Fortitude Shard",
+   "cn": "锻武碎片"
+  },
+  "1682257631": {
+   "id": "ITEM_10_0001",
+   "en": "Fortitude Crystal (S)",
+   "cn": "锻武结晶·小"
+  },
+  "2034818685": {
+   "id": "ITEM_10_0002",
+   "en": "Fortitude Crystal (M)",
+   "cn": "锻武结晶·中"
+  },
+  "618616046": {
+   "id": "ITEM_10_0003",
+   "en": "Fortitude Crystal (L)",
+   "cn": "锻武结晶·大"
+  },
+  "3816417379": {
+   "id": "ITEM_11_0000",
+   "en": "Copper Spellbook",
+   "cn": "拉结尔之书·铜"
+  },
+  "1686952564": {
+   "id": "ITEM_11_0001",
+   "en": "Silver Spellbook",
+   "cn": "拉结尔之书·银"
+  },
+  "2911202316": {
+   "id": "ITEM_11_0002",
+   "en": "Gold Spellbook",
+   "cn": "拉结尔之书·金"
+  },
+  "2604934722": {
+   "id": "ITEM_12_0000",
+   "en": "Ambrosia",
+   "cn": "不死仙果"
+  },
+  "957777052": {
+   "id": "ITEM_13_0000",
+   "en": "Green Potion",
+   "cn": "治疗药水"
+  },
+  "2484284129": {
+   "id": "ITEM_13_0001",
+   "en": "Mega Potion",
+   "cn": "强效药水"
+  },
+  "2823596009": {
+   "id": "ITEM_13_0002",
+   "en": "Blue Potion",
+   "cn": "群疗药水"
+  },
+  "3873469928": {
+   "id": "ITEM_13_0003",
+   "en": "Revival Potion",
+   "cn": "复活药水"
+  },
+  "2986628693": {
+   "id": "ITEM_14_0000",
+   "en": "Azurite's Splendor",
+   "cn": "苍穹之辉"
+  },
+  "549929694": {
+   "id": "ITEM_14_0001",
+   "en": "Azurite Shard",
+   "cn": "苍穹碎片"
+  },
+  "2430571818": {
+   "id": "ITEM_14_0003",
+   "en": "Silver Centrum",
+   "cn": "银天之辉"
+  },
+  "2283187653": {
+   "id": "ITEM_14_0010",
+   "en": "Prism Chip",
+   "cn": "星晶碎片"
+  },
+  "1126542201": {
+   "id": "ITEM_14_0011",
+   "en": "Flawed Prism",
+   "cn": "星晶碎块"
+  },
+  "2096775676": {
+   "id": "ITEM_14_0012",
+   "en": "Flawless Prism",
+   "cn": "星晶块"
+  },
+  "603121559": {
+   "id": "ITEM_14_0013",
+   "en": "Rainbow Prism",
+   "cn": "虹星晶"
+  },
+  "2537080954": {
+   "id": "ITEM_14_0020",
+   "en": "Champion Merit",
+   "cn": "荣光之证"
+  },
+  "1864346598": {
+   "id": "ITEM_14_0021",
+   "en": "Supreme Merit",
+   "cn": "霸者之证"
+  },
+  "781505434": {
+   "id": "ITEM_14_0022",
+   "en": "Legendary Merit",
+   "cn": "究极之证"
+  },
+  "3225664201": {
+   "id": "ITEM_14_0023",
+   "en": "Daybreak Merit",
+   "cn": "黎明之证"
+  },
+  "1567652045": {
+   "id": "ITEM_14_0030",
+   "en": "Copper Dalia Badge",
+   "cn": "达丽雅铜奖章"
+  },
+  "2176802908": {
+   "id": "ITEM_14_0031",
+   "en": "Silver Dalia Badge",
+   "cn": "达丽雅银奖章"
+  },
+  "1543996314": {
+   "id": "ITEM_14_0032",
+   "en": "Gold Dalia Badge",
+   "cn": "达丽雅金奖章"
+  },
+  "1623940774": {
+   "id": "ITEM_14_0050",
+   "en": "Revenant Medallion",
+   "cn": "天星章"
+  },
+  "1704079604": {
+   "id": "ITEM_14_0051",
+   "en": "Supreme Weapon Essence",
+   "cn": "究极器之极意"
+  },
+  "1400682201": {
+   "id": "ITEM_14_0061",
+   "en": "Ragnite (Defender)",
+   "cn": "终焉钢锭【防御】"
+  },
+  "2264608481": {
+   "id": "ITEM_14_0062",
+   "en": "Ragnite (Stunner)",
+   "cn": "终焉钢锭【昏厥】"
+  },
+  "1699717269": {
+   "id": "ITEM_14_0063",
+   "en": "Ragnite (Ascension)",
+   "cn": "终焉钢锭【觉醒】"
+  },
+  "525053580": {
+   "id": "ITEM_14_0064",
+   "en": "Ragnite (Stinger)",
+   "cn": "终焉钢锭【暴击】"
+  },
+  "1416831640": {
+   "id": "ITEM_14_0065",
+   "en": "Ragnite (Executioner)",
+   "cn": "终焉钢锭【弱点】"
+  },
+  "471424307": {
+   "id": "ITEM_14_0066",
+   "en": "Ragnite (Terminus)",
+   "cn": "终焉钢锭【究极】"
+  },
+  "2354037529": {
+   "id": "ITEM_14_0074",
+   "en": "Chaos Refinium",
+   "cn": "混沌精炼材"
+  },
+  "1694907927": {
+   "id": "ITEM_14_0076",
+   "en": "Mythic Artifact",
+   "cn": "神代忆体"
+  },
+  "3727698296": {
+   "id": "ITEM_15_0000",
+   "en": "Rafale Coin",
+   "cn": "拉法尔纪念币"
+  },
+  "1411201024": {
+   "id": "ITEM_15_0001",
+   "en": "Standard Refinium",
+   "cn": "基础精炼材"
+  },
+  "2580948094": {
+   "id": "ITEM_15_0002",
+   "en": "Quality Refinium",
+   "cn": "高等精炼材"
+  },
+  "611472661": {
+   "id": "ITEM_15_0003",
+   "en": "Exceptional Refinium",
+   "cn": "梦幻精炼材"
+  },
+  "246842317": {
+   "id": "ITEM_15_0010",
+   "en": "Grand Refinium I",
+   "cn": "华贵精炼材Ⅰ"
+  },
+  "2563617903": {
+   "id": "ITEM_15_0011",
+   "en": "Grand Refinium II",
+   "cn": "华贵精炼材Ⅱ"
+  },
+  "1688616892": {
+   "id": "ITEM_15_0012",
+   "en": "Grand Refinium III",
+   "cn": "华贵精炼材Ⅲ"
+  },
+  "256352167": {
+   "id": "ITEM_16_0000",
+   "en": "Heliotrope Urn",
+   "cn": "紫银灵息"
+  },
+  "32153700": {
+   "id": "ITEM_16_0001",
+   "en": "Demigod Feather",
+   "cn": "半神之羽"
+  },
+  "1066356477": {
+   "id": "ITEM_16_0002",
+   "en": "Terror Urn",
+   "cn": "黑银灵息"
+  },
+  "1105800970": {
+   "id": "ITEM_16_0003",
+   "en": "Reality Thorn",
+   "cn": "神之棘"
+  },
+  "403931621": {
+   "id": "ITEM_16_0004",
+   "en": "Divinity Shackle",
+   "cn": "神之枷锁"
+  },
+  "1402134246": {
+   "id": "ITEM_16_0005",
+   "en": "Divine Blightplume",
+   "cn": "神之混沌羽"
+  },
+  "1757084727": {
+   "id": "ITEM_16_0105",
+   "en": "Forgotten Azureplume",
+   "cn": "被遗忘的苍羽"
+  },
+  "3243653218": {
+   "id": "ITEM_16_0106",
+   "en": "Divinity's Crimsonplume",
+   "cn": "神威红羽"
+  },
+  "2199859711": {
+   "id": "ITEM_16_0007",
+   "en": "Sown Emptiness",
+   "cn": "虚无之棘"
+  },
+  "3748741033": {
+   "id": "ITEM_16_0009",
+   "en": "Ultimate Memory",
+   "cn": "超级存储器"
+  },
+  "4246585498": {
+   "id": "ITEM_16_0901",
+   "en": "Primeval Firestorm Node",
+   "cn": "焚天源节点"
+  },
+  "622220054": {
+   "id": "ITEM_16_0902",
+   "en": "Primeval Aquashade Node",
+   "cn": "覆水源节点"
+  },
+  "1752109741": {
+   "id": "ITEM_16_0903",
+   "en": "Primeval Galewing Node",
+   "cn": "劫风源节点"
+  },
+  "1403638929": {
+   "id": "ITEM_16_0904",
+   "en": "Primeval Landslide Node",
+   "cn": "裂地源节点"
+  },
+  "295759973": {
+   "id": "ITEM_16_0010",
+   "en": "Protocol Fiber",
+   "cn": "制式纤维"
+  },
+  "698871497": {
+   "id": "ITEM_16_0011",
+   "en": "Mana Circuit",
+   "cn": "魔力主板"
+  },
+  "1620494015": {
+   "id": "ITEM_16_0012",
+   "en": "Chronos Core",
+   "cn": "时光核心"
+  },
+  "60920214": {
+   "id": "ITEM_16_0013",
+   "en": "Era Core",
+   "cn": "末日核心"
+  },
+  "1425826874": {
+   "id": "ITEM_17_0000",
+   "en": "Furycane Nihilla Core",
+   "cn": "胡拉坎·虚无之核"
+  },
+  "2069890880": {
+   "id": "ITEM_17_0001",
+   "en": "Nihilla-Cast Sword",
+   "cn": "虚无·诅咒之剑"
+  },
+  "3143081135": {
+   "id": "ITEM_17_0010",
+   "en": "Managarmr Nihilla Core",
+   "cn": "玛纳加尔姆·虚无之核"
+  },
+  "3644682758": {
+   "id": "ITEM_17_0011",
+   "en": "Nihilla Horn of Disdain",
+   "cn": "虚无·抗拒之角"
+  },
+  "2473658398": {
+   "id": "ITEM_17_0020",
+   "en": "Vulkan Bolla Nihilla Core",
+   "cn": "伏尔甘博拉·虚无之核"
+  },
+  "3654913750": {
+   "id": "ITEM_17_0021",
+   "en": "Nihilla-Fused Dark Plasma",
+   "cn": "虚无·黑暗之炎"
+  },
+  "504576684": {
+   "id": "ITEM_18_0000",
+   "en": "Dark Residue",
+   "cn": "暗黑碎片"
+  },
+  "292694625": {
+   "id": "ITEM_18_0001",
+   "en": "Tears of the Apocalypse",
+   "cn": "终焉暗晶"
+  },
+  "2848699823": {
+   "id": "ITEM_18_0002",
+   "en": "Canaan Whitebloom",
+   "cn": "迦南白花"
+  },
+  "51491550": {
+   "id": "ITEM_18_0003",
+   "en": "Sparks of the Apocalypse",
+   "cn": "终焉混沌晶"
+  },
+  "4096625665": {
+   "id": "ITEM_19_0001",
+   "en": "Curio",
+   "cn": "遗物"
+  },
+  "1865986017": {
+   "id": "ITEM_19_0010",
+   "en": "World Idean",
+   "cn": "世界意念"
+  },
+  "2247363961": {
+   "id": "ITEM_19_0012",
+   "en": "Chaotic Signum",
+   "cn": "混沌之印"
+  },
+  "2315843150": {
+   "id": "ITEM_19_0013",
+   "en": "Auroral Signum",
+   "cn": "极光之印"
+  },
+  "3511132602": {
+   "id": "ITEM_19_0020",
+   "en": "Abyssal Wings",
+   "cn": "漆黑棘羽"
+  },
+  "88557129": {
+   "id": "ITEM_19_0022",
+   "en": "Provenance Crystal",
+   "cn": "至理结晶"
+  },
+  "4158418649": {
+   "id": "ITEM_19_0023",
+   "en": "Hexachrome Quartz",
+   "cn": "至理六合晶"
+  },
+  "154602042": {
+   "id": "ITEM_21_0000",
+   "en": "Knickknack Voucher",
+   "cn": "万事屋抽奖券"
+  },
+  "1492949913": {
+   "id": "ITEM_21_0001",
+   "en": "Transmarvel Voucher",
+   "cn": "高级炼成券"
+  },
+  "3202910589": {
+   "id": "ITEM_22_0000",
+   "en": "Dragon Scale",
+   "cn": "龙鳞"
+  },
+  "2415817472": {
+   "id": "ITEM_22_0010",
+   "en": "Dragon Wing",
+   "cn": "龙翼"
+  },
+  "97701753": {
+   "id": "ITEM_22_0020",
+   "en": "Red Dragon Scale",
+   "cn": "赤龙鳞"
+  },
+  "2497521181": {
+   "id": "ITEM_22_0021",
+   "en": "Firewyrm's Jewel",
+   "cn": "火龙珠"
+  },
+  "3505409439": {
+   "id": "ITEM_22_0022",
+   "en": "Primordial Fire",
+   "cn": "原初之火"
+  },
+  "4178203544": {
+   "id": "ITEM_22_0030",
+   "en": "Blue Dragon Scale",
+   "cn": "青龙鳞"
+  },
+  "1362451496": {
+   "id": "ITEM_22_0031",
+   "en": "Icewyrm's Jewel",
+   "cn": "冰龙珠"
+  },
+  "2722442108": {
+   "id": "ITEM_22_0032",
+   "en": "Primordial Water",
+   "cn": "原初之水"
+  },
+  "2639890257": {
+   "id": "ITEM_22_0040",
+   "en": "Brown Dragon Scale",
+   "cn": "地龙鳞"
+  },
+  "3453890871": {
+   "id": "ITEM_22_0041",
+   "en": "Earthwyrm's Jewel",
+   "cn": "地龙珠"
+  },
+  "2302700976": {
+   "id": "ITEM_22_0042",
+   "en": "Primordial Earth",
+   "cn": "原初之土"
+  },
+  "3894960561": {
+   "id": "ITEM_22_0050",
+   "en": "Green Dragon Scale",
+   "cn": "风龙鳞"
+  },
+  "2446113807": {
+   "id": "ITEM_22_0051",
+   "en": "Windwyrm's Jewel",
+   "cn": "风龙珠"
+  },
+  "2716521154": {
+   "id": "ITEM_22_0052",
+   "en": "Primordial Wind",
+   "cn": "原初之风"
+  },
+  "1682389610": {
+   "id": "ITEM_22_0060",
+   "en": "White Dragon Scale",
+   "cn": "白龙鳞"
+  },
+  "2565300171": {
+   "id": "ITEM_22_0061",
+   "en": "Whitewyrm's Jewel",
+   "cn": "白龙珠"
+  },
+  "2284819623": {
+   "id": "ITEM_22_0062",
+   "en": "Primordial Light",
+   "cn": "原初之光"
+  },
+  "2673118640": {
+   "id": "ITEM_22_0070",
+   "en": "Black Dragon Scale",
+   "cn": "黑龙鳞"
+  },
+  "2658511192": {
+   "id": "ITEM_22_0071",
+   "en": "Blackwyrm's Jewel",
+   "cn": "黑龙珠"
+  },
+  "3359612470": {
+   "id": "ITEM_22_0072",
+   "en": "Primordial Darkness",
+   "cn": "原初之暗"
+  },
+  "4210637772": {
+   "id": "ITEM_22_0121",
+   "en": "Blaze of the Wedges",
+   "cn": "定榫精火"
+  },
+  "902298528": {
+   "id": "ITEM_23_0000",
+   "en": "Crewmate Card",
+   "cn": "角色解锁券"
+  },
+  "2238886606": {
+   "id": "ITEM_23_0001",
+   "en": "Crewmate Card: Seofon",
+   "cn": "希耶提专用解锁券"
+  },
+  "4266850251": {
+   "id": "ITEM_23_0002",
+   "en": "Crewmate Card: Tweyen",
+   "cn": "索恩专用解锁券"
+  },
+  "1532724739": {
+   "id": "ITEM_23_0003",
+   "en": "Crewmate Card: Sandalphon",
+   "cn": "圣德芬专用解锁券"
+  },
+  "3950018215": {
+   "id": "ITEM_23_0004",
+   "en": "Crewmate Card: Gallanza",
+   "cn": "伽兰查专用解锁券"
+  },
+  "3901907269": {
+   "id": "ITEM_23_0005",
+   "en": "Crewmate Card: Maglielle",
+   "cn": "玛琪拉菲菈专用解锁券"
+  },
+  "1105512654": {
+   "id": "ITEM_23_0006",
+   "en": "Crewmate Card: Fraux",
+   "cn": "芙劳专用解锁券"
+  },
+  "115677279": {
+   "id": "ITEM_23_0007",
+   "en": "Crewmate Card: Fediel",
+   "cn": "菲迪埃尔专用解锁券"
+  },
+  "1098345981": {
+   "id": "ITEM_30_0000",
+   "en": "Mirage Munition",
+   "cn": "武器幻晶"
+  },
+  "3565123882": {
+   "id": "ITEM_31_0000",
+   "en": "Bizarre Wing",
+   "cn": "怪异之翼"
+  },
+  "3985768024": {
+   "id": "ITEM_31_0001",
+   "en": "Bizarre Ice Spine",
+   "cn": "怪异冰棘"
+  },
+  "3825667736": {
+   "id": "ITEM_31_0002",
+   "en": "Chilling Demon Eye",
+   "cn": "冰冻魔眼"
+  },
+  "401820090": {
+   "id": "ITEM_31_0003",
+   "en": "Vile Demon Eye",
+   "cn": "极冰怪异魔眼"
+  },
+  "3090901789": {
+   "id": "ITEM_31_0010",
+   "en": "Bleak Bone",
+   "cn": "忘却之骨"
+  },
+  "110244476": {
+   "id": "ITEM_31_0011",
+   "en": "Bleak Armguard",
+   "cn": "忘却护腕"
+  },
+  "2347717204": {
+   "id": "ITEM_31_0012",
+   "en": "Frosty War Axe",
+   "cn": "冰冻巨斧"
+  },
+  "1748496326": {
+   "id": "ITEM_31_0013",
+   "en": "Extinction War Axe",
+   "cn": "极冰忘却战斧"
+  },
+  "543238922": {
+   "id": "ITEM_31_0020",
+   "en": "Purgatory Bone",
+   "cn": "炼狱之骨"
+  },
+  "2615646251": {
+   "id": "ITEM_31_0021",
+   "en": "Purgatory Armguard",
+   "cn": "炼狱护腕"
+  },
+  "1761557000": {
+   "id": "ITEM_31_0022",
+   "en": "Searing War Axe",
+   "cn": "灼热巨斧"
+  },
+  "428284915": {
+   "id": "ITEM_31_0023",
+   "en": "Excoriation War Axe",
+   "cn": "极惨炼狱战斧"
+  },
+  "3442052296": {
+   "id": "ITEM_31_0030",
+   "en": "Griffin Feather",
+   "cn": "狮鹫之羽"
+  },
+  "2121898419": {
+   "id": "ITEM_31_0031",
+   "en": "Griffin Talon",
+   "cn": "狮鹫钩爪"
+  },
+  "1708755538": {
+   "id": "ITEM_31_0032",
+   "en": "Giant Beak",
+   "cn": "狮鹫巨喙"
+  },
+  "3378992551": {
+   "id": "ITEM_31_0040",
+   "en": "Landbeast Claw",
+   "cn": "地兽之爪"
+  },
+  "243055758": {
+   "id": "ITEM_31_0033",
+   "en": "Majestic Beak",
+   "cn": "极佳坚喙"
+  },
+  "1387996268": {
+   "id": "ITEM_31_0041",
+   "en": "Landbeast Plate",
+   "cn": "地兽外壳"
+  },
+  "565387584": {
+   "id": "ITEM_31_0042",
+   "en": "Landbeast Horn",
+   "cn": "地兽硬角"
+  },
+  "623416708": {
+   "id": "ITEM_31_0043",
+   "en": "Landbeast Grimspike",
+   "cn": "地兽异角"
+  },
+  "3603693782": {
+   "id": "ITEM_31_0050",
+   "en": "Frostbeast Claw",
+   "cn": "冰兽之爪"
+  },
+  "2458037182": {
+   "id": "ITEM_31_0051",
+   "en": "Frostbeast Plate",
+   "cn": "冰兽外壳"
+  },
+  "3645095654": {
+   "id": "ITEM_31_0052",
+   "en": "Frostbeast Horn",
+   "cn": "冰兽硬角"
+  },
+  "1962984921": {
+   "id": "ITEM_31_0053",
+   "en": "Frostbeast Grimspike",
+   "cn": "冰兽异角"
+  },
+  "894256771": {
+   "id": "ITEM_31_0060",
+   "en": "Flamebeast Claw",
+   "cn": "炎兽之爪"
+  },
+  "4163315417": {
+   "id": "ITEM_31_0061",
+   "en": "Flamebeast Plate",
+   "cn": "炎兽外壳"
+  },
+  "1285285086": {
+   "id": "ITEM_31_0062",
+   "en": "Flamebeast Horn",
+   "cn": "炎兽硬角"
+  },
+  "1767810838": {
+   "id": "ITEM_31_0063",
+   "en": "Flamebeast Grimspike",
+   "cn": "炎兽异角"
+  },
+  "3563390058": {
+   "id": "ITEM_31_0070",
+   "en": "Mythril Wheel",
+   "cn": "秘银之轮"
+  },
+  "3076777900": {
+   "id": "ITEM_31_0071",
+   "en": "Condemnation Saw",
+   "cn": "断罪之锯"
+  },
+  "2125621332": {
+   "id": "ITEM_31_0072",
+   "en": "Ether Battery",
+   "cn": "以太电池"
+  },
+  "3621471751": {
+   "id": "ITEM_31_0073",
+   "en": "Extension Bracer",
+   "cn": "镇压型移动装置"
+  },
+  "3309333434": {
+   "id": "ITEM_31_0074",
+   "en": "Swivel Cannon",
+   "cn": "扫荡型加农炮"
+  },
+  "600153169": {
+   "id": "ITEM_31_0075",
+   "en": "Judgment Prongs",
+   "cn": "审判型机杖"
+  },
+  "79793900": {
+   "id": "ITEM_31_0077",
+   "en": "Carnage Pulse Unit",
+   "cn": "杀戮型脉冲组件"
+  },
+  "4160333400": {
+   "id": "ITEM_31_0078",
+   "en": "Sinister Prongs",
+   "cn": "凶邪机杖"
+  },
+  "3585032730": {
+   "id": "ITEM_31_0080",
+   "en": "Golem Finger",
+   "cn": "魔像石指"
+  },
+  "2582921344": {
+   "id": "ITEM_31_0081",
+   "en": "Golem Rockjaw",
+   "cn": "魔像巨颚"
+  },
+  "2011115312": {
+   "id": "ITEM_31_0082",
+   "en": "Crowning Parapet",
+   "cn": "城墙头冠"
+  },
+  "3572400067": {
+   "id": "ITEM_31_0085",
+   "en": "Blood Ruby",
+   "cn": "血红晶"
+  },
+  "964853": {
+   "id": "ITEM_31_0090",
+   "en": "Chieftain's Braid",
+   "cn": "兽人将领发束"
+  },
+  "2651847283": {
+   "id": "ITEM_31_0091",
+   "en": "Greatshield Fragment",
+   "cn": "狂乱大盾碎片"
+  },
+  "810080937": {
+   "id": "ITEM_31_0092",
+   "en": "Broken Savage Sword",
+   "cn": "断裂的蛮剑"
+  },
+  "710232233": {
+   "id": "ITEM_31_0086",
+   "en": "Fool's Fractured Jaw",
+   "cn": "黑金之颚"
+  },
+  "940910244": {
+   "id": "ITEM_31_0095",
+   "en": "Blood-Soaked Helm",
+   "cn": "罗刹之盔"
+  },
+  "1742991988": {
+   "id": "ITEM_32_0030",
+   "en": "Tayu'itar Head Unit",
+   "cn": "泰尤达尔·头部组件"
+  },
+  "497067577": {
+   "id": "ITEM_32_0031",
+   "en": "Ukhar Core",
+   "cn": "强力核心"
+  },
+  "3224885232": {
+   "id": "ITEM_32_0040",
+   "en": "Death Nail",
+   "cn": "狂暴锐锋"
+  },
+  "1010517151": {
+   "id": "ITEM_32_0041",
+   "en": "Wing of Portent",
+   "cn": "狂暴之兆"
+  },
+  "255126204": {
+   "id": "ITEM_32_0042",
+   "en": "Crown of Lament",
+   "cn": "恸哭之石"
+  },
+  "987798329": {
+   "id": "ITEM_32_0043",
+   "en": "Rancorous Lance",
+   "cn": "毁灭凶角"
+  },
+  "3183428590": {
+   "id": "ITEM_32_0044",
+   "en": "Spiteband of Lament",
+   "cn": "恸哭之混沌石"
+  },
+  "2919227982": {
+   "id": "ITEM_32_0046",
+   "en": "Bestial Ritual Stone",
+   "cn": "狂兽勾玉"
+  },
+  "1516216659": {
+   "id": "ITEM_32_0050",
+   "en": "Ancient Hollowpoint",
+   "cn": "古龙洞角"
+  },
+  "1837592491": {
+   "id": "ITEM_32_0051",
+   "en": "Crimson Horn",
+   "cn": "深红之角"
+  },
+  "2611406109": {
+   "id": "ITEM_32_0052",
+   "en": "Frozen Horn",
+   "cn": "冰封之角"
+  },
+  "2193691080": {
+   "id": "ITEM_32_0053",
+   "en": "Terra Horn",
+   "cn": "大地之角"
+  },
+  "1952436871": {
+   "id": "ITEM_32_0054",
+   "en": "Typhoon Horn",
+   "cn": "台风之角"
+  },
+  "2019821557": {
+   "id": "ITEM_32_0055",
+   "en": "Bright Horn",
+   "cn": "光明之角"
+  },
+  "167326622": {
+   "id": "ITEM_32_0056",
+   "en": "Abyssal Horn",
+   "cn": "深渊之角"
+  },
+  "3868041329": {
+   "id": "ITEM_32_0060",
+   "en": "Calamity Corkscrew",
+   "cn": "灾祸曲角"
+  },
+  "755004169": {
+   "id": "ITEM_32_0070",
+   "en": "Horn of Bahamut",
+   "cn": "巴哈姆特之角"
+  },
+  "3520606912": {
+   "id": "ITEM_32_0080",
+   "en": "Lunary Detector",
+   "cn": "月之感应装置"
+  },
+  "3252467630": {
+   "id": "ITEM_32_0081",
+   "en": "Lunary Cell",
+   "cn": "月之单元"
+  },
+  "4148849229": {
+   "id": "ITEM_32_1000",
+   "en": "Fan-Fave Crown",
+   "cn": "斗蟹双角"
+  },
+  "1938357863": {
+   "id": "ITEM_33_0002",
+   "en": "Sephira Luster",
+   "cn": "塞斐拉之光"
+  },
+  "2187432295": {
+   "id": "ITEM_33_0003",
+   "en": "Vallion Commemorative Coin",
+   "cn": "卡利翁纪念铜币"
+  },
+  "2814848833": {
+   "id": "ITEM_34_1000",
+   "en": "Glitterstone (S)",
+   "cn": "闪亮石·小"
+  },
+  "820189950": {
+   "id": "ITEM_34_2000",
+   "en": "Glitterstone (L)",
+   "cn": "闪亮石·大"
+  },
+  "343865098": {
+   "id": "ITEM_34_3000",
+   "en": "Glittercrystal",
+   "cn": "闪亮结晶"
+  },
+  "4136826646": {
+   "id": "ITEM_34_4000",
+   "en": "Glittercrystal Cluster",
+   "cn": "闪亮晶块"
+  },
+  "2388265993": {
+   "id": "ITEM_35_0000",
+   "en": "Rupie",
+   "cn": "金币"
+  },
+  "106427395": {
+   "id": "ITEM_35_1000",
+   "en": "Mastery Point",
+   "cn": "历练点数"
+  },
+  "1760221865": {
+   "id": "ITEM_35_2000",
+   "en": "Conflux Point",
+   "cn": "混融点数"
+  },
+  "643246142": {
+   "id": "ITEM_35_3000",
+   "en": "Resonance Point",
+   "cn": "共鸣点数"
+  },
+  "4177076094": {
+   "id": "ITEM_36_0000",
+   "en": "Gold Badge Ticket",
+   "cn": "达丽雅金奖章优待券"
+  },
+  "3409567996": {
+   "id": "ITEM_50_0000",
+   "en": "Windcrest",
+   "cn": "风散草"
+  },
+  "700162101": {
+   "id": "ITEM_50_0001",
+   "en": "Beast Warding Stick",
+   "cn": "驱兽人香木"
+  },
+  "3858808437": {
+   "id": "ITEM_50_0002",
+   "en": "Well-Used Gardening Tools",
+   "cn": "用惯了的洒水壶和铲子"
+  },
+  "2137611126": {
+   "id": "ITEM_50_0003",
+   "en": "Evergreen Crystal",
+   "cn": "深绿极水晶"
+  },
+  "3905184202": {
+   "id": "ITEM_50_0004",
+   "en": "Azure Gemstone",
+   "cn": "琉璃色半宝石"
+  },
+  "4085572386": {
+   "id": "ITEM_50_0005",
+   "en": "Tears of Repentance",
+   "cn": "净罪之泪"
+  },
+  "3446338896": {
+   "id": "ITEM_50_0006",
+   "en": "Twilight Sphere",
+   "cn": "月黑之珠"
+  },
+  "3938637739": {
+   "id": "ITEM_50_0007",
+   "en": "Kaleidosphere",
+   "cn": "多彩之珠"
+  },
+  "320489014": {
+   "id": "ITEM_50_0008",
+   "en": "Iridescent Effigy Shell",
+   "cn": "精灵像变色外壳"
+  },
+  "2680576094": {
+   "id": "ITEM_50_0009",
+   "en": "Midnight Sun's Amber",
+   "cn": "白夜沉眠的琥珀石"
+  },
+  "3456841630": {
+   "id": "ITEM_50_0010",
+   "en": "Desert Oil",
+   "cn": "沙漠油脂"
+  },
+  "3995425222": {
+   "id": "ITEM_60_0000",
+   "en": "Wee Pincer",
+   "cn": "小钳蟹"
+  },
+  "2679805649": {
+   "id": "ITEM_60_0001",
+   "en": "Dark Wee Pincer",
+   "cn": "漆黑小钳蟹"
+  },
+  "3406266863": {
+   "id": "ITEM_70_0001",
+   "en": "Life Link",
+   "cn": "生命连接"
+  },
+  "4047970971": {
+   "id": "ITEM_70_0002",
+   "en": "Lyria's Journal",
+   "cn": "露莉亚笔记"
+  },
+  "2005440500": {
+   "id": "ITEM_70_0003",
+   "en": "Sky Map Piece",
+   "cn": "空图碎片"
+  },
+  "4201074621": {
+   "id": "ITEM_70_0004",
+   "en": "Rolan's Transceiver",
+   "cn": "罗兰的传声机"
+  },
+  "1497548283": {
+   "id": "ITEM_70_0005",
+   "en": "Rebelwear",
+   "cn": "反抗之甲"
+  },
+  "1908183602": {
+   "id": "ITEM_70_0006",
+   "en": "Elpis, the Mind Sealer",
+   "cn": "封心器“埃尔匹斯”"
+  },
+  "4279902330": {
+   "id": "ITEM_70_0007",
+   "en": "Golden Crab Statue",
+   "cn": "黄金蟹像"
+  },
+  "3849894789": {
+   "id": "ITEM_70_0008",
+   "en": "Dehg's Catalyst Stone",
+   "cn": "Deg催化剂"
+  },
+  "1998426738": {
+   "id": "ITEM_70_0009",
+   "en": "Avia Research Logs",
+   "cn": "阿维亚研究记录"
+  },
+  "4119230163": {
+   "id": "ITEM_70_0010",
+   "en": "Rolan's Notes",
+   "cn": "罗兰的手记"
+  },
+  "2551982525": {
+   "id": "ITEM_70_0011",
+   "en": "Evergreen Crystal Fragment",
+   "cn": "破碎的深绿水晶碎片"
+  },
+  "3531263588": {
+   "id": "ITEM_70_0012",
+   "en": "Veil Armet",
+   "cn": "隐秘铠甲·头盔"
+  },
+  "4007634148": {
+   "id": "ITEM_70_0013",
+   "en": "Color Pack 1",
+   "cn": "角色颜色包1"
+  },
+  "3296724189": {
+   "id": "ITEM_70_0014",
+   "en": "Color Pack 2",
+   "cn": "角色颜色包2"
+  },
+  "2045018198": {
+   "id": "ITEM_70_0015",
+   "en": "Color Pack 3",
+   "cn": "角色颜色包3"
+  },
+  "853287923": {
+   "id": "ITEM_70_0016",
+   "en": "Color Pack 4",
+   "cn": "角色颜色包4"
+  },
+  "1525762400": {
+   "id": "ITEM_70_0017",
+   "en": "Color Pack 5",
+   "cn": "角色颜色包5"
+  },
+  "124428097": {
+   "id": "ITEM_70_0018",
+   "en": "Jet-Black Crab Statue",
+   "cn": "漆黑蟹像"
+  },
+  "113299617": {
+   "id": "ITEM_70_0019",
+   "en": "Golden Albacore Statue",
+   "cn": "黄金金枪鱼像"
+  },
+  "1815567769": {
+   "id": "ITEM_70_0020",
+   "en": "Sky Memory: Infinitesimal and Infinite",
+   "cn": "空之记忆“亿万生灵”"
+  },
+  "738941570": {
+   "id": "ITEM_70_0021",
+   "en": "Sky Memory: Manifestation",
+   "cn": "空之记忆“降世”"
+  },
+  "2527071298": {
+   "id": "ITEM_70_0022",
+   "en": "Sky Memory: Love's Legacy",
+   "cn": "空之记忆“爱的传承”"
+  },
+  "3819684759": {
+   "id": "ITEM_70_0023",
+   "en": "Sky Memory: The War",
+   "cn": "空之记忆“霸空战争”"
+  },
+  "155423035": {
+   "id": "ITEM_70_0024",
+   "en": "Sky Memory: The Girl in Blue",
+   "cn": "空之记忆“苍之少女”"
+  },
+  "3313131497": {
+   "id": "ITEM_70_0025",
+   "en": "Sky Memory: Divided Skies",
+   "cn": "空之记忆“天空断隔”"
+  },
+  "1112097646": {
+   "id": "ITEM_70_0026",
+   "en": "Sky Memory: Sundered God",
+   "cn": "空之记忆“二分之神”"
+  },
+  "1948259095": {
+   "id": "ITEM_70_0027",
+   "en": "Sky Memory: Rebirthed Genesis",
+   "cn": "空之记忆“创世之再生”"
+  },
+  "3508251388": {
+   "id": "ITEM_70_0028",
+   "en": "Concept Art Color Pack",
+   "cn": "印象色礼包"
+  },
+  "2029940268": {
+   "id": "ITEM_80_0000",
+   "en": "Silver Key",
+   "cn": "苍银之钥"
+  },
+  "2256716460": {
+   "id": "ITEM_80_0001",
+   "en": "Gold Key",
+   "cn": "黄金宝钥"
+  },
+  "2259757756": {
+   "id": "ITEM_80_0002",
+   "en": "Whitewing Key",
+   "cn": "白翼之钥"
+  },
+  "3376295901": {
+   "id": "ITEM_90_0000",
+   "en": "Child of Darkness and Flames",
+   "cn": "召唤石[暗炎之子]"
+  },
+  "2348123799": {
+   "id": "ITEM_90_0001",
+   "en": "Wings from the Boundary",
+   "cn": "召唤石[涯之银龙]"
+  },
+  "3475288822": {
+   "id": "ITEM_90_0002",
+   "en": "Colossus of Fortification",
+   "cn": "召唤石[镇守巨神]"
+  },
+  "3144882439": {
+   "id": "ITEM_25_0000",
+   "en": "Dread Wrightstone",
+   "cn": "畏惧之祝福"
+  },
+  "3242726787": {
+   "id": "ITEM_25_0001",
+   "en": "Dread Wrightstone",
+   "cn": "畏惧之祝福"
+  },
+  "1429041389": {
+   "id": "ITEM_26_0000",
+   "en": "Vitality Wrightstone",
+   "cn": "生机之祝福"
+  },
+  "4114277527": {
+   "id": "ITEM_26_0001",
+   "en": "Vitality Wrightstone",
+   "cn": "生机之祝福"
+  },
+  "3407773775": {
+   "id": "ITEM_27_0000",
+   "en": "Fortification Wrightstone",
+   "cn": "镇守之祝福"
+  },
+  "4004617196": {
+   "id": "ITEM_27_0001",
+   "en": "Fortification Wrightstone",
+   "cn": "镇守之祝福"
+  },
+  "1178254381": {
+   "id": "ITEM_28_0000",
+   "en": "Sequestration Wrightstone",
+   "cn": "隔绝之祝福"
+  },
+  "431065047": {
+   "id": "ITEM_28_0001",
+   "en": "Sequestration Wrightstone",
+   "cn": "隔绝之祝福"
+  }
+ },
+ "sigils": {
+  "2508557155": {
+   "id": "GEEN_000_00",
+   "en": "Attack Power I",
+   "cn": "攻击力"
+  },
+  "1033604719": {
+   "id": "GEEN_000_01",
+   "en": "Attack Power II",
+   "cn": "攻击力Ⅱ"
+  },
+  "2779909180": {
+   "id": "GEEN_000_02",
+   "en": "Attack Power III",
+   "cn": "攻击力Ⅲ"
+  },
+  "271579050": {
+   "id": "GEEN_000_03",
+   "en": "Attack Power IV",
+   "cn": "攻击力Ⅳ"
+  },
+  "3191637276": {
+   "id": "GEEN_000_04",
+   "en": "Attack Power V",
+   "cn": "攻击力Ⅴ"
+  },
+  "2800638090": {
+   "id": "GEEN_001_00",
+   "en": "Health I",
+   "cn": "体力"
+  },
+  "3279751178": {
+   "id": "GEEN_001_01",
+   "en": "Health II",
+   "cn": "体力Ⅱ"
+  },
+  "1493151402": {
+   "id": "GEEN_001_02",
+   "en": "Health III",
+   "cn": "体力Ⅲ"
+  },
+  "2451290478": {
+   "id": "GEEN_001_03",
+   "en": "Health IV",
+   "cn": "体力Ⅳ"
+  },
+  "1585376964": {
+   "id": "GEEN_001_04",
+   "en": "Health V",
+   "cn": "体力Ⅴ"
+  },
+  "2194580314": {
+   "id": "GEEN_003_00",
+   "en": "Critical Hit Rate I",
+   "cn": "暴击率"
+  },
+  "1125103953": {
+   "id": "GEEN_003_01",
+   "en": "Critical Hit Rate II",
+   "cn": "暴击率Ⅱ"
+  },
+  "3542879407": {
+   "id": "GEEN_003_02",
+   "en": "Critical Hit Rate III",
+   "cn": "暴击率Ⅲ"
+  },
+  "4057589981": {
+   "id": "GEEN_003_03",
+   "en": "Critical Hit Rate IV",
+   "cn": "暴击率Ⅳ"
+  },
+  "2810538530": {
+   "id": "GEEN_003_04",
+   "en": "Critical Hit Rate V",
+   "cn": "暴击率Ⅴ"
+  },
+  "87551755": {
+   "id": "GEEN_004_00",
+   "en": "Stun Power I",
+   "cn": "昏厥"
+  },
+  "509017753": {
+   "id": "GEEN_004_01",
+   "en": "Stun Power II",
+   "cn": "昏厥Ⅱ"
+  },
+  "280175219": {
+   "id": "GEEN_004_02",
+   "en": "Stun Power III",
+   "cn": "昏厥Ⅲ"
+  },
+  "899764163": {
+   "id": "GEEN_004_03",
+   "en": "Stun Power IV",
+   "cn": "昏厥Ⅳ"
+  },
+  "3782102484": {
+   "id": "GEEN_004_04",
+   "en": "Stun Power V",
+   "cn": "昏厥Ⅴ"
+  },
+  "1422851356": {
+   "id": "GEEN_005_00",
+   "en": "Enmity I",
+   "cn": "背水"
+  },
+  "1169436708": {
+   "id": "GEEN_005_01",
+   "en": "Enmity II",
+   "cn": "背水Ⅱ"
+  },
+  "103302397": {
+   "id": "GEEN_005_02",
+   "en": "Enmity III",
+   "cn": "背水Ⅲ"
+  },
+  "900119261": {
+   "id": "GEEN_005_03",
+   "en": "Enmity IV",
+   "cn": "背水Ⅳ"
+  },
+  "4136087995": {
+   "id": "GEEN_005_04",
+   "en": "Enmity V",
+   "cn": "背水Ⅴ"
+  },
+  "4226902404": {
+   "id": "GEEN_006_00",
+   "en": "Stamina I",
+   "cn": "热血"
+  },
+  "395791290": {
+   "id": "GEEN_006_01",
+   "en": "Stamina II",
+   "cn": "热血Ⅱ"
+  },
+  "1964124322": {
+   "id": "GEEN_006_02",
+   "en": "Stamina III",
+   "cn": "热血Ⅲ"
+  },
+  "3173840021": {
+   "id": "GEEN_006_03",
+   "en": "Stamina IV",
+   "cn": "热血Ⅳ"
+  },
+  "1756489864": {
+   "id": "GEEN_006_04",
+   "en": "Stamina V",
+   "cn": "热血Ⅴ"
+  },
+  "3597897231": {
+   "id": "GEEN_008_00",
+   "en": "Charged Attack I",
+   "cn": "蓄力攻击"
+  },
+  "2480502607": {
+   "id": "GEEN_008_01",
+   "en": "Charged Attack II",
+   "cn": "蓄力攻击Ⅱ"
+  },
+  "3428694067": {
+   "id": "GEEN_008_02",
+   "en": "Charged Attack III",
+   "cn": "蓄力攻击Ⅲ"
+  },
+  "1212203810": {
+   "id": "GEEN_008_03",
+   "en": "Charged Attack IV",
+   "cn": "蓄力攻击Ⅳ"
+  },
+  "4220286015": {
+   "id": "GEEN_008_04",
+   "en": "Charged Attack V",
+   "cn": "蓄力攻击Ⅴ"
+  },
+  "538210636": {
+   "id": "GEEN_009_00",
+   "en": "Linked Together I",
+   "cn": "协同攻击"
+  },
+  "2191452283": {
+   "id": "GEEN_009_01",
+   "en": "Linked Together II",
+   "cn": "协同攻击Ⅱ"
+  },
+  "3332381102": {
+   "id": "GEEN_009_02",
+   "en": "Linked Together III",
+   "cn": "协同攻击Ⅲ"
+  },
+  "2944381453": {
+   "id": "GEEN_009_03",
+   "en": "Linked Together IV",
+   "cn": "协同攻击Ⅳ"
+  },
+  "435176797": {
+   "id": "GEEN_009_04",
+   "en": "Linked Together V",
+   "cn": "协同攻击Ⅴ"
+  },
+  "2062282641": {
+   "id": "GEEN_012_00",
+   "en": "Throw I",
+   "cn": "投掷"
+  },
+  "1774144172": {
+   "id": "GEEN_012_01",
+   "en": "Throw II",
+   "cn": "投掷Ⅱ"
+  },
+  "2004891765": {
+   "id": "GEEN_012_02",
+   "en": "Throw III",
+   "cn": "投掷Ⅲ"
+  },
+  "2217393131": {
+   "id": "GEEN_012_03",
+   "en": "Throw IV",
+   "cn": "投掷Ⅳ"
+  },
+  "3293752067": {
+   "id": "GEEN_012_04",
+   "en": "Throw V",
+   "cn": "投掷Ⅴ"
+  },
+  "3044071882": {
+   "id": "GEEN_013_00",
+   "en": "Critical Damage I",
+   "cn": "暴击伤害"
+  },
+  "3918625473": {
+   "id": "GEEN_013_01",
+   "en": "Critical Damage II",
+   "cn": "暴击伤害Ⅱ"
+  },
+  "3059035048": {
+   "id": "GEEN_013_02",
+   "en": "Critical Damage III",
+   "cn": "暴击伤害Ⅲ"
+  },
+  "80750819": {
+   "id": "GEEN_013_03",
+   "en": "Critical Damage IV",
+   "cn": "暴击伤害Ⅳ"
+  },
+  "3813127523": {
+   "id": "GEEN_013_04",
+   "en": "Critical Damage V",
+   "cn": "暴击伤害Ⅴ"
+  },
+  "2034039493": {
+   "id": "GEEN_014_00",
+   "en": "Exploiter I",
+   "cn": "弱点攻击"
+  },
+  "2833024189": {
+   "id": "GEEN_014_01",
+   "en": "Exploiter II",
+   "cn": "弱点攻击Ⅱ"
+  },
+  "103729941": {
+   "id": "GEEN_014_02",
+   "en": "Exploiter III",
+   "cn": "弱点攻击Ⅲ"
+  },
+  "1616306631": {
+   "id": "GEEN_014_03",
+   "en": "Exploiter IV",
+   "cn": "弱点攻击Ⅳ"
+  },
+  "4151344300": {
+   "id": "GEEN_014_04",
+   "en": "Exploiter V",
+   "cn": "弱点攻击Ⅴ"
+  },
+  "4156045046": {
+   "id": "GEEN_017_00",
+   "en": "Combo Finisher I",
+   "cn": "连击收招"
+  },
+  "4198347235": {
+   "id": "GEEN_017_01",
+   "en": "Combo Finisher II",
+   "cn": "连击收招Ⅱ"
+  },
+  "3646531282": {
+   "id": "GEEN_017_02",
+   "en": "Combo Finisher III",
+   "cn": "连击收招Ⅲ"
+  },
+  "3770090182": {
+   "id": "GEEN_017_03",
+   "en": "Combo Finisher IV",
+   "cn": "连击收招Ⅳ"
+  },
+  "3352907209": {
+   "id": "GEEN_017_04",
+   "en": "Combo Finisher V",
+   "cn": "连击收招Ⅴ"
+  },
+  "1653461215": {
+   "id": "GEEN_018_00",
+   "en": "Concentrated Fire I",
+   "cn": "集中炮火"
+  },
+  "3417037657": {
+   "id": "GEEN_018_01",
+   "en": "Concentrated Fire II",
+   "cn": "集中炮火Ⅱ"
+  },
+  "2999384410": {
+   "id": "GEEN_018_02",
+   "en": "Concentrated Fire III",
+   "cn": "集中炮火Ⅲ"
+  },
+  "2400931268": {
+   "id": "GEEN_018_03",
+   "en": "Concentrated Fire IV",
+   "cn": "集中炮火Ⅳ"
+  },
+  "994632935": {
+   "id": "GEEN_018_04",
+   "en": "Concentrated Fire V",
+   "cn": "集中炮火Ⅴ"
+  },
+  "3333536742": {
+   "id": "GEEN_020_00",
+   "en": "Damage Cap I",
+   "cn": "伤害上限"
+  },
+  "1318620495": {
+   "id": "GEEN_020_01",
+   "en": "Damage Cap II",
+   "cn": "伤害上限Ⅱ"
+  },
+  "3054331798": {
+   "id": "GEEN_020_02",
+   "en": "Damage Cap III",
+   "cn": "伤害上限Ⅲ"
+  },
+  "3549682210": {
+   "id": "GEEN_020_03",
+   "en": "Damage Cap IV",
+   "cn": "伤害上限Ⅳ"
+  },
+  "4000524161": {
+   "id": "GEEN_020_04",
+   "en": "Damage Cap V",
+   "cn": "伤害上限Ⅴ"
+  },
+  "2421976447": {
+   "id": "GEEN_024_00",
+   "en": "Combo Booster I",
+   "cn": "连击加成"
+  },
+  "2446083776": {
+   "id": "GEEN_024_01",
+   "en": "Combo Booster II",
+   "cn": "连击加成Ⅱ"
+  },
+  "3596081977": {
+   "id": "GEEN_024_02",
+   "en": "Combo Booster III",
+   "cn": "连击加成Ⅲ"
+  },
+  "399415879": {
+   "id": "GEEN_024_03",
+   "en": "Combo Booster IV",
+   "cn": "连击加成Ⅳ"
+  },
+  "2057516470": {
+   "id": "GEEN_024_04",
+   "en": "Combo Booster V",
+   "cn": "连击加成Ⅴ"
+  },
+  "2046098750": {
+   "id": "GEEN_027_00",
+   "en": "Tyranny I",
+   "cn": "暴君"
+  },
+  "2426026731": {
+   "id": "GEEN_027_01",
+   "en": "Tyranny II",
+   "cn": "暴君Ⅱ"
+  },
+  "2753578387": {
+   "id": "GEEN_027_02",
+   "en": "Tyranny III",
+   "cn": "暴君Ⅲ"
+  },
+  "3754033721": {
+   "id": "GEEN_027_03",
+   "en": "Tyranny IV",
+   "cn": "暴君Ⅳ"
+  },
+  "1920162311": {
+   "id": "GEEN_027_04",
+   "en": "Tyranny V",
+   "cn": "暴君Ⅴ"
+  },
+  "1124989060": {
+   "id": "GEEN_028_00",
+   "en": "Lucky Charge I",
+   "cn": "蓄力会心"
+  },
+  "5037804": {
+   "id": "GEEN_028_01",
+   "en": "Lucky Charge II",
+   "cn": "蓄力会心Ⅱ"
+  },
+  "1736888132": {
+   "id": "GEEN_028_02",
+   "en": "Lucky Charge III",
+   "cn": "蓄力会心Ⅲ"
+  },
+  "2388329835": {
+   "id": "GEEN_028_03",
+   "en": "Lucky Charge IV",
+   "cn": "蓄力会心Ⅳ"
+  },
+  "2591374849": {
+   "id": "GEEN_028_04",
+   "en": "Lucky Charge V",
+   "cn": "蓄力会心Ⅴ"
+  },
+  "2756012115": {
+   "id": "GEEN_029_00",
+   "en": "Injury to Insult I",
+   "cn": "弱化状态特效"
+  },
+  "2558093535": {
+   "id": "GEEN_029_01",
+   "en": "Injury to Insult II",
+   "cn": "弱化状态特效Ⅱ"
+  },
+  "4290415344": {
+   "id": "GEEN_029_02",
+   "en": "Injury to Insult III",
+   "cn": "弱化状态特效Ⅲ"
+  },
+  "318484487": {
+   "id": "GEEN_029_03",
+   "en": "Injury to Insult IV",
+   "cn": "弱化状态特效Ⅳ"
+  },
+  "2682495245": {
+   "id": "GEEN_029_04",
+   "en": "Injury to Insult V",
+   "cn": "弱化状态特效Ⅴ"
+  },
+  "1865217631": {
+   "id": "GEEN_030_00",
+   "en": "Overdrive Assassin I",
+   "cn": "OVERDRIVE特效"
+  },
+  "748015336": {
+   "id": "GEEN_030_01",
+   "en": "Overdrive Assassin II",
+   "cn": "OVERDRIVE特效Ⅱ"
+  },
+  "874595287": {
+   "id": "GEEN_030_02",
+   "en": "Overdrive Assassin III",
+   "cn": "OVERDRIVE特效Ⅲ"
+  },
+  "3091182478": {
+   "id": "GEEN_030_03",
+   "en": "Overdrive Assassin IV",
+   "cn": "OVERDRIVE特效Ⅳ"
+  },
+  "4004955340": {
+   "id": "GEEN_030_04",
+   "en": "Overdrive Assassin V",
+   "cn": "OVERDRIVE特效Ⅴ"
+  },
+  "3797285586": {
+   "id": "GEEN_031_00",
+   "en": "Break Assassin I",
+   "cn": "破防特效"
+  },
+  "1895214595": {
+   "id": "GEEN_031_01",
+   "en": "Break Assassin II",
+   "cn": "破防特效Ⅱ"
+  },
+  "3365099893": {
+   "id": "GEEN_031_02",
+   "en": "Break Assassin III",
+   "cn": "破防特效Ⅲ"
+  },
+  "824024249": {
+   "id": "GEEN_031_03",
+   "en": "Break Assassin IV",
+   "cn": "破防特效Ⅳ"
+  },
+  "4154871856": {
+   "id": "GEEN_031_04",
+   "en": "Break Assassin V",
+   "cn": "破防特效Ⅴ"
+  },
+  "1944409423": {
+   "id": "GEEN_036_00",
+   "en": "Garrison I",
+   "cn": "坚守"
+  },
+  "3689676205": {
+   "id": "GEEN_036_01",
+   "en": "Garrison II",
+   "cn": "坚守Ⅱ"
+  },
+  "2629405889": {
+   "id": "GEEN_036_02",
+   "en": "Garrison III",
+   "cn": "坚守Ⅲ"
+  },
+  "2489614757": {
+   "id": "GEEN_036_03",
+   "en": "Garrison IV",
+   "cn": "坚守Ⅳ"
+  },
+  "2720311344": {
+   "id": "GEEN_036_04",
+   "en": "Garrison V",
+   "cn": "坚守Ⅴ"
+  },
+  "3412011457": {
+   "id": "GEEN_044_04",
+   "en": "Stout Heart",
+   "cn": "霸体"
+  },
+  "1492530215": {
+   "id": "GEEN_045_00",
+   "en": "Guts I",
+   "cn": "豪胆"
+  },
+  "3637949312": {
+   "id": "GEEN_045_01",
+   "en": "Guts II",
+   "cn": "豪胆Ⅱ"
+  },
+  "950651615": {
+   "id": "GEEN_045_02",
+   "en": "Guts III",
+   "cn": "豪胆Ⅲ"
+  },
+  "3845983800": {
+   "id": "GEEN_045_03",
+   "en": "Guts IV",
+   "cn": "豪胆Ⅳ"
+  },
+  "3128408050": {
+   "id": "GEEN_045_04",
+   "en": "Guts V",
+   "cn": "豪胆Ⅴ"
+  },
+  "2970207273": {
+   "id": "GEEN_046_00",
+   "en": "Poison Resistance I",
+   "cn": "中毒抗性"
+  },
+  "2520992909": {
+   "id": "GEEN_046_01",
+   "en": "Poison Resistance II",
+   "cn": "中毒抗性Ⅱ"
+  },
+  "3615423430": {
+   "id": "GEEN_046_02",
+   "en": "Poison Resistance III",
+   "cn": "中毒抗性Ⅲ"
+  },
+  "1245305981": {
+   "id": "GEEN_046_03",
+   "en": "Poison Resistance IV",
+   "cn": "中毒抗性Ⅳ"
+  },
+  "1545190320": {
+   "id": "GEEN_046_04",
+   "en": "Poison Resistance V",
+   "cn": "中毒抗性Ⅴ"
+  },
+  "956397031": {
+   "id": "GEEN_047_00",
+   "en": "Burn Resistance I",
+   "cn": "灼热抗性"
+  },
+  "2837178390": {
+   "id": "GEEN_047_01",
+   "en": "Burn Resistance II",
+   "cn": "灼热抗性Ⅱ"
+  },
+  "254523570": {
+   "id": "GEEN_047_02",
+   "en": "Burn Resistance III",
+   "cn": "灼热抗性Ⅲ"
+  },
+  "1036310552": {
+   "id": "GEEN_047_03",
+   "en": "Burn Resistance IV",
+   "cn": "灼热抗性Ⅳ"
+  },
+  "2893554340": {
+   "id": "GEEN_047_04",
+   "en": "Burn Resistance V",
+   "cn": "灼热抗性Ⅴ"
+  },
+  "700335986": {
+   "id": "GEEN_051_00",
+   "en": "Sandtomb Resistance I",
+   "cn": "泥沙抗性"
+  },
+  "3592858783": {
+   "id": "GEEN_051_01",
+   "en": "Sandtomb Resistance II",
+   "cn": "泥沙抗性Ⅱ"
+  },
+  "667296594": {
+   "id": "GEEN_051_02",
+   "en": "Sandtomb Resistance III",
+   "cn": "泥沙抗性Ⅲ"
+  },
+  "2640701110": {
+   "id": "GEEN_051_03",
+   "en": "Sandtomb Resistance IV",
+   "cn": "泥沙抗性Ⅳ"
+  },
+  "1925949200": {
+   "id": "GEEN_051_04",
+   "en": "Sandtomb Resistance V",
+   "cn": "泥沙抗性Ⅴ"
+  },
+  "255356814": {
+   "id": "GEEN_052_00",
+   "en": "Glaciate Resistance I",
+   "cn": "冰冻抗性"
+  },
+  "3619911793": {
+   "id": "GEEN_052_01",
+   "en": "Glaciate Resistance II",
+   "cn": "冰冻抗性Ⅱ"
+  },
+  "1320853546": {
+   "id": "GEEN_052_02",
+   "en": "Glaciate Resistance III",
+   "cn": "冰冻抗性Ⅲ"
+  },
+  "1202718105": {
+   "id": "GEEN_052_03",
+   "en": "Glaciate Resistance IV",
+   "cn": "冰冻抗性Ⅳ"
+  },
+  "3248747646": {
+   "id": "GEEN_052_04",
+   "en": "Glaciate Resistance V",
+   "cn": "冰冻抗性Ⅴ"
+  },
+  "613155094": {
+   "id": "GEEN_054_00",
+   "en": "Dizzy Resistance I",
+   "cn": "昏迷抗性"
+  },
+  "3212617179": {
+   "id": "GEEN_054_01",
+   "en": "Dizzy Resistance II",
+   "cn": "昏迷抗性Ⅱ"
+  },
+  "1061542876": {
+   "id": "GEEN_054_02",
+   "en": "Dizzy Resistance III",
+   "cn": "昏迷抗性Ⅲ"
+  },
+  "2860072418": {
+   "id": "GEEN_054_03",
+   "en": "Dizzy Resistance IV",
+   "cn": "昏迷抗性Ⅳ"
+  },
+  "736082580": {
+   "id": "GEEN_054_04",
+   "en": "Dizzy Resistance V",
+   "cn": "昏迷抗性Ⅴ"
+  },
+  "3530821179": {
+   "id": "GEEN_055_00",
+   "en": "Paralysis Resistance I",
+   "cn": "麻痹抗性"
+  },
+  "3912987462": {
+   "id": "GEEN_055_01",
+   "en": "Paralysis Resistance II",
+   "cn": "麻痹抗性Ⅱ"
+  },
+  "4090021494": {
+   "id": "GEEN_055_02",
+   "en": "Paralysis Resistance III",
+   "cn": "麻痹抗性Ⅲ"
+  },
+  "427301047": {
+   "id": "GEEN_055_03",
+   "en": "Paralysis Resistance IV",
+   "cn": "麻痹抗性Ⅳ"
+  },
+  "4221290185": {
+   "id": "GEEN_055_04",
+   "en": "Paralysis Resistance V",
+   "cn": "麻痹抗性Ⅴ"
+  },
+  "747996681": {
+   "id": "GEEN_057_00",
+   "en": "Skill Sealed Resistance I",
+   "cn": "能力封印抗性"
+  },
+  "1623899611": {
+   "id": "GEEN_057_01",
+   "en": "Skill Sealed Resistance II",
+   "cn": "能力封印抗性Ⅱ"
+  },
+  "2565378015": {
+   "id": "GEEN_057_02",
+   "en": "Skill Sealed Resistance III",
+   "cn": "能力封印抗性Ⅲ"
+  },
+  "1922329169": {
+   "id": "GEEN_057_03",
+   "en": "Skill Sealed Resistance IV",
+   "cn": "能力封印抗性Ⅳ"
+  },
+  "858972557": {
+   "id": "GEEN_057_04",
+   "en": "Skill Sealed Resistance V",
+   "cn": "能力封印抗性Ⅴ"
+  },
+  "2716191001": {
+   "id": "GEEN_058_00",
+   "en": "SBA Sealed Resistance I",
+   "cn": "奥义封印抗性"
+  },
+  "2494772592": {
+   "id": "GEEN_058_01",
+   "en": "SBA Sealed Resistance II",
+   "cn": "奥义封印抗性Ⅱ"
+  },
+  "3922966218": {
+   "id": "GEEN_058_02",
+   "en": "SBA Sealed Resistance III",
+   "cn": "奥义封印抗性Ⅲ"
+  },
+  "1471601061": {
+   "id": "GEEN_058_03",
+   "en": "SBA Sealed Resistance IV",
+   "cn": "奥义封印抗性Ⅳ"
+  },
+  "3746195054": {
+   "id": "GEEN_058_04",
+   "en": "SBA Sealed Resistance V",
+   "cn": "奥义封印抗性Ⅴ"
+  },
+  "2541901295": {
+   "id": "GEEN_060_00",
+   "en": "Improved Guard I",
+   "cn": "格挡性能"
+  },
+  "1992813417": {
+   "id": "GEEN_060_01",
+   "en": "Improved Guard II",
+   "cn": "格挡性能Ⅱ"
+  },
+  "2675183893": {
+   "id": "GEEN_060_02",
+   "en": "Improved Guard III",
+   "cn": "格挡性能Ⅲ"
+  },
+  "4050197212": {
+   "id": "GEEN_060_03",
+   "en": "Improved Guard IV",
+   "cn": "格挡性能Ⅳ"
+  },
+  "3603074613": {
+   "id": "GEEN_060_04",
+   "en": "Improved Guard V",
+   "cn": "格挡性能Ⅴ"
+  },
+  "4226959634": {
+   "id": "GEEN_061_00",
+   "en": "Guard Payback I",
+   "cn": "格挡仇火"
+  },
+  "3276385617": {
+   "id": "GEEN_061_01",
+   "en": "Guard Payback II",
+   "cn": "格挡仇火Ⅱ"
+  },
+  "2338748250": {
+   "id": "GEEN_061_02",
+   "en": "Guard Payback III",
+   "cn": "格挡仇火Ⅲ"
+  },
+  "619522534": {
+   "id": "GEEN_061_03",
+   "en": "Guard Payback IV",
+   "cn": "格挡仇火Ⅳ"
+  },
+  "2704068251": {
+   "id": "GEEN_061_04",
+   "en": "Guard Payback V",
+   "cn": "格挡仇火Ⅴ"
+  },
+  "545977749": {
+   "id": "GEEN_063_04",
+   "en": "Improved Dodge",
+   "cn": "躲避性能"
+  },
+  "1284779733": {
+   "id": "GEEN_064_00",
+   "en": "Dodge Payback I",
+   "cn": "躲避仇火"
+  },
+  "4104965234": {
+   "id": "GEEN_064_01",
+   "en": "Dodge Payback II",
+   "cn": "躲避仇火Ⅱ"
+  },
+  "2986443431": {
+   "id": "GEEN_064_02",
+   "en": "Dodge Payback III",
+   "cn": "躲避仇火Ⅲ"
+  },
+  "502584145": {
+   "id": "GEEN_064_03",
+   "en": "Dodge Payback IV",
+   "cn": "躲避仇火Ⅳ"
+  },
+  "2220274083": {
+   "id": "GEEN_064_04",
+   "en": "Dodge Payback V",
+   "cn": "躲避仇火Ⅴ"
+  },
+  "4143171683": {
+   "id": "GEEN_065_00",
+   "en": "Improved Healing I",
+   "cn": "回复性能"
+  },
+  "2817692351": {
+   "id": "GEEN_065_01",
+   "en": "Improved Healing II",
+   "cn": "回复性能Ⅱ"
+  },
+  "2044154735": {
+   "id": "GEEN_065_02",
+   "en": "Improved Healing III",
+   "cn": "回复性能Ⅲ"
+  },
+  "3756533603": {
+   "id": "GEEN_065_03",
+   "en": "Improved Healing IV",
+   "cn": "回复性能Ⅳ"
+  },
+  "3799718993": {
+   "id": "GEEN_065_04",
+   "en": "Improved Healing V",
+   "cn": "回复性能Ⅴ"
+  },
+  "1921768038": {
+   "id": "GEEN_066_00",
+   "en": "Regen I",
+   "cn": "自愈"
+  },
+  "1210301363": {
+   "id": "GEEN_066_01",
+   "en": "Regen II",
+   "cn": "自愈Ⅱ"
+  },
+  "1054690335": {
+   "id": "GEEN_066_02",
+   "en": "Regen III",
+   "cn": "自愈Ⅲ"
+  },
+  "3195638385": {
+   "id": "GEEN_066_03",
+   "en": "Regen IV",
+   "cn": "自愈Ⅳ"
+  },
+  "3381510728": {
+   "id": "GEEN_066_04",
+   "en": "Regen V",
+   "cn": "自愈Ⅴ"
+  },
+  "723812068": {
+   "id": "GEEN_067_00",
+   "en": "Drain I",
+   "cn": "HP吸收"
+  },
+  "188378313": {
+   "id": "GEEN_067_01",
+   "en": "Drain II",
+   "cn": "HP吸收Ⅱ"
+  },
+  "3547810579": {
+   "id": "GEEN_067_02",
+   "en": "Drain III",
+   "cn": "HP吸收Ⅲ"
+  },
+  "4047677036": {
+   "id": "GEEN_067_03",
+   "en": "Drain IV",
+   "cn": "HP吸收Ⅳ"
+  },
+  "3550420089": {
+   "id": "GEEN_067_04",
+   "en": "Drain V",
+   "cn": "HP吸收Ⅴ"
+  },
+  "1695877635": {
+   "id": "GEEN_068_00",
+   "en": "Autorevive I",
+   "cn": "自动复活"
+  },
+  "2432414911": {
+   "id": "GEEN_068_01",
+   "en": "Autorevive II",
+   "cn": "自动复活Ⅱ"
+  },
+  "3809489286": {
+   "id": "GEEN_068_02",
+   "en": "Autorevive III",
+   "cn": "自动复活Ⅲ"
+  },
+  "4073455570": {
+   "id": "GEEN_068_03",
+   "en": "Autorevive IV",
+   "cn": "自动复活Ⅳ"
+  },
+  "1588757190": {
+   "id": "GEEN_068_04",
+   "en": "Autorevive V",
+   "cn": "自动复活Ⅴ"
+  },
+  "1882418432": {
+   "id": "GEEN_069_00",
+   "en": "Quick Cooldown I",
+   "cn": "迅捷能力"
+  },
+  "1935108519": {
+   "id": "GEEN_069_01",
+   "en": "Quick Cooldown II",
+   "cn": "迅捷能力Ⅱ"
+  },
+  "1330646975": {
+   "id": "GEEN_069_02",
+   "en": "Quick Cooldown III",
+   "cn": "迅捷能力Ⅲ"
+  },
+  "3000275619": {
+   "id": "GEEN_069_03",
+   "en": "Quick Cooldown IV",
+   "cn": "迅捷能力Ⅳ"
+  },
+  "752623584": {
+   "id": "GEEN_069_04",
+   "en": "Quick Cooldown V",
+   "cn": "迅捷能力Ⅴ"
+  },
+  "3503692970": {
+   "id": "GEEN_070_00",
+   "en": "Cascade I",
+   "cn": "怒涛"
+  },
+  "2903124705": {
+   "id": "GEEN_070_01",
+   "en": "Cascade II",
+   "cn": "怒涛Ⅱ"
+  },
+  "3950241584": {
+   "id": "GEEN_070_02",
+   "en": "Cascade III",
+   "cn": "怒涛Ⅲ"
+  },
+  "646770117": {
+   "id": "GEEN_070_03",
+   "en": "Cascade IV",
+   "cn": "怒涛Ⅳ"
+  },
+  "3086523075": {
+   "id": "GEEN_070_04",
+   "en": "Cascade V",
+   "cn": "怒涛Ⅴ"
+  },
+  "1329053296": {
+   "id": "GEEN_072_00",
+   "en": "Uplift I",
+   "cn": "激昂"
+  },
+  "3093060667": {
+   "id": "GEEN_072_01",
+   "en": "Uplift II",
+   "cn": "激昂Ⅱ"
+  },
+  "124795530": {
+   "id": "GEEN_072_02",
+   "en": "Uplift III",
+   "cn": "激昂Ⅲ"
+  },
+  "371290077": {
+   "id": "GEEN_072_03",
+   "en": "Uplift IV",
+   "cn": "激昂Ⅳ"
+  },
+  "2285076692": {
+   "id": "GEEN_072_04",
+   "en": "Uplift V",
+   "cn": "激昂Ⅴ"
+  },
+  "1752928910": {
+   "id": "GEEN_073_00",
+   "en": "Potion Hoarder I",
+   "cn": "药水携带数"
+  },
+  "3649220181": {
+   "id": "GEEN_073_01",
+   "en": "Potion Hoarder II",
+   "cn": "药水携带数Ⅱ"
+  },
+  "3352372445": {
+   "id": "GEEN_073_02",
+   "en": "Potion Hoarder III",
+   "cn": "药水携带数Ⅲ"
+  },
+  "2524163001": {
+   "id": "GEEN_073_03",
+   "en": "Potion Hoarder IV",
+   "cn": "药水携带数Ⅳ"
+  },
+  "2112492923": {
+   "id": "GEEN_073_04",
+   "en": "Potion Hoarder V",
+   "cn": "药水携带数Ⅴ"
+  },
+  "3241638229": {
+   "id": "GEEN_077_00",
+   "en": "Low Profile I",
+   "cn": "匿踪"
+  },
+  "2021995850": {
+   "id": "GEEN_077_01",
+   "en": "Low Profile II",
+   "cn": "匿踪Ⅱ"
+  },
+  "2997915405": {
+   "id": "GEEN_077_02",
+   "en": "Low Profile III",
+   "cn": "匿踪Ⅲ"
+  },
+  "3425277274": {
+   "id": "GEEN_077_03",
+   "en": "Low Profile IV",
+   "cn": "匿踪Ⅳ"
+  },
+  "1353733888": {
+   "id": "GEEN_077_04",
+   "en": "Low Profile V",
+   "cn": "匿踪Ⅴ"
+  },
+  "2461194335": {
+   "id": "GEEN_078_00",
+   "en": "Provoke I",
+   "cn": "挑衅"
+  },
+  "1987119186": {
+   "id": "GEEN_078_01",
+   "en": "Provoke II",
+   "cn": "挑衅Ⅱ"
+  },
+  "2121725325": {
+   "id": "GEEN_078_02",
+   "en": "Provoke III",
+   "cn": "挑衅Ⅲ"
+  },
+  "1287915210": {
+   "id": "GEEN_078_03",
+   "en": "Provoke IV",
+   "cn": "挑衅Ⅳ"
+  },
+  "1313411578": {
+   "id": "GEEN_078_04",
+   "en": "Provoke V",
+   "cn": "挑衅Ⅴ"
+  },
+  "1806275021": {
+   "id": "GEEN_079_00",
+   "en": "Fast Learner I",
+   "cn": "获得经验值"
+  },
+  "1763866338": {
+   "id": "GEEN_079_01",
+   "en": "Fast Learner II",
+   "cn": "获得经验值Ⅱ"
+  },
+  "4166740656": {
+   "id": "GEEN_079_02",
+   "en": "Fast Learner III",
+   "cn": "获得经验值Ⅲ"
+  },
+  "269372189": {
+   "id": "GEEN_079_03",
+   "en": "Fast Learner IV",
+   "cn": "获得经验值Ⅳ"
+  },
+  "3785222062": {
+   "id": "GEEN_079_04",
+   "en": "Fast Learner V",
+   "cn": "获得经验值Ⅴ"
+  },
+  "2577707687": {
+   "id": "GEEN_080_00",
+   "en": "Rupie Tycoon I",
+   "cn": "获得金币"
+  },
+  "2372115980": {
+   "id": "GEEN_080_01",
+   "en": "Rupie Tycoon II",
+   "cn": "获得金币Ⅱ"
+  },
+  "3853877543": {
+   "id": "GEEN_080_02",
+   "en": "Rupie Tycoon III",
+   "cn": "获得金币Ⅲ"
+  },
+  "1790220108": {
+   "id": "GEEN_080_03",
+   "en": "Rupie Tycoon IV",
+   "cn": "获得金币Ⅳ"
+  },
+  "3098022381": {
+   "id": "GEEN_080_04",
+   "en": "Rupie Tycoon V",
+   "cn": "获得金币Ⅴ"
+  },
+  "1265978682": {
+   "id": "GEEN_083_00",
+   "en": "Skilled Assault I",
+   "cn": "能力伤害"
+  },
+  "2559710923": {
+   "id": "GEEN_083_01",
+   "en": "Skilled Assault II",
+   "cn": "能力伤害Ⅱ"
+  },
+  "3995450767": {
+   "id": "GEEN_083_02",
+   "en": "Skilled Assault III",
+   "cn": "能力伤害Ⅲ"
+  },
+  "3779344691": {
+   "id": "GEEN_083_03",
+   "en": "Skilled Assault IV",
+   "cn": "能力伤害Ⅳ"
+  },
+  "243490925": {
+   "id": "GEEN_083_04",
+   "en": "Skilled Assault V",
+   "cn": "能力伤害Ⅴ"
+  },
+  "4111097826": {
+   "id": "GEEN_085_00",
+   "en": "Aegis I",
+   "cn": "守护"
+  },
+  "1630589735": {
+   "id": "GEEN_085_01",
+   "en": "Aegis II",
+   "cn": "守护Ⅱ"
+  },
+  "1268315450": {
+   "id": "GEEN_085_02",
+   "en": "Aegis III",
+   "cn": "守护Ⅲ"
+  },
+  "937964872": {
+   "id": "GEEN_085_03",
+   "en": "Aegis IV",
+   "cn": "守护Ⅳ"
+  },
+  "3877314532": {
+   "id": "GEEN_085_04",
+   "en": "Aegis V",
+   "cn": "守护Ⅴ"
+  },
+  "3072194150": {
+   "id": "GEEN_086_00",
+   "en": "Slow Resistance I",
+   "cn": "缓速抗性"
+  },
+  "3584177513": {
+   "id": "GEEN_086_01",
+   "en": "Slow Resistance II",
+   "cn": "缓速抗性Ⅱ"
+  },
+  "967019308": {
+   "id": "GEEN_086_02",
+   "en": "Slow Resistance III",
+   "cn": "缓速抗性Ⅲ"
+  },
+  "1660867825": {
+   "id": "GEEN_086_03",
+   "en": "Slow Resistance IV",
+   "cn": "缓速抗性Ⅳ"
+  },
+  "3436354347": {
+   "id": "GEEN_086_04",
+   "en": "Slow Resistance V",
+   "cn": "缓速抗性Ⅴ"
+  },
+  "2434360473": {
+   "id": "GEEN_087_00",
+   "en": "Firm Stance I",
+   "cn": "不动"
+  },
+  "573677351": {
+   "id": "GEEN_087_01",
+   "en": "Firm Stance II",
+   "cn": "不动Ⅱ"
+  },
+  "3568479674": {
+   "id": "GEEN_087_02",
+   "en": "Firm Stance III",
+   "cn": "不动Ⅲ"
+  },
+  "2508556534": {
+   "id": "GEEN_087_03",
+   "en": "Firm Stance IV",
+   "cn": "不动Ⅳ"
+  },
+  "2161905592": {
+   "id": "GEEN_087_04",
+   "en": "Firm Stance V",
+   "cn": "不动Ⅴ"
+  },
+  "2026304003": {
+   "id": "GEEN_088_00",
+   "en": "Blight Resistance I",
+   "cn": "灾祸抗性"
+  },
+  "196945910": {
+   "id": "GEEN_088_01",
+   "en": "Blight Resistance II",
+   "cn": "灾祸抗性Ⅱ"
+  },
+  "2142495701": {
+   "id": "GEEN_088_02",
+   "en": "Blight Resistance III",
+   "cn": "灾祸抗性Ⅲ"
+  },
+  "1807111665": {
+   "id": "GEEN_088_03",
+   "en": "Blight Resistance IV",
+   "cn": "灾祸抗性Ⅳ"
+  },
+  "388490935": {
+   "id": "GEEN_088_04",
+   "en": "Blight Resistance V",
+   "cn": "灾祸抗性Ⅴ"
+  },
+  "452187356": {
+   "id": "GEEN_094_00",
+   "en": "Steady Focus I",
+   "cn": "蓄力强化"
+  },
+  "1975048919": {
+   "id": "GEEN_094_01",
+   "en": "Steady Focus II",
+   "cn": "蓄力强化Ⅱ"
+  },
+  "2106585838": {
+   "id": "GEEN_094_02",
+   "en": "Steady Focus III",
+   "cn": "蓄力强化Ⅲ"
+  },
+  "3713990440": {
+   "id": "GEEN_094_03",
+   "en": "Steady Focus IV",
+   "cn": "蓄力强化Ⅳ"
+  },
+  "3973260487": {
+   "id": "GEEN_094_04",
+   "en": "Steady Focus V",
+   "cn": "蓄力强化Ⅴ"
+  },
+  "3956021564": {
+   "id": "GEEN_096_00",
+   "en": "Steel Nerves I",
+   "cn": "坚持"
+  },
+  "4102019625": {
+   "id": "GEEN_096_01",
+   "en": "Steel Nerves II",
+   "cn": "坚持Ⅱ"
+  },
+  "3708944414": {
+   "id": "GEEN_096_02",
+   "en": "Steel Nerves III",
+   "cn": "坚持Ⅲ"
+  },
+  "2722686417": {
+   "id": "GEEN_096_03",
+   "en": "Steel Nerves IV",
+   "cn": "坚持Ⅳ"
+  },
+  "757897705": {
+   "id": "GEEN_096_04",
+   "en": "Steel Nerves V",
+   "cn": "坚持Ⅴ"
+  },
+  "480904893": {
+   "id": "GEEN_100_00",
+   "en": "Supplements I",
+   "cn": "强化效果延长"
+  },
+  "804798569": {
+   "id": "GEEN_100_01",
+   "en": "Supplements II",
+   "cn": "强化效果延长Ⅱ"
+  },
+  "2845731610": {
+   "id": "GEEN_100_02",
+   "en": "Supplements III",
+   "cn": "强化效果延长Ⅲ"
+  },
+  "4068285205": {
+   "id": "GEEN_100_03",
+   "en": "Supplements IV",
+   "cn": "强化效果延长Ⅳ"
+  },
+  "2160748269": {
+   "id": "GEEN_100_04",
+   "en": "Supplements V",
+   "cn": "强化效果延长Ⅴ"
+  },
+  "4073213263": {
+   "id": "GEEN_103_04",
+   "en": "Natural Defenses",
+   "cn": "全弱化效果抗性"
+  },
+  "2738549046": {
+   "id": "GEEN_104_00",
+   "en": "Nimble Defense I",
+   "cn": "凝神"
+  },
+  "3545468157": {
+   "id": "GEEN_104_01",
+   "en": "Nimble Defense II",
+   "cn": "凝神Ⅱ"
+  },
+  "1244884254": {
+   "id": "GEEN_104_02",
+   "en": "Nimble Defense III",
+   "cn": "凝神Ⅲ"
+  },
+  "3188662895": {
+   "id": "GEEN_104_03",
+   "en": "Nimble Defense IV",
+   "cn": "凝神Ⅳ"
+  },
+  "438458435": {
+   "id": "GEEN_104_04",
+   "en": "Nimble Defense V",
+   "cn": "凝神Ⅴ"
+  },
+  "469200130": {
+   "id": "GEEN_106_00",
+   "en": "Nimble Onslaught I",
+   "cn": "明镜止水"
+  },
+  "1205505077": {
+   "id": "GEEN_106_01",
+   "en": "Nimble Onslaught II",
+   "cn": "明镜止水Ⅱ"
+  },
+  "910487340": {
+   "id": "GEEN_106_02",
+   "en": "Nimble Onslaught III",
+   "cn": "明镜止水Ⅲ"
+  },
+  "2177592427": {
+   "id": "GEEN_106_03",
+   "en": "Nimble Onslaught IV",
+   "cn": "明镜止水Ⅳ"
+  },
+  "67455415": {
+   "id": "GEEN_106_04",
+   "en": "Nimble Onslaught V",
+   "cn": "明镜止水Ⅴ"
+  },
+  "3326556135": {
+   "id": "GEEN_107_00",
+   "en": "Precise Resilience I",
+   "cn": "抗争"
+  },
+  "3311365343": {
+   "id": "GEEN_107_01",
+   "en": "Precise Resilience II",
+   "cn": "抗争Ⅱ"
+  },
+  "3825577120": {
+   "id": "GEEN_107_02",
+   "en": "Precise Resilience III",
+   "cn": "抗争Ⅲ"
+  },
+  "1245098879": {
+   "id": "GEEN_107_03",
+   "en": "Precise Resilience IV",
+   "cn": "抗争Ⅳ"
+  },
+  "3841743606": {
+   "id": "GEEN_107_04",
+   "en": "Precise Resilience V",
+   "cn": "抗争Ⅴ"
+  },
+  "3559533943": {
+   "id": "GEEN_109_00",
+   "en": "Precise Wrath I",
+   "cn": "怒发冲冠"
+  },
+  "1130738687": {
+   "id": "GEEN_109_01",
+   "en": "Precise Wrath II",
+   "cn": "怒发冲冠Ⅱ"
+  },
+  "3943738531": {
+   "id": "GEEN_109_02",
+   "en": "Precise Wrath III",
+   "cn": "怒发冲冠Ⅲ"
+  },
+  "4077553398": {
+   "id": "GEEN_109_03",
+   "en": "Precise Wrath IV",
+   "cn": "怒发冲冠Ⅳ"
+  },
+  "1185653696": {
+   "id": "GEEN_109_04",
+   "en": "Precise Wrath V",
+   "cn": "怒发冲冠Ⅴ"
+  },
+  "2802691930": {
+   "id": "GEEN_110_00",
+   "en": "Life on the Line I",
+   "cn": "奋不顾身"
+  },
+  "2861830227": {
+   "id": "GEEN_110_01",
+   "en": "Life on the Line II",
+   "cn": "奋不顾身Ⅱ"
+  },
+  "3842483523": {
+   "id": "GEEN_110_02",
+   "en": "Life on the Line III",
+   "cn": "奋不顾身Ⅲ"
+  },
+  "290476348": {
+   "id": "GEEN_110_03",
+   "en": "Life on the Line IV",
+   "cn": "奋不顾身Ⅳ"
+  },
+  "895064204": {
+   "id": "GEEN_110_04",
+   "en": "Life on the Line V",
+   "cn": "奋不顾身Ⅴ"
+  },
+  "3209533322": {
+   "id": "GEEN_111_00",
+   "en": "Quick Charge I",
+   "cn": "快速蓄力"
+  },
+  "2287400789": {
+   "id": "GEEN_111_01",
+   "en": "Quick Charge II",
+   "cn": "快速蓄力Ⅱ"
+  },
+  "287494166": {
+   "id": "GEEN_111_02",
+   "en": "Quick Charge III",
+   "cn": "快速蓄力Ⅲ"
+  },
+  "4287258763": {
+   "id": "GEEN_111_03",
+   "en": "Quick Charge IV",
+   "cn": "快速蓄力Ⅳ"
+  },
+  "156432709": {
+   "id": "GEEN_111_04",
+   "en": "Quick Charge V",
+   "cn": "快速蓄力Ⅴ"
+  },
+  "89082574": {
+   "id": "GEEN_113_00",
+   "en": "Sigil Booster I",
+   "cn": "因子强化"
+  },
+  "3442833280": {
+   "id": "GEEN_113_01",
+   "en": "Sigil Booster II",
+   "cn": "因子强化Ⅱ"
+  },
+  "1077270922": {
+   "id": "GEEN_113_02",
+   "en": "Sigil Booster III",
+   "cn": "因子强化Ⅲ"
+  },
+  "2073802753": {
+   "id": "GEEN_113_03",
+   "en": "Sigil Booster IV",
+   "cn": "因子强化Ⅳ"
+  },
+  "1945633120": {
+   "id": "GEEN_113_04",
+   "en": "Sigil Booster V",
+   "cn": "因子强化Ⅴ"
+  },
+  "172035032": {
+   "id": "GEEN_114_04",
+   "en": "Fearless Drive",
+   "cn": "英勇神速"
+  },
+  "2473459200": {
+   "id": "GEEN_114_54",
+   "en": "Fearless Spirit",
+   "cn": "英勇灵气"
+  },
+  "3153155694": {
+   "id": "GEEN_115_04",
+   "en": "Guardian's Conviction",
+   "cn": "守护者的决心"
+  },
+  "3184302729": {
+   "id": "GEEN_115_54",
+   "en": "Guardian's Honor",
+   "cn": "守护者的骄傲"
+  },
+  "3875941401": {
+   "id": "GEEN_116_04",
+   "en": "Helmsman's Navigation",
+   "cn": "舵手的指引"
+  },
+  "1830348764": {
+   "id": "GEEN_116_54",
+   "en": "Helmsman's Tenacity",
+   "cn": "舵手的坚持"
+  },
+  "1004266672": {
+   "id": "GEEN_117_04",
+   "en": "Mage's Aspiration",
+   "cn": "魔法师的心愿"
+  },
+  "954106322": {
+   "id": "GEEN_117_54",
+   "en": "Mage's Savvy",
+   "cn": "魔法师的伶利"
+  },
+  "4283960054": {
+   "id": "GEEN_118_04",
+   "en": "Veteran's Insight",
+   "cn": "老兵的智慧"
+  },
+  "2000289469": {
+   "id": "GEEN_118_54",
+   "en": "Veteran's Vision",
+   "cn": "老兵的天眼"
+  },
+  "23346932": {
+   "id": "GEEN_119_04",
+   "en": "Rose's Blooming",
+   "cn": "玫瑰早绽"
+  },
+  "1915766681": {
+   "id": "GEEN_119_54",
+   "en": "Rose's Profusion",
+   "cn": "玫瑰缤纷"
+  },
+  "4254675227": {
+   "id": "GEEN_120_04",
+   "en": "Phantasm's Concord",
+   "cn": "幽幻之谊"
+  },
+  "556499445": {
+   "id": "GEEN_120_54",
+   "en": "Phantasm's Harmony",
+   "cn": "幽幻之应"
+  },
+  "1451760745": {
+   "id": "GEEN_121_04",
+   "en": "White Dragon's Oath",
+   "cn": "白龙的誓约"
+  },
+  "2138997419": {
+   "id": "GEEN_121_54",
+   "en": "White Dragon's Glory",
+   "cn": "白龙的荣耀"
+  },
+  "3547121808": {
+   "id": "GEEN_122_04",
+   "en": "Hero's Creed",
+   "cn": "勇士的信念"
+  },
+  "968237191": {
+   "id": "GEEN_122_54",
+   "en": "Hero's Will",
+   "cn": "勇士的毅力"
+  },
+  "1176994517": {
+   "id": "GEEN_123_04",
+   "en": "Lord's Procession",
+   "cn": "王者行进"
+  },
+  "1967050653": {
+   "id": "GEEN_123_54",
+   "en": "Lord's Ambition",
+   "cn": "王者一心"
+  },
+  "110118617": {
+   "id": "GEEN_124_04",
+   "en": "Dragonslayer's Dominance",
+   "cn": "屠龙者的威猛"
+  },
+  "838410191": {
+   "id": "GEEN_124_54",
+   "en": "Dragonslayer's Ingenuity",
+   "cn": "屠龙者的才智"
+  },
+  "448453709": {
+   "id": "GEEN_125_04",
+   "en": "Holy Knight's Luster",
+   "cn": "圣骑士的剑辉"
+  },
+  "2987990806": {
+   "id": "GEEN_125_54",
+   "en": "Holy Knight's Grandeur",
+   "cn": "圣骑士的威光"
+  },
+  "1480389647": {
+   "id": "GEEN_126_04",
+   "en": "Swordmaster's Prowess",
+   "cn": "变幻自如的迅刃"
+  },
+  "1683672805": {
+   "id": "GEEN_126_54",
+   "en": "Swordmaster's Art",
+   "cn": "变幻自如的妖剑士"
+  },
+  "1604978915": {
+   "id": "GEEN_127_04",
+   "en": "Butterfly's Grace",
+   "cn": "斩姬梦幻"
+  },
+  "1985196377": {
+   "id": "GEEN_127_54",
+   "en": "Butterfly's Valor",
+   "cn": "斩姬武艺"
+  },
+  "299832547": {
+   "id": "GEEN_128_04",
+   "en": "Eternal Rage's Mettle",
+   "cn": "古今无双的气概"
+  },
+  "231935685": {
+   "id": "GEEN_128_54",
+   "en": "Eternal Rage's Ethos",
+   "cn": "古今无双的强者"
+  },
+  "3329131011": {
+   "id": "GEEN_129_04",
+   "en": "Founder's Strategy",
+   "cn": "极致谋略"
+  },
+  "2160905603": {
+   "id": "GEEN_129_54",
+   "en": "Founder's Truth",
+   "cn": "极致真理"
+  },
+  "671652503": {
+   "id": "GEEN_130_04",
+   "en": "Versalis Foundation",
+   "cn": "异能增长"
+  },
+  "2237560595": {
+   "id": "GEEN_130_54",
+   "en": "Versalis Ignition",
+   "cn": "异能战意"
+  },
+  "1282070928": {
+   "id": "GEEN_131_04",
+   "en": "Crimson's Clout",
+   "cn": "真红烈焰"
+  },
+  "1882595057": {
+   "id": "GEEN_131_54",
+   "en": "Crimson's Flight",
+   "cn": "真红翔舞"
+  },
+  "1768040123": {
+   "id": "GEEN_132_04",
+   "en": "Ebony's Presence",
+   "cn": "冥暗刚刃"
+  },
+  "2151638205": {
+   "id": "GEEN_132_54",
+   "en": "Ebony's Poise",
+   "cn": "冥暗自若"
+  },
+  "2885319154": {
+   "id": "GEEN_133_02",
+   "en": "Fortifying Vigor",
+   "cn": "强健甘露"
+  },
+  "1453746353": {
+   "id": "GEEN_134_02",
+   "en": "Instilling Vigor",
+   "cn": "修炼甘露"
+  },
+  "3778388058": {
+   "id": "GEEN_135_02",
+   "en": "Gilding Vigor",
+   "cn": "幸运甘露"
+  },
+  "595372577": {
+   "id": "GEEN_136_00",
+   "en": "Held Under Resistance I",
+   "cn": "水牢抗性"
+  },
+  "3750384379": {
+   "id": "GEEN_136_01",
+   "en": "Held Under Resistance II",
+   "cn": "水牢抗性Ⅱ"
+  },
+  "2756374464": {
+   "id": "GEEN_136_02",
+   "en": "Held Under Resistance III",
+   "cn": "水牢抗性Ⅲ"
+  },
+  "3057525274": {
+   "id": "GEEN_136_03",
+   "en": "Held Under Resistance IV",
+   "cn": "水牢抗性Ⅳ"
+  },
+  "3444278215": {
+   "id": "GEEN_136_04",
+   "en": "Held Under Resistance V",
+   "cn": "水牢抗性Ⅴ"
+  },
+  "2806786195": {
+   "id": "GEEN_137_00",
+   "en": "Darkflame Resistance I",
+   "cn": "异能耐受"
+  },
+  "2580036471": {
+   "id": "GEEN_137_01",
+   "en": "Darkflame Resistance II",
+   "cn": "异能耐受Ⅱ"
+  },
+  "2562930784": {
+   "id": "GEEN_137_02",
+   "en": "Darkflame Resistance III",
+   "cn": "异能耐受Ⅲ"
+  },
+  "1003110357": {
+   "id": "GEEN_137_03",
+   "en": "Darkflame Resistance IV",
+   "cn": "异能耐受Ⅳ"
+  },
+  "1287979805": {
+   "id": "GEEN_137_04",
+   "en": "Darkflame Resistance V",
+   "cn": "异能耐受Ⅴ"
+  },
+  "2103204418": {
+   "id": "GEEN_138_00",
+   "en": "Attack Down Resistance I",
+   "cn": "攻击DOWN抗性"
+  },
+  "4244177737": {
+   "id": "GEEN_138_01",
+   "en": "Attack Down Resistance II",
+   "cn": "攻击DOWN抗性Ⅱ"
+  },
+  "964309328": {
+   "id": "GEEN_138_02",
+   "en": "Attack Down Resistance III",
+   "cn": "攻击DOWN抗性Ⅲ"
+  },
+  "2736851844": {
+   "id": "GEEN_138_03",
+   "en": "Attack Down Resistance IV",
+   "cn": "攻击DOWN抗性Ⅳ"
+  },
+  "3904414836": {
+   "id": "GEEN_138_04",
+   "en": "Attack Down Resistance V",
+   "cn": "攻击DOWN抗性Ⅴ"
+  },
+  "1066387060": {
+   "id": "GEEN_139_00",
+   "en": "Defense Down Resistance I",
+   "cn": "防御DOWN抗性"
+  },
+  "2114783274": {
+   "id": "GEEN_139_01",
+   "en": "Defense Down Resistance II",
+   "cn": "防御DOWN抗性Ⅱ"
+  },
+  "1301688088": {
+   "id": "GEEN_139_02",
+   "en": "Defense Down Resistance III",
+   "cn": "防御DOWN抗性Ⅲ"
+  },
+  "1536398903": {
+   "id": "GEEN_139_03",
+   "en": "Defense Down Resistance IV",
+   "cn": "防御DOWN抗性Ⅳ"
+  },
+  "2187819690": {
+   "id": "GEEN_139_04",
+   "en": "Defense Down Resistance V",
+   "cn": "防御DOWN抗性Ⅴ"
+  },
+  "474822628": {
+   "id": "GEEN_140_00",
+   "en": "Crabby Resonance",
+   "cn": "钳蟹的共鸣"
+  },
+  "4177457924": {
+   "id": "GEEN_141_04",
+   "en": "Crabvestment Returns",
+   "cn": "钳蟹的报恩"
+  },
+  "4098058191": {
+   "id": "GEEN_142_02",
+   "en": "Seven Net",
+   "cn": "7net"
+  },
+  "3955359376": {
+   "id": "GEEN_144_00",
+   "en": "Stronghold I",
+   "cn": "刚健"
+  },
+  "750178521": {
+   "id": "GEEN_144_01",
+   "en": "Stronghold II",
+   "cn": "刚健Ⅱ"
+  },
+  "485185706": {
+   "id": "GEEN_144_02",
+   "en": "Stronghold III",
+   "cn": "刚健Ⅲ"
+  },
+  "2171873353": {
+   "id": "GEEN_144_03",
+   "en": "Stronghold IV",
+   "cn": "刚健Ⅳ"
+  },
+  "3738493828": {
+   "id": "GEEN_144_04",
+   "en": "Stronghold V",
+   "cn": "刚健Ⅴ"
+  },
+  "2158419248": {
+   "id": "GEEN_145_00",
+   "en": "Power Hungry I",
+   "cn": "修罗"
+  },
+  "2776018971": {
+   "id": "GEEN_145_01",
+   "en": "Power Hungry II",
+   "cn": "修罗Ⅱ"
+  },
+  "2495796659": {
+   "id": "GEEN_145_02",
+   "en": "Power Hungry III",
+   "cn": "修罗Ⅲ"
+  },
+  "756581719": {
+   "id": "GEEN_145_03",
+   "en": "Power Hungry IV",
+   "cn": "修罗Ⅳ"
+  },
+  "178746206": {
+   "id": "GEEN_145_04",
+   "en": "Power Hungry V",
+   "cn": "修罗Ⅴ"
+  },
+  "3666949793": {
+   "id": "GEEN_146_04",
+   "en": "War Elemental",
+   "cn": "属性克制转换"
+  },
+  "2587105433": {
+   "id": "GEEN_147_00",
+   "en": "Path to Mastery I",
+   "cn": "获得MSP"
+  },
+  "1952562541": {
+   "id": "GEEN_147_01",
+   "en": "Path to Mastery II",
+   "cn": "获得MSPⅡ"
+  },
+  "731175126": {
+   "id": "GEEN_147_02",
+   "en": "Path to Mastery III",
+   "cn": "获得MSPⅢ"
+  },
+  "302800280": {
+   "id": "GEEN_147_03",
+   "en": "Path to Mastery IV",
+   "cn": "获得MSPⅣ"
+  },
+  "2192769269": {
+   "id": "GEEN_147_04",
+   "en": "Path to Mastery V",
+   "cn": "获得MSPⅤ"
+  },
+  "788966448": {
+   "id": "GEEN_150_04",
+   "en": "Untouchable",
+   "cn": "躲避距离"
+  },
+  "2929236422": {
+   "id": "GEEN_151_00",
+   "en": "Supplementary Damage I",
+   "cn": "追击"
+  },
+  "1998979540": {
+   "id": "GEEN_151_01",
+   "en": "Supplementary Damage II",
+   "cn": "追击Ⅱ"
+  },
+  "18144657": {
+   "id": "GEEN_151_02",
+   "en": "Supplementary Damage III",
+   "cn": "追击Ⅲ"
+  },
+  "2865209881": {
+   "id": "GEEN_151_03",
+   "en": "Supplementary Damage IV",
+   "cn": "追击Ⅳ"
+  },
+  "1119554588": {
+   "id": "GEEN_151_04",
+   "en": "Supplementary Damage V",
+   "cn": "追击Ⅴ"
+  },
+  "256510562": {
+   "id": "GEEN_152_00",
+   "en": "Less Is More I",
+   "cn": "身无长技"
+  },
+  "794483398": {
+   "id": "GEEN_152_01",
+   "en": "Less Is More II",
+   "cn": "身无长技Ⅱ"
+  },
+  "1443426174": {
+   "id": "GEEN_152_02",
+   "en": "Less Is More III",
+   "cn": "身无长技Ⅲ"
+  },
+  "1423323103": {
+   "id": "GEEN_152_03",
+   "en": "Less Is More IV",
+   "cn": "身无长技Ⅳ"
+  },
+  "2510066286": {
+   "id": "GEEN_152_04",
+   "en": "Less Is More V",
+   "cn": "身无长技Ⅴ"
+  },
+  "1972196130": {
+   "id": "GEEN_153_00",
+   "en": "Head Start I",
+   "cn": "先发制人"
+  },
+  "2386501319": {
+   "id": "GEEN_153_01",
+   "en": "Head Start II",
+   "cn": "先发制人Ⅱ"
+  },
+  "3471433030": {
+   "id": "GEEN_153_02",
+   "en": "Head Start III",
+   "cn": "先发制人Ⅲ"
+  },
+  "1866942893": {
+   "id": "GEEN_153_03",
+   "en": "Head Start IV",
+   "cn": "先发制人Ⅳ"
+  },
+  "868785948": {
+   "id": "GEEN_153_04",
+   "en": "Head Start V",
+   "cn": "先发制人Ⅴ"
+  },
+  "2589585900": {
+   "id": "GEEN_154_00",
+   "en": "Berserker I",
+   "cn": "穷寇心"
+  },
+  "2316337681": {
+   "id": "GEEN_154_01",
+   "en": "Berserker II",
+   "cn": "穷寇心Ⅱ"
+  },
+  "2325705588": {
+   "id": "GEEN_154_02",
+   "en": "Berserker III",
+   "cn": "穷寇心Ⅲ"
+  },
+  "4229571937": {
+   "id": "GEEN_154_03",
+   "en": "Berserker IV",
+   "cn": "穷寇心Ⅳ"
+  },
+  "761494821": {
+   "id": "GEEN_154_04",
+   "en": "Berserker V",
+   "cn": "穷寇心Ⅴ"
+  },
+  "1801004074": {
+   "id": "GEEN_156_04",
+   "en": "Potent Greens",
+   "cn": "万能药"
+  },
+  "249686487": {
+   "id": "GEEN_157_04",
+   "en": "Roll of the Die",
+   "cn": "骰子剑"
+  },
+  "1964522493": {
+   "id": "GEEN_158_00",
+   "en": "Glass Cannon I",
+   "cn": "刀上舞"
+  },
+  "3063205334": {
+   "id": "GEEN_158_01",
+   "en": "Glass Cannon II",
+   "cn": "刀上舞Ⅱ"
+  },
+  "990108687": {
+   "id": "GEEN_158_02",
+   "en": "Glass Cannon III",
+   "cn": "刀上舞Ⅲ"
+  },
+  "2072788486": {
+   "id": "GEEN_158_03",
+   "en": "Glass Cannon IV",
+   "cn": "刀上舞Ⅳ"
+  },
+  "229840632": {
+   "id": "GEEN_158_04",
+   "en": "Glass Cannon V",
+   "cn": "刀上舞Ⅴ"
+  },
+  "4080232501": {
+   "id": "GEEN_159_04",
+   "en": "Flight over Fight",
+   "cn": "摇曳步"
+  },
+  "2451411160": {
+   "id": "GEEN_160_04",
+   "en": "Alpha+",
+   "cn": "α秘纹＋"
+  },
+  "3996352483": {
+   "id": "GEEN_161_04",
+   "en": "Beta+",
+   "cn": "β秘纹＋"
+  },
+  "1144547182": {
+   "id": "GEEN_162_04",
+   "en": "Gamma+",
+   "cn": "γ秘纹＋"
+  },
+  "4010340396": {
+   "id": "GEEN_000_10",
+   "en": "Attack Power I+",
+   "cn": "攻击力＋"
+  },
+  "1819837529": {
+   "id": "GEEN_000_11",
+   "en": "Attack Power II+",
+   "cn": "攻击力Ⅱ＋"
+  },
+  "4051931910": {
+   "id": "GEEN_000_12",
+   "en": "Attack Power III+",
+   "cn": "攻击力Ⅲ＋"
+  },
+  "2452096239": {
+   "id": "GEEN_000_13",
+   "en": "Attack Power IV+",
+   "cn": "攻击力Ⅳ＋"
+  },
+  "148533881": {
+   "id": "GEEN_000_14",
+   "en": "Attack Power V+",
+   "cn": "攻击力Ⅴ＋"
+  },
+  "3064832373": {
+   "id": "GEEN_001_10",
+   "en": "Health I+",
+   "cn": "体力＋"
+  },
+  "25749987": {
+   "id": "GEEN_001_11",
+   "en": "Health II+",
+   "cn": "体力Ⅱ＋"
+  },
+  "2378113050": {
+   "id": "GEEN_001_12",
+   "en": "Health III+",
+   "cn": "体力Ⅲ＋"
+  },
+  "2311736752": {
+   "id": "GEEN_001_13",
+   "en": "Health IV+",
+   "cn": "体力Ⅳ＋"
+  },
+  "3048357634": {
+   "id": "GEEN_001_14",
+   "en": "Health V+",
+   "cn": "体力Ⅴ＋"
+  },
+  "2402287104": {
+   "id": "GEEN_003_10",
+   "en": "Critical Hit Rate I+",
+   "cn": "暴击率＋"
+  },
+  "764284493": {
+   "id": "GEEN_003_11",
+   "en": "Critical Hit Rate II+",
+   "cn": "暴击率Ⅱ＋"
+  },
+  "1011757007": {
+   "id": "GEEN_003_12",
+   "en": "Critical Hit Rate III+",
+   "cn": "暴击率Ⅲ＋"
+  },
+  "2338616592": {
+   "id": "GEEN_003_13",
+   "en": "Critical Hit Rate IV+",
+   "cn": "暴击率Ⅳ＋"
+  },
+  "1167971010": {
+   "id": "GEEN_003_14",
+   "en": "Critical Hit Rate V+",
+   "cn": "暴击率Ⅴ＋"
+  },
+  "264496726": {
+   "id": "GEEN_004_10",
+   "en": "Stun Power I+",
+   "cn": "昏厥＋"
+  },
+  "1578702094": {
+   "id": "GEEN_004_11",
+   "en": "Stun Power II+",
+   "cn": "昏厥Ⅱ＋"
+  },
+  "3882104372": {
+   "id": "GEEN_004_12",
+   "en": "Stun Power III+",
+   "cn": "昏厥Ⅲ＋"
+  },
+  "3327368373": {
+   "id": "GEEN_004_13",
+   "en": "Stun Power IV+",
+   "cn": "昏厥Ⅳ＋"
+  },
+  "968796571": {
+   "id": "GEEN_004_14",
+   "en": "Stun Power V+",
+   "cn": "昏厥Ⅴ＋"
+  },
+  "3095160005": {
+   "id": "GEEN_005_10",
+   "en": "Enmity I+",
+   "cn": "背水＋"
+  },
+  "1821651847": {
+   "id": "GEEN_005_11",
+   "en": "Enmity II+",
+   "cn": "背水Ⅱ＋"
+  },
+  "1397461954": {
+   "id": "GEEN_005_12",
+   "en": "Enmity III+",
+   "cn": "背水Ⅲ＋"
+  },
+  "103157142": {
+   "id": "GEEN_005_13",
+   "en": "Enmity IV+",
+   "cn": "背水Ⅳ＋"
+  },
+  "4062351526": {
+   "id": "GEEN_005_14",
+   "en": "Enmity V+",
+   "cn": "背水Ⅴ＋"
+  },
+  "190176612": {
+   "id": "GEEN_006_10",
+   "en": "Stamina I+",
+   "cn": "热血＋"
+  },
+  "1713065296": {
+   "id": "GEEN_006_11",
+   "en": "Stamina II+",
+   "cn": "热血Ⅱ＋"
+  },
+  "2319305393": {
+   "id": "GEEN_006_12",
+   "en": "Stamina III+",
+   "cn": "热血Ⅲ＋"
+  },
+  "445911613": {
+   "id": "GEEN_006_13",
+   "en": "Stamina IV+",
+   "cn": "热血Ⅳ＋"
+  },
+  "1269097644": {
+   "id": "GEEN_006_14",
+   "en": "Stamina V+",
+   "cn": "热血Ⅴ＋"
+  },
+  "243779794": {
+   "id": "GEEN_008_10",
+   "en": "Charged Attack I+",
+   "cn": "蓄力攻击＋"
+  },
+  "1171860506": {
+   "id": "GEEN_008_11",
+   "en": "Charged Attack II+",
+   "cn": "蓄力攻击Ⅱ＋"
+  },
+  "2399349244": {
+   "id": "GEEN_008_12",
+   "en": "Charged Attack III+",
+   "cn": "蓄力攻击Ⅲ＋"
+  },
+  "3501472928": {
+   "id": "GEEN_008_13",
+   "en": "Charged Attack IV+",
+   "cn": "蓄力攻击Ⅳ＋"
+  },
+  "480801511": {
+   "id": "GEEN_008_14",
+   "en": "Charged Attack V+",
+   "cn": "蓄力攻击Ⅴ＋"
+  },
+  "2353432802": {
+   "id": "GEEN_009_10",
+   "en": "Linked Together I+",
+   "cn": "协同攻击＋"
+  },
+  "2453093113": {
+   "id": "GEEN_009_11",
+   "en": "Linked Together II+",
+   "cn": "协同攻击Ⅱ＋"
+  },
+  "3550743591": {
+   "id": "GEEN_009_12",
+   "en": "Linked Together III+",
+   "cn": "协同攻击Ⅲ＋"
+  },
+  "312353354": {
+   "id": "GEEN_009_13",
+   "en": "Linked Together IV+",
+   "cn": "协同攻击Ⅳ＋"
+  },
+  "3158593875": {
+   "id": "GEEN_009_14",
+   "en": "Linked Together V+",
+   "cn": "协同攻击Ⅴ＋"
+  },
+  "1360408835": {
+   "id": "GEEN_012_10",
+   "en": "Throw I+",
+   "cn": "投掷＋"
+  },
+  "3420838966": {
+   "id": "GEEN_012_11",
+   "en": "Throw II+",
+   "cn": "投掷Ⅱ＋"
+  },
+  "907887812": {
+   "id": "GEEN_012_12",
+   "en": "Throw III+",
+   "cn": "投掷Ⅲ＋"
+  },
+  "3162067337": {
+   "id": "GEEN_012_13",
+   "en": "Throw IV+",
+   "cn": "投掷Ⅳ＋"
+  },
+  "2359810497": {
+   "id": "GEEN_012_14",
+   "en": "Throw V+",
+   "cn": "投掷Ⅴ＋"
+  },
+  "143689775": {
+   "id": "GEEN_013_10",
+   "en": "Critical Damage I+",
+   "cn": "暴击伤害＋"
+  },
+  "3095078775": {
+   "id": "GEEN_013_11",
+   "en": "Critical Damage II+",
+   "cn": "暴击伤害Ⅱ＋"
+  },
+  "2130349069": {
+   "id": "GEEN_013_12",
+   "en": "Critical Damage III+",
+   "cn": "暴击伤害Ⅲ＋"
+  },
+  "1594979397": {
+   "id": "GEEN_013_13",
+   "en": "Critical Damage IV+",
+   "cn": "暴击伤害Ⅳ＋"
+  },
+  "1661855197": {
+   "id": "GEEN_013_14",
+   "en": "Critical Damage V+",
+   "cn": "暴击伤害Ⅴ＋"
+  },
+  "1576227779": {
+   "id": "GEEN_014_10",
+   "en": "Exploiter I+",
+   "cn": "弱点攻击＋"
+  },
+  "1211094681": {
+   "id": "GEEN_014_11",
+   "en": "Exploiter II+",
+   "cn": "弱点攻击Ⅱ＋"
+  },
+  "2499216700": {
+   "id": "GEEN_014_12",
+   "en": "Exploiter III+",
+   "cn": "弱点攻击Ⅲ＋"
+  },
+  "386325356": {
+   "id": "GEEN_014_13",
+   "en": "Exploiter IV+",
+   "cn": "弱点攻击Ⅳ＋"
+  },
+  "316077369": {
+   "id": "GEEN_014_14",
+   "en": "Exploiter V+",
+   "cn": "弱点攻击Ⅴ＋"
+  },
+  "2905474897": {
+   "id": "GEEN_017_10",
+   "en": "Combo Finisher I+",
+   "cn": "连击收招＋"
+  },
+  "3603814798": {
+   "id": "GEEN_017_11",
+   "en": "Combo Finisher II+",
+   "cn": "连击收招Ⅱ＋"
+  },
+  "681771525": {
+   "id": "GEEN_017_12",
+   "en": "Combo Finisher III+",
+   "cn": "连击收招Ⅲ＋"
+  },
+  "3559768956": {
+   "id": "GEEN_017_13",
+   "en": "Combo Finisher IV+",
+   "cn": "连击收招Ⅳ＋"
+  },
+  "2325117550": {
+   "id": "GEEN_017_14",
+   "en": "Combo Finisher V+",
+   "cn": "连击收招Ⅴ＋"
+  },
+  "2692471958": {
+   "id": "GEEN_018_10",
+   "en": "Concentrated Fire I+",
+   "cn": "集中炮火＋"
+  },
+  "3158981641": {
+   "id": "GEEN_018_11",
+   "en": "Concentrated Fire II+",
+   "cn": "集中炮火Ⅱ＋"
+  },
+  "2184230690": {
+   "id": "GEEN_018_12",
+   "en": "Concentrated Fire III+",
+   "cn": "集中炮火Ⅲ＋"
+  },
+  "3856229990": {
+   "id": "GEEN_018_13",
+   "en": "Concentrated Fire IV+",
+   "cn": "集中炮火Ⅳ＋"
+  },
+  "3493394514": {
+   "id": "GEEN_018_14",
+   "en": "Concentrated Fire V+",
+   "cn": "集中炮火Ⅴ＋"
+  },
+  "2905870343": {
+   "id": "GEEN_020_10",
+   "en": "Damage Cap I+",
+   "cn": "伤害上限＋"
+  },
+  "2012932290": {
+   "id": "GEEN_020_11",
+   "en": "Damage Cap II+",
+   "cn": "伤害上限Ⅱ＋"
+  },
+  "4186376912": {
+   "id": "GEEN_020_12",
+   "en": "Damage Cap III+",
+   "cn": "伤害上限Ⅲ＋"
+  },
+  "211188273": {
+   "id": "GEEN_020_13",
+   "en": "Damage Cap IV+",
+   "cn": "伤害上限Ⅳ＋"
+  },
+  "2966117476": {
+   "id": "GEEN_020_14",
+   "en": "Damage Cap V+",
+   "cn": "伤害上限Ⅴ＋"
+  },
+  "745485395": {
+   "id": "GEEN_024_10",
+   "en": "Combo Booster I+",
+   "cn": "连击加成＋"
+  },
+  "1381132447": {
+   "id": "GEEN_024_11",
+   "en": "Combo Booster II+",
+   "cn": "连击加成Ⅱ＋"
+  },
+  "1912575594": {
+   "id": "GEEN_024_12",
+   "en": "Combo Booster III+",
+   "cn": "连击加成Ⅲ＋"
+  },
+  "2190491262": {
+   "id": "GEEN_024_13",
+   "en": "Combo Booster IV+",
+   "cn": "连击加成Ⅳ＋"
+  },
+  "2828835017": {
+   "id": "GEEN_024_14",
+   "en": "Combo Booster V+",
+   "cn": "连击加成Ⅴ＋"
+  },
+  "3348878463": {
+   "id": "GEEN_027_10",
+   "en": "Tyranny I+",
+   "cn": "暴君＋"
+  },
+  "544958417": {
+   "id": "GEEN_027_11",
+   "en": "Tyranny II+",
+   "cn": "暴君Ⅱ＋"
+  },
+  "1342071525": {
+   "id": "GEEN_027_12",
+   "en": "Tyranny III+",
+   "cn": "暴君Ⅲ＋"
+  },
+  "1177233363": {
+   "id": "GEEN_027_13",
+   "en": "Tyranny IV+",
+   "cn": "暴君Ⅳ＋"
+  },
+  "2647142493": {
+   "id": "GEEN_027_14",
+   "en": "Tyranny V+",
+   "cn": "暴君Ⅴ＋"
+  },
+  "2263059371": {
+   "id": "GEEN_028_10",
+   "en": "Lucky Charge I+",
+   "cn": "蓄力会心＋"
+  },
+  "1680105127": {
+   "id": "GEEN_028_11",
+   "en": "Lucky Charge II+",
+   "cn": "蓄力会心Ⅱ＋"
+  },
+  "321475265": {
+   "id": "GEEN_028_12",
+   "en": "Lucky Charge III+",
+   "cn": "蓄力会心Ⅲ＋"
+  },
+  "3542990982": {
+   "id": "GEEN_028_13",
+   "en": "Lucky Charge IV+",
+   "cn": "蓄力会心Ⅳ＋"
+  },
+  "544561593": {
+   "id": "GEEN_028_14",
+   "en": "Lucky Charge V+",
+   "cn": "蓄力会心Ⅴ＋"
+  },
+  "3104179352": {
+   "id": "GEEN_029_10",
+   "en": "Injury to Insult I+",
+   "cn": "弱化状态特效＋"
+  },
+  "4111932578": {
+   "id": "GEEN_029_11",
+   "en": "Injury to Insult II+",
+   "cn": "弱化状态特效Ⅱ＋"
+  },
+  "3511330644": {
+   "id": "GEEN_029_12",
+   "en": "Injury to Insult III+",
+   "cn": "弱化状态特效Ⅲ＋"
+  },
+  "1979601125": {
+   "id": "GEEN_029_13",
+   "en": "Injury to Insult IV+",
+   "cn": "弱化状态特效Ⅳ＋"
+  },
+  "4182467353": {
+   "id": "GEEN_029_14",
+   "en": "Injury to Insult V+",
+   "cn": "弱化状态特效Ⅴ＋"
+  },
+  "4074992083": {
+   "id": "GEEN_030_10",
+   "en": "Overdrive Assassin I+",
+   "cn": "OVERDRIVE特效＋"
+  },
+  "4092742783": {
+   "id": "GEEN_030_11",
+   "en": "Overdrive Assassin II+",
+   "cn": "OVERDRIVE特效Ⅱ＋"
+  },
+  "4093674198": {
+   "id": "GEEN_030_12",
+   "en": "Overdrive Assassin III+",
+   "cn": "OVERDRIVE特效Ⅲ＋"
+  },
+  "3755345428": {
+   "id": "GEEN_030_13",
+   "en": "Overdrive Assassin IV+",
+   "cn": "OVERDRIVE特效Ⅳ＋"
+  },
+  "3691624657": {
+   "id": "GEEN_030_14",
+   "en": "Overdrive Assassin V+",
+   "cn": "OVERDRIVE特效Ⅴ＋"
+  },
+  "36055413": {
+   "id": "GEEN_031_10",
+   "en": "Break Assassin I+",
+   "cn": "破防特效＋"
+  },
+  "1658948947": {
+   "id": "GEEN_031_11",
+   "en": "Break Assassin II+",
+   "cn": "破防特效Ⅱ＋"
+  },
+  "2925353551": {
+   "id": "GEEN_031_12",
+   "en": "Break Assassin III+",
+   "cn": "破防特效Ⅲ＋"
+  },
+  "900516924": {
+   "id": "GEEN_031_13",
+   "en": "Break Assassin IV+",
+   "cn": "破防特效Ⅳ＋"
+  },
+  "1363476045": {
+   "id": "GEEN_031_14",
+   "en": "Break Assassin V+",
+   "cn": "破防特效Ⅴ＋"
+  },
+  "1018685832": {
+   "id": "GEEN_061_10",
+   "en": "Guard Payback I+",
+   "cn": "格挡仇火＋"
+  },
+  "3570105735": {
+   "id": "GEEN_061_11",
+   "en": "Guard Payback II+",
+   "cn": "格挡仇火Ⅱ＋"
+  },
+  "3712557606": {
+   "id": "GEEN_061_12",
+   "en": "Guard Payback III+",
+   "cn": "格挡仇火Ⅲ＋"
+  },
+  "4223219945": {
+   "id": "GEEN_061_13",
+   "en": "Guard Payback IV+",
+   "cn": "格挡仇火Ⅳ＋"
+  },
+  "1303510465": {
+   "id": "GEEN_061_14",
+   "en": "Guard Payback V+",
+   "cn": "格挡仇火Ⅴ＋"
+  },
+  "1844408776": {
+   "id": "GEEN_064_10",
+   "en": "Dodge Payback I+",
+   "cn": "躲避仇火＋"
+  },
+  "964758686": {
+   "id": "GEEN_064_11",
+   "en": "Dodge Payback II+",
+   "cn": "躲避仇火Ⅱ＋"
+  },
+  "4104511661": {
+   "id": "GEEN_064_12",
+   "en": "Dodge Payback III+",
+   "cn": "躲避仇火Ⅲ＋"
+  },
+  "2555510072": {
+   "id": "GEEN_064_13",
+   "en": "Dodge Payback IV+",
+   "cn": "躲避仇火Ⅳ＋"
+  },
+  "1616318857": {
+   "id": "GEEN_064_14",
+   "en": "Dodge Payback V+",
+   "cn": "躲避仇火Ⅴ＋"
+  },
+  "4016106889": {
+   "id": "GEEN_083_10",
+   "en": "Skilled Assault I+",
+   "cn": "能力伤害＋"
+  },
+  "1007511629": {
+   "id": "GEEN_083_11",
+   "en": "Skilled Assault II+",
+   "cn": "能力伤害Ⅱ＋"
+  },
+  "398346305": {
+   "id": "GEEN_083_12",
+   "en": "Skilled Assault III+",
+   "cn": "能力伤害Ⅲ＋"
+  },
+  "2977722887": {
+   "id": "GEEN_083_13",
+   "en": "Skilled Assault IV+",
+   "cn": "能力伤害Ⅳ＋"
+  },
+  "2758321128": {
+   "id": "GEEN_083_14",
+   "en": "Skilled Assault V+",
+   "cn": "能力伤害Ⅴ＋"
+  },
+  "1819839927": {
+   "id": "GEEN_110_10",
+   "en": "Life on the Line I+",
+   "cn": "奋不顾身＋"
+  },
+  "3615115839": {
+   "id": "GEEN_110_11",
+   "en": "Life on the Line II+",
+   "cn": "奋不顾身Ⅱ＋"
+  },
+  "895789645": {
+   "id": "GEEN_110_12",
+   "en": "Life on the Line III+",
+   "cn": "奋不顾身Ⅲ＋"
+  },
+  "1450225354": {
+   "id": "GEEN_110_13",
+   "en": "Life on the Line IV+",
+   "cn": "奋不顾身Ⅳ＋"
+  },
+  "1082966965": {
+   "id": "GEEN_110_14",
+   "en": "Life on the Line V+",
+   "cn": "奋不顾身Ⅴ＋"
+  },
+  "3000951478": {
+   "id": "GEEN_111_10",
+   "en": "Quick Charge I+",
+   "cn": "快速蓄力＋"
+  },
+  "2863368507": {
+   "id": "GEEN_111_11",
+   "en": "Quick Charge II+",
+   "cn": "快速蓄力Ⅱ＋"
+  },
+  "2831579447": {
+   "id": "GEEN_111_12",
+   "en": "Quick Charge III+",
+   "cn": "快速蓄力Ⅲ＋"
+  },
+  "3337035017": {
+   "id": "GEEN_111_13",
+   "en": "Quick Charge IV+",
+   "cn": "快速蓄力Ⅳ＋"
+  },
+  "1903409471": {
+   "id": "GEEN_111_14",
+   "en": "Quick Charge V+",
+   "cn": "快速蓄力Ⅴ＋"
+  },
+  "1019602001": {
+   "id": "GEEN_000_20",
+   "en": "Attack Power I+",
+   "cn": "攻击力＋"
+  },
+  "2801113134": {
+   "id": "GEEN_000_21",
+   "en": "Attack Power II+",
+   "cn": "攻击力Ⅱ＋"
+  },
+  "2256469997": {
+   "id": "GEEN_000_22",
+   "en": "Attack Power III+",
+   "cn": "攻击力Ⅲ＋"
+  },
+  "2564816032": {
+   "id": "GEEN_000_23",
+   "en": "Attack Power IV+",
+   "cn": "攻击力Ⅳ＋"
+  },
+  "763309680": {
+   "id": "GEEN_000_24",
+   "en": "Attack Power V+",
+   "cn": "攻击力Ⅴ＋"
+  },
+  "1005506660": {
+   "id": "GEEN_001_20",
+   "en": "Health I+",
+   "cn": "体力＋"
+  },
+  "3509969021": {
+   "id": "GEEN_001_21",
+   "en": "Health II+",
+   "cn": "体力Ⅱ＋"
+  },
+  "2440220672": {
+   "id": "GEEN_001_22",
+   "en": "Health III+",
+   "cn": "体力Ⅲ＋"
+  },
+  "3581972382": {
+   "id": "GEEN_001_23",
+   "en": "Health IV+",
+   "cn": "体力Ⅳ＋"
+  },
+  "3912165432": {
+   "id": "GEEN_001_24",
+   "en": "Health V+",
+   "cn": "体力Ⅴ＋"
+  },
+  "1878807634": {
+   "id": "GEEN_003_20",
+   "en": "Critical Hit Rate I+",
+   "cn": "暴击率＋"
+  },
+  "1238371503": {
+   "id": "GEEN_003_21",
+   "en": "Critical Hit Rate II+",
+   "cn": "暴击率Ⅱ＋"
+  },
+  "835863012": {
+   "id": "GEEN_003_22",
+   "en": "Critical Hit Rate III+",
+   "cn": "暴击率Ⅲ＋"
+  },
+  "2518361932": {
+   "id": "GEEN_003_23",
+   "en": "Critical Hit Rate IV+",
+   "cn": "暴击率Ⅳ＋"
+  },
+  "196723080": {
+   "id": "GEEN_003_24",
+   "en": "Critical Hit Rate V+",
+   "cn": "暴击率Ⅴ＋"
+  },
+  "4108159595": {
+   "id": "GEEN_004_20",
+   "en": "Stun Power I+",
+   "cn": "昏厥＋"
+  },
+  "3333448045": {
+   "id": "GEEN_004_21",
+   "en": "Stun Power II+",
+   "cn": "昏厥Ⅱ＋"
+  },
+  "1573658480": {
+   "id": "GEEN_004_22",
+   "en": "Stun Power III+",
+   "cn": "昏厥Ⅲ＋"
+  },
+  "2136857113": {
+   "id": "GEEN_004_23",
+   "en": "Stun Power IV+",
+   "cn": "昏厥Ⅳ＋"
+  },
+  "2031986925": {
+   "id": "GEEN_004_24",
+   "en": "Stun Power V+",
+   "cn": "昏厥Ⅴ＋"
+  },
+  "461454864": {
+   "id": "GEEN_005_20",
+   "en": "Enmity I+",
+   "cn": "背水＋"
+  },
+  "725618602": {
+   "id": "GEEN_005_21",
+   "en": "Enmity II+",
+   "cn": "背水Ⅱ＋"
+  },
+  "901582721": {
+   "id": "GEEN_005_22",
+   "en": "Enmity III+",
+   "cn": "背水Ⅲ＋"
+  },
+  "2964133341": {
+   "id": "GEEN_005_23",
+   "en": "Enmity IV+",
+   "cn": "背水Ⅳ＋"
+  },
+  "2734824286": {
+   "id": "GEEN_005_24",
+   "en": "Enmity V+",
+   "cn": "背水Ⅴ＋"
+  },
+  "2107379804": {
+   "id": "GEEN_006_20",
+   "en": "Stamina I+",
+   "cn": "热血＋"
+  },
+  "3346702429": {
+   "id": "GEEN_006_21",
+   "en": "Stamina II+",
+   "cn": "热血Ⅱ＋"
+  },
+  "2838620666": {
+   "id": "GEEN_006_22",
+   "en": "Stamina III+",
+   "cn": "热血Ⅲ＋"
+  },
+  "1969418250": {
+   "id": "GEEN_006_23",
+   "en": "Stamina IV+",
+   "cn": "热血Ⅳ＋"
+  },
+  "3896853593": {
+   "id": "GEEN_006_24",
+   "en": "Stamina V+",
+   "cn": "热血Ⅴ＋"
+  },
+  "3894768775": {
+   "id": "GEEN_008_20",
+   "en": "Charged Attack I+",
+   "cn": "蓄力攻击＋"
+  },
+  "159430671": {
+   "id": "GEEN_008_21",
+   "en": "Charged Attack II+",
+   "cn": "蓄力攻击Ⅱ＋"
+  },
+  "2510558053": {
+   "id": "GEEN_008_22",
+   "en": "Charged Attack III+",
+   "cn": "蓄力攻击Ⅲ＋"
+  },
+  "3518449605": {
+   "id": "GEEN_008_23",
+   "en": "Charged Attack IV+",
+   "cn": "蓄力攻击Ⅳ＋"
+  },
+  "46563166": {
+   "id": "GEEN_008_24",
+   "en": "Charged Attack V+",
+   "cn": "蓄力攻击Ⅴ＋"
+  },
+  "370777774": {
+   "id": "GEEN_009_20",
+   "en": "Linked Together I+",
+   "cn": "协同攻击＋"
+  },
+  "2213104396": {
+   "id": "GEEN_009_21",
+   "en": "Linked Together II+",
+   "cn": "协同攻击Ⅱ＋"
+  },
+  "1758482554": {
+   "id": "GEEN_009_22",
+   "en": "Linked Together III+",
+   "cn": "协同攻击Ⅲ＋"
+  },
+  "3586795391": {
+   "id": "GEEN_009_23",
+   "en": "Linked Together IV+",
+   "cn": "协同攻击Ⅳ＋"
+  },
+  "1508193115": {
+   "id": "GEEN_009_24",
+   "en": "Linked Together V+",
+   "cn": "协同攻击Ⅴ＋"
+  },
+  "926538590": {
+   "id": "GEEN_012_20",
+   "en": "Throw I+",
+   "cn": "投掷＋"
+  },
+  "3851143131": {
+   "id": "GEEN_012_21",
+   "en": "Throw II+",
+   "cn": "投掷Ⅱ＋"
+  },
+  "2551505307": {
+   "id": "GEEN_012_22",
+   "en": "Throw III+",
+   "cn": "投掷Ⅲ＋"
+  },
+  "4045919327": {
+   "id": "GEEN_012_23",
+   "en": "Throw IV+",
+   "cn": "投掷Ⅳ＋"
+  },
+  "3031293381": {
+   "id": "GEEN_012_24",
+   "en": "Throw V+",
+   "cn": "投掷Ⅴ＋"
+  },
+  "1310864685": {
+   "id": "GEEN_013_20",
+   "en": "Critical Damage I+",
+   "cn": "暴击伤害＋"
+  },
+  "468221613": {
+   "id": "GEEN_013_21",
+   "en": "Critical Damage II+",
+   "cn": "暴击伤害Ⅱ＋"
+  },
+  "922006666": {
+   "id": "GEEN_013_22",
+   "en": "Critical Damage III+",
+   "cn": "暴击伤害Ⅲ＋"
+  },
+  "3317116134": {
+   "id": "GEEN_013_23",
+   "en": "Critical Damage IV+",
+   "cn": "暴击伤害Ⅳ＋"
+  },
+  "2637206446": {
+   "id": "GEEN_013_24",
+   "en": "Critical Damage V+",
+   "cn": "暴击伤害Ⅴ＋"
+  },
+  "3720179731": {
+   "id": "GEEN_014_20",
+   "en": "Exploiter I+",
+   "cn": "弱点攻击＋"
+  },
+  "3642842696": {
+   "id": "GEEN_014_21",
+   "en": "Exploiter II+",
+   "cn": "弱点攻击Ⅱ＋"
+  },
+  "2926325508": {
+   "id": "GEEN_014_22",
+   "en": "Exploiter III+",
+   "cn": "弱点攻击Ⅲ＋"
+  },
+  "540518893": {
+   "id": "GEEN_014_23",
+   "en": "Exploiter IV+",
+   "cn": "弱点攻击Ⅳ＋"
+  },
+  "3215606910": {
+   "id": "GEEN_014_24",
+   "en": "Exploiter V+",
+   "cn": "弱点攻击Ⅴ＋"
+  },
+  "1339981998": {
+   "id": "GEEN_017_20",
+   "en": "Combo Finisher I+",
+   "cn": "连击收招＋"
+  },
+  "1907546664": {
+   "id": "GEEN_017_21",
+   "en": "Combo Finisher II+",
+   "cn": "连击收招Ⅱ＋"
+  },
+  "238806636": {
+   "id": "GEEN_017_22",
+   "en": "Combo Finisher III+",
+   "cn": "连击收招Ⅲ＋"
+  },
+  "327770376": {
+   "id": "GEEN_017_23",
+   "en": "Combo Finisher IV+",
+   "cn": "连击收招Ⅳ＋"
+  },
+  "319097004": {
+   "id": "GEEN_017_24",
+   "en": "Combo Finisher V+",
+   "cn": "连击收招Ⅴ＋"
+  },
+  "2500028699": {
+   "id": "GEEN_018_20",
+   "en": "Concentrated Fire I+",
+   "cn": "集中炮火＋"
+  },
+  "1260731078": {
+   "id": "GEEN_018_21",
+   "en": "Concentrated Fire II+",
+   "cn": "集中炮火Ⅱ＋"
+  },
+  "1134177692": {
+   "id": "GEEN_018_22",
+   "en": "Concentrated Fire III+",
+   "cn": "集中炮火Ⅲ＋"
+  },
+  "3146182517": {
+   "id": "GEEN_018_23",
+   "en": "Concentrated Fire IV+",
+   "cn": "集中炮火Ⅳ＋"
+  },
+  "3083096922": {
+   "id": "GEEN_018_24",
+   "en": "Concentrated Fire V+",
+   "cn": "集中炮火Ⅴ＋"
+  },
+  "2339137520": {
+   "id": "GEEN_020_20",
+   "en": "Damage Cap I+",
+   "cn": "伤害上限＋"
+  },
+  "2529192408": {
+   "id": "GEEN_020_21",
+   "en": "Damage Cap II+",
+   "cn": "伤害上限Ⅱ＋"
+  },
+  "3842094962": {
+   "id": "GEEN_020_22",
+   "en": "Damage Cap III+",
+   "cn": "伤害上限Ⅲ＋"
+  },
+  "2714322882": {
+   "id": "GEEN_020_23",
+   "en": "Damage Cap IV+",
+   "cn": "伤害上限Ⅳ＋"
+  },
+  "1423501828": {
+   "id": "GEEN_020_24",
+   "en": "Damage Cap V+",
+   "cn": "伤害上限Ⅴ＋"
+  },
+  "3068610418": {
+   "id": "GEEN_024_20",
+   "en": "Combo Booster I+",
+   "cn": "连击加成＋"
+  },
+  "3447181738": {
+   "id": "GEEN_024_21",
+   "en": "Combo Booster II+",
+   "cn": "连击加成Ⅱ＋"
+  },
+  "2648865601": {
+   "id": "GEEN_024_22",
+   "en": "Combo Booster III+",
+   "cn": "连击加成Ⅲ＋"
+  },
+  "4031524060": {
+   "id": "GEEN_024_23",
+   "en": "Combo Booster IV+",
+   "cn": "连击加成Ⅳ＋"
+  },
+  "1782261331": {
+   "id": "GEEN_024_24",
+   "en": "Combo Booster V+",
+   "cn": "连击加成Ⅴ＋"
+  },
+  "1499125377": {
+   "id": "GEEN_027_20",
+   "en": "Tyranny I+",
+   "cn": "暴君＋"
+  },
+  "4025480913": {
+   "id": "GEEN_027_21",
+   "en": "Tyranny II+",
+   "cn": "暴君Ⅱ＋"
+  },
+  "2881517938": {
+   "id": "GEEN_027_22",
+   "en": "Tyranny III+",
+   "cn": "暴君Ⅲ＋"
+  },
+  "3247978941": {
+   "id": "GEEN_027_23",
+   "en": "Tyranny IV+",
+   "cn": "暴君Ⅳ＋"
+  },
+  "2761097132": {
+   "id": "GEEN_027_24",
+   "en": "Tyranny V+",
+   "cn": "暴君Ⅴ＋"
+  },
+  "3583906091": {
+   "id": "GEEN_028_20",
+   "en": "Lucky Charge I+",
+   "cn": "蓄力会心＋"
+  },
+  "659125207": {
+   "id": "GEEN_028_21",
+   "en": "Lucky Charge II+",
+   "cn": "蓄力会心Ⅱ＋"
+  },
+  "2166196842": {
+   "id": "GEEN_028_22",
+   "en": "Lucky Charge III+",
+   "cn": "蓄力会心Ⅲ＋"
+  },
+  "1858721467": {
+   "id": "GEEN_028_23",
+   "en": "Lucky Charge IV+",
+   "cn": "蓄力会心Ⅳ＋"
+  },
+  "2183456480": {
+   "id": "GEEN_028_24",
+   "en": "Lucky Charge V+",
+   "cn": "蓄力会心Ⅴ＋"
+  },
+  "4280865062": {
+   "id": "GEEN_029_20",
+   "en": "Injury to Insult I+",
+   "cn": "弱化状态特效＋"
+  },
+  "674621467": {
+   "id": "GEEN_029_21",
+   "en": "Injury to Insult II+",
+   "cn": "弱化状态特效Ⅱ＋"
+  },
+  "3529102807": {
+   "id": "GEEN_029_22",
+   "en": "Injury to Insult III+",
+   "cn": "弱化状态特效Ⅲ＋"
+  },
+  "4061322084": {
+   "id": "GEEN_029_23",
+   "en": "Injury to Insult IV+",
+   "cn": "弱化状态特效Ⅳ＋"
+  },
+  "3279554626": {
+   "id": "GEEN_029_24",
+   "en": "Injury to Insult V+",
+   "cn": "弱化状态特效Ⅴ＋"
+  },
+  "1803691243": {
+   "id": "GEEN_030_20",
+   "en": "Overdrive Assassin I+",
+   "cn": "OVERDRIVE特效＋"
+  },
+  "536550125": {
+   "id": "GEEN_030_21",
+   "en": "Overdrive Assassin II+",
+   "cn": "OVERDRIVE特效Ⅱ＋"
+  },
+  "470885322": {
+   "id": "GEEN_030_22",
+   "en": "Overdrive Assassin III+",
+   "cn": "OVERDRIVE特效Ⅲ＋"
+  },
+  "2561587315": {
+   "id": "GEEN_030_23",
+   "en": "Overdrive Assassin IV+",
+   "cn": "OVERDRIVE特效Ⅳ＋"
+  },
+  "963887556": {
+   "id": "GEEN_030_24",
+   "en": "Overdrive Assassin V+",
+   "cn": "OVERDRIVE特效Ⅴ＋"
+  },
+  "4269741394": {
+   "id": "GEEN_031_20",
+   "en": "Break Assassin I+",
+   "cn": "破防特效＋"
+  },
+  "1297142267": {
+   "id": "GEEN_031_21",
+   "en": "Break Assassin II+",
+   "cn": "破防特效Ⅱ＋"
+  },
+  "311556042": {
+   "id": "GEEN_031_22",
+   "en": "Break Assassin III+",
+   "cn": "破防特效Ⅲ＋"
+  },
+  "228692990": {
+   "id": "GEEN_031_23",
+   "en": "Break Assassin IV+",
+   "cn": "破防特效Ⅳ＋"
+  },
+  "273471210": {
+   "id": "GEEN_031_24",
+   "en": "Break Assassin V+",
+   "cn": "破防特效Ⅴ＋"
+  },
+  "1103986593": {
+   "id": "GEEN_061_20",
+   "en": "Guard Payback I+",
+   "cn": "格挡仇火＋"
+  },
+  "3181964557": {
+   "id": "GEEN_061_21",
+   "en": "Guard Payback II+",
+   "cn": "格挡仇火Ⅱ＋"
+  },
+  "861623760": {
+   "id": "GEEN_061_22",
+   "en": "Guard Payback III+",
+   "cn": "格挡仇火Ⅲ＋"
+  },
+  "1905222391": {
+   "id": "GEEN_061_23",
+   "en": "Guard Payback IV+",
+   "cn": "格挡仇火Ⅳ＋"
+  },
+  "1378620344": {
+   "id": "GEEN_061_24",
+   "en": "Guard Payback V+",
+   "cn": "格挡仇火Ⅴ＋"
+  },
+  "4283421229": {
+   "id": "GEEN_064_20",
+   "en": "Dodge Payback I+",
+   "cn": "躲避仇火＋"
+  },
+  "2683504160": {
+   "id": "GEEN_064_21",
+   "en": "Dodge Payback II+",
+   "cn": "躲避仇火Ⅱ＋"
+  },
+  "910986777": {
+   "id": "GEEN_064_22",
+   "en": "Dodge Payback III+",
+   "cn": "躲避仇火Ⅲ＋"
+  },
+  "3262494831": {
+   "id": "GEEN_064_23",
+   "en": "Dodge Payback IV+",
+   "cn": "躲避仇火Ⅳ＋"
+  },
+  "2725782414": {
+   "id": "GEEN_064_24",
+   "en": "Dodge Payback V+",
+   "cn": "躲避仇火Ⅴ＋"
+  },
+  "2497521192": {
+   "id": "GEEN_083_20",
+   "en": "Skilled Assault I+",
+   "cn": "能力伤害＋"
+  },
+  "3050592287": {
+   "id": "GEEN_083_21",
+   "en": "Skilled Assault II+",
+   "cn": "能力伤害Ⅱ＋"
+  },
+  "3948882144": {
+   "id": "GEEN_083_22",
+   "en": "Skilled Assault III+",
+   "cn": "能力伤害Ⅲ＋"
+  },
+  "3234409828": {
+   "id": "GEEN_083_23",
+   "en": "Skilled Assault IV+",
+   "cn": "能力伤害Ⅳ＋"
+  },
+  "713401538": {
+   "id": "GEEN_083_24",
+   "en": "Skilled Assault V+",
+   "cn": "能力伤害Ⅴ＋"
+  },
+  "2086371246": {
+   "id": "GEEN_110_20",
+   "en": "Life on the Line I+",
+   "cn": "奋不顾身＋"
+  },
+  "430201230": {
+   "id": "GEEN_110_21",
+   "en": "Life on the Line II+",
+   "cn": "奋不顾身Ⅱ＋"
+  },
+  "230042488": {
+   "id": "GEEN_110_22",
+   "en": "Life on the Line III+",
+   "cn": "奋不顾身Ⅲ＋"
+  },
+  "1388130562": {
+   "id": "GEEN_110_23",
+   "en": "Life on the Line IV+",
+   "cn": "奋不顾身Ⅳ＋"
+  },
+  "4128302009": {
+   "id": "GEEN_110_24",
+   "en": "Life on the Line V+",
+   "cn": "奋不顾身Ⅴ＋"
+  },
+  "361582703": {
+   "id": "GEEN_111_20",
+   "en": "Quick Charge I+",
+   "cn": "快速蓄力＋"
+  },
+  "28614413": {
+   "id": "GEEN_111_21",
+   "en": "Quick Charge II+",
+   "cn": "快速蓄力Ⅱ＋"
+  },
+  "1767816238": {
+   "id": "GEEN_111_22",
+   "en": "Quick Charge III+",
+   "cn": "快速蓄力Ⅲ＋"
+  },
+  "2442570121": {
+   "id": "GEEN_111_23",
+   "en": "Quick Charge IV+",
+   "cn": "快速蓄力Ⅳ＋"
+  },
+  "2442488633": {
+   "id": "GEEN_111_24",
+   "en": "Quick Charge V+",
+   "cn": "快速蓄力Ⅴ＋"
+  },
+  "2740423016": {
+   "id": "GEEN_036_23",
+   "en": "Garrison IV+",
+   "cn": "坚守Ⅳ＋"
+  },
+  "941342308": {
+   "id": "GEEN_036_24",
+   "en": "Garrison V+",
+   "cn": "坚守Ⅴ＋"
+  },
+  "2702236702": {
+   "id": "GEEN_060_23",
+   "en": "Improved Guard IV+",
+   "cn": "格挡性能Ⅳ＋"
+  },
+  "3090343847": {
+   "id": "GEEN_060_24",
+   "en": "Improved Guard V+",
+   "cn": "格挡性能Ⅴ＋"
+  },
+  "3901891745": {
+   "id": "GEEN_063_24",
+   "en": "Improved Dodge+",
+   "cn": "躲避性能＋"
+  },
+  "1917218620": {
+   "id": "GEEN_085_23",
+   "en": "Aegis IV+",
+   "cn": "守护Ⅳ＋"
+  },
+  "2619578842": {
+   "id": "GEEN_085_24",
+   "en": "Aegis V+",
+   "cn": "守护Ⅴ＋"
+  },
+  "2004886275": {
+   "id": "GEEN_096_23",
+   "en": "Steel Nerves IV+",
+   "cn": "坚持Ⅳ＋"
+  },
+  "3986821482": {
+   "id": "GEEN_096_24",
+   "en": "Steel Nerves V+",
+   "cn": "坚持Ⅴ＋"
+  },
+  "2959894182": {
+   "id": "GEEN_104_23",
+   "en": "Nimble Defense IV+",
+   "cn": "凝神Ⅳ＋"
+  },
+  "2763540896": {
+   "id": "GEEN_104_24",
+   "en": "Nimble Defense V+",
+   "cn": "凝神Ⅴ＋"
+  },
+  "1603830070": {
+   "id": "GEEN_107_23",
+   "en": "Precise Resilience IV+",
+   "cn": "抗争Ⅳ＋"
+  },
+  "490406010": {
+   "id": "GEEN_107_24",
+   "en": "Precise Resilience V+",
+   "cn": "抗争Ⅴ＋"
+  },
+  "1913753478": {
+   "id": "GEEN_144_20",
+   "en": "Stronghold I+",
+   "cn": "刚健＋"
+  },
+  "1054751939": {
+   "id": "GEEN_144_21",
+   "en": "Stronghold II+",
+   "cn": "刚健Ⅱ＋"
+  },
+  "3943717784": {
+   "id": "GEEN_144_22",
+   "en": "Stronghold III+",
+   "cn": "刚健Ⅲ＋"
+  },
+  "374241130": {
+   "id": "GEEN_144_23",
+   "en": "Stronghold IV+",
+   "cn": "刚健Ⅳ＋"
+  },
+  "3572217910": {
+   "id": "GEEN_144_24",
+   "en": "Stronghold V+",
+   "cn": "刚健Ⅴ＋"
+  },
+  "672011049": {
+   "id": "GEEN_145_20",
+   "en": "Power Hungry I+",
+   "cn": "修罗＋"
+  },
+  "2144136962": {
+   "id": "GEEN_145_21",
+   "en": "Power Hungry II+",
+   "cn": "修罗Ⅱ＋"
+  },
+  "336079733": {
+   "id": "GEEN_145_22",
+   "en": "Power Hungry III+",
+   "cn": "修罗Ⅲ＋"
+  },
+  "252105260": {
+   "id": "GEEN_145_23",
+   "en": "Power Hungry IV+",
+   "cn": "修罗Ⅳ＋"
+  },
+  "4056612774": {
+   "id": "GEEN_145_24",
+   "en": "Power Hungry V+",
+   "cn": "修罗Ⅴ＋"
+  },
+  "1232361780": {
+   "id": "GEEN_150_24",
+   "en": "Untouchable+",
+   "cn": "躲避距离＋"
+  },
+  "4055199251": {
+   "id": "GEEN_151_20",
+   "en": "Supplementary Damage I+",
+   "cn": "追击＋"
+  },
+  "773577546": {
+   "id": "GEEN_151_21",
+   "en": "Supplementary Damage II+",
+   "cn": "追击Ⅱ＋"
+  },
+  "802526812": {
+   "id": "GEEN_151_22",
+   "en": "Supplementary Damage III+",
+   "cn": "追击Ⅲ＋"
+  },
+  "2025452971": {
+   "id": "GEEN_151_23",
+   "en": "Supplementary Damage IV+",
+   "cn": "追击Ⅳ＋"
+  },
+  "56249821": {
+   "id": "GEEN_151_24",
+   "en": "Supplementary Damage V+",
+   "cn": "追击Ⅴ＋"
+  },
+  "3825151594": {
+   "id": "GEEN_152_20",
+   "en": "Less Is More I+",
+   "cn": "身无长技＋"
+  },
+  "2333106120": {
+   "id": "GEEN_152_21",
+   "en": "Less Is More II+",
+   "cn": "身无长技Ⅱ＋"
+  },
+  "1926771000": {
+   "id": "GEEN_152_22",
+   "en": "Less Is More III+",
+   "cn": "身无长技Ⅲ＋"
+  },
+  "589383597": {
+   "id": "GEEN_152_23",
+   "en": "Less Is More IV+",
+   "cn": "身无长技Ⅳ＋"
+  },
+  "1396519803": {
+   "id": "GEEN_152_24",
+   "en": "Less Is More V+",
+   "cn": "身无长技Ⅴ＋"
+  },
+  "2954918760": {
+   "id": "GEEN_153_20",
+   "en": "Head Start I+",
+   "cn": "先发制人＋"
+  },
+  "2542960464": {
+   "id": "GEEN_153_21",
+   "en": "Head Start II+",
+   "cn": "先发制人Ⅱ＋"
+  },
+  "2931797493": {
+   "id": "GEEN_153_22",
+   "en": "Head Start III+",
+   "cn": "先发制人Ⅲ＋"
+  },
+  "4277047704": {
+   "id": "GEEN_153_23",
+   "en": "Head Start IV+",
+   "cn": "先发制人Ⅳ＋"
+  },
+  "3194708616": {
+   "id": "GEEN_153_24",
+   "en": "Head Start V+",
+   "cn": "先发制人Ⅴ＋"
+  },
+  "3878130816": {
+   "id": "GEEN_154_20",
+   "en": "Berserker I+",
+   "cn": "穷寇心＋"
+  },
+  "739576938": {
+   "id": "GEEN_154_21",
+   "en": "Berserker II+",
+   "cn": "穷寇心Ⅱ＋"
+  },
+  "1473432306": {
+   "id": "GEEN_154_22",
+   "en": "Berserker III+",
+   "cn": "穷寇心Ⅲ＋"
+  },
+  "253665265": {
+   "id": "GEEN_154_23",
+   "en": "Berserker IV+",
+   "cn": "穷寇心Ⅳ＋"
+  },
+  "2212823150": {
+   "id": "GEEN_154_24",
+   "en": "Berserker V+",
+   "cn": "穷寇心Ⅴ＋"
+  },
+  "1252295703": {
+   "id": "GEEN_156_24",
+   "en": "Potent Greens+",
+   "cn": "万能药＋"
+  },
+  "2983461232": {
+   "id": "GEEN_157_24",
+   "en": "Roll of the Die+",
+   "cn": "骰子剑＋"
+  },
+  "3585544290": {
+   "id": "GEEN_158_20",
+   "en": "Glass Cannon I+",
+   "cn": "刀上舞＋"
+  },
+  "2825606168": {
+   "id": "GEEN_158_21",
+   "en": "Glass Cannon II+",
+   "cn": "刀上舞Ⅱ＋"
+  },
+  "1158941412": {
+   "id": "GEEN_158_22",
+   "en": "Glass Cannon III+",
+   "cn": "刀上舞Ⅲ＋"
+  },
+  "1632761334": {
+   "id": "GEEN_158_23",
+   "en": "Glass Cannon IV+",
+   "cn": "刀上舞Ⅳ＋"
+  },
+  "490771525": {
+   "id": "GEEN_158_24",
+   "en": "Glass Cannon V+",
+   "cn": "刀上舞Ⅴ＋"
+  },
+  "172380603": {
+   "id": "GEEN_159_24",
+   "en": "Flight over Fight+",
+   "cn": "摇曳步＋"
+  },
+  "1386668697": {
+   "id": "GEEN_114_90",
+   "en": "Fearless Soul+",
+   "cn": "英勇之魂＋"
+  },
+  "2597993984": {
+   "id": "GEEN_115_90",
+   "en": "Guardian's Awakening+",
+   "cn": "守护者之觉醒＋"
+  },
+  "2561069641": {
+   "id": "GEEN_116_90",
+   "en": "Helmsman's Awakening+",
+   "cn": "舵手之觉醒＋"
+  },
+  "3803414757": {
+   "id": "GEEN_117_90",
+   "en": "Mage's Awakening+",
+   "cn": "魔法师之觉醒＋"
+  },
+  "465473948": {
+   "id": "GEEN_118_90",
+   "en": "Veteran's Awakening+",
+   "cn": "老兵之觉醒＋"
+  },
+  "2614217764": {
+   "id": "GEEN_119_90",
+   "en": "Rose's Awakening+",
+   "cn": "玫瑰之觉醒＋"
+  },
+  "3024168797": {
+   "id": "GEEN_120_90",
+   "en": "Phantasm's Awakening+",
+   "cn": "幽幻之觉醒＋"
+  },
+  "3785038181": {
+   "id": "GEEN_121_90",
+   "en": "White Dragon's Awakening+",
+   "cn": "白龙之觉醒＋"
+  },
+  "1732009359": {
+   "id": "GEEN_122_90",
+   "en": "Hero's Awakening+",
+   "cn": "勇士之觉醒＋"
+  },
+  "38218819": {
+   "id": "GEEN_123_90",
+   "en": "Lord's Awakening+",
+   "cn": "王者之觉醒＋"
+  },
+  "2877510803": {
+   "id": "GEEN_124_90",
+   "en": "Dragonslayer's Awakening+",
+   "cn": "屠龙者之觉醒＋"
+  },
+  "2934932291": {
+   "id": "GEEN_125_90",
+   "en": "Holy Knight's Awakening+",
+   "cn": "圣骑士之觉醒＋"
+  },
+  "295380136": {
+   "id": "GEEN_126_90",
+   "en": "Swordmaster's Awakening+",
+   "cn": "变幻自如之觉醒＋"
+  },
+  "441954033": {
+   "id": "GEEN_127_90",
+   "en": "Butterfly's Awakening+",
+   "cn": "斩姬之觉醒＋"
+  },
+  "3457603211": {
+   "id": "GEEN_128_90",
+   "en": "Eternal Rage's Awakening+",
+   "cn": "古今无双之觉醒＋"
+  },
+  "45217984": {
+   "id": "GEEN_129_90",
+   "en": "Founder's Awakening+",
+   "cn": "极致之觉醒＋"
+  },
+  "2945351294": {
+   "id": "GEEN_130_90",
+   "en": "Versalis Soul+",
+   "cn": "异能之魂＋"
+  },
+  "1325520586": {
+   "id": "GEEN_131_90",
+   "en": "Crimson's Awakening+",
+   "cn": "真红之觉醒＋"
+  },
+  "3841558233": {
+   "id": "GEEN_132_90",
+   "en": "Ebony's Awakening+",
+   "cn": "冥暗之觉醒＋"
+  },
+  "871372816": {
+   "id": "GEEN_114_91",
+   "en": "Fearless Drive+",
+   "cn": "英勇神速＋"
+  },
+  "940194984": {
+   "id": "GEEN_114_92",
+   "en": "Fearless Spirit+",
+   "cn": "英勇灵气＋"
+  },
+  "1377830059": {
+   "id": "GEEN_115_91",
+   "en": "Guardian's Conviction+",
+   "cn": "守护者的决心＋"
+  },
+  "816050922": {
+   "id": "GEEN_115_92",
+   "en": "Guardian's Honor+",
+   "cn": "守护者的骄傲＋"
+  },
+  "2668164759": {
+   "id": "GEEN_116_91",
+   "en": "Helmsman's Navigation+",
+   "cn": "舵手的指引＋"
+  },
+  "3565862362": {
+   "id": "GEEN_116_92",
+   "en": "Helmsman's Tenacity+",
+   "cn": "舵手的坚持＋"
+  },
+  "2642992801": {
+   "id": "GEEN_117_91",
+   "en": "Mage's Aspiration+",
+   "cn": "魔法师的心愿＋"
+  },
+  "4139842725": {
+   "id": "GEEN_117_92",
+   "en": "Mage's Savvy+",
+   "cn": "魔法师的伶利＋"
+  },
+  "1691760675": {
+   "id": "GEEN_118_91",
+   "en": "Veteran's Insight+",
+   "cn": "老兵的智慧＋"
+  },
+  "95201426": {
+   "id": "GEEN_118_92",
+   "en": "Veteran's Vision+",
+   "cn": "老兵的天眼＋"
+  },
+  "30516942": {
+   "id": "GEEN_119_91",
+   "en": "Rose's Blooming+",
+   "cn": "玫瑰早绽＋"
+  },
+  "568397495": {
+   "id": "GEEN_119_92",
+   "en": "Rose's Profusion+",
+   "cn": "玫瑰缤纷＋"
+  },
+  "3765693029": {
+   "id": "GEEN_120_91",
+   "en": "Phantasm's Concord+",
+   "cn": "幽幻之谊＋"
+  },
+  "3211872906": {
+   "id": "GEEN_120_92",
+   "en": "Phantasm's Harmony+",
+   "cn": "幽幻之应＋"
+  },
+  "2245505845": {
+   "id": "GEEN_121_91",
+   "en": "White Dragon's Oath+",
+   "cn": "白龙的誓约＋"
+  },
+  "3050978944": {
+   "id": "GEEN_121_92",
+   "en": "White Dragon's Glory+",
+   "cn": "白龙的荣耀＋"
+  },
+  "2640037311": {
+   "id": "GEEN_122_91",
+   "en": "Hero's Creed+",
+   "cn": "勇士的信念＋"
+  },
+  "4221267413": {
+   "id": "GEEN_122_92",
+   "en": "Hero's Will+",
+   "cn": "勇士的毅力＋"
+  },
+  "3044168306": {
+   "id": "GEEN_123_91",
+   "en": "Lord's Procession+",
+   "cn": "王者行进＋"
+  },
+  "3228518152": {
+   "id": "GEEN_123_92",
+   "en": "Lord's Ambition+",
+   "cn": "王者一心＋"
+  },
+  "3233092238": {
+   "id": "GEEN_124_91",
+   "en": "Dragonslayer's Dominance+",
+   "cn": "屠龙者的威猛＋"
+  },
+  "3169710176": {
+   "id": "GEEN_124_92",
+   "en": "Dragonslayer's Ingenuity+",
+   "cn": "屠龙者的才智＋"
+  },
+  "2700693353": {
+   "id": "GEEN_125_91",
+   "en": "Holy Knight's Luster+",
+   "cn": "圣骑士的剑辉＋"
+  },
+  "2089124042": {
+   "id": "GEEN_125_92",
+   "en": "Holy Knight's Grandeur+",
+   "cn": "圣骑士的威光＋"
+  },
+  "3881977617": {
+   "id": "GEEN_126_91",
+   "en": "Swordmaster's Prowess+",
+   "cn": "变幻自如的迅刃＋"
+  },
+  "1231363209": {
+   "id": "GEEN_126_92",
+   "en": "Swordmaster's Art+",
+   "cn": "变幻自如的妖剑士＋"
+  },
+  "2974014182": {
+   "id": "GEEN_127_91",
+   "en": "Butterfly's Grace+",
+   "cn": "斩姬梦幻＋"
+  },
+  "2826510479": {
+   "id": "GEEN_127_92",
+   "en": "Butterfly's Valor+",
+   "cn": "斩姬武艺＋"
+  },
+  "2100400119": {
+   "id": "GEEN_128_91",
+   "en": "Eternal Rage's Mettle+",
+   "cn": "古今无双的气概＋"
+  },
+  "1825185783": {
+   "id": "GEEN_128_92",
+   "en": "Eternal Rage's Ethos+",
+   "cn": "古今无双的强者＋"
+  },
+  "348490737": {
+   "id": "GEEN_129_91",
+   "en": "Founder's Strategy+",
+   "cn": "极致谋略＋"
+  },
+  "343778699": {
+   "id": "GEEN_129_92",
+   "en": "Founder's Truth+",
+   "cn": "极致真理＋"
+  },
+  "3112832802": {
+   "id": "GEEN_130_91",
+   "en": "Versalis Foundation+",
+   "cn": "异能增长＋"
+  },
+  "3936948658": {
+   "id": "GEEN_130_92",
+   "en": "Versalis Ignition+",
+   "cn": "异能战意＋"
+  },
+  "3075219579": {
+   "id": "GEEN_131_91",
+   "en": "Crimson's Clout+",
+   "cn": "真红烈焰＋"
+  },
+  "1154778233": {
+   "id": "GEEN_131_92",
+   "en": "Crimson's Flight+",
+   "cn": "真红翔舞＋"
+  },
+  "4212101175": {
+   "id": "GEEN_132_91",
+   "en": "Ebony's Presence+",
+   "cn": "冥暗刚刃＋"
+  },
+  "2778502675": {
+   "id": "GEEN_132_92",
+   "en": "Ebony's Poise+",
+   "cn": "冥暗自若＋"
+  },
+  "1380835868": {
+   "id": "GEEN_170_04",
+   "en": "Spirit Edge's Rally",
+   "cn": "剑圣的炼气"
+  },
+  "934311996": {
+   "id": "GEEN_170_54",
+   "en": "Spirit Edge's Fury",
+   "cn": "剑圣的闪刃"
+  },
+  "1740760547": {
+   "id": "GEEN_170_64",
+   "en": "Spirit Edge's Warpath",
+   "cn": "剑圣的战气"
+  },
+  "3302852154": {
+   "id": "GEEN_170_74",
+   "en": "Seven-Star Boundary+",
+   "cn": "涯之七星＋"
+  },
+  "1029588600": {
+   "id": "GEEN_171_04",
+   "en": "Dark Huntress's Volley",
+   "cn": "魔眼的万箭"
+  },
+  "2267888377": {
+   "id": "GEEN_171_54",
+   "en": "Dark Huntress's Surge",
+   "cn": "魔眼的凛翔"
+  },
+  "2959295748": {
+   "id": "GEEN_171_64",
+   "en": "Dark Huntress's Warpath",
+   "cn": "魔眼的战气"
+  },
+  "1138615773": {
+   "id": "GEEN_171_74",
+   "en": "Two-Crown Boundary+",
+   "cn": "涯之二王＋"
+  },
+  "2603305871": {
+   "id": "GEEN_114_64",
+   "en": "Fearless Heart",
+   "cn": "英勇之心"
+  },
+  "1645882007": {
+   "id": "GEEN_115_64",
+   "en": "Guardian's Warpath",
+   "cn": "守护者的战气"
+  },
+  "395400303": {
+   "id": "GEEN_116_64",
+   "en": "Helmsman's Warpath",
+   "cn": "舵手的战气"
+  },
+  "2755787601": {
+   "id": "GEEN_117_64",
+   "en": "Mage's Warpath",
+   "cn": "魔法师的战气"
+  },
+  "2088681555": {
+   "id": "GEEN_118_64",
+   "en": "Veteran's Warpath",
+   "cn": "老兵的战气"
+  },
+  "2982223883": {
+   "id": "GEEN_119_64",
+   "en": "Rose's Warpath",
+   "cn": "玫瑰的战气"
+  },
+  "885485713": {
+   "id": "GEEN_125_64",
+   "en": "Holy Knight's Warpath",
+   "cn": "圣骑士的战气"
+  },
+  "2217767143": {
+   "id": "GEEN_128_64",
+   "en": "Eternal Rage's Warpath",
+   "cn": "古今无双的战气"
+  },
+  "1081314525": {
+   "id": "GEEN_120_64",
+   "en": "Phantasm's Warpath",
+   "cn": "幽幻的战气"
+  },
+  "4145664405": {
+   "id": "GEEN_127_64",
+   "en": "Butterfly's Warpath",
+   "cn": "斩姬的战气"
+  },
+  "3849363521": {
+   "id": "GEEN_121_64",
+   "en": "White Dragon's Warpath",
+   "cn": "白龙的战气"
+  },
+  "1032687881": {
+   "id": "GEEN_122_64",
+   "en": "Hero's Warpath",
+   "cn": "勇士的战气"
+  },
+  "1300006450": {
+   "id": "GEEN_123_64",
+   "en": "Lord's Warpath",
+   "cn": "王者的战气"
+  },
+  "1158383148": {
+   "id": "GEEN_124_64",
+   "en": "Dragonslayer's Warpath",
+   "cn": "屠龙者的战气"
+  },
+  "1605911268": {
+   "id": "GEEN_129_64",
+   "en": "Founder's Warpath",
+   "cn": "极致的战气"
+  },
+  "3561523741": {
+   "id": "GEEN_126_64",
+   "en": "Swordmaster's Warpath",
+   "cn": "变幻自如的战气"
+  },
+  "1718928953": {
+   "id": "GEEN_131_64",
+   "en": "Crimson's Warpath",
+   "cn": "真红的战气"
+  },
+  "1493965256": {
+   "id": "GEEN_132_64",
+   "en": "Ebony's Warpath",
+   "cn": "冥暗的战气"
+  },
+  "2849506516": {
+   "id": "GEEN_130_64",
+   "en": "Versalis Heart",
+   "cn": "异能之心"
+  },
+  "1789807503": {
+   "id": "GEEN_170_90",
+   "en": "Spirit Edge's Awakening+",
+   "cn": "剑圣之觉醒＋"
+  },
+  "2395713699": {
+   "id": "GEEN_171_90",
+   "en": "Dark Huntress's Awakening+",
+   "cn": "魔眼之觉醒＋"
+  },
+  "316658448": {
+   "id": "GEEN_170_91",
+   "en": "Spirit Edge's Rally+",
+   "cn": "剑圣的炼气＋"
+  },
+  "2929560031": {
+   "id": "GEEN_170_92",
+   "en": "Spirit Edge's Fury+",
+   "cn": "剑圣的闪刃＋"
+  },
+  "2675096288": {
+   "id": "GEEN_170_93",
+   "en": "Spirit Edge's Warpath+",
+   "cn": "剑圣的战气＋"
+  },
+  "3947551085": {
+   "id": "GEEN_171_91",
+   "en": "Dark Huntress's Volley+",
+   "cn": "魔眼的万箭＋"
+  },
+  "3689219015": {
+   "id": "GEEN_171_92",
+   "en": "Dark Huntress's Surge+",
+   "cn": "魔眼的凛翔＋"
+  },
+  "2911678203": {
+   "id": "GEEN_171_93",
+   "en": "Dark Huntress's Warpath+",
+   "cn": "魔眼的战气＋"
+  },
+  "118741288": {
+   "id": "GEEN_114_93",
+   "en": "Fearless Heart+",
+   "cn": "英勇之心＋"
+  },
+  "2887211300": {
+   "id": "GEEN_115_93",
+   "en": "Guardian's Warpath+",
+   "cn": "守护者的战气＋"
+  },
+  "3159608868": {
+   "id": "GEEN_116_93",
+   "en": "Helmsman's Warpath+",
+   "cn": "舵手的战气＋"
+  },
+  "1139960465": {
+   "id": "GEEN_117_93",
+   "en": "Mage's Warpath+",
+   "cn": "魔法师的战气＋"
+  },
+  "3400417180": {
+   "id": "GEEN_118_93",
+   "en": "Veteran's Warpath+",
+   "cn": "老兵的战气＋"
+  },
+  "1365141820": {
+   "id": "GEEN_119_93",
+   "en": "Rose's Warpath+",
+   "cn": "玫瑰的战气＋"
+  },
+  "1277712474": {
+   "id": "GEEN_125_93",
+   "en": "Holy Knight's Warpath+",
+   "cn": "圣骑士的战气＋"
+  },
+  "812237566": {
+   "id": "GEEN_128_93",
+   "en": "Eternal Rage's Warpath+",
+   "cn": "古今无双的战气＋"
+  },
+  "3835091074": {
+   "id": "GEEN_120_93",
+   "en": "Phantasm's Warpath+",
+   "cn": "幽幻的战气＋"
+  },
+  "3472038036": {
+   "id": "GEEN_127_93",
+   "en": "Butterfly's Warpath+",
+   "cn": "斩姬的战气＋"
+  },
+  "2318932416": {
+   "id": "GEEN_121_93",
+   "en": "White Dragon's Warpath+",
+   "cn": "白龙的战气＋"
+  },
+  "2760948447": {
+   "id": "GEEN_122_93",
+   "en": "Hero's Warpath+",
+   "cn": "勇士的战气＋"
+  },
+  "1289544283": {
+   "id": "GEEN_123_93",
+   "en": "Lord's Warpath+",
+   "cn": "王者的战气＋"
+  },
+  "3793371504": {
+   "id": "GEEN_124_93",
+   "en": "Dragonslayer's Warpath+",
+   "cn": "屠龙者的战气＋"
+  },
+  "1727115560": {
+   "id": "GEEN_129_93",
+   "en": "Founder's Warpath+",
+   "cn": "极致的战气＋"
+  },
+  "1993634155": {
+   "id": "GEEN_126_93",
+   "en": "Swordmaster's Warpath+",
+   "cn": "变幻自如的战气＋"
+  },
+  "3219096460": {
+   "id": "GEEN_131_93",
+   "en": "Crimson's Warpath+",
+   "cn": "真红的战气＋"
+  },
+  "3014345715": {
+   "id": "GEEN_132_93",
+   "en": "Ebony's Warpath+",
+   "cn": "冥暗的战气＋"
+  },
+  "2565465839": {
+   "id": "GEEN_130_93",
+   "en": "Versalis Heart+",
+   "cn": "异能之心＋"
+  },
+  "2196891620": {
+   "id": "GEEN_164_00",
+   "en": "Crabmiration",
+   "cn": "终极钳蟹因子"
+  },
+  "4046148708": {
+   "id": "GEEN_166_00",
+   "en": "Greater Aegis I",
+   "cn": "金刚"
+  },
+  "2611944813": {
+   "id": "GEEN_166_01",
+   "en": "Greater Aegis II",
+   "cn": "金刚Ⅱ"
+  },
+  "634214515": {
+   "id": "GEEN_166_02",
+   "en": "Greater Aegis III",
+   "cn": "金刚Ⅲ"
+  },
+  "1890087381": {
+   "id": "GEEN_166_03",
+   "en": "Greater Aegis IV",
+   "cn": "金刚Ⅳ"
+  },
+  "3224267754": {
+   "id": "GEEN_166_04",
+   "en": "Greater Aegis V",
+   "cn": "金刚Ⅴ"
+  },
+  "1487019959": {
+   "id": "GEEN_166_22",
+   "en": "Greater Aegis III+",
+   "cn": "金刚Ⅲ＋"
+  },
+  "2157030590": {
+   "id": "GEEN_166_23",
+   "en": "Greater Aegis IV+",
+   "cn": "金刚Ⅳ＋"
+  },
+  "1864173680": {
+   "id": "GEEN_166_24",
+   "en": "Greater Aegis V+",
+   "cn": "金刚Ⅴ＋"
+  },
+  "4216361714": {
+   "id": "GEEN_167_04",
+   "en": "Auto Potion",
+   "cn": "自动药水"
+  },
+  "895712150": {
+   "id": "GEEN_210_94",
+   "en": "Aegis V+",
+   "cn": "守护Ⅴ＋"
+  },
+  "4204787777": {
+   "id": "GEEN_211_94",
+   "en": "Regen V+",
+   "cn": "自愈Ⅴ＋"
+  },
+  "3465191539": {
+   "id": "GEEN_212_94",
+   "en": "Supplementary Damage V+",
+   "cn": "追击Ⅴ＋"
+  },
+  "2658773553": {
+   "id": "GEEN_213_94",
+   "en": "Improved Guard V+",
+   "cn": "格挡性能Ⅴ＋"
+  },
+  "2888751524": {
+   "id": "GEEN_220_94",
+   "en": "Flight over Fight+",
+   "cn": "摇曳步＋"
+  },
+  "406111146": {
+   "id": "GEEN_221_94",
+   "en": "Damage Cap V+",
+   "cn": "伤害上限Ⅴ＋"
+  },
+  "1706507071": {
+   "id": "GEEN_222_94",
+   "en": "Potion Hoarder V+",
+   "cn": "药水携带数Ⅴ＋"
+  },
+  "523707795": {
+   "id": "GEEN_223_94",
+   "en": "Tyranny V+",
+   "cn": "暴君Ⅴ＋"
+  },
+  "3170443136": {
+   "id": "GEEN_233_04",
+   "en": "Berserker Echo",
+   "cn": "狂战士"
+  },
+  "879680883": {
+   "id": "GEEN_234_04",
+   "en": "Spartan Echo",
+   "cn": "斯巴达"
+  },
+  "2475939383": {
+   "id": "GEEN_235_04",
+   "en": "Super Ultimate Perfect Dodge",
+   "cn": "超终极精准躲避"
+  },
+  "3386424727": {
+   "id": "GEEN_172_04",
+   "en": "Supreme Primarch's Awe",
+   "cn": "天司长的灵威"
+  },
+  "2874113366": {
+   "id": "GEEN_172_54",
+   "en": "Supreme Primarch's Nimbus",
+   "cn": "天司长的风雅"
+  },
+  "3099872606": {
+   "id": "GEEN_172_90",
+   "en": "Supreme Primarch's Awakening+",
+   "cn": "天司长之觉醒＋"
+  },
+  "4045828149": {
+   "id": "GEEN_172_74",
+   "en": "Ain+",
+   "cn": "无态＋"
+  },
+  "3437561831": {
+   "id": "GEEN_172_64",
+   "en": "Supreme Primarch's Warpath",
+   "cn": "天司长的战气"
+  },
+  "858692400": {
+   "id": "GEEN_233_24",
+   "en": "Berserker Echo+",
+   "cn": "狂战士＋"
+  },
+  "2475537957": {
+   "id": "GEEN_234_24",
+   "en": "Spartan Echo+",
+   "cn": "斯巴达＋"
+  },
+  "3152556466": {
+   "id": "GEEN_235_24",
+   "en": "Super Ultimate Perfect Dodge+",
+   "cn": "超终极精准躲避＋"
+  },
+  "1050940235": {
+   "id": "GEEN_172_91",
+   "en": "Supreme Primarch's Awe+",
+   "cn": "天司长的灵威＋"
+  },
+  "2117751459": {
+   "id": "GEEN_172_92",
+   "en": "Supreme Primarch's Nimbus+",
+   "cn": "天司长的风雅＋"
+  },
+  "1566126045": {
+   "id": "GEEN_172_93",
+   "en": "Supreme Primarch's Warpath+",
+   "cn": "天司长的战气＋"
+  },
+  "652070201": {
+   "id": "GEEN_044_24",
+   "en": "Stout Heart+",
+   "cn": "霸体＋"
+  },
+  "2443976157": {
+   "id": "GEEN_045_24",
+   "en": "Guts V+",
+   "cn": "豪胆Ⅴ＋"
+  },
+  "393207852": {
+   "id": "GEEN_046_24",
+   "en": "Poison Resistance V+",
+   "cn": "中毒抗性Ⅴ＋"
+  },
+  "670056586": {
+   "id": "GEEN_047_24",
+   "en": "Burn Resistance V+",
+   "cn": "灼热抗性Ⅴ＋"
+  },
+  "1632613712": {
+   "id": "GEEN_051_24",
+   "en": "Sandtomb Resistance V+",
+   "cn": "泥沙抗性Ⅴ＋"
+  },
+  "4017146486": {
+   "id": "GEEN_052_24",
+   "en": "Glaciate Resistance V+",
+   "cn": "冰冻抗性Ⅴ＋"
+  },
+  "549247771": {
+   "id": "GEEN_054_24",
+   "en": "Dizzy Resistance V+",
+   "cn": "昏迷抗性Ⅴ＋"
+  },
+  "1791174562": {
+   "id": "GEEN_055_24",
+   "en": "Paralysis Resistance V+",
+   "cn": "麻痹抗性Ⅴ＋"
+  },
+  "432754361": {
+   "id": "GEEN_057_24",
+   "en": "Skill Sealed Resistance V+",
+   "cn": "能力封印抗性Ⅴ＋"
+  },
+  "1178638797": {
+   "id": "GEEN_058_24",
+   "en": "SBA Sealed Resistance V+",
+   "cn": "奥义封印抗性Ⅴ＋"
+  },
+  "2115217197": {
+   "id": "GEEN_065_24",
+   "en": "Improved Healing V+",
+   "cn": "回复性能Ⅴ＋"
+  },
+  "510247888": {
+   "id": "GEEN_066_24",
+   "en": "Regen V+",
+   "cn": "自愈Ⅴ＋"
+  },
+  "2512948815": {
+   "id": "GEEN_067_24",
+   "en": "Drain V+",
+   "cn": "HP吸收Ⅴ＋"
+  },
+  "761214007": {
+   "id": "GEEN_068_24",
+   "en": "Autorevive V+",
+   "cn": "自动复活Ⅴ＋"
+  },
+  "1703976452": {
+   "id": "GEEN_069_24",
+   "en": "Quick Cooldown V+",
+   "cn": "迅捷能力Ⅴ＋"
+  },
+  "1875979873": {
+   "id": "GEEN_070_24",
+   "en": "Cascade V+",
+   "cn": "怒涛Ⅴ＋"
+  },
+  "3855218309": {
+   "id": "GEEN_072_24",
+   "en": "Uplift V+",
+   "cn": "激昂Ⅴ＋"
+  },
+  "600329858": {
+   "id": "GEEN_073_24",
+   "en": "Potion Hoarder V+",
+   "cn": "药水携带数Ⅴ＋"
+  },
+  "4281122000": {
+   "id": "GEEN_077_24",
+   "en": "Low Profile V+",
+   "cn": "匿踪Ⅴ＋"
+  },
+  "3325857247": {
+   "id": "GEEN_078_24",
+   "en": "Provoke V+",
+   "cn": "挑衅Ⅴ＋"
+  },
+  "3618356682": {
+   "id": "GEEN_079_24",
+   "en": "Fast Learner V+",
+   "cn": "获得经验值Ⅴ＋"
+  },
+  "2657252765": {
+   "id": "GEEN_080_24",
+   "en": "Rupie Tycoon V+",
+   "cn": "获得金币Ⅴ＋"
+  },
+  "571563889": {
+   "id": "GEEN_086_24",
+   "en": "Slow Resistance V+",
+   "cn": "缓速抗性Ⅴ＋"
+  },
+  "2982986257": {
+   "id": "GEEN_087_24",
+   "en": "Firm Stance V+",
+   "cn": "不动Ⅴ＋"
+  },
+  "2856701229": {
+   "id": "GEEN_088_24",
+   "en": "Blight Resistance V+",
+   "cn": "灾祸抗性Ⅴ＋"
+  },
+  "189099503": {
+   "id": "GEEN_094_24",
+   "en": "Steady Focus V+",
+   "cn": "蓄力强化Ⅴ＋"
+  },
+  "693246457": {
+   "id": "GEEN_106_24",
+   "en": "Nimble Onslaught V+",
+   "cn": "明镜止水Ⅴ＋"
+  },
+  "3463209679": {
+   "id": "GEEN_109_24",
+   "en": "Precise Wrath V+",
+   "cn": "怒发冲冠Ⅴ＋"
+  },
+  "4015852822": {
+   "id": "GEEN_136_24",
+   "en": "Held Under Resistance V+",
+   "cn": "水牢抗性Ⅴ＋"
+  },
+  "3540458885": {
+   "id": "GEEN_137_24",
+   "en": "Darkflame Resistance V+",
+   "cn": "异能耐受Ⅴ＋"
+  },
+  "1922147321": {
+   "id": "GEEN_138_24",
+   "en": "Attack Down Resistance V+",
+   "cn": "攻击DOWN抗性Ⅴ＋"
+  },
+  "1346946374": {
+   "id": "GEEN_139_24",
+   "en": "Defense Down Resistance V+",
+   "cn": "防御DOWN抗性Ⅴ＋"
+  },
+  "6368016": {
+   "id": "GEEN_146_24",
+   "en": "War Elemental+",
+   "cn": "属性克制转换＋"
+  },
+  "775115235": {
+   "id": "GEEN_147_24",
+   "en": "Path to Mastery V+",
+   "cn": "获得MSPⅤ＋"
+  },
+  "2639226583": {
+   "id": "GEEN_167_24",
+   "en": "Auto Potion+",
+   "cn": "自动药水＋"
+  },
+  "3192656806": {
+   "id": "GEEN_173_04",
+   "en": "Gladiator's Frenzy",
+   "cn": "狼王的激昂"
+  },
+  "2976398045": {
+   "id": "GEEN_173_54",
+   "en": "Gladiator's Top",
+   "cn": "狼王的大转轮"
+  },
+  "1167567016": {
+   "id": "GEEN_173_64",
+   "en": "Gladiator's Warpath",
+   "cn": "狼王的战气"
+  },
+  "2441409403": {
+   "id": "GEEN_174_04",
+   "en": "Bladequeen's Serenade",
+   "cn": "刃姬的小夜曲"
+  },
+  "611992051": {
+   "id": "GEEN_174_54",
+   "en": "Bladequeen's Circuit",
+   "cn": "刃姬的轮舞曲"
+  },
+  "1804733858": {
+   "id": "GEEN_174_64",
+   "en": "Bladequeen's Warpath",
+   "cn": "刃姬的战气"
+  },
+  "3583301957": {
+   "id": "GEEN_175_04",
+   "en": "Ultramarine's Flash",
+   "cn": "群青的剑光"
+  },
+  "3821873461": {
+   "id": "GEEN_175_54",
+   "en": "Ultramarine's Adversity",
+   "cn": "群青的逆境"
+  },
+  "3035424700": {
+   "id": "GEEN_175_64",
+   "en": "Ultramarine's Warpath",
+   "cn": "群青的战气"
+  },
+  "29049707": {
+   "id": "GEEN_176_04",
+   "en": "Thunderwolf's Recharge",
+   "cn": "雷狼的弹匣"
+  },
+  "2568570117": {
+   "id": "GEEN_176_54",
+   "en": "Thunderwolf's Acuity",
+   "cn": "雷狼的慧眼"
+  },
+  "1637982873": {
+   "id": "GEEN_176_64",
+   "en": "Thunderwolf's Warpath",
+   "cn": "雷狼的战气"
+  },
+  "2047264763": {
+   "id": "GEEN_177_04",
+   "en": "Enchantress's Blessing",
+   "cn": "转世的恩宠"
+  },
+  "1555186783": {
+   "id": "GEEN_177_54",
+   "en": "Enchantress's Rhythm",
+   "cn": "转世的跃动"
+  },
+  "3674581093": {
+   "id": "GEEN_177_64",
+   "en": "Enchantress's Warpath",
+   "cn": "转世的战气"
+  },
+  "2574829143": {
+   "id": "GEEN_178_04",
+   "en": "The Black's Mark",
+   "cn": "黑龙的咒印"
+  },
+  "2497479182": {
+   "id": "GEEN_178_54",
+   "en": "The Black's Impulse",
+   "cn": "黑龙的折跃"
+  },
+  "1092219035": {
+   "id": "GEEN_178_64",
+   "en": "The Black's Warpath",
+   "cn": "黑龙的战气"
+  },
+  "2304424950": {
+   "id": "GEEN_173_90",
+   "en": "Gladiator's Awakening+",
+   "cn": "狼王之觉醒＋"
+  },
+  "3634652401": {
+   "id": "GEEN_174_90",
+   "en": "Bladequeen's Awakening+",
+   "cn": "刃姬之觉醒＋"
+  },
+  "2513190072": {
+   "id": "GEEN_175_90",
+   "en": "Ultramarine's Awakening+",
+   "cn": "群青之觉醒＋"
+  },
+  "596983764": {
+   "id": "GEEN_176_90",
+   "en": "Thunderwolf's Awakening+",
+   "cn": "雷狼之觉醒＋"
+  },
+  "1513492136": {
+   "id": "GEEN_177_90",
+   "en": "Enchantress's Awakening+",
+   "cn": "转世之觉醒＋"
+  },
+  "2829110271": {
+   "id": "GEEN_178_90",
+   "en": "The Black's Awakening+",
+   "cn": "黑龙之觉醒＋"
+  },
+  "674086896": {
+   "id": "GEEN_173_91",
+   "en": "Gladiator's Frenzy+",
+   "cn": "狼王的激昂＋"
+  },
+  "4061398193": {
+   "id": "GEEN_173_92",
+   "en": "Gladiator's Top+",
+   "cn": "狼王的大转轮＋"
+  },
+  "1101795458": {
+   "id": "GEEN_173_93",
+   "en": "Gladiator's Warpath+",
+   "cn": "狼王的战气＋"
+  },
+  "3969908343": {
+   "id": "GEEN_174_91",
+   "en": "Bladequeen's Serenade+",
+   "cn": "刃姬的小夜曲＋"
+  },
+  "2530672222": {
+   "id": "GEEN_174_92",
+   "en": "Bladequeen's Circuit+",
+   "cn": "刃姬的轮舞曲＋"
+  },
+  "3950407047": {
+   "id": "GEEN_174_93",
+   "en": "Bladequeen's Warpath+",
+   "cn": "刃姬的战气＋"
+  },
+  "2663826797": {
+   "id": "GEEN_175_91",
+   "en": "Ultramarine's Flash+",
+   "cn": "群青的剑光＋"
+  },
+  "3557916659": {
+   "id": "GEEN_175_92",
+   "en": "Ultramarine's Adversity+",
+   "cn": "群青的逆境＋"
+  },
+  "1374259836": {
+   "id": "GEEN_175_93",
+   "en": "Ultramarine's Warpath+",
+   "cn": "群青的战气＋"
+  },
+  "4184122570": {
+   "id": "GEEN_176_91",
+   "en": "Thunderwolf's Recharge+",
+   "cn": "雷狼的弹匣＋"
+  },
+  "439720807": {
+   "id": "GEEN_176_92",
+   "en": "Thunderwolf's Acuity+",
+   "cn": "雷狼的慧眼＋"
+  },
+  "3636860167": {
+   "id": "GEEN_176_93",
+   "en": "Thunderwolf's Warpath+",
+   "cn": "雷狼的战气＋"
+  },
+  "1680875153": {
+   "id": "GEEN_177_91",
+   "en": "Enchantress's Blessing+",
+   "cn": "转世的恩宠＋"
+  },
+  "3123234844": {
+   "id": "GEEN_177_92",
+   "en": "Enchantress's Rhythm+",
+   "cn": "转世的跃动＋"
+  },
+  "762364797": {
+   "id": "GEEN_177_93",
+   "en": "Enchantress's Warpath+",
+   "cn": "转世的战气＋"
+  },
+  "86221314": {
+   "id": "GEEN_178_91",
+   "en": "The Black's Mark+",
+   "cn": "黑龙的咒印＋"
+  },
+  "119797740": {
+   "id": "GEEN_178_92",
+   "en": "The Black's Impulse+",
+   "cn": "黑龙的折跃＋"
+  },
+  "2596089253": {
+   "id": "GEEN_178_93",
+   "en": "The Black's Warpath+",
+   "cn": "黑龙的战气＋"
+  },
+  "1114296846": {
+   "id": "GEEN_300_11",
+   "en": "Crabs Are Forever+",
+   "cn": "永恒钳蟹因子＋"
+  },
+  "1229145750": {
+   "id": "GEEN_301_00",
+   "en": "Immortal Shell",
+   "cn": "可怕的漆黑钳蟹因子"
+  },
+  "1724590266": {
+   "id": "GEEN_301_10",
+   "en": "Immortal Shell+",
+   "cn": "可怕的漆黑钳蟹因子＋"
+  },
+  "1710244362": {
+   "id": "GEEN_302_00",
+   "en": "In a Pinch",
+   "cn": "漆黑之谊"
+  },
+  "1987602537": {
+   "id": "GEEN_302_10",
+   "en": "In a Pinch+",
+   "cn": "漆黑之谊＋"
+  },
+  "2995366317": {
+   "id": "GEEN_303_00",
+   "en": "Sumo Force",
+   "cn": "相扑斗力"
+  },
+  "2282952497": {
+   "id": "GEEN_303_10",
+   "en": "Sumo Force+",
+   "cn": "相扑斗力＋"
+  },
+  "3446387846": {
+   "id": "GEEN_320_00",
+   "en": "Celestial Nyx I",
+   "cn": "天星之炼"
+  },
+  "1961811097": {
+   "id": "GEEN_320_01",
+   "en": "Celestial Nyx II",
+   "cn": "天星之炼Ⅱ"
+  },
+  "1925554749": {
+   "id": "GEEN_320_02",
+   "en": "Celestial Nyx III",
+   "cn": "天星之炼Ⅲ"
+  },
+  "1594454419": {
+   "id": "GEEN_320_03",
+   "en": "Celestial Nyx IV",
+   "cn": "天星之炼Ⅳ"
+  },
+  "1456576197": {
+   "id": "GEEN_320_04",
+   "en": "Celestial Nyx V",
+   "cn": "天星之炼Ⅴ"
+  },
+  "1267125249": {
+   "id": "GEEN_321_00",
+   "en": "Celestial Lumen I",
+   "cn": "天星之煌"
+  },
+  "3015756093": {
+   "id": "GEEN_321_01",
+   "en": "Celestial Lumen II",
+   "cn": "天星之煌Ⅱ"
+  },
+  "309891606": {
+   "id": "GEEN_321_02",
+   "en": "Celestial Lumen III",
+   "cn": "天星之煌Ⅲ"
+  },
+  "2417454469": {
+   "id": "GEEN_321_03",
+   "en": "Celestial Lumen IV",
+   "cn": "天星之煌Ⅳ"
+  },
+  "1929423207": {
+   "id": "GEEN_321_04",
+   "en": "Celestial Lumen V",
+   "cn": "天星之煌Ⅴ"
+  },
+  "2215395738": {
+   "id": "GEEN_322_00",
+   "en": "Celestial Terra I",
+   "cn": "天星之界"
+  },
+  "2884781653": {
+   "id": "GEEN_322_01",
+   "en": "Celestial Terra II",
+   "cn": "天星之界Ⅱ"
+  },
+  "2415225079": {
+   "id": "GEEN_322_02",
+   "en": "Celestial Terra III",
+   "cn": "天星之界Ⅲ"
+  },
+  "443825684": {
+   "id": "GEEN_322_03",
+   "en": "Celestial Terra IV",
+   "cn": "天星之界Ⅳ"
+  },
+  "2271578735": {
+   "id": "GEEN_322_04",
+   "en": "Celestial Terra V",
+   "cn": "天星之界Ⅴ"
+  },
+  "3430800981": {
+   "id": "GEEN_323_00",
+   "en": "Celestial Incendo I",
+   "cn": "天星之焰"
+  },
+  "2844820983": {
+   "id": "GEEN_323_01",
+   "en": "Celestial Incendo II",
+   "cn": "天星之焰Ⅱ"
+  },
+  "2520321743": {
+   "id": "GEEN_323_02",
+   "en": "Celestial Incendo III",
+   "cn": "天星之焰Ⅲ"
+  },
+  "584877825": {
+   "id": "GEEN_323_03",
+   "en": "Celestial Incendo IV",
+   "cn": "天星之焰Ⅳ"
+  },
+  "1429663330": {
+   "id": "GEEN_323_04",
+   "en": "Celestial Incendo V",
+   "cn": "天星之焰Ⅴ"
+  },
+  "1037272337": {
+   "id": "GEEN_324_00",
+   "en": "Celestial Aqua I",
+   "cn": "天星之雪"
+  },
+  "432288910": {
+   "id": "GEEN_324_01",
+   "en": "Celestial Aqua II",
+   "cn": "天星之雪Ⅱ"
+  },
+  "1493636569": {
+   "id": "GEEN_324_02",
+   "en": "Celestial Aqua III",
+   "cn": "天星之雪Ⅲ"
+  },
+  "3531608486": {
+   "id": "GEEN_324_03",
+   "en": "Celestial Aqua IV",
+   "cn": "天星之雪Ⅳ"
+  },
+  "2363590009": {
+   "id": "GEEN_324_04",
+   "en": "Celestial Aqua V",
+   "cn": "天星之雪Ⅴ"
+  },
+  "1404908095": {
+   "id": "GEEN_325_00",
+   "en": "Fatebreaker I",
+   "cn": "浪迹天涯"
+  },
+  "2246598033": {
+   "id": "GEEN_325_01",
+   "en": "Fatebreaker II",
+   "cn": "浪迹天涯Ⅱ"
+  },
+  "3705671131": {
+   "id": "GEEN_325_02",
+   "en": "Fatebreaker III",
+   "cn": "浪迹天涯Ⅲ"
+  },
+  "3833682200": {
+   "id": "GEEN_325_03",
+   "en": "Fatebreaker IV",
+   "cn": "浪迹天涯Ⅳ"
+  },
+  "1343845326": {
+   "id": "GEEN_325_04",
+   "en": "Fatebreaker V",
+   "cn": "浪迹天涯Ⅴ"
+  },
+  "2631090344": {
+   "id": "GEEN_325_20",
+   "en": "Fatebreaker I+",
+   "cn": "浪迹天涯＋"
+  },
+  "2505635139": {
+   "id": "GEEN_325_21",
+   "en": "Fatebreaker II+",
+   "cn": "浪迹天涯Ⅱ＋"
+  },
+  "661108706": {
+   "id": "GEEN_325_22",
+   "en": "Fatebreaker III+",
+   "cn": "浪迹天涯Ⅲ＋"
+  },
+  "2796208735": {
+   "id": "GEEN_325_23",
+   "en": "Fatebreaker IV+",
+   "cn": "浪迹天涯Ⅳ＋"
+  },
+  "1543000017": {
+   "id": "GEEN_325_24",
+   "en": "Fatebreaker V+",
+   "cn": "浪迹天涯Ⅴ＋"
+  },
+  "2209695291": {
+   "id": "GEEN_326_00",
+   "en": "Celestial Ventus I",
+   "cn": "天星之止息"
+  },
+  "2706090446": {
+   "id": "GEEN_326_01",
+   "en": "Celestial Ventus II",
+   "cn": "天星之止息Ⅱ"
+  },
+  "2990673086": {
+   "id": "GEEN_326_02",
+   "en": "Celestial Ventus III",
+   "cn": "天星之止息Ⅲ"
+  },
+  "2135898351": {
+   "id": "GEEN_326_03",
+   "en": "Celestial Ventus IV",
+   "cn": "天星之止息Ⅳ"
+  },
+  "855666627": {
+   "id": "GEEN_326_04",
+   "en": "Celestial Ventus V",
+   "cn": "天星之止息Ⅴ"
+  },
+  "3784099727": {
+   "id": "GEEN_327_00",
+   "en": "Divergence I",
+   "cn": "分歧"
+  },
+  "2585159": {
+   "id": "GEEN_327_01",
+   "en": "Divergence II",
+   "cn": "分歧Ⅱ"
+  },
+  "3180046085": {
+   "id": "GEEN_327_02",
+   "en": "Divergence III",
+   "cn": "分歧Ⅲ"
+  },
+  "2060049556": {
+   "id": "GEEN_327_03",
+   "en": "Divergence IV",
+   "cn": "分歧Ⅳ"
+  },
+  "2824027363": {
+   "id": "GEEN_327_04",
+   "en": "Divergence V",
+   "cn": "分歧Ⅴ"
+  },
+  "4132493121": {
+   "id": "GEEN_327_20",
+   "en": "Divergence I+",
+   "cn": "分歧＋"
+  },
+  "143141304": {
+   "id": "GEEN_327_21",
+   "en": "Divergence II+",
+   "cn": "分歧Ⅱ＋"
+  },
+  "2425181714": {
+   "id": "GEEN_327_22",
+   "en": "Divergence III+",
+   "cn": "分歧Ⅲ＋"
+  },
+  "1297269596": {
+   "id": "GEEN_327_23",
+   "en": "Divergence IV+",
+   "cn": "分歧Ⅳ＋"
+  },
+  "2068491056": {
+   "id": "GEEN_327_24",
+   "en": "Divergence V+",
+   "cn": "分歧Ⅴ＋"
+  },
+  "3391256384": {
+   "id": "GEEN_320_20",
+   "en": "Celestial Nyx I+",
+   "cn": "天星之炼＋"
+  },
+  "2404487827": {
+   "id": "GEEN_320_21",
+   "en": "Celestial Nyx II+",
+   "cn": "天星之炼Ⅱ＋"
+  },
+  "4182638694": {
+   "id": "GEEN_320_22",
+   "en": "Celestial Nyx III+",
+   "cn": "天星之炼Ⅲ＋"
+  },
+  "1352229665": {
+   "id": "GEEN_320_23",
+   "en": "Celestial Nyx IV+",
+   "cn": "天星之炼Ⅳ＋"
+  },
+  "2340455872": {
+   "id": "GEEN_320_24",
+   "en": "Celestial Nyx V+",
+   "cn": "天星之炼Ⅴ＋"
+  },
+  "1404837777": {
+   "id": "GEEN_321_20",
+   "en": "Celestial Lumen I+",
+   "cn": "天星之煌＋"
+  },
+  "99034912": {
+   "id": "GEEN_321_21",
+   "en": "Celestial Lumen II+",
+   "cn": "天星之煌Ⅱ＋"
+  },
+  "2430873141": {
+   "id": "GEEN_321_22",
+   "en": "Celestial Lumen III+",
+   "cn": "天星之煌Ⅲ＋"
+  },
+  "589216418": {
+   "id": "GEEN_321_23",
+   "en": "Celestial Lumen IV+",
+   "cn": "天星之煌Ⅳ＋"
+  },
+  "541664821": {
+   "id": "GEEN_321_24",
+   "en": "Celestial Lumen V+",
+   "cn": "天星之煌Ⅴ＋"
+  },
+  "2053486843": {
+   "id": "GEEN_322_20",
+   "en": "Celestial Terra I+",
+   "cn": "天星之界＋"
+  },
+  "3240261004": {
+   "id": "GEEN_322_21",
+   "en": "Celestial Terra II+",
+   "cn": "天星之界Ⅱ＋"
+  },
+  "128166873": {
+   "id": "GEEN_322_22",
+   "en": "Celestial Terra III+",
+   "cn": "天星之界Ⅲ＋"
+  },
+  "2342272271": {
+   "id": "GEEN_322_23",
+   "en": "Celestial Terra IV+",
+   "cn": "天星之界Ⅳ＋"
+  },
+  "3533494496": {
+   "id": "GEEN_322_24",
+   "en": "Celestial Terra V+",
+   "cn": "天星之界Ⅴ＋"
+  },
+  "4259727263": {
+   "id": "GEEN_323_20",
+   "en": "Celestial Incendo I+",
+   "cn": "天星之焰＋"
+  },
+  "2110380592": {
+   "id": "GEEN_323_21",
+   "en": "Celestial Incendo II+",
+   "cn": "天星之焰Ⅱ＋"
+  },
+  "368449713": {
+   "id": "GEEN_323_22",
+   "en": "Celestial Incendo III+",
+   "cn": "天星之焰Ⅲ＋"
+  },
+  "1404126605": {
+   "id": "GEEN_323_23",
+   "en": "Celestial Incendo IV+",
+   "cn": "天星之焰Ⅳ＋"
+  },
+  "1946557196": {
+   "id": "GEEN_323_24",
+   "en": "Celestial Incendo V+",
+   "cn": "天星之焰Ⅴ＋"
+  },
+  "1666155211": {
+   "id": "GEEN_324_20",
+   "en": "Celestial Aqua I+",
+   "cn": "天星之雪＋"
+  },
+  "1074043500": {
+   "id": "GEEN_324_21",
+   "en": "Celestial Aqua II+",
+   "cn": "天星之雪Ⅱ＋"
+  },
+  "900596302": {
+   "id": "GEEN_324_22",
+   "en": "Celestial Aqua III+",
+   "cn": "天星之雪Ⅲ＋"
+  },
+  "2880372278": {
+   "id": "GEEN_324_23",
+   "en": "Celestial Aqua IV+",
+   "cn": "天星之雪Ⅳ＋"
+  },
+  "3779990936": {
+   "id": "GEEN_324_24",
+   "en": "Celestial Aqua V+",
+   "cn": "天星之雪Ⅴ＋"
+  },
+  "2629553935": {
+   "id": "GEEN_326_20",
+   "en": "Celestial Ventus I+",
+   "cn": "天星之止息＋"
+  },
+  "3112387533": {
+   "id": "GEEN_326_21",
+   "en": "Celestial Ventus II+",
+   "cn": "天星之止息Ⅱ＋"
+  },
+  "2176030253": {
+   "id": "GEEN_326_22",
+   "en": "Celestial Ventus III+",
+   "cn": "天星之止息Ⅲ＋"
+  },
+  "1243994130": {
+   "id": "GEEN_326_23",
+   "en": "Celestial Ventus IV+",
+   "cn": "天星之止息Ⅳ＋"
+  },
+  "2466314971": {
+   "id": "GEEN_326_24",
+   "en": "Celestial Ventus V+",
+   "cn": "天星之止息Ⅴ＋"
+  }
+ },
+ "traits": {
+  "1342675484": {
+   "id": "SKILL_000_00",
+   "en": "ATK",
+   "cn": "攻击力"
+  },
+  "4084396182": {
+   "id": "SKILL_001_00",
+   "en": "HP",
+   "cn": "体力"
+  },
+  "2373493147": {
+   "id": "SKILL_003_00",
+   "en": "Critical Hit Rate",
+   "cn": "暴击率"
+  },
+  "3468099822": {
+   "id": "SKILL_004_00",
+   "en": "Stun Power",
+   "cn": "昏厥"
+  },
+  "1061716793": {
+   "id": "SKILL_005_00",
+   "en": "Enmity",
+   "cn": "背水"
+  },
+  "801700863": {
+   "id": "SKILL_006_00",
+   "en": "Stamina",
+   "cn": "热血"
+  },
+  "473304163": {
+   "id": "SKILL_008_00",
+   "en": "Charged Attack DMG",
+   "cn": "蓄力攻击"
+  },
+  "1072455552": {
+   "id": "SKILL_009_00",
+   "en": "Linked Together",
+   "cn": "协同攻击"
+  },
+  "2366080407": {
+   "id": "SKILL_012_00",
+   "en": "Throw DMG",
+   "cn": "投掷"
+  },
+  "3231160855": {
+   "id": "SKILL_013_00",
+   "en": "Critical Hit DMG",
+   "cn": "暴击伤害"
+  },
+  "1802063213": {
+   "id": "SKILL_014_00",
+   "en": "Weak Point DMG",
+   "cn": "弱点攻击"
+  },
+  "2812567336": {
+   "id": "SKILL_017_00",
+   "en": "Combo Finisher DMG",
+   "cn": "连击收招"
+  },
+  "3009445917": {
+   "id": "SKILL_018_00",
+   "en": "Concentrated Fire",
+   "cn": "集中炮火"
+  },
+  "3696775008": {
+   "id": "SKILL_020_00",
+   "en": "DMG Cap",
+   "cn": "伤害上限"
+  },
+  "4051194041": {
+   "id": "SKILL_024_00",
+   "en": "Combo Booster",
+   "cn": "连击加成"
+  },
+  "1911626395": {
+   "id": "SKILL_027_00",
+   "en": "Tyranny",
+   "cn": "暴君"
+  },
+  "3277525275": {
+   "id": "SKILL_028_00",
+   "en": "Lucky Charge",
+   "cn": "蓄力会心"
+  },
+  "1327117955": {
+   "id": "SKILL_029_00",
+   "en": "Injury to Insult",
+   "cn": "弱化状态特效"
+  },
+  "2849079125": {
+   "id": "SKILL_030_00",
+   "en": "Overdrive Assassin",
+   "cn": "OVERDRIVE特效"
+  },
+  "2895541441": {
+   "id": "SKILL_031_00",
+   "en": "Break Assassin",
+   "cn": "破防特效"
+  },
+  "3872242332": {
+   "id": "SKILL_036_00",
+   "en": "Garrison",
+   "cn": "坚守"
+  },
+  "2712200093": {
+   "id": "SKILL_044_00",
+   "en": "Stout Heart",
+   "cn": "霸体"
+  },
+  "3868870292": {
+   "id": "SKILL_045_00",
+   "en": "Guts",
+   "cn": "豪胆"
+  },
+  "2537245103": {
+   "id": "SKILL_046_00",
+   "en": "Poison Resistance",
+   "cn": "中毒抗性"
+  },
+  "2089068211": {
+   "id": "SKILL_047_00",
+   "en": "Burn Resistance",
+   "cn": "灼热抗性"
+  },
+  "3578760359": {
+   "id": "SKILL_051_00",
+   "en": "Sandtomb Resistance",
+   "cn": "泥沙抗性"
+  },
+  "4216792705": {
+   "id": "SKILL_052_00",
+   "en": "Glaciate Resistance",
+   "cn": "冰冻抗性"
+  },
+  "928622009": {
+   "id": "SKILL_054_00",
+   "en": "Dizzy Resistance",
+   "cn": "昏迷抗性"
+  },
+  "574788127": {
+   "id": "SKILL_055_00",
+   "en": "Paralysis Resistance",
+   "cn": "麻痹抗性"
+  },
+  "1353995229": {
+   "id": "SKILL_057_00",
+   "en": "Skill Sealed Resistance",
+   "cn": "能力封印抗性"
+  },
+  "3484714882": {
+   "id": "SKILL_058_00",
+   "en": "SBA Sealed Resistance",
+   "cn": "奥义封印抗性"
+  },
+  "178391110": {
+   "id": "SKILL_060_00",
+   "en": "Improved Guard",
+   "cn": "格挡性能"
+  },
+  "1009473456": {
+   "id": "SKILL_061_00",
+   "en": "Guard Payback",
+   "cn": "格挡仇火"
+  },
+  "2335962636": {
+   "id": "SKILL_063_00",
+   "en": "Improved Dodge",
+   "cn": "躲避性能"
+  },
+  "2083409252": {
+   "id": "SKILL_064_00",
+   "en": "Dodge Payback",
+   "cn": "躲避仇火"
+  },
+  "2475281414": {
+   "id": "SKILL_065_00",
+   "en": "Improved Healing",
+   "cn": "回复性能"
+  },
+  "1619384869": {
+   "id": "SKILL_066_00",
+   "en": "Regen",
+   "cn": "自愈"
+  },
+  "2094004047": {
+   "id": "SKILL_067_00",
+   "en": "Drain",
+   "cn": "HP吸收"
+  },
+  "2515794566": {
+   "id": "SKILL_068_00",
+   "en": "Autorevive",
+   "cn": "自动复活"
+  },
+  "831329001": {
+   "id": "SKILL_069_00",
+   "en": "Quick Cooldown",
+   "cn": "迅捷能力"
+  },
+  "99806428": {
+   "id": "SKILL_070_00",
+   "en": "Cascade",
+   "cn": "怒涛"
+  },
+  "3053428691": {
+   "id": "SKILL_072_00",
+   "en": "Uplift",
+   "cn": "激昂"
+  },
+  "612907763": {
+   "id": "SKILL_073_00",
+   "en": "Potion Hoarder",
+   "cn": "药水携带数"
+  },
+  "3697311093": {
+   "id": "SKILL_077_00",
+   "en": "Low Profile",
+   "cn": "匿踪"
+  },
+  "1612199723": {
+   "id": "SKILL_078_00",
+   "en": "Provoke",
+   "cn": "挑衅"
+  },
+  "4136093167": {
+   "id": "SKILL_079_00",
+   "en": "Fast Learner",
+   "cn": "获得经验值"
+  },
+  "3362730114": {
+   "id": "SKILL_080_00",
+   "en": "Rupie Tycoon",
+   "cn": "获得金币"
+  },
+  "3940753899": {
+   "id": "SKILL_083_00",
+   "en": "Skilled Assault",
+   "cn": "能力伤害"
+  },
+  "3769368062": {
+   "id": "SKILL_085_00",
+   "en": "Aegis",
+   "cn": "守护"
+  },
+  "2734331525": {
+   "id": "SKILL_086_00",
+   "en": "Slow Resistance",
+   "cn": "缓速抗性"
+  },
+  "3068338038": {
+   "id": "SKILL_087_00",
+   "en": "Firm Stance",
+   "cn": "不动"
+  },
+  "2533525007": {
+   "id": "SKILL_088_00",
+   "en": "Blight Resistance",
+   "cn": "灾祸抗性"
+  },
+  "5462430": {
+   "id": "SKILL_094_00",
+   "en": "Steady Focus",
+   "cn": "蓄力强化"
+  },
+  "342947936": {
+   "id": "SKILL_096_00",
+   "en": "Steel Nerves",
+   "cn": "坚持"
+  },
+  "1059866670": {
+   "id": "SKILL_100_00",
+   "en": "Supplements",
+   "cn": "强化效果延长"
+  },
+  "246244832": {
+   "id": "SKILL_103_00",
+   "en": "Natural Defenses",
+   "cn": "全弱化效果抗性"
+  },
+  "162168245": {
+   "id": "SKILL_104_00",
+   "en": "Nimble Defense",
+   "cn": "凝神"
+  },
+  "3536380170": {
+   "id": "SKILL_106_00",
+   "en": "Nimble Onslaught",
+   "cn": "明镜止水"
+  },
+  "699568808": {
+   "id": "SKILL_107_00",
+   "en": "Precise Resilience",
+   "cn": "抗争"
+  },
+  "2128439760": {
+   "id": "SKILL_109_00",
+   "en": "Precise Wrath",
+   "cn": "怒发冲冠"
+  },
+  "2404396813": {
+   "id": "SKILL_110_00",
+   "en": "Life on the Line",
+   "cn": "奋不顾身"
+  },
+  "2215087280": {
+   "id": "SKILL_111_00",
+   "en": "Quick Charge",
+   "cn": "快速蓄力"
+  },
+  "1474865471": {
+   "id": "SKILL_113_00",
+   "en": "Sigil Booster",
+   "cn": "因子强化"
+  },
+  "3439526504": {
+   "id": "SKILL_114_00",
+   "en": "Fearless Drive",
+   "cn": "英勇神速"
+  },
+  "2743406818": {
+   "id": "SKILL_114_01",
+   "en": "Fearless Spirit",
+   "cn": "英勇灵气"
+  },
+  "1006557464": {
+   "id": "SKILL_115_00",
+   "en": "Guardian's Conviction",
+   "cn": "守护者的决心"
+  },
+  "4165559094": {
+   "id": "SKILL_115_01",
+   "en": "Guardian's Honor",
+   "cn": "守护者的骄傲"
+  },
+  "354305652": {
+   "id": "SKILL_116_00",
+   "en": "Helmsman's Navigation",
+   "cn": "舵手的指引"
+  },
+  "2742353392": {
+   "id": "SKILL_116_01",
+   "en": "Helmsman's Tenacity",
+   "cn": "舵手的坚持"
+  },
+  "3029266248": {
+   "id": "SKILL_117_00",
+   "en": "Mage's Aspiration",
+   "cn": "魔法师的心愿"
+  },
+  "296412661": {
+   "id": "SKILL_117_01",
+   "en": "Mage's Savvy",
+   "cn": "魔法师的伶利"
+  },
+  "2860774728": {
+   "id": "SKILL_118_00",
+   "en": "Veteran's Insight",
+   "cn": "老兵的智慧"
+  },
+  "2451270412": {
+   "id": "SKILL_118_01",
+   "en": "Veteran's Vision",
+   "cn": "老兵的天眼"
+  },
+  "600897151": {
+   "id": "SKILL_119_00",
+   "en": "Rose's Blooming",
+   "cn": "玫瑰早绽"
+  },
+  "3265578921": {
+   "id": "SKILL_119_01",
+   "en": "Rose's Profusion",
+   "cn": "玫瑰缤纷"
+  },
+  "3641188925": {
+   "id": "SKILL_120_00",
+   "en": "Phantasm's Concord",
+   "cn": "幽幻之谊"
+  },
+  "1934743042": {
+   "id": "SKILL_120_01",
+   "en": "Phantasm's Harmony",
+   "cn": "幽幻之应"
+  },
+  "2363462530": {
+   "id": "SKILL_121_00",
+   "en": "White Dragon's Oath",
+   "cn": "白龙的誓约"
+  },
+  "3506515340": {
+   "id": "SKILL_121_01",
+   "en": "White Dragon's Glory",
+   "cn": "白龙的荣耀"
+  },
+  "778413940": {
+   "id": "SKILL_122_00",
+   "en": "Hero's Creed",
+   "cn": "勇士的信念"
+  },
+  "384825448": {
+   "id": "SKILL_122_01",
+   "en": "Hero's Will",
+   "cn": "勇士的毅力"
+  },
+  "3859444572": {
+   "id": "SKILL_123_00",
+   "en": "Lord's Procession",
+   "cn": "王者行进"
+  },
+  "1878020643": {
+   "id": "SKILL_123_01",
+   "en": "Lord's Ambition",
+   "cn": "王者一心"
+  },
+  "2261503428": {
+   "id": "SKILL_124_00",
+   "en": "Dragonslayer's Dominance",
+   "cn": "屠龙者的威猛"
+  },
+  "100287897": {
+   "id": "SKILL_124_01",
+   "en": "Dragonslayer's Ingenuity",
+   "cn": "屠龙者的才智"
+  },
+  "2594029936": {
+   "id": "SKILL_125_00",
+   "en": "Holy Knight's Luster",
+   "cn": "圣骑士的剑辉"
+  },
+  "1378755464": {
+   "id": "SKILL_125_01",
+   "en": "Holy Knight's Grandeur",
+   "cn": "圣骑士的威光"
+  },
+  "215402021": {
+   "id": "SKILL_126_00",
+   "en": "Swordmaster's Prowess",
+   "cn": "变幻自如的迅刃"
+  },
+  "2746520096": {
+   "id": "SKILL_126_01",
+   "en": "Swordmaster's Art",
+   "cn": "变幻自如的妖剑士"
+  },
+  "699431915": {
+   "id": "SKILL_127_00",
+   "en": "Butterfly's Grace",
+   "cn": "斩姬梦幻"
+  },
+  "2788919757": {
+   "id": "SKILL_127_01",
+   "en": "Butterfly's Valor",
+   "cn": "斩姬武艺"
+  },
+  "1415783215": {
+   "id": "SKILL_128_00",
+   "en": "Eternal Rage's Mettle",
+   "cn": "古今无双的气概"
+  },
+  "1159561548": {
+   "id": "SKILL_128_01",
+   "en": "Eternal Rage's Ethos",
+   "cn": "古今无双的强者"
+  },
+  "3963416948": {
+   "id": "SKILL_129_00",
+   "en": "Founder's Strategy",
+   "cn": "极致谋略"
+  },
+  "2941336221": {
+   "id": "SKILL_129_01",
+   "en": "Founder's Truth",
+   "cn": "极致真理"
+  },
+  "2476869948": {
+   "id": "SKILL_130_00",
+   "en": "Versalis Foundation",
+   "cn": "异能增长"
+  },
+  "2060501008": {
+   "id": "SKILL_130_01",
+   "en": "Versalis Ignition",
+   "cn": "异能战意"
+  },
+  "1858052470": {
+   "id": "SKILL_131_00",
+   "en": "Crimson's Clout",
+   "cn": "真红烈焰"
+  },
+  "4057324496": {
+   "id": "SKILL_131_01",
+   "en": "Crimson's Flight",
+   "cn": "真红翔舞"
+  },
+  "1950410857": {
+   "id": "SKILL_132_00",
+   "en": "Ebony's Presence",
+   "cn": "冥暗刚刃"
+  },
+  "3440525669": {
+   "id": "SKILL_132_01",
+   "en": "Ebony's Poise",
+   "cn": "冥暗自若"
+  },
+  "499767271": {
+   "id": "SKILL_136_00",
+   "en": "Held Under Resistance",
+   "cn": "水牢抗性"
+  },
+  "3712643102": {
+   "id": "SKILL_137_00",
+   "en": "Darkflame Resistance",
+   "cn": "异能耐受"
+  },
+  "1274208657": {
+   "id": "SKILL_138_00",
+   "en": "ATK↓ Resistance",
+   "cn": "攻击DOWN抗性"
+  },
+  "1725849777": {
+   "id": "SKILL_139_00",
+   "en": "DEF↓ Resistance",
+   "cn": "防御DOWN抗性"
+  },
+  "136328139": {
+   "id": "SKILL_140_00",
+   "en": "Crabby Resonance",
+   "cn": "钳蟹的共鸣"
+  },
+  "3563187451": {
+   "id": "SKILL_141_04",
+   "en": "Crabvestment Returns",
+   "cn": "钳蟹的报恩"
+  },
+  "2597893606": {
+   "id": "SKILL_142_00",
+   "en": "Seven Net",
+   "cn": "7net"
+  },
+  "1075985448": {
+   "id": "SKILL_143_00",
+   "en": "Catastrophe",
+   "cn": "浩劫"
+  },
+  "1957328342": {
+   "id": "SKILL_144_00",
+   "en": "Stronghold",
+   "cn": "刚健"
+  },
+  "3693239446": {
+   "id": "SKILL_145_00",
+   "en": "Power Hungry",
+   "cn": "修罗"
+  },
+  "1280871463": {
+   "id": "SKILL_146_00",
+   "en": "War Elemental",
+   "cn": "属性克制转换"
+  },
+  "1581394661": {
+   "id": "SKILL_147_00",
+   "en": "Path to Mastery",
+   "cn": "获得MSP"
+  },
+  "2943961735": {
+   "id": "SKILL_150_00",
+   "en": "Untouchable",
+   "cn": "躲避距离"
+  },
+  "1470847760": {
+   "id": "SKILL_151_00",
+   "en": "Supplementary DMG",
+   "cn": "追击"
+  },
+  "2194548621": {
+   "id": "SKILL_152_00",
+   "en": "Less Is More",
+   "cn": "身无长技"
+  },
+  "359194852": {
+   "id": "SKILL_153_00",
+   "en": "Head Start",
+   "cn": "先发制人"
+  },
+  "1882806065": {
+   "id": "SKILL_154_00",
+   "en": "Berserker",
+   "cn": "穷寇心"
+  },
+  "3440945021": {
+   "id": "SKILL_156_00",
+   "en": "Potent Greens",
+   "cn": "万能药"
+  },
+  "859723874": {
+   "id": "SKILL_157_00",
+   "en": "Roll of the Die",
+   "cn": "骰子剑"
+  },
+  "2829260347": {
+   "id": "SKILL_158_00",
+   "en": "Glass Cannon",
+   "cn": "刀上舞"
+  },
+  "3961284473": {
+   "id": "SKILL_159_00",
+   "en": "Flight over Fight",
+   "cn": "摇曳步"
+  },
+  "3689011061": {
+   "id": "SKILL_160_00",
+   "en": "Alpha",
+   "cn": "α秘纹"
+  },
+  "2368396142": {
+   "id": "SKILL_161_00",
+   "en": "Beta",
+   "cn": "β秘纹"
+  },
+  "1552297491": {
+   "id": "SKILL_162_00",
+   "en": "Gamma",
+   "cn": "γ秘纹"
+  },
+  "2009598453": {
+   "id": "SKILL_170_00",
+   "en": "Spirit Edge's Rally",
+   "cn": "剑圣的炼气"
+  },
+  "2452677621": {
+   "id": "SKILL_170_01",
+   "en": "Spirit Edge's Fury",
+   "cn": "剑圣的闪刃"
+  },
+  "2068825210": {
+   "id": "SKILL_170_02",
+   "en": "Spirit Edge's Warpath",
+   "cn": "剑圣的战气"
+  },
+  "4010142797": {
+   "id": "SKILL_170_03",
+   "en": "Seven-Star Boundary",
+   "cn": "涯之七星"
+  },
+  "3898603744": {
+   "id": "SKILL_171_00",
+   "en": "Dark Huntress's Volley",
+   "cn": "魔眼的万箭"
+  },
+  "2238888111": {
+   "id": "SKILL_171_01",
+   "en": "Dark Huntress's Surge",
+   "cn": "魔眼的凛翔"
+  },
+  "2175964121": {
+   "id": "SKILL_171_02",
+   "en": "Dark Huntress's Warpath",
+   "cn": "魔眼的战气"
+  },
+  "672273579": {
+   "id": "SKILL_171_03",
+   "en": "Two-Crown Boundary",
+   "cn": "涯之二王"
+  },
+  "3671987420": {
+   "id": "SKILL_114_02",
+   "en": "Fearless Heart",
+   "cn": "英勇之心"
+  },
+  "2600336030": {
+   "id": "SKILL_115_02",
+   "en": "Guardian's Warpath",
+   "cn": "守护者的战气"
+  },
+  "3614395684": {
+   "id": "SKILL_116_02",
+   "en": "Helmsman's Warpath",
+   "cn": "舵手的战气"
+  },
+  "3221316531": {
+   "id": "SKILL_117_02",
+   "en": "Mage's Warpath",
+   "cn": "魔法师的战气"
+  },
+  "239255067": {
+   "id": "SKILL_118_02",
+   "en": "Veteran's Warpath",
+   "cn": "老兵的战气"
+  },
+  "2233052490": {
+   "id": "SKILL_119_02",
+   "en": "Rose's Warpath",
+   "cn": "玫瑰的战气"
+  },
+  "3092382396": {
+   "id": "SKILL_125_02",
+   "en": "Holy Knight's Warpath",
+   "cn": "圣骑士的战气"
+  },
+  "251817200": {
+   "id": "SKILL_128_02",
+   "en": "Eternal Rage's Warpath",
+   "cn": "古今无双的战气"
+  },
+  "2738476610": {
+   "id": "SKILL_120_02",
+   "en": "Phantasm's Warpath",
+   "cn": "幽幻的战气"
+  },
+  "4258376996": {
+   "id": "SKILL_127_02",
+   "en": "Butterfly's Warpath",
+   "cn": "斩姬的战气"
+  },
+  "1662438379": {
+   "id": "SKILL_121_02",
+   "en": "White Dragon's Warpath",
+   "cn": "白龙的战气"
+  },
+  "3640028188": {
+   "id": "SKILL_122_02",
+   "en": "Hero's Warpath",
+   "cn": "勇士的战气"
+  },
+  "3125822983": {
+   "id": "SKILL_123_02",
+   "en": "Lord's Warpath",
+   "cn": "王者的战气"
+  },
+  "3352525297": {
+   "id": "SKILL_124_02",
+   "en": "Dragonslayer's Warpath",
+   "cn": "屠龙者的战气"
+  },
+  "3870895668": {
+   "id": "SKILL_129_02",
+   "en": "Founder's Warpath",
+   "cn": "极致的战气"
+  },
+  "3673144103": {
+   "id": "SKILL_126_02",
+   "en": "Swordmaster's Warpath",
+   "cn": "变幻自如的战气"
+  },
+  "1326666263": {
+   "id": "SKILL_131_02",
+   "en": "Crimson's Warpath",
+   "cn": "真红的战气"
+  },
+  "3623467912": {
+   "id": "SKILL_132_02",
+   "en": "Ebony's Warpath",
+   "cn": "冥暗的战气"
+  },
+  "2959386164": {
+   "id": "SKILL_130_02",
+   "en": "Versalis Heart",
+   "cn": "异能之心"
+  },
+  "3552100895": {
+   "id": "SKILL_164_00",
+   "en": "Crabmiration",
+   "cn": "终极钳蟹因子"
+  },
+  "1219058573": {
+   "id": "SKILL_166_00",
+   "en": "Greater Aegis",
+   "cn": "金刚"
+  },
+  "4146039191": {
+   "id": "SKILL_167_00",
+   "en": "Auto Potion",
+   "cn": "自动药水"
+  },
+  "4001746207": {
+   "id": "SKILL_233_00",
+   "en": "Berserker Echo",
+   "cn": "狂战士"
+  },
+  "1031885729": {
+   "id": "SKILL_234_00",
+   "en": "Spartan Echo",
+   "cn": "斯巴达"
+  },
+  "1371608530": {
+   "id": "SKILL_235_00",
+   "en": "Super Ultimate Perfect Dodge",
+   "cn": "超终极精准躲避"
+  },
+  "3557629595": {
+   "id": "SKILL_172_00",
+   "en": "Supreme Primarch's Awe",
+   "cn": "天司长的灵威"
+  },
+  "360738300": {
+   "id": "SKILL_172_01",
+   "en": "Supreme Primarch's Nimbus",
+   "cn": "天司长的风雅"
+  },
+  "439285150": {
+   "id": "SKILL_172_03",
+   "en": "Ain",
+   "cn": "无态"
+  },
+  "1314875142": {
+   "id": "SKILL_172_02",
+   "en": "Supreme Primarch's Warpath",
+   "cn": "天司长的战气"
+  },
+  "501304421": {
+   "id": "SKILL_173_00",
+   "en": "Gladiator's Frenzy",
+   "cn": "狼王的激昂"
+  },
+  "647327525": {
+   "id": "SKILL_173_01",
+   "en": "Gladiator's Top",
+   "cn": "狼王的大转轮"
+  },
+  "3684800360": {
+   "id": "SKILL_173_02",
+   "en": "Gladiator's Warpath",
+   "cn": "狼王的战气"
+  },
+  "2069563421": {
+   "id": "SKILL_174_00",
+   "en": "Bladequeen's Serenade",
+   "cn": "刃姬的小夜曲"
+  },
+  "2597196811": {
+   "id": "SKILL_174_01",
+   "en": "Bladequeen's Circuit",
+   "cn": "刃姬的轮舞曲"
+  },
+  "2032559190": {
+   "id": "SKILL_174_02",
+   "en": "Bladequeen's Warpath",
+   "cn": "刃姬的战气"
+  },
+  "3514225250": {
+   "id": "SKILL_175_00",
+   "en": "Ultramarine's Flash",
+   "cn": "群青的剑光"
+  },
+  "1176145415": {
+   "id": "SKILL_175_01",
+   "en": "Ultramarine's Adversity",
+   "cn": "群青的逆境"
+  },
+  "3109276702": {
+   "id": "SKILL_175_02",
+   "en": "Ultramarine's Warpath",
+   "cn": "群青的战气"
+  },
+  "2104875268": {
+   "id": "SKILL_176_00",
+   "en": "Thunderwolf's Recharge",
+   "cn": "雷狼的弹匣"
+  },
+  "3191080121": {
+   "id": "SKILL_176_01",
+   "en": "Thunderwolf's Acuity",
+   "cn": "雷狼的慧眼"
+  },
+  "1051936215": {
+   "id": "SKILL_176_02",
+   "en": "Thunderwolf's Warpath",
+   "cn": "雷狼的战气"
+  },
+  "1194869320": {
+   "id": "SKILL_177_00",
+   "en": "Enchantress's Blessing",
+   "cn": "转世的恩宠"
+  },
+  "813117847": {
+   "id": "SKILL_177_01",
+   "en": "Enchantress's Rhythm",
+   "cn": "转世的跃动"
+  },
+  "2155570820": {
+   "id": "SKILL_177_02",
+   "en": "Enchantress's Warpath",
+   "cn": "转世的战气"
+  },
+  "108106290": {
+   "id": "SKILL_178_00",
+   "en": "The Black's Mark",
+   "cn": "黑龙的咒印"
+  },
+  "3985476312": {
+   "id": "SKILL_178_01",
+   "en": "The Black's Impulse",
+   "cn": "黑龙的折跃"
+  },
+  "1431905071": {
+   "id": "SKILL_178_02",
+   "en": "The Black's Warpath",
+   "cn": "黑龙的战气"
+  },
+  "997306130": {
+   "id": "SKILL_311_00",
+   "en": "DMG Cap Ecru",
+   "cn": "伤害上限·轰天"
+  },
+  "4294496100": {
+   "id": "SKILL_312_00",
+   "en": "DMG Cap Sage",
+   "cn": "伤害上限·疾天"
+  },
+  "593331951": {
+   "id": "SKILL_313_00",
+   "en": "Supernova",
+   "cn": "超新星"
+  },
+  "2935927228": {
+   "id": "SKILL_314_00",
+   "en": "DMG Cap Cobalt",
+   "cn": "伤害上限·苍天"
+  },
+  "22138782": {
+   "id": "SKILL_315_00",
+   "en": "DMG Cap Cardinal",
+   "cn": "伤害上限·红天"
+  },
+  "3212377084": {
+   "id": "SKILL_301_00",
+   "en": "Immortal Shell",
+   "cn": "可怕的漆黑钳蟹因子"
+  },
+  "1190015254": {
+   "id": "SKILL_302_00",
+   "en": "In a Pinch",
+   "cn": "漆黑之谊"
+  },
+  "2311482059": {
+   "id": "SKILL_303_00",
+   "en": "Sumo Force",
+   "cn": "相扑斗力"
+  },
+  "233342880": {
+   "id": "SKILL_320_00",
+   "en": "Celestial Nyx",
+   "cn": "天星之炼"
+  },
+  "2809291152": {
+   "id": "SKILL_321_00",
+   "en": "Celestial Lumen",
+   "cn": "天星之煌"
+  },
+  "2452806679": {
+   "id": "SKILL_322_00",
+   "en": "Celestial Terra",
+   "cn": "天星之界"
+  },
+  "920880269": {
+   "id": "SKILL_323_00",
+   "en": "Celestial Incendo",
+   "cn": "天星之焰"
+  },
+  "2828591747": {
+   "id": "SKILL_324_00",
+   "en": "Celestial Aqua",
+   "cn": "天星之雪"
+  },
+  "3492412936": {
+   "id": "SKILL_325_00",
+   "en": "Fatebreaker",
+   "cn": "浪迹天涯"
+  },
+  "1931609893": {
+   "id": "SKILL_326_00",
+   "en": "Celestial Ventus",
+   "cn": "天星之止息"
+  },
+  "4067143333": {
+   "id": "SKILL_327_00",
+   "en": "Divergence",
+   "cn": "分歧"
+  },
+  "3151461427": {
+   "id": "SKILL_316_00",
+   "en": "Unbound Strike",
+   "cn": "超凡强击"
+  },
+  "34453299": {
+   "id": "SKILL_317_00",
+   "en": "Unbound Technique",
+   "cn": "超凡技艺"
+  },
+  "1063789971": {
+   "id": "SKILL_318_00",
+   "en": "Unbound Exertion",
+   "cn": "超凡奥秘"
+  },
+  "2030206920": {
+   "id": "SKILL_319_00",
+   "en": "Unbound Master",
+   "cn": "超凡破限"
+  },
+  "505212110": {
+   "id": "SKILL_143_10",
+   "en": "Catastrophe Nova",
+   "cn": "浩劫新星"
+  }
+ }
+}
