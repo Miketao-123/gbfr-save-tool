@@ -1,0 +1,52 @@
+任务:编写 tkinter/ttk 暗色主题模块 `gui_theme.py` 的**第一部分**。输出 ONLY Python 代码(UTF-8),不要解释、不要 markdown 围栏、不要重复标题。
+
+这是分块生成的第 1/3 块,本块输出文件的**开头部分**:模块 docstring、import、全部颜色/字体常量、字体辅助函数、`_style_base(st)`、`_style_options(root)`、`apply_theme(root)`。
+
+环境:Python 3.10+ / Windows / Tk 8.6 与 9.0 都兼容;只用标准库 tkinter/ttk。所有颜色必须 6 位十六进制(Tk 不支持 8 位)。模块顶层不得创建 Tk() 实例。
+
+【模块整体结构约定(本块+后续两块共同完成)】
+```
+# -*- coding: utf-8 -*-
+"""docstring:GBFR 存档修改器暗色主题模块..."""
+import tkinter as tk
+from tkinter import ttk
+# 颜色常量与字体常量
+BG / BG_PANEL / BG_INPUT / BG_TEXT / FG / FG_DIM / FG_FAINT / ACCENT / ACCENT_DARK / GREEN / RED / AMBER / PURPLE / BORDER / BORDER_LT
+FONT_FAMILY / FONT_FAMILY_MONO
+def font(size=10, bold=False): ...
+def mono_font(size=10): ...
+def _style_base(st): ...      # 本块实现
+def _style_options(root): ... # 本块实现
+def apply_theme(root): ...    # 本块实现(调用 _style_base、_style_advanced、_style_options)
+def _style_advanced(st): ...  # 第 2 块追加(TNotebook/Scrollbar/Progressbar)
+def configure_tags(w): ...    # 第 3 块追加
+def emit_line(w, line): ...   # 第 3 块追加
+def make_icon(): ...          # 第 3 块追加
+```
+
+【常量值(照抄)】
+BG="#0d1b2c"; BG_PANEL="#1b2636"; BG_INPUT="#0f1d2e"; BG_TEXT="#101418"; FG="#e8ecf1"; FG_DIM="#8b98a9"; FG_FAINT="#5c6b7f"; ACCENT="#67e8f9"; ACCENT_DARK="#22b8d4"; GREEN="#4ade80"; RED="#f87171"; AMBER="#fbbf24"; PURPLE="#a5b4fc"; BORDER="#2e4057"; BORDER_LT="#3b5371"; FONT_FAMILY="Microsoft YaHei UI"; FONT_FAMILY_MONO="Consolas"
+
+【font/mono_font】返回 `(FONT_FAMILY, size, 'bold' if bold else 'normal')` / `(FONT_FAMILY_MONO, size)`。
+
+【_style_base(st) 实现要求】`st.theme_use('clam')` 在 apply_theme 里做。本函数配置:
+- `st.configure('.', font=(FONT_FAMILY, 10), background=BG, foreground=FG)`(注意 '.' 是全局默认)
+- 'TFrame': background=BG
+- 'TLabel': background=BG, foreground=FG(并 map 无特殊状态)
+- 'TButton': background=BG_PANEL, foreground=FG, bordercolor=BORDER, lightcolor=BORDER_LT, darkcolor=BORDER, focuscolor=ACCENT_DARK, padding=(12,5);map: background=[('pressed', ACCENT_DARK), ('active', '#24364a')], foreground=[('disabled', FG_FAINT)]
+- 'Accent.TButton'(继承 TButton 的 map,单独 configure):background=ACCENT, foreground='#0b1220', bordercolor=ACCENT, focuscolor=ACCENT;map: background=[('pressed', '#3dd5f5'), ('active', '#7eeefc')]
+- 'Green.TButton': background=GREEN, foreground='#0b1220', bordercolor=GREEN
+- 'Danger.TButton': background=RED, foreground='#0b1220', bordercolor=RED
+- 'TEntry': fieldbackground=BG_INPUT, foreground=FG, insertcolor=ACCENT, bordercolor=BORDER, lightcolor=BORDER, darkcolor=BORDER, selectbackground=ACCENT_DARK, selectforeground=FG;map: fieldbackground=[('readonly', BG_INPUT)], foreground=[('disabled', FG_FAINT)], bordercolor=[('focus', ACCENT)]
+- 'TCombobox': fieldbackground=BG_INPUT, background=BG_PANEL, foreground=FG, arrowcolor=ACCENT, bordercolor=BORDER, selectbackground=ACCENT_DARK, selectforeground=FG;map 同上 focus 边框变 ACCENT
+- 'TCheckbutton': background=BG, foreground=FG, focuscolor=BG;map: background=[('active', BG)], indicatorcolor 不用管
+- 'TLabelframe': background=BG_PANEL, bordercolor=BORDER, lightcolor=BORDER, darkcolor=BORDER
+- 'TLabelframe.Label': background=BG_PANEL, foreground=ACCENT
+
+【_style_options(root)】用 root.option_add 设置:
+- '*TCombobox*Listbox.background'=BG_INPUT,'*TCombobox*Listbox.foreground'=FG,'*TCombobox*Listbox.selectBackground'='#0e3a4a','*TCombobox*Listbox.selectForeground'=ACCENT,'*TCombobox*Listbox.font'=(FONT_FAMILY,10)
+- '*Menu.background'=BG_PANEL,'*Menu.foreground'=FG,'*Menu.activeBackground'=ACCENT_DARK,'*Menu.activeForeground'='#0b1220','*Menu.borderWidth'=0
+
+【apply_theme(root)】`st=ttk.Style(); st.theme_use('clam'); _style_base(st); _style_advanced(st); _style_options(root); root.configure(bg=BG)`(第 2 块会追加 _style_advanced 定义,先调用无妨)。
+
+直接输出上面全部内容的完整代码,变量名/样式名严格照约定,风格紧凑,行数 200 行以内。

@@ -1,0 +1,36 @@
+任务:为 tkinter/ttk 暗色主题模块 `gui_theme.py` 追加**第三部分**(追加到现有文件末尾,不要重复已有内容)。输出 ONLY Python 代码,不要解释、不要 markdown 围栏。
+
+当前文件内容如下(你的代码将追加在其后):
+{FILE:save_tool/gui_theme.py}
+
+本块实现且只实现这三个函数:
+
+```python
+def configure_tags(text_widget):
+    # 幂等配置颜色 tag(带 exist_ok 保护):'err'=RED,'warn'=AMBER,'done'=GREEN,
+    # 'preview'=PURPLE,'info'=ACCENT。全部 6 位 hex,引用模块常量。
+
+def emit_line(text_widget, line):
+    # 把一行文本插入 text_widget(假设调用方已把控件置于 normal 状态):
+    #   - 先 configure_tags(text_widget)
+    #   - 按行内标记选择 tag(优先级从高到低):
+    #       含 '[错误]' -> 'err'; 含 '[警告]' -> 'warn'; 含 '[完成]' -> 'done';
+    #       含 '[预览]' -> 'preview'; 含 '[信息]' 或 '[物品]' 或 '[任务]' 或 '[奖励]' -> 'info';
+    #       否则无 tag(默认前景)。
+    #   - text_widget.insert("end", line, tag) 然后 text_widget.see("end")
+    # 注意 line 可能以 \n 结尾,原样插入即可。
+
+def make_icon():
+    # 用纯 tkinter 程序化绘制 64x64 青色宝石图标,返回 tk.PhotoImage(不依赖任何图片文件):
+    #   img = tk.PhotoImage(width=64, height=64)
+    #   菱形顶点:(32,6) (58,32) (32,58) (6,32)。逐像素:若点 (x,y) 在菱形内(|x-32|/26 + |y-32|/26 <= 1):
+    #     按纵向位置着色:y < 32 用亮青 #a5f3fc(顶部高光), 33~44 用主青 #67e8f9,
+    #     45~52 用 #22b8d4, y>52 用深青 #155e75(底部阴影)。
+    #     给右边缘(|x-32| 接近菱形右边界)叠加 #3dd5f5 高光:当 x>32 且 |x-32|/26 + |y-32|/26 > 0.75 时
+    #     用 #3dd5f5。
+    #   菱形外不 put(保持透明)。用 img.put(color, (x, y)) 或 put(color, to=(x,y,x+1,y+1))。
+    #   返回 img;调用方需持有引用防 GC。
+    # 提示:64x64 循环用两层 for 即可,性能无碍。
+```
+
+实现要点:颜色必须与常量一致(ACCENT=#67e8f9, ACCENT_DARK=#22b8d4, GREEN=#4ade80, RED=#f87171, AMBER=#fbbf24, PURPLE=#a5b4fc);函数体紧凑,总共约 70 行。

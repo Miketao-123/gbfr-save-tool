@@ -22,6 +22,8 @@ import gbfr_cheat_tool as gct  # noqa: E402
 import tkinter as tk
 from tkinter import ttk, filedialog
 
+import gui_theme as th  # 暗色主题模块(翻新新增)
+
 APP_TITLE = "GBFR 存档修改器 v1.1"
 
 
@@ -48,7 +50,7 @@ def _default_chara():
 
 # ---------------------------------------------------------------- 日志捕获
 class LogCapture(io.StringIO):
-    """把 print 输出重定向到 GUI 日志框。"""
+    """把 print 输出重定向到 GUI 日志框(按行用主题模块自动着色)。"""
     def __init__(self, widget):
         super().__init__()
         self.widget = widget
@@ -56,8 +58,9 @@ class LogCapture(io.StringIO):
     def write(self, s):
         if s:
             self.widget.configure(state="normal")
-            self.widget.insert("end", s)
-            self.widget.see("end")
+            for seg in s.split("\n"):
+                if seg:
+                    th.emit_line(self.widget, seg + "\n")
             self.widget.configure(state="disabled")
         return len(s)
 
@@ -70,8 +73,26 @@ class App:
     def __init__(self, root):
         self.root = root
         root.title(APP_TITLE)
-        root.geometry("1000x700")
         root.minsize(880, 620)
+
+        # 暗色主题(必须在创建任何控件之前应用)
+        th.apply_theme(root)
+
+        # 恢复上次窗口几何
+        try:
+            with open(os.path.join(gct.WRITE_DIR, 'ui_state.json'), encoding='utf-8') as f:
+                geo = json.load(f).get('geometry')
+            if geo:
+                root.geometry(geo)
+        except Exception:
+            root.geometry("1000x700")
+
+        # 程序化绘制图标(失败不影响启动)
+        try:
+            self._icon = th.make_icon()
+            root.iconphoto(True, self._icon)
+        except Exception:
+            pass
 
         self.save_path = tk.StringVar(value=gct.DEFAULT_SAVE)
         self.var_item_q = tk.StringVar()
@@ -104,6 +125,10 @@ class App:
         self.var_wr_traits = [tk.StringVar() for _ in range(3)]
         self.var_wr_levels = [tk.StringVar(value=str(lv)) for lv in (20, 15, 10)]
 
+        # 状态栏
+        self._status_save = tk.StringVar(value='未加载')
+        self._status_msg = tk.StringVar(value='就绪')
+
         # 性能缓存:打开的存档 + 各 id_type 的 vm 字典(打开后记录不变,写档后失效)
         self._save = None
         self._save_path = None
@@ -113,21 +138,39 @@ class App:
         self._build_top()
         self._build_notebook()
         self._build_log()
+        self._build_statusbar()
+
+        # 快捷键
+        root.bind("<F5>", lambda e: self.refresh_all())
+        root.bind("<Control-b>", lambda e: self.backup_save())
+        root.bind("<Control-o>", lambda e: self._pick_save())
+        root.bind("<Control-h>", lambda e: self._show_about())
+
+        # 关闭时记忆窗口几何
+        root.protocol("WM_DELETE_WINDOW", self._on_close)
 
         # 打开默认存档并刷新
         self.root.after(50, self.refresh_all)
 
     # ------------------------------------------------------------ 顶部
     def _build_top(self):
-        f = ttk.Frame(self.root, padding=(8, 6))
-        f.pack(fill="x")
-        ttk.Label(f, text="存档路径:").pack(side="left")
-        ttk.Entry(f, textvariable=self.save_path, width=58).pack(side="left", padx=4)
-        ttk.Button(f, text="浏览…", command=self._pick_save).pack(side="left", padx=2)
-        ttk.Button(f, text="打开并刷新", command=self.refresh_all).pack(side="left", padx=6)
-        ttk.Button(f, text="备份当前存档", command=self.backup_save).pack(side="left", padx=2)
-        ttk.Checkbutton(f, text="强制写入(游戏运行中,有风险)",
-                        variable=self.var_force).pack(side="right", padx=4)
+            top = ttk.Frame(self.root, padding=(8, 6, 8, 2))
+            top.pack(fill="x")
+            ttk.Label(top, text=APP_TITLE, font=th.font(12, bold=True), foreground=th.ACCENT).pack(side="left")
+            ttk.Label(top, text="v1.1", foreground=th.FG_DIM).pack(side="right")
+
+            row = ttk.Frame(self.root, padding=(8, 2, 8, 6))
+            row.pack(fill="x")
+            force = ttk.Checkbutton(row, text="强制写入(有风险)", variable=self.var_force)
+            refresh = ttk.Button(row, text="打开并刷新", style="Accent.TButton", command=self.refresh_all)
+            refresh.pack(side="right", padx=(0, 8))
+            force.pack(side="right", padx=4)
+            ttk.Label(row, text="存档路径:").pack(side="left")
+            ttk.Entry(row, textvariable=self.save_path, width=52).pack(side="left", padx=4)
+            ttk.Button(row, text="浏览…", command=self._pick_save).pack(side="left")
+            ttk.Button(row, text="备份当前存档", command=self.backup_save).pack(side="left")
+            ttk.Button(row, text="关于", command=self._show_about).pack(side="left")
+
 
     def _pick_save(self):
         p = filedialog.askopenfilename(title="选择 SaveData1.dat",
@@ -139,117 +182,158 @@ class App:
 
     # ------------------------------------------------------------ 选项卡
     def _build_notebook(self):
-        nb = ttk.Notebook(self.root)
-        nb.pack(fill="both", expand=True, padx=8, pady=(4, 0))
-        self._tab_items(nb)
-        self._tab_sigils(nb)
-        self._tab_chars(nb)
-        self._tab_summons(nb)
-        self._tab_loadout(nb)
-        self._tab_overmastery(nb)
-        self._tab_crab(nb)
-        self._tab_wrightstone(nb)
-        self.nb = nb
+            nb = ttk.Notebook(self.root)
+            nb.pack(fill="both", expand=True, padx=8, pady=(4, 0))
+            self._tab_items(nb)
+            self._tab_sigils(nb)
+            self._tab_chars(nb)
+            self._tab_summons(nb)
+            self._tab_loadout(nb)
+            self._tab_overmastery(nb)
+            self._tab_crab(nb)
+            self._tab_wrightstone(nb)
+            self.nb = nb
+
 
     def _mk_out(self, parent, height):
-        t = tk.Text(parent, height=height, state="disabled", wrap="none",
-                    bg="#101418", fg="#e8e8e8", insertbackground="white")
+        t = tk.Text(
+            parent,
+            height=height,
+            state="disabled",
+            wrap="none",
+            relief="flat",
+            bg=th.BG_TEXT,
+            fg=th.FG,
+            insertbackground=th.ACCENT,
+            font=th.mono_font(9),
+        )
+        th.configure_tags(t)
         t.pack(fill="both", expand=True, pady=(6, 0))
-        sb = ttk.Scrollbar(t, command=t.yview)
+        sb = ttk.Scrollbar(parent, command=t.yview, style="Vertical.TScrollbar")
         t.configure(yscrollcommand=sb.set)
         sb.pack(side="right", fill="y")
         return t
 
+
     def _chara_cb(self, parent, var, width=16):
-        """角色下拉框:可直接选择名字,也可手动输入 PL 代码/0x 哈希。"""
-        cb = ttk.Combobox(parent, textvariable=var, width=width, state="normal",
-                          values=_chara_choices())
+        choices = _chara_choices()
+        cb = ttk.Combobox(
+            parent,
+            textvariable=var,
+            width=width,
+            state="normal",
+            values=choices,
+        )
         return cb
+
 
     def _tab_items(self, nb):
         t = ttk.Frame(nb, padding=8)
         nb.add(t, text=" 物品 ")
-        top = ttk.Frame(t); top.pack(fill="x")
-        ttk.Label(top, text="搜索:").pack(side="left")
-        ttk.Entry(top, textvariable=self.var_item_q, width=22).pack(side="left", padx=4)
-        ttk.Button(top, text="列出", command=self.cmd_items_list).pack(side="left", padx=2)
-        ttk.Label(top, text="修改(名称 数量):").pack(side="left", padx=(16, 0))
-        ttk.Entry(top, textvariable=self.var_item_list, width=26).pack(side="left", padx=4)
-        ttk.Button(top, text="设置数量", command=self.cmd_items_set).pack(side="left", padx=2)
+        top = ttk.Frame(t)
+        top.pack(fill="x")
+        ttk.Label(top, text="搜索:").pack(side="left", padx=(0, 4))
+        ttk.Entry(top, textvariable=self.var_item_q, width=22).pack(side="left", padx=(0, 8))
+        ttk.Button(top, text="列出", command=self.cmd_items_list).pack(side="left")
+        ttk.Label(top, text="修改(名称 数量):").pack(side="left", padx=(16, 4))
+        ttk.Entry(top, textvariable=self.var_item_list, width=26).pack(side="left", padx=(0, 8))
+        ttk.Button(top, text="设置数量", style="Accent.TButton", command=self.cmd_items_set).pack(side="left")
         self.items_out = self._mk_out(t, 15)
+
 
     def _tab_sigils(self, nb):
         t = ttk.Frame(nb, padding=8)
         nb.add(t, text=" 因子 ")
-        top = ttk.Frame(t); top.pack(fill="x")
-        ttk.Label(top, text="搜索:").pack(side="left")
-        ttk.Entry(top, textvariable=self.var_sigil_q, width=22).pack(side="left", padx=4)
-        ttk.Button(top, text="列出", command=self.cmd_sigils_list).pack(side="left", padx=2)
-
+        top = ttk.Frame(t)
+        top.pack(fill="x")
+        ttk.Label(top, text="搜索:").pack(side="left", padx=(0, 4))
+        ttk.Entry(top, textvariable=self.var_sigil_q, width=22).pack(side="left", padx=(0, 8))
+        ttk.Button(top, text="列出", command=self.cmd_sigils_list).pack(side="left")
         mid = ttk.LabelFrame(t, text="生成合法因子", padding=8)
         mid.pack(fill="x", pady=6)
-        g = ttk.Frame(mid); g.pack(fill="x")
-        ttk.Label(g, text="因子(名称/0x):").pack(side="left")
-        ttk.Entry(g, textvariable=self.var_sigil_name, width=26).pack(side="left", padx=4)
-        ttk.Label(g, text="等级:").pack(side="left", padx=(8, 0))
-        ttk.Entry(g, textvariable=self.var_sigil_level, width=5).pack(side="left", padx=4)
-        ttk.Label(g, text="副词条:").pack(side="left", padx=(8, 0))
-        ttk.Entry(g, textvariable=self.var_sigil_secondary, width=16).pack(side="left", padx=4)
-        ttk.Label(g, text="装备给:").pack(side="left", padx=(8, 0))
-        self._chara_cb(g, self.var_sigil_equip, width=16).pack(side="left", padx=4)
-        b = ttk.Frame(mid); b.pack(fill="x", pady=(6, 0))
-        ttk.Button(b, text="生成(写入存档)", command=self.cmd_sigils_add).pack(side="left", padx=2)
-        ttk.Button(b, text="预览(不写入)", command=self.cmd_sigils_add_dry).pack(side="left", padx=2)
+        g = ttk.Frame(mid)
+        g.pack(fill="x")
+        ttk.Label(g, text="因子(名称/0x):").pack(side="left", padx=(0, 4))
+        ttk.Entry(g, textvariable=self.var_sigil_name, width=26).pack(side="left", padx=(0, 8))
+        ttk.Label(g, text="等级:").pack(side="left", padx=(0, 4))
+        ttk.Entry(g, textvariable=self.var_sigil_level, width=5).pack(side="left", padx=(0, 8))
+        ttk.Label(g, text="副词条:").pack(side="left", padx=(0, 4))
+        ttk.Entry(g, textvariable=self.var_sigil_secondary, width=16).pack(side="left", padx=(0, 8))
+        ttk.Label(g, text="装备给:").pack(side="left", padx=(0, 4))
+        self._chara_cb(g, self.var_sigil_equip, width=16).pack(side="left")
+        b = ttk.Frame(mid)
+        b.pack(fill="x", pady=(6, 0))
+        ttk.Button(b, text="生成(写入存档)", style="Accent.TButton", command=self.cmd_sigils_add).pack(side="left", padx=(0, 8))
+        ttk.Button(b, text="预览(不写入)", command=self.cmd_sigils_add_dry).pack(side="left")
         self.sigils_out = self._mk_out(t, 10)
+
 
     def _tab_chars(self, nb):
         t = ttk.Frame(nb, padding=8)
         nb.add(t, text=" 角色 ")
-        top = ttk.Frame(t); top.pack(fill="x")
-        ttk.Label(top, text="角色:").pack(side="left")
-        self._chara_cb(top, self.var_chara, width=16).pack(side="left", padx=4)
-        ttk.Button(top, text="列出装备", command=self.cmd_chars_list).pack(side="left", padx=2)
-        ttk.Button(top, text="查看该角色因子", command=self.cmd_chars_sigils).pack(side="left", padx=2)
-        ttk.Button(top, text="卸下全部", command=self.cmd_chars_clear).pack(side="left", padx=2)
+        top = ttk.Frame(t)
+        top.pack(fill="x")
+        ttk.Label(top, text="角色:").pack(side="left", padx=(0, 4))
+        self._chara_cb(top, self.var_chara, 16).pack(side="left", padx=(0, 8))
+        ttk.Button(top, text="列出装备", command=self.cmd_chars_list).pack(side="left", padx=(0, 8))
+        ttk.Button(top, text="查看该角色因子", command=self.cmd_chars_sigils).pack(side="left", padx=(0, 8))
+        ttk.Button(top, text="卸下全部", style="Danger.TButton", command=self.cmd_chars_clear).pack(side="left")
         self.chars_out = self._mk_out(t, 16)
+
 
     def _tab_summons(self, nb):
         t = ttk.Frame(nb, padding=8)
         nb.add(t, text=" 召唤石 ")
-        top = ttk.Frame(t); top.pack(fill="x")
-        ttk.Button(top, text="列出召唤石", command=self.cmd_summons_list).pack(side="left", padx=2)
-        ttk.Label(top, text="槽号:").pack(side="left", padx=(16, 0))
-        ttk.Entry(top, textvariable=self.var_summon_unit, width=7).pack(side="left", padx=4)
-        ttk.Label(top, text="装备给:").pack(side="left", padx=(8, 0))
-        self._chara_cb(top, self.var_summon_chara, width=16).pack(side="left", padx=4)
-        ttk.Label(top, text="等级:").pack(side="left", padx=(8, 0))
-        ttk.Entry(top, textvariable=self.var_summon_level, width=5).pack(side="left", padx=4)
-        ttk.Button(top, text="更新", command=self.cmd_summons_set).pack(side="left", padx=4)
+        top = ttk.Frame(t)
+        top.pack(fill="x")
+        ttk.Button(top, text="列出召唤石", command=self.cmd_summons_list).pack(side="left", padx=(0, 8))
+        ttk.Label(top, text="槽号:").pack(side="left", padx=(0, 4))
+        ttk.Entry(top, textvariable=self.var_summon_unit, width=7).pack(side="left", padx=(0, 8))
+        ttk.Label(top, text="装备给:").pack(side="left", padx=(0, 4))
+        self._chara_cb(top, self.var_summon_chara, 16).pack(side="left", padx=(0, 8))
+        ttk.Label(top, text="等级:").pack(side="left", padx=(0, 4))
+        ttk.Entry(top, textvariable=self.var_summon_level, width=5).pack(side="left", padx=(0, 8))
+        ttk.Button(top, text="更新", style="Accent.TButton", command=self.cmd_summons_set).pack(side="left")
         self.summons_out = self._mk_out(t, 16)
+
 
     def _tab_loadout(self, nb):
         t = ttk.Frame(nb, padding=8)
         nb.add(t, text=" 配装方案 ")
-        top = ttk.Frame(t); top.pack(fill="x")
-        ttk.Button(top, text="列出方案", command=self.cmd_ld_list).pack(side="left", padx=2)
-        ttk.Label(top, text="方案名:").pack(side="left", padx=(16, 0))
-        ttk.Entry(top, textvariable=self.var_ld_name, width=14).pack(side="left", padx=4)
-        ttk.Label(top, text="角色:").pack(side="left", padx=(8, 0))
-        self._chara_cb(top, self.var_ld_chara, width=16).pack(side="left", padx=4)
-        ttk.Button(top, text="保存方案", command=self.cmd_ld_save).pack(side="left", padx=2)
-        ttk.Button(top, text="恢复方案", command=self.cmd_ld_restore).pack(side="left", padx=2)
+        top = ttk.Frame(t)
+        top.pack(fill="x")
+        ttk.Button(top, text="列出方案", command=self.cmd_ld_list).pack(side="left", padx=(0, 8))
+        ttk.Label(top, text="方案名:").pack(side="left", padx=(0, 4))
+        ttk.Entry(top, textvariable=self.var_ld_name, width=14).pack(side="left", padx=(0, 8))
+        ttk.Label(top, text="角色:").pack(side="left", padx=(0, 4))
+        self._chara_cb(top, self.var_ld_chara, 16).pack(side="left", padx=(0, 8))
+        ttk.Button(top, text="保存方案", style="Accent.TButton", command=self.cmd_ld_save).pack(side="left", padx=(0, 8))
+        ttk.Button(top, text="恢复方案", command=self.cmd_ld_restore).pack(side="left")
         self.ld_out = self._mk_out(t, 16)
+
 
     # ------------------------------------------------------------ 日志
     def _build_log(self):
-        f = ttk.LabelFrame(self.root, text="日志", padding=(6, 3))
-        f.pack(fill="x", padx=8, pady=6)
-        self.log = tk.Text(f, height=9, state="disabled", wrap="none", bg="#101418", fg="#e8e8e8")
-        self.log.pack(fill="x")
-        sb = ttk.Scrollbar(self.log, command=self.log.yview)
+        lf = ttk.LabelFrame(self.root, text="日志", padding=(6, 3))
+        lf.pack(fill="x", padx=8, pady=6)
+        self.log = tk.Text(
+            lf,
+            height=9,
+            state="disabled",
+            wrap="none",
+            relief="flat",
+            bg=th.BG_TEXT,
+            fg=th.FG,
+            insertbackground=th.ACCENT,
+            font=th.mono_font(9),
+        )
+        sb = ttk.Scrollbar(lf, orient="vertical", style="Vertical.TScrollbar", command=self.log.yview)
         self.log.configure(yscrollcommand=sb.set)
         sb.pack(side="right", fill="y")
+        self.log.pack(side="left", fill="x", expand=True)
+        th.configure_tags(self.log)
         self._capture = LogCapture(self.log)
+
 
     def _note(self, s):
         self._capture.write(s + "\n")
@@ -259,6 +343,7 @@ class App:
         p = self.save_path.get().strip()
         if not os.path.isfile(p):
             self._note(f'[错误] 找不到存档: {p}')
+            self._status_msg.set('打开失败: 找不到存档')
             return None
         if self._save is not None and self._save_path == p:
             return self._save
@@ -266,9 +351,11 @@ class App:
             self._save = gct.GBFRSaveData.open(p)
             self._save_path = p
             self._vm_cache = {}
+            self._status_save.set(os.path.basename(p))
             return self._save
         except Exception as e:
             self._note(f'[错误] 打开存档失败: {e}')
+            self._status_msg.set(f'打开失败: {e}')
             self._save = None
             self._save_path = None
             return None
@@ -301,16 +388,19 @@ class App:
         self._summons_list(save)
         self._ld_list()
         self._note('--- 已刷新 ---')
+        self._status_msg.set('已加载并刷新 ✓')
 
     def backup_save(self):
         import shutil, time
         p = self.save_path.get().strip()
         if not os.path.isfile(p):
             self._note(f'[错误] 找不到存档: {p}')
+            self._status_msg.set('备份失败: 找不到存档')
             return
         bak = f'{p}.manual_{time.strftime("%Y%m%d_%H%M%S")}'
         shutil.copy2(p, bak)
         self._note(f'[完成] 已备份: {os.path.basename(bak)}')
+        self._status_msg.set(f'已备份: {os.path.basename(bak)}')
 
     # ------------------------------------------------------------ 物品
     def _items_rows(self, save):
@@ -635,36 +725,39 @@ class App:
         self._note(f'[完成] 已恢复配装 {name} 到 {gct.chara_label(gid)} (装备 {ok}/{len(data.get("sigils",[]))}) 备份:{os.path.basename(bak)}')
 
     def _tab_overmastery(self, nb):
-        t = ttk.Frame(nb, padding=8)
-        nb.add(t, text=" 上限突破 ")
-        top = ttk.Frame(t); top.pack(fill="x")
-        ttk.Label(top, text="角色:").pack(side="left")
-        self._chara_cb(top, self.var_om_chara, width=16).pack(side="left", padx=4)
-        ttk.Button(top, text="读取该角色", command=self.cmd_om_list).pack(side="left", padx=2)
-        ttk.Label(top, text="槽位(0-3):").pack(side="left", padx=(16, 0))
-        ttk.Entry(top, textvariable=self.var_om_lane, width=4).pack(side="left", padx=4)
-        ttk.Label(top, text="效果:").pack(side="left", padx=(8, 0))
-        ttk.Combobox(top, textvariable=self.var_om_effect, width=16, state="normal",
-                     values=list(gct.OM_EFFECTS.keys())).pack(side="left", padx=4)
-        ttk.Label(top, text="数值:").pack(side="left", padx=(8, 0))
-        ttk.Entry(top, textvariable=self.var_om_value, width=6).pack(side="left", padx=4)
-        ttk.Button(top, text="写入该槽", command=self.cmd_om_set).pack(side="left", padx=2)
-        ttk.Button(top, text="清空该槽", command=self.cmd_om_clear).pack(side="left", padx=2)
-        ttk.Button(top, text="全部清空", command=self.cmd_om_clear_all).pack(side="left", padx=4)
-        self.om_out = self._mk_out(t, 14)
+            t = ttk.Frame(nb, padding=8);nb.add(t, text=" 上限突破 ")
+            top = ttk.Frame(t)
+            top.pack(fill="x", pady=(0,6))
+            ttk.Label(top, text="角色:").pack(side="left")
+            cb = self._chara_cb(top, self.var_om_chara, 16)
+            if cb is not None and not cb.winfo_manager():
+                cb.pack(side="left", padx=4)
+            ttk.Button(top, text="读取该角色", command=self.cmd_om_list).pack(side="left", padx=4)
+            ttk.Label(top, text="槽位(0-3):").pack(side="left", padx=(12,0))
+            ttk.Entry(top, textvariable=self.var_om_lane, width=4).pack(side="left", padx=4)
+            ttk.Label(top, text="效果:").pack(side="left", padx=(12,0))
+            ttk.Combobox(top, textvariable=self.var_om_effect, width=16, state="normal", values=list(gct.OM_EFFECTS.keys())).pack(side="left", padx=4)
+            ttk.Label(top, text="数值:").pack(side="left", padx=(12,0))
+            ttk.Entry(top, textvariable=self.var_om_value, width=6).pack(side="left", padx=4)
+            ttk.Button(top, text="写入该槽", style="Accent.TButton", command=self.cmd_om_set).pack(side="left", padx=4)
+            ttk.Button(top, text="清空该槽", style="Danger.TButton", command=self.cmd_om_clear).pack(side="left", padx=4)
+            ttk.Button(top, text="全部清空", style="Danger.TButton", command=self.cmd_om_clear_all).pack(side="left", padx=4)
+            self.om_out = self._mk_out(t, 14)
+
 
     def _tab_crab(self, nb):
-        t = ttk.Frame(nb, padding=8)
-        nb.add(t, text=" 小钳蟹 ")
-        top = ttk.Frame(t); top.pack(fill="x")
+        t = ttk.Frame(nb, padding=8);nb.add(t, text=" 小钳蟹 ")
+        top = ttk.Frame(t)
+        top.pack(fill="x", pady=(0,6))
         ttk.Label(top, text="普通小钳蟹数量:").pack(side="left")
         ttk.Entry(top, textvariable=self.var_crab_wee, width=6).pack(side="left", padx=4)
-        ttk.Label(top, text="漆黑小钳蟹数量:").pack(side="left", padx=(10, 0))
+        ttk.Label(top, text="漆黑小钳蟹数量:").pack(side="left", padx=(10,0))
         ttk.Entry(top, textvariable=self.var_crab_dark, width=6).pack(side="left", padx=4)
-        ttk.Checkbutton(top, text="漆黑蟹像=1", variable=self.var_crab_statue).pack(side="left", padx=(12, 2))
-        ttk.Checkbutton(top, text="完成收集任务", variable=self.var_crab_quest).pack(side="left", padx=4)
-        ttk.Button(top, text="执行小钳蟹修改", command=self.cmd_crab_run).pack(side="left", padx=8)
+        ttk.Checkbutton(top, text="漆黑蟹像=1", variable=self.var_crab_statue).pack(side="left", padx=8)
+        ttk.Checkbutton(top, text="完成收集任务", variable=self.var_crab_quest).pack(side="left", padx=8)
+        ttk.Button(top, text="执行小钳蟹修改", style="Accent.TButton", command=self.cmd_crab_run).pack(side="left", padx=8)
         self.crab_out = self._mk_out(t, 14)
+
 
     # ------------------------------------------------------------ 上限突破
     def cmd_om_list(self):
@@ -780,29 +873,25 @@ class App:
 
     # ------------------------------------------------------------ 武器祝福
     def _tab_wrightstone(self, nb):
-        t = ttk.Frame(nb, padding=8)
-        nb.add(t, text=" 祝福 ")
-        top = ttk.Frame(t); top.pack(fill="x")
+        t = ttk.Frame(nb, padding=8);nb.add(t, text=" 祝福 ")
+        top = ttk.Frame(t)
+        top.pack(fill="x", pady=(0,6))
         ttk.Label(top, text="祝福类型:").pack(side="left")
-        ttk.Combobox(top, textvariable=self.var_wr_type, width=20, state="readonly",
-                     values=['%s (%s)' % (x[0], x[1]) for x in gct.WRIGHT_TYPES]).pack(side="left", padx=4)
-        ttk.Button(top, text="刷新词条列表", command=self.cmd_wr_refresh).pack(side="left", padx=6)
-
-        mid = ttk.LabelFrame(t, text="祝福配置(3 个词条 + 等级,等级 0-20)", padding=8)
-        mid.pack(fill="x", pady=6)
+        ttk.Combobox(top, textvariable=self.var_wr_type, width=20, state="readonly", values=['%s (%s)' % (x[0], x[1]) for x in gct.WRIGHT_TYPES]).pack(side="left", padx=4)
+        ttk.Button(top, text="刷新词条列表", command=self.cmd_wr_refresh).pack(side="left", padx=8)
+        mid = ttk.LabelFrame(t, text="祝福配置(3 个词条 + 等级,等级 0-20)", padding=8);mid.pack(fill="x", pady=6)
         self._wr_trait_combos = []
         for i in range(3):
-            row = ttk.Frame(mid); row.pack(fill="x", pady=2)
+            row = ttk.Frame(mid);row.pack(fill="x", pady=2)
             ttk.Label(row, text=f"词条{i+1}:").pack(side="left")
-            cb = ttk.Combobox(row, textvariable=self.var_wr_traits[i], width=22, state="normal")
-            cb.pack(side="left", padx=4)
-            self._wr_trait_combos.append(cb)
-            ttk.Label(row, text="等级:").pack(side="left", padx=(8, 0))
+            cb = ttk.Combobox(row, textvariable=self.var_wr_traits[i], width=22, state="normal");cb.pack(side="left", padx=4);self._wr_trait_combos.append(cb)
+            ttk.Label(row, text="等级:").pack(side="left", padx=(8,0))
             ttk.Entry(row, textvariable=self.var_wr_levels[i], width=4).pack(side="left", padx=4)
-        b = ttk.Frame(mid); b.pack(fill="x", pady=(6, 0))
-        ttk.Button(b, text="生成祝福(写入存档)", command=lambda: self.cmd_wr_add(dry=False)).pack(side="left", padx=2)
-        ttk.Button(b, text="预览(不写入)", command=lambda: self.cmd_wr_add(dry=True)).pack(side="left", padx=2)
+        b = ttk.Frame(t);b.pack(fill="x", pady=(6,0))
+        ttk.Button(b, text="生成祝福(写入存档)", style="Accent.TButton", command=lambda: self.cmd_wr_add(dry=False)).pack(side="left")
+        ttk.Button(b, text="预览(不写入)", command=lambda: self.cmd_wr_add(dry=True)).pack(side="left", padx=8)
         self.wr_out = self._mk_out(t, 12)
+
 
     def cmd_wr_refresh(self):
         save = self._open()
@@ -867,6 +956,55 @@ class App:
         m2103 = self._vm(gct.WRIGHT_SERIAL_FIELD)
         self._note(f'[完成] 已生成 {wt[0]} (槽{slot}, 序列号={m2103.get(slot)}) 备份:{os.path.basename(bak)}')
 
+    # ------------------------------------------------------------ 状态栏 / 关于 / 关闭
+    def _build_statusbar(self):
+        bar = ttk.Frame(self.root, padding=(8, 4))
+        bar.pack(side="bottom", fill="x")
+        self._status_bar = bar
+        left = ttk.Label(bar, textvariable=self._status_save)
+        right = ttk.Label(bar, textvariable=self._status_msg)
+        left.configure(foreground=th.FG_DIM)
+        right.configure(foreground=th.ACCENT)
+        left.pack(side="left")
+        right.pack(side="right")
+
+
+    def _show_about(self):
+        win = tk.Toplevel(self.root)
+        win.title("关于")
+        win.configure(bg=th.BG)
+        win.transient(self.root)
+        win.grab_set()
+        win.resizable(False, False)
+
+        ttk.Label(win, text=APP_TITLE, font=th.font(13, bold=True), foreground=th.ACCENT).pack(anchor="w", padx=18, pady=4)
+        ttk.Label(win, text="《碧蓝幻想:Relink》本地存档修改工具", foreground=th.FG).pack(anchor="w", padx=18, pady=4)
+        ttk.Label(win, text="支持:物品 · 因子 · 角色配装 · 召唤石 · 配装方案 · 上限突破 · 小钳蟹 · 武器祝福", foreground=th.FG_DIM).pack(anchor="w", padx=18, pady=4)
+        ttk.Label(win, text="写入前自动备份并重算校验和;修改前请完全退出游戏(含 Steam 云同步)", foreground=th.FG_DIM).pack(anchor="w", padx=18, pady=4)
+        ttk.Label(win, text="快捷键:F5 刷新 · Ctrl+B 备份 · Ctrl+O 选择存档 · Ctrl+H 关于", foreground=th.FG_DIM).pack(anchor="w", padx=18, pady=4)
+        ttk.Label(win, text="暗色主题 · UI 翻新", foreground=th.PURPLE).pack(anchor="w", padx=18, pady=4)
+
+        ttk.Button(win, text="关闭", style="Accent.TButton", command=win.destroy).pack(pady=(6, 14))
+        win.update_idletasks()
+        w = win.winfo_reqwidth()
+        h = win.winfo_reqheight()
+        x = self.root.winfo_x() + (self.root.winfo_width() - w) // 2
+        y = self.root.winfo_y() + (self.root.winfo_height() - h) // 2
+        win.geometry(f"+{x}+{y}")
+
+
+    def _on_close(self):
+        state = {"geometry": self.root.geometry()}
+        path = os.path.join(gct.WRITE_DIR, "ui_state.json")
+        try:
+            with open(path, "w", encoding="utf-8") as fh:
+                json.dump(state, fh, ensure_ascii=False)
+        except Exception:
+            pass
+        finally:
+            self.root.destroy()
+
+
     # ------------------------------------------------------------ 工具
     @staticmethod
     def _set_text(w, s):
@@ -883,6 +1021,11 @@ def main():
     except Exception:
         root.destroy()
         raise
+    # --smoke 参数:自测模式,运行 N 秒后自动关闭(默认 2.5 秒),期间异常会冒泡
+    if '--smoke' in sys.argv:
+        idx = sys.argv.index('--smoke')
+        secs = float(sys.argv[idx + 1]) if len(sys.argv) > idx + 1 else 2.5
+        root.after(int(secs * 1000), root.destroy)
     root.mainloop()
 
 

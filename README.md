@@ -11,6 +11,9 @@
 - 角色因子配装 / 卸下、召唤石、配装方案保存恢复
 - 上限突破（Overmastery）、小钳蟹收集、武器祝福（Wrightstone）生成
 - 每次写入自动备份原档 + 重算 xxHash64 校验和，支持 `--dry-run` 预览
+- GUI（tkinter）为暗色主题界面（参照 GBFR PE Patch Tool 风格）：彩色分级日志、
+  底部状态栏、程序化图标、关于对话框、窗口几何记忆、快捷键（F5 刷新 / Ctrl+B 备份 /
+  Ctrl+O 选择存档 / Ctrl+H 关于）
 
 ## 目录结构
 

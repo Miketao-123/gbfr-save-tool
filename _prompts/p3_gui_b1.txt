@@ -1,0 +1,77 @@
+任务:为 GBFR 存档修改器 GUI(`gbfr_gui.py` 的 App 类)生成**第一部分视觉方法**。输出 ONLY Python 代码:5 个以 4 空格缩进书写的方法定义(类内方法),方法之间空一行,不要解释、不要 markdown 围栏、不要 def 以外的任何顶层代码。
+
+主题模块 `gui_theme`(import 为 th)提供以下 API(颜色常量与函数,全部可用):
+```
+BG="#0d1b2c" BG_PANEL="#1b2636" BG_INPUT="#0f1d2e" BG_TEXT="#101418" FG="#e8ecf1"
+FG_DIM="#8b98a9" FG_FAINT="#5c6b7f" ACCENT="#67e8f9" ACCENT_DARK="#22b8d4"
+GREEN="#4ade80" RED="#f87171" AMBER="#fbbf24" PURPLE="#a5b4fc" BORDER="#2e4057" BORDER_LT="#3b5371"
+th.font(size=10, bold=False) -> (FONT_FAMILY, size, 'bold'/'normal')
+th.mono_font(size) -> (FONT_FAMILY_MONO, size)
+th.configure_tags(text_widget)   # 配置日志颜色 tag
+th.emit_line(text_widget, line)  # 按 [错误]/[完成]/[警告]/[信息]/[预览] 着色插入一行
+```
+ttk 样式名:'TButton'(默认)、'Accent.TButton'(青色主按钮)、'Danger.TButton'(红色危险按钮)、'Green.TButton'、'TEntry'、'TCombobox'、'TCheckbutton'、'TLabelframe'、'TLabelframe.Label'(青色标题)、'TNotebook'、'TNotebook.Tab'、'Vertical.TScrollbar'。
+
+背景:App 类已有属性 self.root / self.save_path(StringVar) / self._status_save(StringVar) / self._status_msg(StringVar) / self.var_force(BooleanVar);方法 self._pick_save / self.refresh_all / self.backup_save / self._show_about / self._note / self._capture;`import os`、`import json`、`gct.WRITE_DIR` 均可用;模块级常量 APP_TITLE="GBFR 存档修改器 v1.1"。
+
+请生成以下 5 个方法(严格按签名与要求,布局用 pack,不要用 grid):
+
+```python
+    def _build_top(self):
+        # 顶部两行布局(pack fill="x"):
+        # 第一行:ttk.Frame(padding=(8,6,8,2), style 默认)内:
+        #   左侧粗体标题 ttk.Label(text=APP_TITLE, font=th.font(12, bold=True), foreground=th.ACCENT)
+        #   右侧 ttk.Label(text="v1.1", foreground=th.FG_DIM) pack(side="right")
+        #   中间留白(不需要)
+        # 第二行:ttk.Frame(padding=(8,2,8,6))内,从左到右:
+        #   ttk.Label(text="存档路径:")
+        #   ttk.Entry(textvariable=self.save_path, width=52)  pack(padx=4)
+        #   ttk.Button(text="浏览…", command=self._pick_save)
+        #   ttk.Button(text="备份当前存档", command=self.backup_save)
+        #   ttk.Button(text="关于", command=self._show_about)
+        #   ttk.Checkbutton(text="强制写入(有风险)", variable=self.var_force) pack(side="right", padx=4)
+        #   ttk.Button(text="打开并刷新", style="Accent.TButton", command=self.refresh_all) pack(side="right", padx=(0,8))
+```
+
+```python
+    def _build_log(self):
+        # ttk.LabelFrame(text="日志", padding=(6,3)) pack(fill="x", padx=8, pady=6)
+        # 内: tk.Text(height=9, state="disabled", wrap="none", relief="flat",
+        #             bg=th.BG_TEXT, fg=th.FG, insertbackground=th.ACCENT, font=th.mono_font(9))
+        #     pack(fill="x")
+        # 右侧滚动条 ttk.Scrollbar(command=self.log.yview),self.log.configure(yscrollcommand=sb.set)
+        # 先 th.configure_tags(self.log)
+        # self._capture = LogCapture(self.log)(LogCapture 类已存在)
+```
+
+```python
+    def _build_statusbar(self):
+        # ttk.Frame(padding=(8,4)) pack(fill="x", side="bottom");背景用默认 BG
+        # 左侧 ttk.Label(textvariable=self._status_save, foreground=th.FG_DIM) pack(side="left")
+        # 右侧 ttk.Label(textvariable=self._status_msg, foreground=th.ACCENT) pack(side="right")
+```
+
+```python
+    def _show_about(self):
+        # win = tk.Toplevel(self.root);win.title("关于");win.configure(bg=th.BG_PANEL)
+        # win.transient(self.root);win.grab_set();win.resizable(False, False)
+        # 内容 pack(anchor="w", padx=18, pady=4)(全部 ttk.Label,背景 BG_PANEL 由样式继承):
+        #   ttk.Label(text=APP_TITLE, font=th.font(13, bold=True), foreground=th.ACCENT)
+        #   ttk.Label(text="《碧蓝幻想:Relink》本地存档修改工具", foreground=th.FG)
+        #   ttk.Label(text="支持:物品 · 因子 · 角色配装 · 召唤石 · 配装方案 · 上限突破 · 小钳蟹 · 武器祝福", foreground=th.FG_DIM)
+        #   ttk.Label(text="写入前自动备份并重算校验和;修改前请完全退出游戏(含 Steam 云同步)", foreground=th.FG_DIM)
+        #   ttk.Label(text="快捷键:F5 刷新 · Ctrl+B 备份 · Ctrl+O 选择存档 · Ctrl+H 关于", foreground=th.FG_DIM)
+        #   ttk.Label(text="暗色主题 · UI 翻新", foreground=th.PURPLE)
+        # 底部按钮行: ttk.Button(text="关闭", style="Accent.TButton", command=win.destroy) pack(pady=(6,14))
+        # 窗口居中:win.update_idletasks(); 用 root 宽高计算 x/y 设置 win.geometry(f"+{x}+{y}")
+```
+
+```python
+    def _on_close(self):
+        # try: 把 {'geometry': self.root.geometry()} 写入 os.path.join(gct.WRITE_DIR, 'ui_state.json')
+        #      (open(..., 'w', encoding='utf-8') + json.dump, ensure_ascii=False)
+        # except Exception: pass
+        # finally: self.root.destroy()
+```
+
+硬性要求:只用上述 API 与标准 ttk/tk 控件;不要引用 gui_theme 里不存在的名字;颜色一律用 th 常量;代码紧凑,每个方法 10~40 行。

@@ -1,0 +1,24 @@
+任务:为 tkinter/ttk 暗色主题模块 `gui_theme.py` 追加**第二部分**(追加到现有文件末尾,不要重复 docstring/import/常量/已有函数)。输出 ONLY Python 代码,不要解释、不要 markdown 围栏。
+
+当前文件内容如下(你的代码将追加在其后):
+{FILE:save_tool/gui_theme.py}
+
+本块实现且只实现这一个函数:
+
+```python
+def _style_advanced(st):
+    # st 是 ttk.Style()(已在 apply_theme 里 theme_use('clam'))
+    # 1) TNotebook: background=BG, borderwidth=0;map: background=[('selected', BG_PANEL)]
+    # 2) TNotebook.Tab: background='#182636', foreground=FG_DIM, padding=(16,7), borderwidth=0;
+    #    map: background=[('selected', BG_PANEL)], foreground=[('selected', ACCENT)],
+    #         border 用 map 做不到,直接 configure borderwidth=0, 并在 selected 时用
+    #         'TNotebook.Tab' 的 lightcolor 模拟:configure lightcolor=BG, darkcolor=BG;
+    #         额外给每个 tab 加下划线效果:map 里 background selected 用 BG_PANEL,同时
+    #         foreground selected=ACCENT(选中青色文字)。
+    # 3) 'Vertical.TScrollbar' / 'Horizontal.TScrollbar': background='#33415c',
+    #    troughcolor=BG, bordercolor=BG, arrowcolor=ACCENT, lightcolor='#33415c', darkcolor='#33415c';
+    #    map: background=[('pressed', ACCENT_DARK), ('active', '#3e5070')]
+    # 4) 'TProgressbar': background=ACCENT, troughcolor=BG_PANEL, bordercolor=BG_PANEL
+```
+
+实现要点:每个样式先 `st.configure(...)`,需要状态变化的再 `st.map(...)`;所有颜色用 6 位 hex;颜色值引用模块已有的常量(如 ACCENT、BG_PANEL、FG_DIM、BG 等),不要写死与常量不一致的值。函数体保持紧凑,约 40 行。

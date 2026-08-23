@@ -1,0 +1,52 @@
+任务:翻新 tkinter GUI 文件 `gbfr_gui.py`(GBFR 存档修改器)。输出 ONLY 新文件的完整代码,不要解释、不要 markdown 围栏、不要省略号占位。UTF-8,第一行 `# -*- coding: utf-8 -*-`。
+
+背景:本文件是 `gbfr_cheat_tool.py`(导入为 gct)的图形封装,现有 890 行。要求做**暗色主题 UI 翻新**并新增若干功能,但**所有存档读写/业务逻辑必须逐字保留、行为完全不变**。
+
+============================================================
+以下是新主题模块 `gui_theme.py` 的完整内容(新 gbfr_gui.py 必须 import 并使用它):
+{FILE:save_tool/gui_theme.py}
+
+============================================================
+以下是当前 gbfr_gui.py 的完整内容(业务方法照抄保留,视觉方法按本任务要求重写):
+{FILE:save_tool/gbfr_gui.py}
+
+============================================================
+具体要求:
+
+1. **文件头部与导入**:保留 UTF-8 头与 sys.stdout.reconfigure 逻辑;新增 `import gui_theme as th`(同目录模块)。保留 `import tkinter as tk / from tkinter import ttk, filedialog`。保留 `APP_TITLE = "GBFR 存档修改器 v1.1"`。
+
+2. **必须逐字保留(一行不改)**:`_chara_choices`、`_default_chara`、`_open`、`_vm`、`_invalidate`、`_force_reopen`、`_items_rows`、`cmd_items_list`、`_items_list`、`cmd_items_set`、`_sigils_rows`、`cmd_sigils_list`、`_sigils_list`、`_resolve_secondary`、`_sigils_add_common`、`cmd_sigils_add`、`cmd_sigils_add_dry`、`cmd_chars_list`、`_chars_list`、`cmd_chars_sigils`、`cmd_chars_clear`、`cmd_summons_list`、`_summons_list`、`cmd_summons_set`、`cmd_ld_list`、`_ld_list`、`cmd_ld_save`、`cmd_ld_restore`、`cmd_om_list`、`cmd_om_set`、`cmd_om_clear`、`cmd_om_clear_all`、`cmd_crab_run`、`cmd_wr_refresh`、`_wr_resolve_trait`、`cmd_wr_add`、`backup_save`。`refresh_all` 保留逻辑,仅允许在其中额外更新状态栏。
+
+3. **视觉层重写**(允许改动的部分):
+   - `App.__init__`:调 `th.apply_theme(root)`(在创建任何控件前);保持所有 StringVar/BooleanVar 声明不变;新增:
+     - `self._status_msg = tk.StringVar(value="就绪")`(状态栏右侧,最后操作信息)
+     - `self._status_save = tk.StringVar()`(状态栏左侧,当前存档文件名)
+     - `self._icon = th.make_icon()`;`root.iconphoto(True, self._icon)`(用 try/except 保护)
+     - 窗口几何恢复:从 `os.path.join(gct.WRITE_DIR, 'ui_state.json')` 读 `{'geometry': ...}`(try/except),存在则 `root.geometry(...)`;`root.minsize(880, 620)` 保留;`root.protocol("WM_DELETE_WINDOW", self._on_close)`。
+     - 快捷键绑定:root 上 `<F5>` → refresh_all,`<Control-b>` → backup_save,`<Control-o>` → _pick_save,`<Control-h>` → _show_about。
+     - 构建顺序:`_build_top()` → `_build_notebook()` → `_build_log()` → `_build_statusbar()` → `root.after(50, self.refresh_all)`。
+   - `_build_top`:重做成「标题栏」样式——顶部一个深色横条(BG_PANEL 底,pack fill=x),左侧粗体标签 "GBFR 存档修改器" (th.font(12, bold=True), fg=ACCENT) + 右侧 "v1.1" 小标签(FG_DIM);第二行:存档路径 Label + Entry(宽度 52) + 「浏览…」/「打开并刷新」/「备份当前存档」按钮(浏览与备份用默认 TButton,打开并刷新用 Accent.TButton)+ 右侧「强制写入(有风险)」Checkbutton(勾选时文字 AMBER)与「关于」按钮。
+   - `_build_notebook`:结构不变(ttk.Notebook + 8 个标签页,tab 文本保持原样如 " 物品 "),每个标签页 Frame 用 padding=8。
+   - `_mk_out(parent, height)`:改用 `tk.Text`(bg=th.BG_TEXT, fg=th.FG, insertbackground=th.ACCENT, relief="flat", font=th.mono_font(9), wrap="none", state="disabled"),右侧 ttk.Scrollbar(样式 Vertical.TScrollbar)。
+   - `_tab_items` / `_tab_sigils` / `_tab_chars` / `_tab_summons` / `_tab_loadout` / `_tab_overmastery` / `_tab_crab` / `_tab_wrightstone`:控件布局与交互保持原样(同样的输入框、下拉、按钮、命令绑定),仅:
+     a) 所有「生成(写入存档)」「执行…」「写入该槽」这类**危险写入按钮**用 `Danger.TButton` 或 `Accent.TButton`(由你判断:写入类=Accent,清空/卸下类=Danger);
+     b) 次要按钮(列出/刷新/预览/浏览)用默认 TButton;
+     c) 控件字号统一 th.font(10);小输入框宽度不变;
+     d) 每个标签页顶部输入区可以用 ttk.LabelFrame 分组(如因子页的「生成合法因子」已有),保持可读。
+   - `_build_log`:LabelFrame「日志」;内部 tk.Text(height=9, bg=th.BG_TEXT, fg=th.FG, font=th.mono_font(9), wrap="none", state="disabled") + 滚动条。`LogCapture` 类改造为:write 时把内容按 `\n` 分段,每段调 `th.emit_line(self.widget, seg)`(emit_line 内部会按 [错误]/[完成]/[警告]/[信息]/[预览] 等标记自动着色并 see("end")),保留 state normal/disabled 包裹;flush 空实现。`_note` 方法不变(仍调 self._capture.write)。
+   - `_build_statusbar`(新增):底部 ttk.Frame(bg=th.BG_PANEL, relief="flat") pack(fill="x", side="bottom"):左侧 Label(textvariable=self._status_save, fg=th.FG_DIM, anchor="w"),右侧 Label(textvariable=self._status_msg, fg=th.ACCENT, anchor="e")。`refresh_all` 成功时设置 `self._status_save` 为存档文件名、`self._status_msg='已加载并刷新 ✓'`;`backup_save` 成功后设置状态信息;`_open` 失败时 `self._status_msg='打开失败'`。
+   - `_show_about`(新增):tk.Toplevel 模态对话框(transient + grab_set),标题「关于」,深色背景(th.BG_PANEL),内容:
+     - 粗体 "GBFR 存档修改器 v1.1" (th.font(12, bold=True))
+     - 普通文本:「《碧蓝幻想:Relink》本地存档修改工具」/「支持:物品 · 因子 · 角色配装 · 召唤石 · 配装方案 · 上限突破 · 小钳蟹 · 武器祝福」/「写入前自动备份并重算校验和」/「UI 翻新 · 暗色主题」,用 th.font(9)/th.FG_DIM 分行显示,pack anchor="w";
+     - 「关闭」按钮(Accent.TButton)。窗口居中于主窗口。
+   - `_on_close`(新增):把 `root.geometry()` 写入 `os.path.join(gct.WRITE_DIR, 'ui_state.json')`(try/except,json 仅存 geometry),然后 `root.destroy()`。
+   - 主入口 `main()`:解析 `sys.argv`,若含 `--smoke` 参数(可带数字秒数,默认 2.5):创建 App 后 `root.after(int(秒*1000), root.destroy)`,期间用 root.update() 循环或直接 mainloop;正常路径 root.mainloop()。其余保持不变(异常时 destroy + raise)。
+   - `_set_text` 静态方法保留;`LogCapture` 类保留(内部改用 emit_line)。
+
+4. **行为一致性红线**:
+   - 所有 `cmd_*` 方法、`_sigils_add_common` 等业务方法逐字保留(第 2 条清单),不得"顺手优化"逻辑、不得改变量名、不得改注释中关键数字。
+   - 所有 StringVar 名、按钮 command 绑定、LabelFrame 分组结构保持原样,确保功能与打包(console=False)兼容。
+   - 不得引入新数据文件依赖、不得改 gct 调用方式。
+   - 若 `th.emit_line`/`th.make_icon` 等函数在你的写法里需要额外保护,用 try/except 包住(图标失败不影响启动)。
+
+5. **风格**:代码紧凑清晰、中文注释;总行数控制在 950 行以内;不要输出测试代码或 __main__ 之外的调试打印。

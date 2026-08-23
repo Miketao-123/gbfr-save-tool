@@ -1,0 +1,53 @@
+任务:为 GBFR 存档修改器 GUI(`gbfr_gui.py` 的 App 类)生成**第三部分视觉方法**。输出 ONLY Python 代码:3 个以 4 空格缩进书写的方法定义,方法之间空一行,不要解释、不要 markdown 围栏、不要 def 以外的任何顶层代码。
+
+主题模块 `gui_theme`(import 为 th)提供:颜色常量 BG/BG_PANEL/BG_INPUT/BG_TEXT/FG/FG_DIM/FG_FAINT/ACCENT/ACCENT_DARK/GREEN/RED/AMBER/PURPLE/BORDER/BORDER_LT;函数 th.font(size, bold)、th.mono_font(size)、th.configure_tags(w)、th.emit_line(w, line)。ttk 样式名:'TButton'、'Accent.TButton'(青色主按钮)、'Danger.TButton'(红色危险按钮)、'Green.TButton'、'TEntry'、'TCombobox'、'TCheckbutton'、'TLabelframe'、'TLabelframe.Label'、'TNotebook'、'TNotebook.Tab'、'Vertical.TScrollbar'。ttk 默认控件已带暗色样式。
+
+背景:App 类已有 self._chara_cb(parent, var, width=16)、self._mk_out(parent, height) 方法;全部 var_* StringVar/BooleanVar;cmd_* 命令方法;模块级 _chara_choices() 函数;`import tkinter as tk / from tkinter import ttk`;`gct.OM_EFFECTS`、`gct.WRIGHT_TYPES` 可用。
+
+请生成以下 3 个方法(严格按签名与要求,布局用 pack):
+
+```python
+    def _tab_overmastery(self, nb):
+        # t = ttk.Frame(nb, padding=8);nb.add(t, text=" 上限突破 ")
+        # top 行:Label("角色:") + self._chara_cb(top, self.var_om_chara, 16)
+        #        + Button("读取该角色", cmd_om_list)
+        #        + Label("槽位(0-3):") + Entry(var_om_lane, 4)
+        #        + Label("效果:") + ttk.Combobox(top, textvariable=self.var_om_effect, width=16,
+        #              state="normal", values=list(gct.OM_EFFECTS.keys()))
+        #        + Label("数值:") + Entry(var_om_value, 6)
+        #        + Button("写入该槽", style="Accent.TButton", cmd_om_set)
+        #        + Button("清空该槽", style="Danger.TButton", cmd_om_clear)
+        #        + Button("全部清空", style="Danger.TButton", cmd_om_clear_all)
+        # self.om_out = self._mk_out(t, 14)
+```
+
+```python
+    def _tab_crab(self, nb):
+        # t = ttk.Frame(nb, padding=8);nb.add(t, text=" 小钳蟹 ")
+        # top 行:Label("普通小钳蟹数量:") + Entry(var_crab_wee, 6)
+        #        + Label("漆黑小钳蟹数量:", padx=(10,0)) + Entry(var_crab_dark, 6)
+        #        + Checkbutton("漆黑蟹像=1", variable=var_crab_statue)
+        #        + Checkbutton("完成收集任务", variable=var_crab_quest)
+        #        + Button("执行小钳蟹修改", style="Accent.TButton", cmd_crab_run)
+        # self.crab_out = self._mk_out(t, 14)
+```
+
+```python
+    def _tab_wrightstone(self, nb):
+        # t = ttk.Frame(nb, padding=8);nb.add(t, text=" 祝福 ")
+        # top 行:Label("祝福类型:") + ttk.Combobox(top, textvariable=self.var_wr_type, width=20,
+        #              state="readonly", values=['%s (%s)' % (x[0], x[1]) for x in gct.WRIGHT_TYPES])
+        #        + Button("刷新词条列表", cmd_wr_refresh)
+        # mid = ttk.LabelFrame(t, text="祝福配置(3 个词条 + 等级,等级 0-20)", padding=8);mid.pack(fill="x", pady=6)
+        # self._wr_trait_combos = []
+        # for i in range(3):
+        #     row = ttk.Frame(mid);row.pack(fill="x", pady=2)
+        #     Label(row, f"词条{i+1}:") + Combobox(row, textvariable=self.var_wr_traits[i], width=22, state="normal")
+        #     + Label(row, "等级:", padx=(8,0)) + Entry(row, textvariable=self.var_wr_levels[i], width=4)
+        #     cb.pack(side="left", padx=4);self._wr_trait_combos.append(cb)
+        # b 行:Button("生成祝福(写入存档)", style="Accent.TButton", command=lambda: self.cmd_wr_add(dry=False))
+        #       + Button("预览(不写入)", command=lambda: self.cmd_wr_add(dry=True))
+        # self.wr_out = self._mk_out(t, 12)
+```
+
+硬性要求:只用 th 常量与上述 API;command 严格用指定的 self.cmd_*;变量绑定与文案、宽度与原布局完全一致;每个方法 10~45 行,紧凑。

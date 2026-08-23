@@ -1,0 +1,82 @@
+任务:为 GBFR 存档修改器 GUI(`gbfr_gui.py` 的 App 类)生成**第二部分视觉方法**。输出 ONLY Python 代码:8 个以 4 空格缩进书写的方法定义,方法之间空一行,不要解释、不要 markdown 围栏、不要 def 以外的任何顶层代码。
+
+主题模块 `gui_theme`(import 为 th)提供:颜色常量 BG/BG_PANEL/BG_INPUT/BG_TEXT/FG/FG_DIM/FG_FAINT/ACCENT/ACCENT_DARK/GREEN/RED/AMBER/PURPLE/BORDER/BORDER_LT;函数 th.font(size, bold)、th.mono_font(size)、th.configure_tags(w)、th.emit_line(w, line)。ttk 样式名:'TButton'、'Accent.TButton'(青色主按钮)、'Danger.TButton'(红色危险按钮)、'Green.TButton'、'TEntry'、'TCombobox'、'TCheckbutton'、'TLabelframe'、'TLabelframe.Label'、'TNotebook'、'TNotebook.Tab'、'Vertical.TScrollbar'。ttk 默认 Frame/Label/Entry/Combobox 已带暗色样式,不需要显式传 bg/fg(除非特殊强调色)。
+
+背景:App 类已有 self._chara_cb(parent, var, width=16) 方法(本块也需生成)、self._mk_out(parent, height)(本块也需生成)、全部 var_* StringVar、cmd_* 命令方法、模块级 _chara_choices() 函数。
+
+请生成以下 8 个方法(严格按签名与要求,布局用 pack,不要用 grid):
+
+```python
+    def _build_notebook(self):
+        # nb = ttk.Notebook(self.root);nb.pack(fill="both", expand=True, padx=8, pady=(4, 0))
+        # 依次调用 self._tab_items(nb) self._tab_sigils(nb) self._tab_chars(nb) self._tab_summons(nb)
+        # self._tab_loadout(nb) self._tab_overmastery(nb) self._tab_crab(nb) self._tab_wrightstone(nb)
+        # self.nb = nb
+```
+
+```python
+    def _mk_out(self, parent, height):
+        # 输出文本区:t = tk.Text(parent, height=height, state="disabled", wrap="none",
+        #   relief="flat", bg=th.BG_TEXT, fg=th.FG, insertbackground=th.ACCENT, font=th.mono_font(9))
+        # t.pack(fill="both", expand=True, pady=(6, 0));右侧 ttk.Scrollbar(command=t.yview)
+        # t.configure(yscrollcommand=sb.set);sb.pack(side="right", fill="y");return t
+```
+
+```python
+    def _chara_cb(self, parent, var, width=16):
+        # 角色下拉框(原样保留):ttk.Combobox(parent, textvariable=var, width=width,
+        #   state="normal", values=_chara_choices());return cb
+```
+
+```python
+    def _tab_items(self, nb):
+        # 原布局(仅套用暗色样式,交互完全不变):
+        # t = ttk.Frame(nb, padding=8);nb.add(t, text=" 物品 ")
+        # top 行:ttk.Label("搜索:") + ttk.Entry(self.var_item_q, width=22) + ttk.Button("列出", cmd_items_list)
+        #        + ttk.Label("修改(名称 数量):", padx=(16,0)) + ttk.Entry(self.var_item_list, width=26)
+        #        + ttk.Button("设置数量", style="Accent.TButton", cmd_items_set)
+        # self.items_out = self._mk_out(t, 15)
+```
+
+```python
+    def _tab_sigils(self, nb):
+        # t = ttk.Frame(nb, padding=8);nb.add(t, text=" 因子 ")
+        # top 行:ttk.Label("搜索:") + ttk.Entry(self.var_sigil_q, width=22) + ttk.Button("列出", cmd_sigils_list)
+        # mid = ttk.LabelFrame(t, text="生成合法因子", padding=8);mid.pack(fill="x", pady=6)
+        # g 行:Label("因子(名称/0x):") + Entry(var_sigil_name, 26) + Label("等级:") + Entry(var_sigil_level, 5)
+        #       + Label("副词条:") + Entry(var_sigil_secondary, 16) + Label("装备给:")
+        #       + self._chara_cb(g, self.var_sigil_equip, width=16)
+        # b 行:ttk.Button("生成(写入存档)", style="Accent.TButton", cmd_sigils_add)
+        #       + ttk.Button("预览(不写入)", cmd_sigils_add_dry)
+        # self.sigils_out = self._mk_out(t, 10)
+```
+
+```python
+    def _tab_chars(self, nb):
+        # t = ttk.Frame(nb, padding=8);nb.add(t, text=" 角色 ")
+        # top 行:Label("角色:") + self._chara_cb(top, self.var_chara, 16)
+        #        + Button("列出装备", cmd_chars_list) + Button("查看该角色因子", cmd_chars_sigils)
+        #        + Button("卸下全部", style="Danger.TButton", cmd_chars_clear)
+        # self.chars_out = self._mk_out(t, 16)
+```
+
+```python
+    def _tab_summons(self, nb):
+        # t = ttk.Frame(nb, padding=8);nb.add(t, text=" 召唤石 ")
+        # top 行:Button("列出召唤石", cmd_summons_list) + Label("槽号:") + Entry(var_summon_unit, 7)
+        #        + Label("装备给:") + self._chara_cb(top, self.var_summon_chara, 16)
+        #        + Label("等级:") + Entry(var_summon_level, 5)
+        #        + Button("更新", style="Accent.TButton", cmd_summons_set)
+        # self.summons_out = self._mk_out(t, 16)
+```
+
+```python
+    def _tab_loadout(self, nb):
+        # t = ttk.Frame(nb, padding=8);nb.add(t, text=" 配装方案 ")
+        # top 行:Button("列出方案", cmd_ld_list) + Label("方案名:") + Entry(var_ld_name, 14)
+        #        + Label("角色:") + self._chara_cb(top, self.var_ld_chara, 16)
+        #        + Button("保存方案", style="Accent.TButton", cmd_ld_save) + Button("恢复方案", cmd_ld_restore)
+        # self.ld_out = self._mk_out(t, 16)
+```
+
+硬性要求:只用 th 常量与上述 API;所有 Button 的 command 严格用指定的 self.cmd_*;控件宽度/文案/变量绑定与原布局一致;每个方法 8~40 行,紧凑。
