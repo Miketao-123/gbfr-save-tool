@@ -24,7 +24,7 @@ from tkinter import ttk, filedialog
 
 import gui_theme as th  # 暗色主题模块(翻新新增)
 
-APP_TITLE = "GBFR 存档修改器 v1.1"
+APP_TITLE = "GBFR 存档修改器 v1.3"
 
 
 def _chara_choices():
@@ -103,9 +103,20 @@ class App:
         self.var_sigil_secondary = tk.StringVar()
         self.var_sigil_equip = tk.StringVar()
         self.var_chara = tk.StringVar()
-        self.var_summon_unit = tk.StringVar()
-        self.var_summon_chara = tk.StringVar()
-        self.var_summon_level = tk.StringVar()
+        self.var_chara_slot = tk.StringVar()
+        # 召唤石页(新 DLC 背包系统)
+        self.var_sum_q = tk.StringVar()
+        self.var_sum_slot = tk.StringVar()
+        self.var_sum_type = tk.StringVar()
+        self.var_sum_main = tk.StringVar()
+        self.var_sum_sub = tk.StringVar()
+        self.var_sum_mlv = tk.StringVar(value='15')
+        self.var_sum_slv = tk.StringVar(value='9')
+        self.var_sum_rank = tk.StringVar(value='3')
+        self.var_sum_eq = [tk.StringVar(value='(空)') for _ in range(4)]
+        self._sum_cur = None          # 当前已读取的召唤石记录
+        self._sum_records = []        # 最近一次背包快照
+        self._sum_equipped = [0, 0, 0, 0]
         self.var_ld_name = tk.StringVar()
         self.var_ld_chara = tk.StringVar()
         self.var_force = tk.BooleanVar(value=False)
@@ -157,7 +168,7 @@ class App:
             top = ttk.Frame(self.root, padding=(8, 6, 8, 2))
             top.pack(fill="x")
             ttk.Label(top, text=APP_TITLE, font=th.font(12, bold=True), foreground=th.ACCENT).pack(side="left")
-            ttk.Label(top, text="v1.1", foreground=th.FG_DIM).pack(side="right")
+            ttk.Label(top, text="v1.3", foreground=th.FG_DIM).pack(side="right")
 
             row = ttk.Frame(self.root, padding=(8, 2, 8, 6))
             row.pack(fill="x")
@@ -277,6 +288,9 @@ class App:
         self._chara_cb(top, self.var_chara, 16).pack(side="left", padx=(0, 8))
         ttk.Button(top, text="列出装备", command=self.cmd_chars_list).pack(side="left", padx=(0, 8))
         ttk.Button(top, text="查看该角色因子", command=self.cmd_chars_sigils).pack(side="left", padx=(0, 8))
+        ttk.Label(top, text="槽号:").pack(side="left", padx=(0, 4))
+        ttk.Entry(top, textvariable=self.var_chara_slot, width=7).pack(side="left", padx=(0, 4))
+        ttk.Button(top, text="卸下指定", command=self.cmd_chars_unequip).pack(side="left", padx=(0, 8))
         ttk.Button(top, text="卸下全部", style="Danger.TButton", command=self.cmd_chars_clear).pack(side="left")
         self.chars_out = self._mk_out(t, 16)
 
@@ -287,14 +301,55 @@ class App:
         top = ttk.Frame(t)
         top.pack(fill="x")
         ttk.Button(top, text="列出召唤石", command=self.cmd_summons_list).pack(side="left", padx=(0, 8))
-        ttk.Label(top, text="槽号:").pack(side="left", padx=(0, 4))
-        ttk.Entry(top, textvariable=self.var_summon_unit, width=7).pack(side="left", padx=(0, 8))
-        ttk.Label(top, text="装备给:").pack(side="left", padx=(0, 4))
-        self._chara_cb(top, self.var_summon_chara, 16).pack(side="left", padx=(0, 8))
-        ttk.Label(top, text="等级:").pack(side="left", padx=(0, 4))
-        ttk.Entry(top, textvariable=self.var_summon_level, width=5).pack(side="left", padx=(0, 8))
-        ttk.Button(top, text="更新", style="Accent.TButton", command=self.cmd_summons_set).pack(side="left")
-        self.summons_out = self._mk_out(t, 16)
+        ttk.Label(top, text="搜索:").pack(side="left", padx=(0, 4))
+        ttk.Entry(top, textvariable=self.var_sum_q, width=18).pack(side="left", padx=(0, 8))
+
+        edit = ttk.LabelFrame(t, text="编辑召唤石(槽号取自列表第一列,点\"读取\"载入)", padding=8)
+        edit.pack(fill="x", pady=6)
+        g = ttk.Frame(edit)
+        g.pack(fill="x")
+        ttk.Label(g, text="槽号:").pack(side="left", padx=(0, 4))
+        ttk.Entry(g, textvariable=self.var_sum_slot, width=6).pack(side="left", padx=(0, 4))
+        ttk.Button(g, text="读取", command=self.cmd_summons_load).pack(side="left", padx=(0, 8))
+        ttk.Label(g, text="种类:").pack(side="left", padx=(0, 4))
+        self._sum_type_cb = ttk.Combobox(g, textvariable=self.var_sum_type, width=26, state="normal")
+        self._sum_type_cb.pack(side="left", padx=(0, 8))
+        ttk.Label(g, text="主加护:").pack(side="left", padx=(0, 4))
+        self._sum_main_cb = ttk.Combobox(g, textvariable=self.var_sum_main, width=20, state="normal")
+        self._sum_main_cb.pack(side="left", padx=(0, 8))
+        g2 = ttk.Frame(edit)
+        g2.pack(fill="x", pady=(4, 0))
+        ttk.Label(g2, text="副词条:").pack(side="left", padx=(0, 4))
+        self._sum_sub_cb = ttk.Combobox(g2, textvariable=self.var_sum_sub, width=26, state="normal")
+        self._sum_sub_cb.pack(side="left", padx=(0, 8))
+        ttk.Label(g2, text="主级:").pack(side="left", padx=(0, 4))
+        ttk.Entry(g2, textvariable=self.var_sum_mlv, width=4).pack(side="left", padx=(0, 8))
+        ttk.Label(g2, text="副档:").pack(side="left", padx=(0, 4))
+        ttk.Entry(g2, textvariable=self.var_sum_slv, width=4).pack(side="left", padx=(0, 8))
+        ttk.Label(g2, text="阶级:").pack(side="left", padx=(0, 4))
+        ttk.Entry(g2, textvariable=self.var_sum_rank, width=4).pack(side="left", padx=(0, 8))
+        ttk.Button(g2, text="更新该石", style="Accent.TButton", command=self.cmd_summons_set).pack(side="left", padx=(0, 8))
+        ttk.Button(g2, text="新增召唤石", command=lambda: self.cmd_summons_add(dry=False)).pack(side="left", padx=(0, 8))
+        ttk.Button(g2, text="预览新增", command=lambda: self.cmd_summons_add(dry=True)).pack(side="left")
+
+        eq = ttk.LabelFrame(t, text="装备(4 个召唤石槽,★ = 已装备)", padding=8)
+        eq.pack(fill="x", pady=6)
+        eqrow = ttk.Frame(eq)
+        eqrow.pack(fill="x")
+        self._sum_eq_cbs = []
+        for i in range(4):
+            ttk.Label(eqrow, text=f"槽{i+1}:").pack(side="left", padx=(4, 2))
+            cb = ttk.Combobox(eqrow, textvariable=self.var_sum_eq[i], width=28, state="readonly")
+            cb.pack(side="left", padx=(0, 6))
+            self._sum_eq_cbs.append(cb)
+        ttk.Button(eqrow, text="应用装备", style="Accent.TButton", command=self.cmd_summons_equip).pack(side="left", padx=6)
+        ttk.Button(eqrow, text="卸下全部", style="Danger.TButton", command=self.cmd_summons_unequip_all).pack(side="left", padx=6)
+        self.summons_out = self._mk_out(t, 10)
+
+        # 种类变化时,把该种类的天然词池排到主加护/副词条下拉最前
+        self._sum_type_cb.bind('<<ComboboxSelected>>', self._sum_type_changed)
+        # 初始填充下拉选项
+        self._sum_refresh_combos()
 
 
     def _tab_loadout(self, nb):
@@ -385,6 +440,7 @@ class App:
         self._items_list(save)
         self._sigils_list(save)
         self._chars_list(save)
+        self._sum_refresh(save)
         self._summons_list(save)
         self._ld_list()
         self._note('--- 已刷新 ---')
@@ -515,7 +571,7 @@ class App:
             self._note(f'[错误] 找不到因子: {name}'); return
         gem_hash = next((int(hk) for hk, x in gct.GEMCAT['sigil_info'].items() if x is e), None)
         info = gct.GEMCAT['sigil_info'][str(gem_hash)]
-        primary = info['primary']
+        primary = gct.sigil_primary_hash(gem_hash, info)
         mx = gct.GEMCAT['trait_info'].get(str(primary), {}).get('max_level', 20)
         lv = self.var_sigil_level.get().strip()
         level = int(lv) if lv and lv.lstrip('-').isdigit() else mx
@@ -599,6 +655,28 @@ class App:
             lines.append(f'  槽{u}: {name:<26} lv{m2704.get(u)}')
         self._set_text(self.chars_out, '\n'.join(lines) if len(lines) > 1 else f'{gct.chara_label(gid)} 未装备因子')
 
+    def cmd_chars_unequip(self):
+        save = self._open()
+        if save is None:
+            return
+        ch_hash, gid = gct.find_chara(self.var_chara.get().strip())
+        if ch_hash is None:
+            self._note(f'[错误] 找不到角色: {self.var_chara.get().strip()}'); return
+        slot_s = self.var_chara_slot.get().strip()
+        if not slot_s or not slot_s.lstrip('-').isdigit():
+            self._note('[错误] 请输入要卸下的槽号(查看角色因子时会显示槽号)'); return
+        slot = int(slot_s)
+        m2703 = self._vm(gct.ID_2703); m2706 = self._vm(gct.ID_2706); m2702 = self._vm(gct.ID_2702)
+        if slot not in m2703 or (m2703.get(slot, gct.EMPTY) & 0xFFFFFFFF) == gct.EMPTY:
+            self._note(f'[错误] 槽 {slot} 为空'); return
+        if (m2706.get(slot, 0) & 0xFFFFFFFF) != (ch_hash & 0xFFFFFFFF):
+            self._note(f'[错误] 槽 {slot} 不是 {gct.chara_label(gid)} 的因子'); return
+        gct.set_first(save, gct.ID_2706, slot, gct.EMPTY, 'uint')
+        gct.sigil_equip_unregister(save, ch_hash, m2702.get(slot, 0))
+        bak = gct.save_and_backup(save, self.save_path.get(), 'unequip', force=self.var_force.get())
+        self._invalidate()
+        self._note(f'[完成] 槽{slot} 已从 {gct.chara_label(gid)} 卸下 备份:{os.path.basename(bak)}')
+
     def cmd_chars_clear(self):
         save = self._open()
         if save is None:
@@ -618,45 +696,250 @@ class App:
         self._note(f'[完成] 已卸下 {gct.chara_label(gid)} 的 {changed} 个因子 备份:{os.path.basename(bak)}')
 
     # ------------------------------------------------------------ 召唤石
+    def _sum_full_names(self, which):
+        """目录全量显示名列表(用于下拉框,含 0x 哈希以便区分同名)。"""
+        cat = gct.SUMCAT_MAIN if which == 'main' else gct.SUMCAT_SUB
+        out = []
+        for hk, e in sorted(cat.items()):
+            cn = e.get('cn') or ''
+            en = e.get('en') or ''
+            tag = ' (%s)' % en if en and cn else ''
+            out.append('%s%s [0x%08X]' % (cn or '0x%08X' % (int(hk) & 0xFFFFFFFF), tag, int(hk) & 0xFFFFFFFF))
+        return out
+
+    def _sum_natural_names(self, type_hash, which):
+        """某种类的 2.0.2 天然词池显示名(含 0x 哈希)。"""
+        te = gct.SUMCAT_TYPES.get(gct._sum_key(type_hash), {})
+        names = []
+        if which == 'main':
+            for h in te.get('mainTraitHashes', []):
+                n = '%s [0x%08X]' % (gct.summon_trait_name(h), int(h) & 0xFFFFFFFF)
+                if n not in names:
+                    names.append(n)
+        else:
+            for h in te.get('subParamHashes', []):
+                n = '%s [0x%08X]' % (gct.summon_sub_name(h), int(h) & 0xFFFFFFFF)
+                if n not in names:
+                    names.append(n)
+        return names
+
+    def _sum_refresh_combos(self):
+        """刷新种类/主加护/副词条下拉(天然词池排前,保留当前值)。"""
+        all_types = []
+        for hk, e in sorted(gct.SUMCAT_TYPES.items()):
+            cn = e.get('cn') or ''
+            en = e.get('en') or ''
+            tag = ' (%s)' % en if en and cn else ''
+            all_types.append('%s%s [0x%08X]' % (cn, tag, int(hk) & 0xFFFFFFFF))
+        cur_t = self.var_sum_type.get()
+        self._sum_type_cb.configure(values=all_types)
+        if cur_t:
+            self.var_sum_type.set(cur_t)
+        th = gct.summon_find_type(cur_t) if cur_t else None
+        pool_m = self._sum_natural_names(th, 'main') if th else []
+        pool_s = self._sum_natural_names(th, 'sub') if th else []
+        all_m = self._sum_full_names('main')
+        all_s = self._sum_full_names('sub')
+        vals_m = pool_m + [x for x in all_m if x not in pool_m]
+        vals_s = pool_s + [x for x in all_s if x not in pool_s]
+        cur_m = self.var_sum_main.get()
+        cur_s = self.var_sum_sub.get()
+        self._sum_main_cb.configure(values=vals_m)
+        self._sum_sub_cb.configure(values=vals_s)
+        if cur_m:
+            self.var_sum_main.set(cur_m)
+        if cur_s:
+            self.var_sum_sub.set(cur_s)
+
+    def _sum_type_changed(self, event=None):
+        self._sum_refresh_combos()
+
     def cmd_summons_list(self):
         save = self._open()
         if save is None:
             return
+        self._sum_refresh(save)
         self._summons_list(save)
+
+    def _sum_refresh(self, save):
+        """刷新背包快照 + 装备下拉。返回 save。"""
+        records, equipped, max_slot, unlocked = gct.summon_inventory(save)
+        self._sum_records = records
+        self._sum_equipped = [int(v) & 0xFFFFFFFF for v in equipped]
+        self._sum_unlocked = unlocked
+        self._sum_max_slot = max_slot
+        name_by_slot = {r['slot']: '槽%d · %s' % (r['slot'], gct.summon_type_name(r['type_hash'])) for r in records}
+        eq_vals = ['(空)'] + [name_by_slot[s] for s in sorted(name_by_slot)]
+        for i, cb in enumerate(self._sum_eq_cbs):
+            cb.configure(values=eq_vals)
+            cur = self._sum_equipped[i] if i < len(self._sum_equipped) else 0
+            self.var_sum_eq[i].set(name_by_slot.get(cur, '(空)') if cur else '(空)')
+        return save
 
     def _summons_list(self, save):
         self._set_text(self.summons_out, '')
-        m3101 = self._vm(3101); m3102 = self._vm(3102); m3113 = self._vm(3113)
-        units = sorted(set(m3101) | set(m3102) | set(m3113))
-        lines = ['=== 召唤石 ===']
-        for u in units:
-            worn = m3101.get(u)
-            ch = gct.chara_label_by_hash(worn) if worn and worn != gct.EMPTY else '未装备'
-            t = m3113.get(u)
-            lines.append(f'  槽{u}: 装备={ch} 等级={m3102.get(u,0)} typeHash=0x{(t or 0):08X}')
+        q = self.var_sum_q.get().strip().lower()
+        eq_set = set(self._sum_equipped)
+        lines = ['=== 召唤石背包(%d 个%s) ===' % (
+            len(self._sum_records), ' · 已解锁' if getattr(self, '_sum_unlocked', False) else ' · 未解锁')]
+        for r in self._sum_records:
+            tn = gct.summon_type_name(r['type_hash'])
+            mn = gct.summon_trait_name(r['main_hash'])
+            sn = gct.summon_sub_name(r['sub_hash'])
+            if q and q not in tn.lower() and q not in mn.lower() and q not in sn.lower() and \
+                    q not in f'0x{r["type_hash"]:08X}'.lower():
+                continue
+            mark = '★' if r['slot'] in eq_set else ' '
+            lines.append('  %s槽%-4d %-30s 主:%s Lv%-2d 副:%s 档%-2d 阶级%d' % (
+                mark, r['slot'], tn, mn, r['main_level'], sn, r['sub_level'], r['rank']))
         self._set_text(self.summons_out, '\n'.join(lines) if len(lines) > 1 else '(无召唤石)')
+
+    def cmd_summons_load(self):
+        save = self._open()
+        if save is None:
+            return
+        self._sum_refresh(save)
+        q = self.var_sum_slot.get().strip()
+        if not q or not q.lstrip('-').isdigit():
+            self._note('[错误] 请输入槽号(列表第一列数字)'); return
+        slot = int(q)
+        rec = next((r for r in self._sum_records if r['slot'] == slot), None)
+        if rec is None:
+            rec = gct.summon_read_record(save, slot)  # 兼容直接输入 unit
+        if rec is None:
+            self._note(f'[错误] 找不到槽 {q} 对应的召唤石'); return
+        self._sum_cur = rec
+        self.var_sum_slot.set(str(rec['slot']))
+        self.var_sum_type.set(gct.summon_type_name(rec['type_hash']))
+        self._sum_refresh_combos()
+        self.var_sum_main.set(gct.summon_trait_name(rec['main_hash']))
+        self.var_sum_sub.set(gct.summon_sub_name(rec['sub_hash']))
+        self.var_sum_mlv.set(str(rec['main_level']))
+        self.var_sum_slv.set(str(rec['sub_level']))
+        self.var_sum_rank.set(str(rec['rank']))
+        self._note(f'[信息] 已读取槽{rec["slot"]} (unit {rec["unit"]}): {gct.summon_type_name(rec["type_hash"])}')
+
+    def _sum_form_values(self):
+        """从表单解析 (type_h, main_h, sub_h, ml, sl, rank);失败返回 (None, 错误)。"""
+        th = gct.summon_find_type(self.var_sum_type.get().strip())
+        if th is None:
+            return None, '找不到召唤石种类: %s' % self.var_sum_type.get().strip()
+        mh = gct.summon_find_main(self.var_sum_main.get().strip())
+        if mh is None:
+            return None, '找不到主加护: %s' % self.var_sum_main.get().strip()
+        sh = gct.summon_find_sub(self.var_sum_sub.get().strip())
+        if sh is None:
+            return None, '找不到副词条: %s' % self.var_sum_sub.get().strip()
+        try:
+            ml = int(self.var_sum_mlv.get().strip())
+            sl = int(self.var_sum_slv.get().strip())
+            rank = int(self.var_sum_rank.get().strip())
+        except ValueError:
+            return None, '主级/副档/阶级必须是整数'
+        return (th, mh, sh, ml, sl, rank), None
 
     def cmd_summons_set(self):
         save = self._open()
         if save is None:
             return
-        u = self.var_summon_unit.get().strip()
-        if not u or not u.lstrip('-').isdigit():
-            self._note('[错误] 请输入召唤石槽号'); return
-        u = int(u)
-        ch = self.var_summon_chara.get().strip() or None
-        lv = self.var_summon_level.get().strip()
-        lv = int(lv) if lv and lv.lstrip('-').isdigit() else None
-        if ch:
-            ch_hash, gid = gct.find_chara(ch)
-            if ch_hash is None:
-                self._note(f'[错误] 找不到角色: {ch}'); return
-            gct.set_first(save, gct.ID_SUM_CHARA, u, ch_hash, 'uint')
-        if lv is not None:
-            gct.set_first(save, gct.ID_SUM_LEVEL, u, lv, 'int')
+        self._sum_refresh(save)
+        if self._sum_cur is None:
+            self._note('[错误] 请先在槽号输入框输入槽号并点"读取"'); return
+        vals, err = self._sum_form_values()
+        if err:
+            self._note(f'[错误] {err}'); return
+        th, mh, sh, ml, sl, rank = vals
+        verr, warns = gct.summon_validate_draft(th, mh, sh, ml, sl, rank, natural_warn=True)
+        if verr:
+            self._note(f'[错误] {verr}'); return
+        for w in warns:
+            self._note(f'[警告] {w}')
+        err2, upd = gct.summon_update(save, self._sum_cur['unit'], th, mh, sh, ml, sl, rank)
+        if err2:
+            self._note(f'[错误] {err2}'); return
         bak = gct.save_and_backup(save, self.save_path.get(), 'summon', force=self.var_force.get())
         self._invalidate()
-        self._note(f'[完成] 召唤石槽{u} 已更新 备份:{os.path.basename(bak)}')
+        self._note('[完成] 槽%d 已更新: %s 主:%s Lv%d 副:%s 档%d 阶级%d 备份:%s' % (
+            upd['slot'], gct.summon_type_name(upd['type_hash']),
+            gct.summon_trait_name(upd['main_hash']), upd['main_level'],
+            gct.summon_sub_name(upd['sub_hash']), upd['sub_level'], upd['rank'],
+            os.path.basename(bak)))
+        self._sum_cur = upd
+        self.var_sum_slot.set(str(upd['slot']))
+        self._sum_refresh(save)
+        self._summons_list(save)
+
+    def cmd_summons_add(self, dry=False):
+        save = self._open()
+        if save is None:
+            return
+        self._sum_refresh(save)
+        vals, err = self._sum_form_values()
+        if err:
+            self._note(f'[错误] {err}'); return
+        th, mh, sh, ml, sl, rank = vals
+        verr, warns = gct.summon_validate_draft(th, mh, sh, ml, sl, rank, natural_warn=True)
+        if verr:
+            self._note(f'[错误] {verr}'); return
+        for w in warns:
+            self._note(f'[警告] {w}')
+        err2, rec = gct.summon_create(save, th, mh, sh, ml, sl, rank, dry=dry)
+        if err2:
+            self._note(f'[错误] {err2}'); return
+        if dry:
+            self._note('[预览] 将新增: %s 主:%s Lv%d 副:%s 档%d 阶级%d (槽%d)' % (
+                gct.summon_type_name(rec['type_hash']), gct.summon_trait_name(rec['main_hash']),
+                rec['main_level'], gct.summon_sub_name(rec['sub_hash']), rec['sub_level'],
+                rec['rank'], rec['slot']))
+            return
+        bak = gct.save_and_backup(save, self.save_path.get(), 'summon', force=self.var_force.get())
+        self._invalidate()
+        self._note('[完成] 已新增: %s (槽%d) 备份:%s' % (
+            gct.summon_type_name(rec['type_hash']), rec['slot'], os.path.basename(bak)))
+        self._sum_refresh(save)
+        self._summons_list(save)
+
+    def cmd_summons_equip(self):
+        save = self._open()
+        if save is None:
+            return
+        # 注意:先读下拉选择,再刷新(_sum_refresh 会把下拉重置为当前装备状态)
+        new_eq = []
+        for i in range(4):
+            s = self.var_sum_eq[i].get().strip()
+            if not s or s == '(空)':
+                new_eq.append(0)
+            else:
+                try:
+                    new_eq.append(int(s.split(' · ')[0][1:]))
+                except (ValueError, IndexError):
+                    self._note(f'[错误] 装备槽{i+1} 选择无效: {s}'); return
+        self._sum_refresh(save)
+        eq_recs = save.find(id_type=gct.ID_SUM_EQUIPPED)
+        if not eq_recs:
+            self._note('[错误] 存档缺少 1451 装备字段'); return
+        save.set_values(eq_recs[0], new_eq)
+        bak = gct.save_and_backup(save, self.save_path.get(), 'summon_equip', force=self.var_force.get())
+        self._invalidate()
+        names = {r['slot']: gct.summon_type_name(r['type_hash']) for r in self._sum_records}
+        self._note('[完成] 装备已更新: ' + ' | '.join(
+            ('槽%d: %s' % (i + 1, names.get(new_eq[i], '空')) if new_eq[i] else '槽%d: 空' % (i + 1))
+            for i in range(4)) + ' 备份:%s' % os.path.basename(bak))
+        self._sum_refresh(save)
+        self._summons_list(save)
+
+    def cmd_summons_unequip_all(self):
+        save = self._open()
+        if save is None:
+            return
+        eq_recs = save.find(id_type=gct.ID_SUM_EQUIPPED)
+        if not eq_recs:
+            self._note('[错误] 存档缺少 1451 装备字段'); return
+        save.set_values(eq_recs[0], [0, 0, 0, 0])
+        bak = gct.save_and_backup(save, self.save_path.get(), 'summon_unequip', force=self.var_force.get())
+        self._invalidate()
+        self._note(f'[完成] 4 个装备槽已全部卸下 备份:{os.path.basename(bak)}')
+        self._sum_refresh(save)
         self._summons_list(save)
 
     # ------------------------------------------------------------ 配装
@@ -909,12 +1192,17 @@ class App:
         self._note(f'[信息] 祝福词条池 {len(vals)} 种')
 
     def _wr_resolve_trait(self, q):
-        """词条名 -> 哈希;失败返回 None。"""
+        """词条名 -> 哈希;失败返回 None。兼容“中文 (English)”“0xHASH (English)”格式。"""
         q = (q or '').strip()
         if not q:
             return None
         if q.lower().startswith('0x'):
-            return int(q, 16) & 0xFFFFFFFF
+            core, _ = gct._split_label(q)
+            hex_part = core if core and core.lower().startswith('0x') else q
+            try:
+                return int(hex_part, 16) & 0xFFFFFFFF
+            except ValueError:
+                return None
         t2 = gct.find_trait(q)
         if t2 is not None:
             return next((int(hk) for hk, x in gct.GEMCAT['trait_info'].items() if x is t2), None)

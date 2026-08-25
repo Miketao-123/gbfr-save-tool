@@ -1,0 +1,9126 @@
+{
+ "meta": {
+  "format": 1,
+  "types": 189,
+  "main_traits": 243,
+  "sub_params": 22,
+  "natural_rules_version": "2.0.2",
+  "note": "来源: GBFR PE Patch Tool (summons.json/summon_skills.json/summon_sub_params.json/summon_natural_rules_202.json)"
+ },
+ "types": {
+  "3380282": {
+   "cn": "黑龙伊弗欧 · 传说 · 伤害",
+   "baseName": "黑龙伊弗欧",
+   "code": "3f00",
+   "cost": 5,
+   "typeName": "伤害",
+   "en": "Evyl Blackwyrm III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "固定",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    2734331525
+   ],
+   "subParamHashes": [
+    2740166587
+   ],
+   "mainTraitLevels": [
+    11
+   ],
+   "subParamLevels": [
+    7
+   ]
+  },
+  "28838225": {
+   "cn": "永暗藏匿者 · 史诗 · 伤害",
+   "baseName": "永暗藏匿者",
+   "code": "4000",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Lurker in the Dark",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "固定",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    4067143333
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "63487888": {
+   "cn": "神谕转轮 · 史诗 · 支援",
+   "baseName": "神谕转轮",
+   "code": "6400",
+   "cost": 4,
+   "typeName": "支援",
+   "en": "Wheel of Fate II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "固定",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    3872242332
+   ],
+   "subParamHashes": [
+    4155519343
+   ],
+   "mainTraitLevels": [
+    7
+   ],
+   "subParamLevels": [
+    1
+   ]
+  },
+  "63525920": {
+   "cn": "巨爪霜鳄 · 史诗 · 伤害",
+   "baseName": "巨爪霜鳄",
+   "code": "1e00",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Blizzadile II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    4216792705,
+    1931609893,
+    2373493147,
+    3940753899,
+    612907763
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "73333595": {
+   "cn": "断罪铁骑 · 传说 · 伤害",
+   "baseName": "断罪铁骑",
+   "code": "4100",
+   "cost": 5,
+   "typeName": "伤害",
+   "en": "Mechanized Executioner III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    162168245,
+    1802063213,
+    3536380170,
+    3009445917
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "86370173": {
+   "cn": "小钳蟹 · 史诗 · 支援",
+   "baseName": "小钳蟹",
+   "code": "6300",
+   "cost": 4,
+   "typeName": "支援",
+   "en": "Wee Pincer II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    3696775008,
+    342947936,
+    99806428
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "161357267": {
+   "cn": "玛纳加尔姆·虚无 · 传说 · 伤害",
+   "baseName": "玛纳加尔姆·虚无",
+   "code": "4c00",
+   "cost": 5,
+   "typeName": "伤害",
+   "en": "Managarmr Nihilla",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    162168245,
+    3536380170,
+    3492412936,
+    2533525007,
+    612907763
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "188115673": {
+   "cn": "巨爪焰鳄 · 史诗 · 伤害",
+   "baseName": "巨爪焰鳄",
+   "code": "1f00",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Infernadile I",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    1957328342,
+    3697311093,
+    2828591747,
+    3492412936,
+    2089068211
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "199402554": {
+   "cn": "巨爪岩鳄 · 史诗 · 伤害",
+   "baseName": "巨爪岩鳄",
+   "code": "1d00",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Quakadile II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "固定",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    1219058573
+   ],
+   "subParamHashes": [
+    1513740315
+   ],
+   "mainTraitLevels": [
+    10
+   ],
+   "subParamLevels": [
+    3
+   ]
+  },
+  "227850399": {
+   "cn": "银史莱姆 · 史诗 · 支援",
+   "baseName": "银史莱姆",
+   "code": "2000",
+   "cost": 4,
+   "typeName": "支援",
+   "en": "Silverslime II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    1581394661,
+    4136093167,
+    3362730114,
+    2335962636
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10,
+    15
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "249718538": {
+   "cn": "死骸格拉森 · 传说 · 伤害",
+   "baseName": "死骸格拉森",
+   "code": "1600",
+   "cost": 5,
+   "typeName": "伤害",
+   "en": "Gerasene III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    2094004047,
+    2475281414,
+    2734331525,
+    3940753899,
+    3868870292
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "261648089": {
+   "cn": "罗兰 · 传说 · 特殊",
+   "baseName": "罗兰",
+   "code": "0200",
+   "cost": 5,
+   "typeName": "特殊",
+   "en": "Rolan",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    2094004047,
+    3769368062,
+    3053428691,
+    2515794566,
+    831329001,
+    1280871463
+   ],
+   "subParamHashes": [
+    782879360,
+    4062539332,
+    1511861385,
+    868275468,
+    1420859959,
+    2749708209,
+    4042750913,
+    2454052772,
+    2692000103,
+    3463497098,
+    2939790331
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "278798961": {
+   "cn": "骑空团联盟拉法尔 · 传说 · 支援",
+   "baseName": "骑空团联盟拉法尔",
+   "code": "5700",
+   "cost": 5,
+   "typeName": "支援",
+   "en": "Crew Alliance Rafale III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    1931609893,
+    1619384869,
+    3277525275
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "367805022": {
+   "cn": "叛乱重炮 · 史诗 · 伤害",
+   "baseName": "叛乱重炮",
+   "code": "4200",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Ballistic Ballista II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "固定",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    3769368062
+   ],
+   "subParamHashes": [
+    4155519343
+   ],
+   "mainTraitLevels": [
+    10
+   ],
+   "subParamLevels": [
+    3
+   ]
+  },
+  "367881591": {
+   "cn": "怀揣希望的空之民 · 传说 · 支援",
+   "baseName": "怀揣希望的空之民",
+   "code": "4f00",
+   "cost": 5,
+   "typeName": "支援",
+   "en": "Hope-Filled Skydwellers III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    3769368062,
+    1619384869,
+    5462430
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "381092572": {
+   "cn": "玛洛斯僧兵 · 传说 · 支援",
+   "baseName": "玛洛斯僧兵",
+   "code": "5600",
+   "cost": 5,
+   "typeName": "支援",
+   "en": "Mellose Clan III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "固定",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    2475281414
+   ],
+   "subParamHashes": [
+    2791457225
+   ],
+   "mainTraitLevels": [
+    13
+   ],
+   "subParamLevels": [
+    7
+   ]
+  },
+  "381303690": {
+   "cn": "冰骸斯卡米勒 · 传说 · 伤害",
+   "baseName": "冰骸斯卡米勒",
+   "code": "1800",
+   "cost": 5,
+   "typeName": "伤害",
+   "en": "Scarmiglione III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    4216792705,
+    162168245,
+    1327117955,
+    2128439760,
+    3053428691
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "448233439": {
+   "cn": "猫 · 传说 · 支援",
+   "baseName": "猫",
+   "code": "5f00",
+   "cost": 5,
+   "typeName": "支援",
+   "en": "Cat",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    162168245,
+    3536380170,
+    2083409252
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "448454173": {
+   "cn": "赛伊格亚 · 稀有 · 伤害",
+   "baseName": "赛伊格亚",
+   "code": "2200",
+   "cost": 3,
+   "typeName": "伤害",
+   "en": "Cyaegha I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "固定",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    4216792705
+   ],
+   "subParamHashes": [
+    13726176
+   ],
+   "mainTraitLevels": [
+    4
+   ],
+   "subParamLevels": [
+    0
+   ]
+  },
+  "459124413": {
+   "cn": "双足飞龙 · 稀有 · 伤害",
+   "baseName": "双足飞龙",
+   "code": "1b00",
+   "cost": 3,
+   "typeName": "伤害",
+   "en": "Wyvern I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    359194852,
+    2215087280,
+    2089068211,
+    3009445917
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "459948068": {
+   "cn": "巨爪焰鳄 · 传说 · 伤害",
+   "baseName": "巨爪焰鳄",
+   "code": "1f00",
+   "cost": 5,
+   "typeName": "伤害",
+   "en": "Infernadile III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    1957328342,
+    3697311093,
+    2828591747,
+    3492412936,
+    2089068211
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "463331578": {
+   "cn": "希德霍姆兵 · 史诗 · 支援",
+   "baseName": "希德霍姆兵",
+   "code": "5400",
+   "cost": 4,
+   "typeName": "支援",
+   "en": "Seedhollow Guardians II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    2849079125,
+    3872242332,
+    3492412936
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "467757127": {
+   "cn": "赛伊格亚 · 稀有 · 伤害",
+   "baseName": "赛伊格亚",
+   "code": "2200",
+   "cost": 3,
+   "typeName": "伤害",
+   "en": "Cyaegha I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    4216792705,
+    1327117955,
+    2194548621,
+    3009445917
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "482402543": {
+   "cn": "水精灵 · 稀有 · 伤害",
+   "baseName": "水精灵",
+   "code": "2b00",
+   "cost": 3,
+   "typeName": "伤害",
+   "en": "Water Spirit I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    2094004047,
+    2849079125,
+    4216792705,
+    3231160855
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "509952931": {
+   "cn": "火龙布雷扎莱克 · 史诗 · 伤害",
+   "baseName": "火龙布雷扎莱克",
+   "code": "3a00",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Vrazarek Firewyrm II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    3696775008,
+    1342675484,
+    3053428691,
+    2089068211,
+    831329001
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "597653151": {
+   "cn": "贝希摩斯 · 传说 · 伤害",
+   "baseName": "贝希摩斯",
+   "code": "3700",
+   "cost": 5,
+   "typeName": "伤害",
+   "en": "Behemoth III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "固定",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    3053428691
+   ],
+   "subParamHashes": [
+    4155519343
+   ],
+   "mainTraitLevels": [
+    11
+   ],
+   "subParamLevels": [
+    2
+   ]
+  },
+  "601373091": {
+   "cn": "玛纳加尔姆 · 稀有 · 伤害",
+   "baseName": "玛纳加尔姆",
+   "code": "4b00",
+   "cost": 3,
+   "typeName": "伤害",
+   "en": "Managarmr I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "固定",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    831329001
+   ],
+   "subParamHashes": [
+    4155519343
+   ],
+   "mainTraitLevels": [
+    5
+   ],
+   "subParamLevels": [
+    1
+   ]
+  },
+  "622314625": {
+   "cn": "黑龙伊弗欧 · 史诗 · 伤害",
+   "baseName": "黑龙伊弗欧",
+   "code": "3f00",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Evyl Blackwyrm II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    4067143333,
+    1957328342,
+    342947936,
+    920880269,
+    2734331525
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "652725425": {
+   "cn": "冰龙威利努斯 · 史诗 · 伤害",
+   "baseName": "冰龙威利努斯",
+   "code": "3b00",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Wilinus Icewyrm II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    4216792705,
+    162168245,
+    2809291152,
+    1009473456,
+    3868870292
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "698096136": {
+   "cn": "托付愿望的空之民 · 稀有 · 支援",
+   "baseName": "托付愿望的空之民",
+   "code": "5000",
+   "cost": 3,
+   "typeName": "支援",
+   "en": "True Believers I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "固定",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    920880269
+   ],
+   "subParamHashes": [
+    3159265995
+   ],
+   "mainTraitLevels": [
+    4
+   ],
+   "subParamLevels": [
+    1
+   ]
+  },
+  "775742425": {
+   "cn": "暗之种 · 史诗 · 支援",
+   "baseName": "暗之种",
+   "code": "2900",
+   "cost": 4,
+   "typeName": "支援",
+   "en": "Dark Gyre II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    233342880,
+    1911626395,
+    4051194041
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "778402561": {
+   "cn": "机械武装·主机 · 稀有 · 伤害",
+   "baseName": "机械武装·主机",
+   "code": "3100",
+   "cost": 3,
+   "typeName": "伤害",
+   "en": "Droita Mother I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    3697311093,
+    342947936,
+    2194548621,
+    574788127
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "782327064": {
+   "cn": "魔眼守卫 · 史诗 · 伤害",
+   "baseName": "魔眼守卫",
+   "code": "2500",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Nazarbonju II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    4216792705,
+    2829260347,
+    99806428,
+    3868870292
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "783079324": {
+   "cn": "角禽 · 稀有 · 支援",
+   "baseName": "角禽",
+   "code": "1a00",
+   "cost": 3,
+   "typeName": "支援",
+   "en": "Hornbird I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    2215087280,
+    831329001,
+    2812567336
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "789923164": {
+   "cn": "别西卜 · 传说 · 特殊",
+   "baseName": "别西卜",
+   "code": "9200",
+   "cost": 5,
+   "typeName": "特殊",
+   "en": "Beelzebub",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "固定",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    2094004047
+   ],
+   "subParamHashes": [
+    2692000103
+   ],
+   "mainTraitLevels": [
+    11
+   ],
+   "subParamLevels": [
+    5
+   ]
+  },
+  "821441044": {
+   "cn": "光之种 · 稀有 · 支援",
+   "baseName": "光之种",
+   "code": "2800",
+   "cost": 3,
+   "typeName": "支援",
+   "en": "Light Gyre I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    2849079125,
+    4084396182,
+    1072455552
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "827757998": {
+   "cn": "红宝石魔像 · 传说 · 伤害",
+   "baseName": "红宝石魔像",
+   "code": "3400",
+   "cost": 5,
+   "typeName": "伤害",
+   "en": "Ruby Golem",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "固定",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    2404396813
+   ],
+   "subParamHashes": [
+    1513740315
+   ],
+   "mainTraitLevels": [
+    11
+   ],
+   "subParamLevels": [
+    2
+   ]
+  },
+  "828785060": {
+   "cn": "金史莱姆 · 史诗 · 支援",
+   "baseName": "金史莱姆",
+   "code": "2100",
+   "cost": 4,
+   "typeName": "支援",
+   "en": "Goldslime II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    1581394661,
+    4136093167,
+    3362730114,
+    1280871463
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10,
+    15
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "837720997": {
+   "cn": "苍百长 · 史诗 · 支援",
+   "baseName": "苍百长",
+   "code": "0f00",
+   "cost": 4,
+   "typeName": "支援",
+   "en": "Cruel Overseer II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    2809291152,
+    1802063213,
+    2373493147
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "846054110": {
+   "cn": "冰骸斯卡米勒 · 史诗 · 伤害",
+   "baseName": "冰骸斯卡米勒",
+   "code": "1800",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Scarmiglione II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    4216792705,
+    162168245,
+    1327117955,
+    2128439760,
+    3053428691
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "919294034": {
+   "cn": "玛洛斯僧兵 · 史诗 · 支援",
+   "baseName": "玛洛斯僧兵",
+   "code": "5600",
+   "cost": 4,
+   "typeName": "支援",
+   "en": "Mellose Clan II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    3769368062,
+    2475281414,
+    1882806065
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "942968350": {
+   "cn": "远古巨龙 · 史诗 · 伤害",
+   "baseName": "远古巨龙",
+   "code": "3900",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Ancient Dragon II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    2094004047,
+    4084396182,
+    3868870292,
+    2194548621,
+    1219058573
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "958167127": {
+   "cn": "灾祸之影 · 稀有 · 伤害",
+   "baseName": "灾祸之影",
+   "code": "4d00",
+   "cost": 3,
+   "typeName": "伤害",
+   "en": "Ominous Form I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    359194852,
+    1931609893,
+    2734331525,
+    1619384869
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "1001197876": {
+   "cn": "地龙杜雷贝尔 · 传说 · 伤害",
+   "baseName": "地龙杜雷贝尔",
+   "code": "3c00",
+   "cost": 5,
+   "typeName": "伤害",
+   "en": "Corvell Earthwyrm III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    3696775008,
+    2452806679,
+    233342880,
+    3578760359,
+    2515794566,
+    3440945021
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "1010310605": {
+   "cn": "哥布林角斗士 · 稀有 · 支援",
+   "baseName": "哥布林角斗士",
+   "code": "0e00",
+   "cost": 3,
+   "typeName": "支援",
+   "en": "Goblin Gladiator I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    4084396182,
+    2404396813,
+    473304163,
+    1725849777
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "1011821437": {
+   "cn": "怀揣希望的空之民 · 稀有 · 支援",
+   "baseName": "怀揣希望的空之民",
+   "code": "4f00",
+   "cost": 3,
+   "typeName": "支援",
+   "en": "Hope-Filled Skydwellers I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    3769368062,
+    1619384869,
+    5462430
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "1037692142": {
+   "cn": "火之种 · 稀有 · 支援",
+   "baseName": "火之种",
+   "code": "2600",
+   "cost": 3,
+   "typeName": "支援",
+   "en": "Flame Gyre I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    920880269,
+    2404396813,
+    3940753899
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "1071160378": {
+   "cn": "世须良加 · 史诗 · 伤害",
+   "baseName": "世须良加",
+   "code": "4600",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Pyet-A II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "固定",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    178391110
+   ],
+   "subParamHashes": [
+    1716424242
+   ],
+   "mainTraitLevels": [
+    10
+   ],
+   "subParamLevels": [
+    4
+   ]
+  },
+  "1111905127": {
+   "cn": "刃重众 · 史诗 · 支援",
+   "baseName": "刃重众",
+   "code": "5500",
+   "cost": 4,
+   "typeName": "支援",
+   "en": "Sword Veil Fellowship II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    920880269,
+    2475281414,
+    2812567336
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "1134353288": {
+   "cn": "金史莱姆 · 传说 · 支援",
+   "baseName": "金史莱姆",
+   "code": "2100",
+   "cost": 5,
+   "typeName": "支援",
+   "en": "Goldslime III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    1581394661,
+    4136093167,
+    3362730114,
+    1280871463
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "1151716017": {
+   "cn": "扎斯巴家 · 稀有 · 支援",
+   "baseName": "扎斯巴家",
+   "code": "5300",
+   "cost": 3,
+   "typeName": "支援",
+   "en": "Family Zathba I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    359194852,
+    342947936,
+    831329001
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "1206038129": {
+   "cn": "神谕转轮 · 传说 · 支援",
+   "baseName": "神谕转轮",
+   "code": "6400",
+   "cost": 5,
+   "typeName": "支援",
+   "en": "Wheel of Fate III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    2215087280,
+    2128439760,
+    1470847760,
+    4146039191
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "1215507743": {
+   "cn": "神谕转轮 · 传说 · 支援",
+   "baseName": "神谕转轮",
+   "code": "6400",
+   "cost": 5,
+   "typeName": "支援",
+   "en": "Wheel of Fate III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "固定",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    3231160855
+   ],
+   "subParamHashes": [
+    13726176
+   ],
+   "mainTraitLevels": [
+    4
+   ],
+   "subParamLevels": [
+    1
+   ]
+  },
+  "1248184701": {
+   "cn": "火之种 · 史诗 · 支援",
+   "baseName": "火之种",
+   "code": "2600",
+   "cost": 4,
+   "typeName": "支援",
+   "en": "Flame Gyre II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    920880269,
+    2404396813,
+    3940753899
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "1262294888": {
+   "cn": "老双足飞龙 · 稀有 · 伤害",
+   "baseName": "老双足飞龙",
+   "code": "1c00",
+   "cost": 3,
+   "typeName": "伤害",
+   "en": "ElderWyvern I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    1327117955,
+    99806428,
+    3468099822,
+    2089068211
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "1269354170": {
+   "cn": "怀揣希望的空之民 · 稀有 · 支援",
+   "baseName": "怀揣希望的空之民",
+   "code": "4f00",
+   "cost": 3,
+   "typeName": "支援",
+   "en": "Hope-Filled Skydwellers I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "固定",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    3769368062
+   ],
+   "subParamHashes": [
+    2791457225
+   ],
+   "mainTraitLevels": [
+    5
+   ],
+   "subParamLevels": [
+    0
+   ]
+  },
+  "1284927055": {
+   "cn": "扎斯巴家 · 传说 · 支援",
+   "baseName": "扎斯巴家",
+   "code": "5300",
+   "cost": 5,
+   "typeName": "支援",
+   "en": "Family Zathba III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    359194852,
+    342947936,
+    831329001
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "1300518943": {
+   "cn": "赤蛮尉 · 稀有 · 支援",
+   "baseName": "赤蛮尉",
+   "code": "1000",
+   "cost": 3,
+   "typeName": "支援",
+   "en": "Scarlet-Shell Butcher I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    2829260347,
+    801700863,
+    2812567336
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "1319278332": {
+   "cn": "银史莱姆 · 传说 · 支援",
+   "baseName": "银史莱姆",
+   "code": "2000",
+   "cost": 5,
+   "typeName": "支援",
+   "en": "Silverslime III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "固定",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    1581394661
+   ],
+   "subParamHashes": [
+    3159265995
+   ],
+   "mainTraitLevels": [
+    11
+   ],
+   "subParamLevels": [
+    4
+   ]
+  },
+  "1330138043": {
+   "cn": "光之种 · 史诗 · 支援",
+   "baseName": "光之种",
+   "code": "2800",
+   "cost": 4,
+   "typeName": "支援",
+   "en": "Light Gyre II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    2849079125,
+    4084396182,
+    1072455552
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "1339525880": {
+   "cn": "地龙杜雷贝尔 · 史诗 · 伤害",
+   "baseName": "地龙杜雷贝尔",
+   "code": "3c00",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Corvell Earthwyrm II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    3696775008,
+    2452806679,
+    233342880,
+    3578760359,
+    2515794566
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "1362953676": {
+   "cn": "骑空团联盟拉法尔 · 史诗 · 支援",
+   "baseName": "骑空团联盟拉法尔",
+   "code": "5700",
+   "cost": 4,
+   "typeName": "支援",
+   "en": "Crew Alliance Rafale II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    1931609893,
+    1619384869,
+    3277525275
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "1363998011": {
+   "cn": "白狼兵团 · 史诗 · 支援",
+   "baseName": "白狼兵团",
+   "code": "5200",
+   "cost": 4,
+   "typeName": "支援",
+   "en": "Silver Wolf Corps II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    3693239446,
+    162168245,
+    2128439760
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "1380783712": {
+   "cn": "玄夜叉 · 传说 · 支援",
+   "baseName": "玄夜叉",
+   "code": "1200",
+   "cost": 5,
+   "typeName": "支援",
+   "en": "Storm-Mane Gatekeeper III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    4067143333,
+    3872242332,
+    2809291152,
+    699568808
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "1387350886": {
+   "cn": "胡拉坎 · 传说 · 伤害",
+   "baseName": "胡拉坎",
+   "code": "4900",
+   "cost": 5,
+   "typeName": "伤害",
+   "en": "Furycane III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    4067143333,
+    1957328342,
+    3231160855,
+    1619384869,
+    1470847760
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "1390550583": {
+   "cn": "红宝石魔像 · 传说 · 伤害",
+   "baseName": "红宝石魔像",
+   "code": "3400",
+   "cost": 5,
+   "typeName": "伤害",
+   "en": "Ruby Golem",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    2809291152,
+    2404396813,
+    3492412936,
+    2515794566,
+    3868870292
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "1399138639": {
+   "cn": "机械武装·主机 · 史诗 · 伤害",
+   "baseName": "机械武装·主机",
+   "code": "3100",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Droita Mother II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    3697311093,
+    342947936,
+    2194548621,
+    574788127
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "1417575932": {
+   "cn": "金枪鱼 · 稀有 · 支援",
+   "baseName": "金枪鱼",
+   "code": "4e00",
+   "cost": 3,
+   "typeName": "支援",
+   "en": "Albacore I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    1581394661,
+    4136093167,
+    3362730114
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "1428013856": {
+   "cn": "灾祸之影 · 史诗 · 伤害",
+   "baseName": "灾祸之影",
+   "code": "4d00",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Ominous Form II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    359194852,
+    1931609893,
+    2734331525,
+    1619384869
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "1433249716": {
+   "cn": "远古巨龙 · 史诗 · 伤害",
+   "baseName": "远古巨龙",
+   "code": "3900",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Ancient Dragon II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "固定",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    801700863
+   ],
+   "subParamHashes": [
+    2740166587
+   ],
+   "mainTraitLevels": [
+    10
+   ],
+   "subParamLevels": [
+    4
+   ]
+  },
+  "1434541721": {
+   "cn": "玄夜叉 · 史诗 · 支援",
+   "baseName": "玄夜叉",
+   "code": "1200",
+   "cost": 4,
+   "typeName": "支援",
+   "en": "Storm-Mane Gatekeeper II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    4067143333,
+    3872242332,
+    2809291152,
+    699568808
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "1466110175": {
+   "cn": "托付愿望的空之民 · 传说 · 支援",
+   "baseName": "托付愿望的空之民",
+   "code": "5000",
+   "cost": 5,
+   "typeName": "支援",
+   "en": "True Believers III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    3693239446,
+    920880269,
+    2194548621
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "1487576237": {
+   "cn": "刃重众 · 稀有 · 支援",
+   "baseName": "刃重众",
+   "code": "5500",
+   "cost": 3,
+   "typeName": "支援",
+   "en": "Sword Veil Fellowship I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    920880269,
+    2475281414,
+    2812567336
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "1509451375": {
+   "cn": "暗之种 · 稀有 · 支援",
+   "baseName": "暗之种",
+   "code": "2900",
+   "cost": 3,
+   "typeName": "支援",
+   "en": "Dark Gyre I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    233342880,
+    1911626395,
+    4051194041
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "1547883900": {
+   "cn": "胡拉坎·虚无 · 传说 · 伤害",
+   "baseName": "胡拉坎·虚无",
+   "code": "4a00",
+   "cost": 5,
+   "typeName": "伤害",
+   "en": "Furycane Nihilla",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    2828591747,
+    3492412936,
+    2533525007,
+    612907763,
+    3868870292
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "1554592522": {
+   "cn": "白狼兵团 · 传说 · 支援",
+   "baseName": "白狼兵团",
+   "code": "5200",
+   "cost": 5,
+   "typeName": "支援",
+   "en": "Silver Wolf Corps III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    3693239446,
+    162168245,
+    2128439760
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "1579805075": {
+   "cn": "玛纳加尔姆 · 稀有 · 伤害",
+   "baseName": "玛纳加尔姆",
+   "code": "4b00",
+   "cost": 3,
+   "typeName": "伤害",
+   "en": "Managarmr I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    4216792705,
+    1957328342,
+    1619384869,
+    831329001,
+    1219058573
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "1597192118": {
+   "cn": "哥布林军士 · 稀有 · 支援",
+   "baseName": "哥布林军士",
+   "code": "0d00",
+   "cost": 3,
+   "typeName": "支援",
+   "en": "Goblin Soldier I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    1072455552,
+    1342675484,
+    1061716793,
+    1725849777
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "1621545893": {
+   "cn": "冰龙威利努斯 · 史诗 · 伤害",
+   "baseName": "冰龙威利努斯",
+   "code": "3b00",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Wilinus Icewyrm II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "固定",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    4216792705
+   ],
+   "subParamHashes": [
+    3159265995
+   ],
+   "mainTraitLevels": [
+    10
+   ],
+   "subParamLevels": [
+    4
+   ]
+  },
+  "1640470548": {
+   "cn": "哥布林军士 · 史诗 · 支援",
+   "baseName": "哥布林军士",
+   "code": "0d00",
+   "cost": 4,
+   "typeName": "支援",
+   "en": "Goblin Soldier II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    1072455552,
+    1342675484,
+    1061716793,
+    1725849777
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "1650628507": {
+   "cn": "魔眼守卫 · 传说 · 伤害",
+   "baseName": "魔眼守卫",
+   "code": "2500",
+   "cost": 5,
+   "typeName": "伤害",
+   "en": "Nazarbonju III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    4216792705,
+    2829260347,
+    99806428,
+    3868870292
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "1665808285": {
+   "cn": "阿里曼 · 稀有 · 伤害",
+   "baseName": "阿里曼",
+   "code": "2400",
+   "cost": 3,
+   "typeName": "伤害",
+   "en": "Ahriman I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    2215087280,
+    1612199723,
+    2083409252,
+    1725849777
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "1667802429": {
+   "cn": "玛洛斯僧兵 · 传说 · 支援",
+   "baseName": "玛洛斯僧兵",
+   "code": "5600",
+   "cost": 5,
+   "typeName": "支援",
+   "en": "Mellose Clan III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    3769368062,
+    2475281414,
+    1882806065
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "1709594841": {
+   "cn": "伏尔甘博拉 · 史诗 · 伤害",
+   "baseName": "伏尔甘博拉",
+   "code": "4700",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Vulkan Bolla II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    3769368062,
+    1009473456,
+    2089068211,
+    2515794566,
+    612907763
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "1718175682": {
+   "cn": "白龙拉迪斯 · 史诗 · 伤害",
+   "baseName": "白龙拉迪斯",
+   "code": "3e00",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "RadisWhitewyrmII",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    1957328342,
+    920880269,
+    2828591747,
+    3053428691,
+    612907763
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "1739011842": {
+   "cn": "怀揣希望的空之民 · 史诗 · 支援",
+   "baseName": "怀揣希望的空之民",
+   "code": "4f00",
+   "cost": 4,
+   "typeName": "支援",
+   "en": "Hope-Filled Skydwellers II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    3769368062,
+    1619384869,
+    5462430
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "1741152767": {
+   "cn": "恩奴基 · 传说 · 伤害",
+   "baseName": "恩奴基",
+   "code": "3800",
+   "cost": 5,
+   "typeName": "伤害",
+   "en": "Ennugi III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    2829260347,
+    4067143333,
+    2734331525,
+    2194548621,
+    1219058573,
+    3440945021
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "1800487689": {
+   "cn": "阿里曼 · 史诗 · 伤害",
+   "baseName": "阿里曼",
+   "code": "2400",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Ahriman II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    2215087280,
+    1612199723,
+    2083409252,
+    1725849777
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "1835840662": {
+   "cn": "永暗藏匿者 · 史诗 · 伤害",
+   "baseName": "永暗藏匿者",
+   "code": "4000",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Lurker in the Dark",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "固定",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    4067143333
+   ],
+   "subParamHashes": [
+    2791457225
+   ],
+   "mainTraitLevels": [
+    1
+   ],
+   "subParamLevels": [
+    9
+   ]
+  },
+  "1851353340": {
+   "cn": "路西法 · 传说 · 特殊",
+   "baseName": "路西法",
+   "code": "0000",
+   "cost": 5,
+   "typeName": "特殊",
+   "en": "Lucilius",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    3689011061,
+    2368396142,
+    1552297491,
+    2452806679,
+    1911626395,
+    4001746207
+   ],
+   "subParamHashes": [
+    782879360,
+    4062539332,
+    1511861385,
+    868275468,
+    1420859959,
+    2749708209,
+    4042750913,
+    2454052772,
+    2692000103,
+    3463497098,
+    2939790331
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "1860771453": {
+   "cn": "叛乱重炮 · 史诗 · 伤害",
+   "baseName": "叛乱重炮",
+   "code": "4200",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Ballistic Ballista II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    3696775008,
+    233342880,
+    3769368062,
+    1061716793
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "1869331424": {
+   "cn": "伏尔甘博拉 · 传说 · 伤害",
+   "baseName": "伏尔甘博拉",
+   "code": "4700",
+   "cost": 5,
+   "typeName": "伤害",
+   "en": "Vulkan Bolla III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    3769368062,
+    1009473456,
+    2089068211,
+    2515794566,
+    612907763
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "1929614812": {
+   "cn": "刃重众 · 传说 · 支援",
+   "baseName": "刃重众",
+   "code": "5500",
+   "cost": 5,
+   "typeName": "支援",
+   "en": "Sword Veil Fellowship III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    920880269,
+    2475281414,
+    2812567336
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "1935529307": {
+   "cn": "角禽 · 史诗 · 支援",
+   "baseName": "角禽",
+   "code": "1a00",
+   "cost": 4,
+   "typeName": "支援",
+   "en": "Hornbird II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    2215087280,
+    831329001,
+    2812567336
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "2039916630": {
+   "cn": "胡拉坎 · 稀有 · 伤害",
+   "baseName": "胡拉坎",
+   "code": "4900",
+   "cost": 3,
+   "typeName": "伤害",
+   "en": "Furycane I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "固定",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    3231160855
+   ],
+   "subParamHashes": [
+    13726176
+   ],
+   "mainTraitLevels": [
+    4
+   ],
+   "subParamLevels": [
+    1
+   ]
+  },
+  "2051466510": {
+   "cn": "巨爪岩鳄 · 史诗 · 伤害",
+   "baseName": "巨爪岩鳄",
+   "code": "1d00",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Quakadile II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    99806428,
+    1612199723,
+    2515794566,
+    1219058573,
+    2083409252
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "2054559187": {
+   "cn": "眼镜蛇 · 史诗 · 伤害",
+   "baseName": "眼镜蛇",
+   "code": "4300",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Cobra II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "固定",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    2537245103
+   ],
+   "subParamHashes": [
+    13726176
+   ],
+   "mainTraitLevels": [
+    10
+   ],
+   "subParamLevels": [
+    3
+   ]
+  },
+  "2115322914": {
+   "cn": "弗尔卡自卫团 · 传说 · 支援",
+   "baseName": "弗尔卡自卫团",
+   "code": "5100",
+   "cost": 5,
+   "typeName": "支援",
+   "en": "Folcan Defense Corps III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    2094004047,
+    1327117955,
+    3492412936
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "2122661398": {
+   "cn": "神谕转轮 · 稀有 · 支援",
+   "baseName": "神谕转轮",
+   "code": "6400",
+   "cost": 3,
+   "typeName": "支援",
+   "en": "Wheel of Fate",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    2215087280,
+    2128439760,
+    1470847760
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "2122999194": {
+   "cn": "目目连 · 史诗 · 伤害",
+   "baseName": "目目连",
+   "code": "2300",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Silent Watcher II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    2809291152,
+    1802063213,
+    801700863,
+    574788127
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "2139317477": {
+   "cn": "黑龙伊弗欧 · 稀有 · 伤害",
+   "baseName": "黑龙伊弗欧",
+   "code": "3f00",
+   "cost": 3,
+   "typeName": "伤害",
+   "en": "Evyl Blackwyrm I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    4067143333,
+    1957328342,
+    342947936,
+    920880269,
+    2734331525
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "2179787903": {
+   "cn": "罗兰 · 传说 · 特殊",
+   "baseName": "罗兰",
+   "code": "0200",
+   "cost": 5,
+   "typeName": "特殊",
+   "en": "Rolan",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "固定",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    1470847760
+   ],
+   "subParamHashes": [
+    2454052772
+   ],
+   "mainTraitLevels": [
+    11
+   ],
+   "subParamLevels": [
+    5
+   ]
+  },
+  "2222781298": {
+   "cn": "叛乱重炮 · 传说 · 伤害",
+   "baseName": "叛乱重炮",
+   "code": "4200",
+   "cost": 5,
+   "typeName": "伤害",
+   "en": "Ballistic Ballista III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    3696775008,
+    233342880,
+    3769368062,
+    1061716793
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "2233632698": {
+   "cn": "水之种 · 稀有 · 支援",
+   "baseName": "水之种",
+   "code": "2700",
+   "cost": 3,
+   "typeName": "支援",
+   "en": "Aqua Gyre I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    699568808,
+    1342675484,
+    3468099822
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "2237464972": {
+   "cn": "莉莉丝 · 传说 · 特殊",
+   "baseName": "莉莉丝",
+   "code": "4500",
+   "cost": 5,
+   "typeName": "特殊",
+   "en": "Lilith",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "固定",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    2515794566
+   ],
+   "subParamHashes": [
+    3463497098
+   ],
+   "mainTraitLevels": [
+    11
+   ],
+   "subParamLevels": [
+    5
+   ]
+  },
+  "2277950277": {
+   "cn": "巨石魔像 · 稀有 · 伤害",
+   "baseName": "巨石魔像",
+   "code": "3300",
+   "cost": 3,
+   "typeName": "伤害",
+   "en": "Rock Golem I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    3693239446,
+    99806428,
+    178391110,
+    2515794566
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "2306865904": {
+   "cn": "赤蛮尉 · 史诗 · 支援",
+   "baseName": "赤蛮尉",
+   "code": "1000",
+   "cost": 4,
+   "typeName": "支援",
+   "en": "Scarlet-Shell Butcher II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    2829260347,
+    801700863,
+    2812567336
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "2336790532": {
+   "cn": "眼镜蛇 · 稀有 · 伤害",
+   "baseName": "眼镜蛇",
+   "code": "4300",
+   "cost": 3,
+   "typeName": "伤害",
+   "en": "Cobra I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    2537245103,
+    3468099822,
+    1911626395
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "2355133734": {
+   "cn": "白狼兵团 · 稀有 · 支援",
+   "baseName": "白狼兵团",
+   "code": "5200",
+   "cost": 3,
+   "typeName": "支援",
+   "en": "Silver Wolf Corps I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    3693239446,
+    162168245,
+    2128439760
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "2364685144": {
+   "cn": "巨石魔像 · 传说 · 伤害",
+   "baseName": "巨石魔像",
+   "code": "3300",
+   "cost": 5,
+   "typeName": "伤害",
+   "en": "Rock Golem III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    3693239446,
+    99806428,
+    178391110,
+    2515794566
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "2373967448": {
+   "cn": "断罪铁骑 · 史诗 · 伤害",
+   "baseName": "断罪铁骑",
+   "code": "4100",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Mechanized Executioner II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    162168245,
+    1802063213,
+    3536380170,
+    3009445917
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "2377282277": {
+   "cn": "黑龙伊弗欧 · 传说 · 伤害",
+   "baseName": "黑龙伊弗欧",
+   "code": "3f00",
+   "cost": 5,
+   "typeName": "伤害",
+   "en": "Evyl Blackwyrm III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    4067143333,
+    1957328342,
+    342947936,
+    920880269,
+    2734331525,
+    1031885729
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "2382553607": {
+   "cn": "死骸格拉森 · 史诗 · 伤害",
+   "baseName": "死骸格拉森",
+   "code": "1600",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Gerasene II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    2094004047,
+    2475281414,
+    2734331525,
+    3940753899,
+    3868870292
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "2428324544": {
+   "cn": "路西法 · 传说 · 特殊",
+   "baseName": "路西法",
+   "code": "0000",
+   "cost": 5,
+   "typeName": "特殊",
+   "en": "Lucilius",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "固定",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    1552297491
+   ],
+   "subParamHashes": [
+    1511861385
+   ],
+   "mainTraitLevels": [
+    11
+   ],
+   "subParamLevels": [
+    5
+   ]
+  },
+  "2434286906": {
+   "cn": "小钳蟹 · 稀有 · 支援",
+   "baseName": "小钳蟹",
+   "code": "6300",
+   "cost": 3,
+   "typeName": "支援",
+   "en": "Wee Pincer I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    3696775008,
+    342947936,
+    99806428
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "2453011359": {
+   "cn": "眼镜蛇 · 史诗 · 伤害",
+   "baseName": "眼镜蛇",
+   "code": "4300",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Cobra II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    2537245103,
+    3468099822,
+    1911626395
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "2472587957": {
+   "cn": "水精灵 · 史诗 · 伤害",
+   "baseName": "水精灵",
+   "code": "2b00",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Water Spirit II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    2094004047,
+    2849079125,
+    4216792705,
+    3231160855
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "2474943955": {
+   "cn": "白龙拉迪斯 · 传说 · 伤害",
+   "baseName": "白龙拉迪斯",
+   "code": "3e00",
+   "cost": 5,
+   "typeName": "伤害",
+   "en": "RadisWhitewyrmIII",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    1957328342,
+    920880269,
+    2828591747,
+    3053428691,
+    612907763,
+    2335962636
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "2548322724": {
+   "cn": "地龙杜雷贝尔 · 史诗 · 伤害",
+   "baseName": "地龙杜雷贝尔",
+   "code": "3c00",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Corvell Earthwyrm II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "固定",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    3578760359
+   ],
+   "subParamHashes": [
+    804999327
+   ],
+   "mainTraitLevels": [
+    10
+   ],
+   "subParamLevels": [
+    3
+   ]
+  },
+  "2577827350": {
+   "cn": "苍百长 · 稀有 · 支援",
+   "baseName": "苍百长",
+   "code": "0f00",
+   "cost": 3,
+   "typeName": "支援",
+   "en": "Cruel Overseer I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    2809291152,
+    1802063213,
+    2373493147
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "2580495877": {
+   "cn": "巨爪霜鳄 · 传说 · 伤害",
+   "baseName": "巨爪霜鳄",
+   "code": "1e00",
+   "cost": 5,
+   "typeName": "伤害",
+   "en": "Blizzadile III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    4216792705,
+    1931609893,
+    2373493147,
+    3940753899,
+    612907763
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "2590869980": {
+   "cn": "弗尔卡自卫团 · 传说 · 支援",
+   "baseName": "弗尔卡自卫团",
+   "code": "5100",
+   "cost": 5,
+   "typeName": "支援",
+   "en": "Folcan Defense Corps III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "固定",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    2094004047
+   ],
+   "subParamHashes": [
+    13726176
+   ],
+   "mainTraitLevels": [
+    13
+   ],
+   "subParamLevels": [
+    7
+   ]
+  },
+  "2613090129": {
+   "cn": "双足飞龙 · 史诗 · 伤害",
+   "baseName": "双足飞龙",
+   "code": "1b00",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Wyvern II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    359194852,
+    2215087280,
+    2089068211,
+    3009445917
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "2640062430": {
+   "cn": "贝希摩斯 · 史诗 · 伤害",
+   "baseName": "贝希摩斯",
+   "code": "3700",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Behemoth II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    1931609893,
+    2373493147,
+    3053428691,
+    2194548621,
+    1470847760
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "2668547979": {
+   "cn": "火龙布雷扎莱克 · 传说 · 伤害",
+   "baseName": "火龙布雷扎莱克",
+   "code": "3a00",
+   "cost": 5,
+   "typeName": "伤害",
+   "en": "Vrazarek Firewyrm III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "固定",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    3696775008
+   ],
+   "subParamHashes": [
+    3159265995
+   ],
+   "mainTraitLevels": [
+    15
+   ],
+   "subParamLevels": [
+    4
+   ]
+  },
+  "2690837510": {
+   "cn": "朱罗刹 · 传说 · 支援",
+   "baseName": "朱罗刹",
+   "code": "1300",
+   "cost": 5,
+   "typeName": "支援",
+   "en": "Blood-Dyed Rakshasa",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    3696775008,
+    3872242332,
+    1931609893,
+    2215087280,
+    1219058573
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "2697554265": {
+   "cn": "骑空团联盟拉法尔 · 稀有 · 支援",
+   "baseName": "骑空团联盟拉法尔",
+   "code": "5700",
+   "cost": 3,
+   "typeName": "支援",
+   "en": "Crew Alliance Rafale I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    1931609893,
+    1619384869,
+    3277525275
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "2739658443": {
+   "cn": "世须良加 · 传说 · 伤害",
+   "baseName": "世须良加",
+   "code": "4600",
+   "cost": 5,
+   "typeName": "伤害",
+   "en": "Pyet-A III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    1957328342,
+    2452806679,
+    3536380170,
+    178391110,
+    2515794566,
+    2335962636
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "2752406772": {
+   "cn": "水之种 · 史诗 · 支援",
+   "baseName": "水之种",
+   "code": "2700",
+   "cost": 4,
+   "typeName": "支援",
+   "en": "Aqua Gyre II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    699568808,
+    1342675484,
+    3468099822
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "2767600271": {
+   "cn": "希德霍姆兵 · 传说 · 支援",
+   "baseName": "希德霍姆兵",
+   "code": "5400",
+   "cost": 5,
+   "typeName": "支援",
+   "en": "Seedhollow Guardians III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    2849079125,
+    3872242332,
+    3492412936
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "2785586893": {
+   "cn": "裁判 · 传说 · 支援",
+   "baseName": "裁判",
+   "code": "5900",
+   "cost": 5,
+   "typeName": "支援",
+   "en": "Referee",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "固定",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    3231160855
+   ],
+   "subParamHashes": [
+    13726176
+   ],
+   "mainTraitLevels": [
+    4
+   ],
+   "subParamLevels": [
+    1
+   ]
+  },
+  "2797298329": {
+   "cn": "巨爪岩鳄 · 传说 · 伤害",
+   "baseName": "巨爪岩鳄",
+   "code": "1d00",
+   "cost": 5,
+   "typeName": "伤害",
+   "en": "Quakadile III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    99806428,
+    1612199723,
+    2515794566,
+    1219058573,
+    2083409252
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "2817520984": {
+   "cn": "别西卜 · 传说 · 特殊",
+   "baseName": "别西卜",
+   "code": "9200",
+   "cost": 5,
+   "typeName": "特殊",
+   "en": "Beelzebub",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    2094004047,
+    3696775008,
+    2809291152,
+    178391110,
+    1470847760,
+    1031885729
+   ],
+   "subParamHashes": [
+    782879360,
+    4062539332,
+    1511861385,
+    868275468,
+    1420859959,
+    2749708209,
+    4042750913,
+    2454052772,
+    2692000103,
+    3463497098,
+    2939790331
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "2854993343": {
+   "cn": "老双足飞龙 · 史诗 · 伤害",
+   "baseName": "老双足飞龙",
+   "code": "1c00",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "ElderWyvern II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    1327117955,
+    99806428,
+    3468099822,
+    2089068211
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "2887829537": {
+   "cn": "恩奴基 · 史诗 · 伤害",
+   "baseName": "恩奴基",
+   "code": "3800",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Ennugi II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    2829260347,
+    4067143333,
+    2734331525,
+    2194548621,
+    1219058573
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "2903890048": {
+   "cn": "伏尔甘博拉·虚无 · 传说 · 伤害",
+   "baseName": "伏尔甘博拉·虚无",
+   "code": "4800",
+   "cost": 5,
+   "typeName": "伤害",
+   "en": "Vulkan Bolla Nihilla",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    1931609893,
+    233342880,
+    3536380170,
+    2533525007,
+    3868870292
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "2924631405": {
+   "cn": "强袭型机械武装·主机 · 史诗 · 伤害",
+   "baseName": "强袭型机械武装·主机",
+   "code": "3200",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Droita Mother (Assault) II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    2452806679,
+    1612199723,
+    3468099822,
+    574788127
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "3009469837": {
+   "cn": "沙漠死神 · 稀有 · 伤害",
+   "baseName": "沙漠死神",
+   "code": "4400",
+   "cost": 3,
+   "typeName": "伤害",
+   "en": "Sand Reaper I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    2537245103,
+    3697311093,
+    1911626395,
+    1619384869
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "3015898020": {
+   "cn": "强袭型机械武装·主机 · 稀有 · 伤害",
+   "baseName": "强袭型机械武装·主机",
+   "code": "3200",
+   "cost": 3,
+   "typeName": "伤害",
+   "en": "Droita Mother (Assault) I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    2452806679,
+    1612199723,
+    3468099822,
+    574788127
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "3024783874": {
+   "cn": "金枪鱼 · 传说 · 支援",
+   "baseName": "金枪鱼",
+   "code": "4e00",
+   "cost": 5,
+   "typeName": "支援",
+   "en": "Albacore III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    1581394661,
+    4136093167,
+    3362730114,
+    246244832
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "3033474758": {
+   "cn": "希德霍姆兵 · 稀有 · 支援",
+   "baseName": "希德霍姆兵",
+   "code": "5400",
+   "cost": 3,
+   "typeName": "支援",
+   "en": "Seedhollow Guardians I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    2849079125,
+    3872242332,
+    3492412936
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "3041170003": {
+   "cn": "托付愿望的空之民 · 稀有 · 支援",
+   "baseName": "托付愿望的空之民",
+   "code": "5000",
+   "cost": 3,
+   "typeName": "支援",
+   "en": "True Believers I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    3693239446,
+    920880269,
+    2194548621
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "3079869095": {
+   "cn": "巨石魔像 · 史诗 · 伤害",
+   "baseName": "巨石魔像",
+   "code": "3300",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Rock Golem II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    3693239446,
+    99806428,
+    178391110,
+    2515794566
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "3110130363": {
+   "cn": "冰龙威利努斯 · 传说 · 伤害",
+   "baseName": "冰龙威利努斯",
+   "code": "3b00",
+   "cost": 5,
+   "typeName": "伤害",
+   "en": "Wilinus Icewyrm III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    4216792705,
+    162168245,
+    2809291152,
+    1009473456,
+    3868870292,
+    4001746207
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "3110910077": {
+   "cn": "目目连 · 稀有 · 伤害",
+   "baseName": "目目连",
+   "code": "2300",
+   "cost": 3,
+   "typeName": "伤害",
+   "en": "Silent Watcher I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    2809291152,
+    1802063213,
+    801700863,
+    574788127
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "3185069722": {
+   "cn": "世须良加 · 史诗 · 伤害",
+   "baseName": "世须良加",
+   "code": "4600",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Pyet-A II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    1957328342,
+    2452806679,
+    3536380170,
+    178391110,
+    2515794566
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "3215729628": {
+   "cn": "狮鹫 · 传说 · 伤害",
+   "baseName": "狮鹫",
+   "code": "3500",
+   "cost": 5,
+   "typeName": "伤害",
+   "en": "Griffin III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    3053428691,
+    801700863,
+    831329001,
+    2812567336
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "3251420220": {
+   "cn": "漆黑猛禽 · 史诗 · 伤害",
+   "baseName": "漆黑猛禽",
+   "code": "3600",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Obsidian Raptor II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    2452806679,
+    1009473456,
+    4051194041,
+    1470847760
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "3271105151": {
+   "cn": "哥布林勇士 · 传说 · 支援",
+   "baseName": "哥布林勇士",
+   "code": "1100",
+   "cost": 5,
+   "typeName": "支援",
+   "en": "Goblin Warrior III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    3468099822,
+    3231160855,
+    473304163,
+    1219058573
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "3286833401": {
+   "cn": "火精灵 · 稀有 · 伤害",
+   "baseName": "火精灵",
+   "code": "2a00",
+   "cost": 3,
+   "typeName": "伤害",
+   "en": "Fire Spirit I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    3769368062,
+    2373493147,
+    2089068211,
+    5462430
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "3307292628": {
+   "cn": "巨爪霜鳄 · 史诗 · 伤害",
+   "baseName": "巨爪霜鳄",
+   "code": "1e00",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Blizzadile II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "固定",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    4216792705
+   ],
+   "subParamHashes": [
+    4155519343
+   ],
+   "mainTraitLevels": [
+    10
+   ],
+   "subParamLevels": [
+    4
+   ]
+  },
+  "3398815116": {
+   "cn": "胡拉坎 · 稀有 · 伤害",
+   "baseName": "胡拉坎",
+   "code": "4900",
+   "cost": 3,
+   "typeName": "伤害",
+   "en": "Furycane I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    4067143333,
+    1957328342,
+    3231160855,
+    1619384869,
+    1470847760
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "3426502131": {
+   "cn": "巨石魔像 · 稀有 · 伤害",
+   "baseName": "巨石魔像",
+   "code": "3300",
+   "cost": 3,
+   "typeName": "伤害",
+   "en": "Rock Golem I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "固定",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    2515794566
+   ],
+   "subParamHashes": [
+    577813568
+   ],
+   "mainTraitLevels": [
+    5
+   ],
+   "subParamLevels": [
+    1
+   ]
+  },
+  "3456121300": {
+   "cn": "远古巨龙 · 传说 · 伤害",
+   "baseName": "远古巨龙",
+   "code": "3900",
+   "cost": 5,
+   "typeName": "伤害",
+   "en": "Ancient Dragon III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    2094004047,
+    4084396182,
+    3868870292,
+    2194548621,
+    1219058573,
+    4146039191
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "3465415545": {
+   "cn": "托付愿望的空之民 · 史诗 · 支援",
+   "baseName": "托付愿望的空之民",
+   "code": "5000",
+   "cost": 4,
+   "typeName": "支援",
+   "en": "True Believers II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    3693239446,
+    920880269,
+    2194548621
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "3568076420": {
+   "cn": "漆黑猛禽 · 传说 · 伤害",
+   "baseName": "漆黑猛禽",
+   "code": "3600",
+   "cost": 5,
+   "typeName": "伤害",
+   "en": "Obsidian Raptor III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    2452806679,
+    1009473456,
+    4051194041,
+    1470847760
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "3579013864": {
+   "cn": "玛纳加尔姆 · 史诗 · 伤害",
+   "baseName": "玛纳加尔姆",
+   "code": "4b00",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Managarmr II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    4216792705,
+    1957328342,
+    1619384869,
+    831329001,
+    1219058573
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "3594026154": {
+   "cn": "哥布林角斗士 · 史诗 · 支援",
+   "baseName": "哥布林角斗士",
+   "code": "0e00",
+   "cost": 4,
+   "typeName": "支援",
+   "en": "Goblin Gladiator II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "固定",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    4084396182
+   ],
+   "subParamHashes": [
+    2828012672
+   ],
+   "mainTraitLevels": [
+    10
+   ],
+   "subParamLevels": [
+    3
+   ]
+  },
+  "3612465362": {
+   "cn": "火精灵 · 史诗 · 伤害",
+   "baseName": "火精灵",
+   "code": "2a00",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Fire Spirit II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    3769368062,
+    2373493147,
+    2089068211,
+    5462430
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "3612695327": {
+   "cn": "神谕转轮 · 史诗 · 支援",
+   "baseName": "神谕转轮",
+   "code": "6400",
+   "cost": 4,
+   "typeName": "支援",
+   "en": "Wheel of FateII",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "固定",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    2215087280
+   ],
+   "subParamHashes": [
+    1716424242
+   ],
+   "mainTraitLevels": [
+    10
+   ],
+   "subParamLevels": [
+    3
+   ]
+  },
+  "3658178706": {
+   "cn": "玛洛斯僧兵 · 稀有 · 支援",
+   "baseName": "玛洛斯僧兵",
+   "code": "5600",
+   "cost": 3,
+   "typeName": "支援",
+   "en": "Mellose Clan I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    3769368062,
+    2475281414,
+    1882806065
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "3688036430": {
+   "cn": "玛纳加尔姆 · 传说 · 伤害",
+   "baseName": "玛纳加尔姆",
+   "code": "4b00",
+   "cost": 5,
+   "typeName": "伤害",
+   "en": "Managarmr III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    4216792705,
+    1957328342,
+    1619384869,
+    831329001,
+    1219058573
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "3719437361": {
+   "cn": "弗尔卡自卫团 · 稀有 · 支援",
+   "baseName": "弗尔卡自卫团",
+   "code": "5100",
+   "cost": 3,
+   "typeName": "支援",
+   "en": "Folcan Defense Corps I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    2094004047,
+    1327117955,
+    3492412936
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "3752554679": {
+   "cn": "莉莉丝 · 传说 · 特殊",
+   "baseName": "莉莉丝",
+   "code": "4500",
+   "cost": 5,
+   "typeName": "特殊",
+   "en": "Lilith",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    1072455552,
+    2475281414,
+    1911626395,
+    3053428691,
+    612907763,
+    1280871463
+   ],
+   "subParamHashes": [
+    782879360,
+    4062539332,
+    1511861385,
+    868275468,
+    1420859959,
+    2749708209,
+    4042750913,
+    2454052772,
+    2692000103,
+    3463497098,
+    2939790331
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "3796584455": {
+   "cn": "神谕转轮 · 史诗 · 支援",
+   "baseName": "神谕转轮",
+   "code": "6400",
+   "cost": 4,
+   "typeName": "支援",
+   "en": "Wheel of FateII",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    2215087280,
+    2128439760,
+    1470847760
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "3834832575": {
+   "cn": "世须良加 · 传说 · 伤害",
+   "baseName": "世须良加",
+   "code": "4600",
+   "cost": 5,
+   "typeName": "伤害",
+   "en": "Pyet-A III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "固定",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    3231160855
+   ],
+   "subParamHashes": [
+    13726176
+   ],
+   "mainTraitLevels": [
+    4
+   ],
+   "subParamLevels": [
+    1
+   ]
+  },
+  "3837254905": {
+   "cn": "贝希摩斯 · 传说 · 伤害",
+   "baseName": "贝希摩斯",
+   "code": "3700",
+   "cost": 5,
+   "typeName": "伤害",
+   "en": "Behemoth III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    1931609893,
+    2373493147,
+    3053428691,
+    2194548621,
+    1470847760,
+    2712200093
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "3843876272": {
+   "cn": "胡拉坎 · 史诗 · 伤害",
+   "baseName": "胡拉坎",
+   "code": "4900",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Furycane II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    4067143333,
+    1957328342,
+    3231160855,
+    1619384869,
+    1470847760
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "3844663151": {
+   "cn": "银史莱姆 · 传说 · 支援",
+   "baseName": "银史莱姆",
+   "code": "2000",
+   "cost": 5,
+   "typeName": "支援",
+   "en": "Silverslime III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    1581394661,
+    4136093167,
+    3362730114,
+    2335962636
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "3874207482": {
+   "cn": "裁判 · 传说 · 支援",
+   "baseName": "裁判",
+   "code": "5900",
+   "cost": 5,
+   "typeName": "支援",
+   "en": "Referee",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    3689011061,
+    2368396142,
+    1552297491
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "3891660764": {
+   "cn": "沙漠死神 · 史诗 · 伤害",
+   "baseName": "沙漠死神",
+   "code": "4400",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Sand Reaper II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    2537245103,
+    3697311093,
+    1911626395,
+    1619384869
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "3958062528": {
+   "cn": "群居狼 · 稀有 · 支援",
+   "baseName": "群居狼",
+   "code": "1900",
+   "cost": 3,
+   "typeName": "支援",
+   "en": "Timber Wolf I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    1072455552,
+    920880269,
+    5462430
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    4,
+    5,
+    6
+   ],
+   "subParamLevels": [
+    0,
+    1,
+    2
+   ]
+  },
+  "4008321152": {
+   "cn": "群居狼 · 史诗 · 支援",
+   "baseName": "群居狼",
+   "code": "1900",
+   "cost": 4,
+   "typeName": "支援",
+   "en": "Timber Wolf II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    1072455552,
+    920880269,
+    5462430
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "4015343761": {
+   "cn": "赛伊格亚 · 史诗 · 伤害",
+   "baseName": "赛伊格亚",
+   "code": "2200",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Cyaegha II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    4216792705,
+    1327117955,
+    2194548621,
+    3009445917
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "4019666312": {
+   "cn": "白狼兵团 · 稀有 · 支援",
+   "baseName": "白狼兵团",
+   "code": "5200",
+   "cost": 3,
+   "typeName": "支援",
+   "en": "Silver Wolf Corps I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "固定",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    162168245
+   ],
+   "subParamHashes": [
+    4155519343
+   ],
+   "mainTraitLevels": [
+    4
+   ],
+   "subParamLevels": [
+    0
+   ]
+  },
+  "4056033783": {
+   "cn": "火龙布雷扎莱克 · 史诗 · 伤害",
+   "baseName": "火龙布雷扎莱克",
+   "code": "3a00",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Vrazarek Firewyrm II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "固定",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    2089068211
+   ],
+   "subParamHashes": [
+    2791457225
+   ],
+   "mainTraitLevels": [
+    10
+   ],
+   "subParamLevels": [
+    4
+   ]
+  },
+  "4059836868": {
+   "cn": "弗尔卡自卫团 · 史诗 · 支援",
+   "baseName": "弗尔卡自卫团",
+   "code": "5100",
+   "cost": 4,
+   "typeName": "支援",
+   "en": "Folcan Defense Corps II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    2094004047,
+    1327117955,
+    3492412936
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "4069330485": {
+   "cn": "小钳蟹 · 传说 · 支援",
+   "baseName": "小钳蟹",
+   "code": "6300",
+   "cost": 5,
+   "typeName": "支援",
+   "en": "Wee Pincer III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    3696775008,
+    342947936,
+    99806428,
+    453875863
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "4072571294": {
+   "cn": "火龙布雷扎莱克 · 传说 · 伤害",
+   "baseName": "火龙布雷扎莱克",
+   "code": "3a00",
+   "cost": 5,
+   "typeName": "伤害",
+   "en": "Vrazarek Firewyrm III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    3696775008,
+    1342675484,
+    3053428691,
+    2089068211,
+    831329001,
+    2712200093
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "4079658919": {
+   "cn": "扎斯巴家 · 史诗 · 支援",
+   "baseName": "扎斯巴家",
+   "code": "5300",
+   "cost": 4,
+   "typeName": "支援",
+   "en": "Family Zathba II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    359194852,
+    342947936,
+    831329001
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "4110493788": {
+   "cn": "哥布林角斗士 · 史诗 · 支援",
+   "baseName": "哥布林角斗士",
+   "code": "0e00",
+   "cost": 4,
+   "typeName": "支援",
+   "en": "Goblin Gladiator II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    4084396182,
+    2404396813,
+    473304163,
+    1725849777
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "4159395805": {
+   "cn": "金枪鱼 · 史诗 · 支援",
+   "baseName": "金枪鱼",
+   "code": "4e00",
+   "cost": 4,
+   "typeName": "支援",
+   "en": "Albacore II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    1581394661,
+    4136093167,
+    3362730114
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "4159885665": {
+   "cn": "狮鹫 · 史诗 · 伤害",
+   "baseName": "狮鹫",
+   "code": "3500",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Griffin II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    3053428691,
+    801700863,
+    831329001,
+    2812567336
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "4167231450": {
+   "cn": "扎斯巴家 · 稀有 · 支援",
+   "baseName": "扎斯巴家",
+   "code": "5300",
+   "cost": 3,
+   "typeName": "支援",
+   "en": "Family Zathba I",
+   "tier": "I",
+   "tierIndex": 0,
+   "variant": 3,
+   "mode": "固定",
+   "equipCost": 1,
+   "mainTraitHashes": [
+    831329001
+   ],
+   "subParamHashes": [
+    577813568
+   ],
+   "mainTraitLevels": [
+    4
+   ],
+   "subParamLevels": [
+    1
+   ]
+  },
+  "4186934167": {
+   "cn": "巨爪焰鳄 · 史诗 · 伤害",
+   "baseName": "巨爪焰鳄",
+   "code": "1f00",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Infernadile II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "固定",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    2089068211
+   ],
+   "subParamHashes": [
+    13726176
+   ],
+   "mainTraitLevels": [
+    10
+   ],
+   "subParamLevels": [
+    4
+   ]
+  },
+  "4236526753": {
+   "cn": "死骸格拉森 · 史诗 · 伤害",
+   "baseName": "死骸格拉森",
+   "code": "1600",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Gerasene II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "固定",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    2734331525
+   ],
+   "subParamHashes": [
+    2828012672
+   ],
+   "mainTraitLevels": [
+    10
+   ],
+   "subParamLevels": [
+    4
+   ]
+  },
+  "4236914379": {
+   "cn": "风龙伊尔西亚斯 · 传说 · 伤害",
+   "baseName": "风龙伊尔西亚斯",
+   "code": "3d00",
+   "cost": 5,
+   "typeName": "伤害",
+   "en": "Elusious Windwyrm III",
+   "tier": "III",
+   "tierIndex": 2,
+   "variant": 5,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    4067143333,
+    2452806679,
+    99806428,
+    178391110,
+    1470847760,
+    246244832
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "subParamLevels": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "4250908971": {
+   "cn": "哥布林勇士 · 史诗 · 支援",
+   "baseName": "哥布林勇士",
+   "code": "1100",
+   "cost": 4,
+   "typeName": "支援",
+   "en": "Goblin Warrior II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 2,
+   "mainTraitHashes": [
+    3468099822,
+    3231160855,
+    473304163,
+    1219058573
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  },
+  "4283512905": {
+   "cn": "风龙伊尔西亚斯 · 史诗 · 伤害",
+   "baseName": "风龙伊尔西亚斯",
+   "code": "3d00",
+   "cost": 4,
+   "typeName": "伤害",
+   "en": "Elusious Windwyrm II",
+   "tier": "II",
+   "tierIndex": 1,
+   "variant": 4,
+   "mode": "随机",
+   "equipCost": 3,
+   "mainTraitHashes": [
+    4067143333,
+    2452806679,
+    99806428,
+    178391110,
+    1470847760
+   ],
+   "subParamHashes": [
+    577813568,
+    3159265995,
+    2740166587,
+    1964215585,
+    1513740315,
+    2828012672,
+    4155519343,
+    2791457225,
+    13726176,
+    804999327,
+    1716424242
+   ],
+   "mainTraitLevels": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "subParamLevels": [
+    3,
+    4,
+    5
+   ]
+  }
+ },
+ "main_traits": {
+  "5462430": {
+   "cn": "蓄力强化",
+   "maxLevel": 15,
+   "en": "Steady Focus"
+  },
+  "22138782": {
+   "cn": "伤害上限·红天",
+   "maxLevel": 15,
+   "en": "DMG Cap Cardinal"
+  },
+  "34453299": {
+   "cn": "超凡技艺",
+   "maxLevel": 15,
+   "en": "Unbound Technique"
+  },
+  "78389889": {
+   "cn": "激昂",
+   "maxLevel": 15
+  },
+  "86221314": {
+   "cn": "黑龙的咒印",
+   "maxLevel": 15
+  },
+  "99806428": {
+   "cn": "怒涛",
+   "maxLevel": 20,
+   "en": "Cascade"
+  },
+  "100287897": {
+   "cn": "屠龙者的才智",
+   "maxLevel": 15,
+   "en": "Dragonslayer's Ingenuity"
+  },
+  "108106290": {
+   "cn": "黑龙的咒印",
+   "maxLevel": 15,
+   "en": "The Black's Mark"
+  },
+  "119797740": {
+   "cn": "黑龙的折跃",
+   "maxLevel": 15
+  },
+  "136328139": {
+   "cn": "钳蟹共鸣",
+   "maxLevel": 45,
+   "en": "Crabby Resonance"
+  },
+  "148533881": {
+   "cn": "攻击力",
+   "maxLevel": 15
+  },
+  "162168245": {
+   "cn": "凝神",
+   "maxLevel": 30,
+   "en": "Nimble Defense"
+  },
+  "178391110": {
+   "cn": "格挡性能",
+   "maxLevel": 30,
+   "en": "Improved Guard"
+  },
+  "215402021": {
+   "cn": "变幻自如的迅刃",
+   "maxLevel": 15,
+   "en": "Swordmaster's Prowess"
+  },
+  "233342880": {
+   "cn": "天星之炼",
+   "maxLevel": 15,
+   "en": "Celestial Nyx"
+  },
+  "239255067": {
+   "cn": "老兵的战气",
+   "maxLevel": 15,
+   "en": "Veteran's Warpath"
+  },
+  "246244832": {
+   "cn": "全弱化效果抗性",
+   "maxLevel": 15,
+   "en": "Natural Defenses"
+  },
+  "251817200": {
+   "cn": "古今无双的战气",
+   "maxLevel": 15,
+   "en": "Eternal Rage's Warpath"
+  },
+  "263866344": {
+   "cn": "幸运甘露",
+   "maxLevel": 50,
+   "en": "0x0FBA47E8"
+  },
+  "296412661": {
+   "cn": "魔法师的伶利",
+   "maxLevel": 15,
+   "en": "Mage's Savvy"
+  },
+  "342947936": {
+   "cn": "坚持",
+   "maxLevel": 15,
+   "en": "Steel Nerves"
+  },
+  "354305652": {
+   "cn": "舵手的指引",
+   "maxLevel": 15,
+   "en": "Helmsman's Navigation"
+  },
+  "359194852": {
+   "cn": "先发制人",
+   "maxLevel": 30,
+   "en": "Head Start"
+  },
+  "360738300": {
+   "cn": "天司长的风雅",
+   "maxLevel": 15,
+   "en": "Supreme Primarch's Nimbus"
+  },
+  "384825448": {
+   "cn": "勇士的毅力",
+   "maxLevel": 15,
+   "en": "Hero's Will"
+  },
+  "439285150": {
+   "cn": "无态",
+   "maxLevel": 15,
+   "en": "Ain"
+  },
+  "439720807": {
+   "cn": "雷狼的慧眼",
+   "maxLevel": 15
+  },
+  "453875863": {
+   "cn": "钳蟹的报恩",
+   "maxLevel": 15,
+   "en": "0x1B0D9897"
+  },
+  "473304163": {
+   "cn": "蓄力攻击",
+   "maxLevel": 30,
+   "en": "Charged Attack DMG"
+  },
+  "499767271": {
+   "cn": "水牢抗性",
+   "maxLevel": 15,
+   "en": "Held Under Resistance"
+  },
+  "501304421": {
+   "cn": "狼王的激昂",
+   "maxLevel": 15,
+   "en": "Gladiator's Frenzy"
+  },
+  "505212110": {
+   "cn": "浩劫新星",
+   "maxLevel": 35,
+   "en": "Catastrophe Nova"
+  },
+  "541664821": {
+   "cn": "天星之煌",
+   "maxLevel": 15
+  },
+  "574788127": {
+   "cn": "麻痹抗性",
+   "maxLevel": 15,
+   "en": "Paralysis Resistance"
+  },
+  "593331951": {
+   "cn": "超新星",
+   "maxLevel": 15,
+   "en": "Supernova"
+  },
+  "596983764": {
+   "cn": "雷狼之觉醒",
+   "maxLevel": 15
+  },
+  "600897151": {
+   "cn": "玫瑰早绽",
+   "maxLevel": 15,
+   "en": "Rose's Blooming"
+  },
+  "612907763": {
+   "cn": "药水携带数",
+   "maxLevel": 15,
+   "en": "Potion Hoarder"
+  },
+  "645506288": {
+   "cn": "明镜止水",
+   "maxLevel": 15
+  },
+  "647327525": {
+   "cn": "狼王的大轮转",
+   "maxLevel": 15,
+   "en": "Gladiator's Top"
+  },
+  "672273579": {
+   "cn": "涯之二王",
+   "maxLevel": 15,
+   "en": "Two-Crown Boundary"
+  },
+  "699431915": {
+   "cn": "斩姬梦幻",
+   "maxLevel": 15,
+   "en": "Butterfly's Grace"
+  },
+  "699568808": {
+   "cn": "抗争",
+   "maxLevel": 30,
+   "en": "Precise Resilience"
+  },
+  "762364797": {
+   "cn": "转世的战气",
+   "maxLevel": 15
+  },
+  "778413940": {
+   "cn": "勇士的信念",
+   "maxLevel": 15,
+   "en": "Hero's Creed"
+  },
+  "801700863": {
+   "cn": "热血",
+   "maxLevel": 30,
+   "en": "Stamina"
+  },
+  "813117847": {
+   "cn": "转世的跃动",
+   "maxLevel": 15,
+   "en": "Enchantress's Rhythm"
+  },
+  "831329001": {
+   "cn": "迅捷能力",
+   "maxLevel": 45,
+   "en": "Quick Cooldown"
+  },
+  "859723874": {
+   "cn": "骰子剑",
+   "maxLevel": 15,
+   "en": "Roll of the Die"
+  },
+  "920880269": {
+   "cn": "天星之焰",
+   "maxLevel": 15,
+   "en": "Celestial Incendo"
+  },
+  "928622009": {
+   "cn": "昏迷抗性",
+   "maxLevel": 15,
+   "en": "Dizzy Resistance"
+  },
+  "997306130": {
+   "cn": "伤害上限·轰天",
+   "maxLevel": 15,
+   "en": "DMG Cap Ecru"
+  },
+  "1000568373": {
+   "cn": "HP吸收",
+   "maxLevel": 15
+  },
+  "1006557464": {
+   "cn": "守护者的决心",
+   "maxLevel": 15,
+   "en": "Guardian's Conviction"
+  },
+  "1009473456": {
+   "cn": "格挡仇火",
+   "maxLevel": 30,
+   "en": "Guard Payback"
+  },
+  "1031885729": {
+   "cn": "斯巴达",
+   "maxLevel": 15,
+   "en": "Spartan Echo"
+  },
+  "1051936215": {
+   "cn": "雷狼的战气",
+   "maxLevel": 15,
+   "en": "Thunderwolf's Warpath"
+  },
+  "1053913010": {
+   "cn": "药水携带数",
+   "maxLevel": 15
+  },
+  "1059866670": {
+   "cn": "弱化效果延长",
+   "maxLevel": 15,
+   "en": "Supplements"
+  },
+  "1061716793": {
+   "cn": "背水",
+   "maxLevel": 30,
+   "en": "Enmity"
+  },
+  "1063789971": {
+   "cn": "超凡奥秘",
+   "maxLevel": 15,
+   "en": "Unbound Exertion"
+  },
+  "1072455552": {
+   "cn": "协同攻击",
+   "maxLevel": 30,
+   "en": "Linked Together"
+  },
+  "1075985448": {
+   "cn": "浩劫",
+   "maxLevel": 30,
+   "en": "Catastrophe"
+  },
+  "1101795458": {
+   "cn": "狼王的战气",
+   "maxLevel": 15
+  },
+  "1159561548": {
+   "cn": "古今无双的强者",
+   "maxLevel": 15,
+   "en": "Eternal Rage's Ethos"
+  },
+  "1176145415": {
+   "cn": "群青的逆境",
+   "maxLevel": 15,
+   "en": "Ultramarine's Adversity"
+  },
+  "1190015254": {
+   "cn": "漆黑之谊",
+   "maxLevel": 15,
+   "en": "In a Pinch"
+  },
+  "1194869320": {
+   "cn": "转世的恩宠",
+   "maxLevel": 15,
+   "en": "Enchantress's Blessing"
+  },
+  "1219058573": {
+   "cn": "金刚",
+   "maxLevel": 30,
+   "en": "Greater Aegis"
+  },
+  "1274208657": {
+   "cn": "攻击DOWN抗性",
+   "maxLevel": 15,
+   "en": "ATK↓ Resistance"
+  },
+  "1280871463": {
+   "cn": "属性克制转换",
+   "maxLevel": 15,
+   "en": "War Elemental"
+  },
+  "1314875142": {
+   "cn": "天司长的战气",
+   "maxLevel": 15,
+   "en": "Supreme Primarch's Warpath"
+  },
+  "1326666263": {
+   "cn": "真红的战气",
+   "maxLevel": 15,
+   "en": "Crimson's Warpath"
+  },
+  "1327117955": {
+   "cn": "弱化状态特效",
+   "maxLevel": 30,
+   "en": "Injury to Insult"
+  },
+  "1342675484": {
+   "cn": "攻击力",
+   "maxLevel": 50,
+   "en": "ATK"
+  },
+  "1353995229": {
+   "cn": "能力封印抗性",
+   "maxLevel": 15,
+   "en": "Skill Sealed Resistance"
+  },
+  "1371608530": {
+   "cn": "超终极精准躲避",
+   "maxLevel": 15,
+   "en": "Super Ultimate Perfect Dodge"
+  },
+  "1374259836": {
+   "cn": "群青的战气",
+   "maxLevel": 15
+  },
+  "1378755464": {
+   "cn": "圣骑士的威光",
+   "maxLevel": 15,
+   "en": "Holy Knight's Grandeur"
+  },
+  "1415783215": {
+   "cn": "古今无双的气概",
+   "maxLevel": 15,
+   "en": "Eternal Rage's Mettle"
+  },
+  "1431905071": {
+   "cn": "黑龙的战气",
+   "maxLevel": 15,
+   "en": "The Black's Warpath"
+  },
+  "1470847760": {
+   "cn": "追击",
+   "maxLevel": 45,
+   "en": "Supplementary DMG"
+  },
+  "1474865471": {
+   "cn": "因子强化",
+   "maxLevel": 15,
+   "en": "Sigil Booster"
+  },
+  "1543000017": {
+   "cn": "浪迹天涯",
+   "maxLevel": 15
+  },
+  "1552297491": {
+   "cn": "γ秘纹",
+   "maxLevel": 30,
+   "en": "Gamma"
+  },
+  "1581394661": {
+   "cn": "获得MSP",
+   "maxLevel": 15,
+   "en": "Path to Mastery"
+  },
+  "1612199723": {
+   "cn": "挑衅",
+   "maxLevel": 15,
+   "en": "Provoke"
+  },
+  "1619384869": {
+   "cn": "自愈",
+   "maxLevel": 45,
+   "en": "Regen"
+  },
+  "1662438379": {
+   "cn": "白龙的战气",
+   "maxLevel": 15,
+   "en": "White Dragon's Warpath"
+  },
+  "1680875153": {
+   "cn": "转世的恩宠",
+   "maxLevel": 15
+  },
+  "1725849777": {
+   "cn": "防御DOWN抗性",
+   "maxLevel": 15,
+   "en": "DEF↓ Resistance"
+  },
+  "1802063213": {
+   "cn": "弱点攻击",
+   "maxLevel": 45,
+   "en": "Weak Point DMG"
+  },
+  "1858052470": {
+   "cn": "真红烈焰",
+   "maxLevel": 15,
+   "en": "Crimson's Clout"
+  },
+  "1878020643": {
+   "cn": "王者一心",
+   "maxLevel": 15,
+   "en": "Lord's Ambition"
+  },
+  "1882806065": {
+   "cn": "穷寇心",
+   "maxLevel": 30,
+   "en": "Berserker"
+  },
+  "1911626395": {
+   "cn": "暴君",
+   "maxLevel": 30,
+   "en": "Tyranny"
+  },
+  "1931609893": {
+   "cn": "天星之止息",
+   "maxLevel": 15,
+   "en": "Celestial Ventus"
+  },
+  "1934743042": {
+   "cn": "幽幻之应",
+   "maxLevel": 15,
+   "en": "Phantasm's Harmony"
+  },
+  "1946557196": {
+   "cn": "天星之焰",
+   "maxLevel": 15
+  },
+  "1950410857": {
+   "cn": "冥暗刚刃",
+   "maxLevel": 15,
+   "en": "Ebony's Presence"
+  },
+  "1957328342": {
+   "cn": "刚健",
+   "maxLevel": 30,
+   "en": "Stronghold"
+  },
+  "2009598453": {
+   "cn": "剑圣的炼气",
+   "maxLevel": 15,
+   "en": "Spirit Edge's Rally"
+  },
+  "2030206920": {
+   "cn": "超凡破限",
+   "maxLevel": 55,
+   "en": "Unbound Master"
+  },
+  "2032559190": {
+   "cn": "刃姬的战气",
+   "maxLevel": 15,
+   "en": "Bladequeen's Warpath"
+  },
+  "2060501008": {
+   "cn": "异能战意",
+   "maxLevel": 15,
+   "en": "Versalis Ignition"
+  },
+  "2068491056": {
+   "cn": "分歧",
+   "maxLevel": 15
+  },
+  "2068825210": {
+   "cn": "剑圣的战气",
+   "maxLevel": 15,
+   "en": "Spirit Edge's Warpath"
+  },
+  "2069563421": {
+   "cn": "刃姬的小夜曲",
+   "maxLevel": 15,
+   "en": "Bladequeen's Serenade"
+  },
+  "2083409252": {
+   "cn": "躲避仇火",
+   "maxLevel": 30,
+   "en": "Dodge Payback"
+  },
+  "2089068211": {
+   "cn": "灼热抗性",
+   "maxLevel": 15,
+   "en": "Burn Resistance"
+  },
+  "2094004047": {
+   "cn": "HP吸收",
+   "maxLevel": 45,
+   "en": "Drain"
+  },
+  "2104875268": {
+   "cn": "雷狼的弹匣",
+   "maxLevel": 15,
+   "en": "Thunderwolf's Recharge"
+  },
+  "2128439760": {
+   "cn": "怒发冲冠",
+   "maxLevel": 15,
+   "en": "Precise Wrath"
+  },
+  "2155570820": {
+   "cn": "转世的战气",
+   "maxLevel": 15,
+   "en": "Enchantress's Warpath"
+  },
+  "2175964121": {
+   "cn": "魔眼的战气",
+   "maxLevel": 15,
+   "en": "Dark Huntress's Warpath"
+  },
+  "2194548621": {
+   "cn": "身无长技",
+   "maxLevel": 30,
+   "en": "Less Is More"
+  },
+  "2205891940": {
+   "cn": "自愈",
+   "maxLevel": 15
+  },
+  "2215087280": {
+   "cn": "快速蓄力",
+   "maxLevel": 30,
+   "en": "Quick Charge"
+  },
+  "2233052490": {
+   "cn": "玫瑰的战气",
+   "maxLevel": 15,
+   "en": "Rose's Warpath"
+  },
+  "2238888111": {
+   "cn": "魔眼的凛翔",
+   "maxLevel": 15,
+   "en": "Dark Huntress's Surge"
+  },
+  "2261503428": {
+   "cn": "屠龙者的威猛",
+   "maxLevel": 15,
+   "en": "Dragonslayer's Dominance"
+  },
+  "2304424950": {
+   "cn": "狼王之觉醒",
+   "maxLevel": 15
+  },
+  "2311482059": {
+   "cn": "相扑斗力",
+   "maxLevel": 5,
+   "en": "Sumo Force"
+  },
+  "2335962636": {
+   "cn": "躲避性能",
+   "maxLevel": 15,
+   "en": "Improved Dodge"
+  },
+  "2340455872": {
+   "cn": "天星之炼",
+   "maxLevel": 15
+  },
+  "2363462530": {
+   "cn": "白龙的誓约",
+   "maxLevel": 15,
+   "en": "White Dragon's Oath"
+  },
+  "2366080407": {
+   "cn": "投掷",
+   "maxLevel": 30,
+   "en": "Throw DMG"
+  },
+  "2368396142": {
+   "cn": "β秘纹",
+   "maxLevel": 30,
+   "en": "Beta"
+  },
+  "2373493147": {
+   "cn": "暴击率",
+   "maxLevel": 45,
+   "en": "Critical Hit Rate"
+  },
+  "2404396813": {
+   "cn": "奋不顾身",
+   "maxLevel": 30,
+   "en": "Life on the Line"
+  },
+  "2451270412": {
+   "cn": "老兵的天眼",
+   "maxLevel": 15,
+   "en": "Veteran's Vision"
+  },
+  "2452677621": {
+   "cn": "剑圣的闪刃",
+   "maxLevel": 15,
+   "en": "Spirit Edge's Fury"
+  },
+  "2452806679": {
+   "cn": "天星之界",
+   "maxLevel": 15,
+   "en": "Celestial Terra"
+  },
+  "2466314971": {
+   "cn": "天星之止息",
+   "maxLevel": 15
+  },
+  "2475281414": {
+   "cn": "回复性能",
+   "maxLevel": 30,
+   "en": "Improved Healing"
+  },
+  "2476869948": {
+   "cn": "异能增长",
+   "maxLevel": 15,
+   "en": "Versalis Foundation"
+  },
+  "2513190072": {
+   "cn": "群青之觉醒",
+   "maxLevel": 15
+  },
+  "2515794566": {
+   "cn": "自动复活",
+   "maxLevel": 20,
+   "en": "Autorevive"
+  },
+  "2530672222": {
+   "cn": "刃姬的圆舞曲",
+   "maxLevel": 15
+  },
+  "2533525007": {
+   "cn": "灾祸抗性",
+   "maxLevel": 15,
+   "en": "Blight Resistance"
+  },
+  "2537245103": {
+   "cn": "中毒抗性",
+   "maxLevel": 15,
+   "en": "Poison Resistance"
+  },
+  "2594029936": {
+   "cn": "圣骑士的剑辉",
+   "maxLevel": 15,
+   "en": "Holy Knight's Luster"
+  },
+  "2596089253": {
+   "cn": "黑龙的战气",
+   "maxLevel": 15
+  },
+  "2597196811": {
+   "cn": "刃姬的轮舞曲",
+   "maxLevel": 15,
+   "en": "Bladequeen's Circuit"
+  },
+  "2597893606": {
+   "cn": "Seven Net",
+   "maxLevel": 6,
+   "en": "Seven Net"
+  },
+  "2600336030": {
+   "cn": "守护者的战气",
+   "maxLevel": 15,
+   "en": "Guardian's Warpath"
+  },
+  "2663826797": {
+   "cn": "狼王的激昂",
+   "maxLevel": 15
+  },
+  "2712200093": {
+   "cn": "霸体",
+   "maxLevel": 15,
+   "en": "Stout Heart"
+  },
+  "2734331525": {
+   "cn": "缓速抗性",
+   "maxLevel": 15,
+   "en": "Slow Resistance"
+  },
+  "2738476610": {
+   "cn": "幽幻的战气",
+   "maxLevel": 15,
+   "en": "Phantasm's Warpath"
+  },
+  "2742353392": {
+   "cn": "舵手的坚持",
+   "maxLevel": 15,
+   "en": "Helmsman's Tenacity"
+  },
+  "2743406818": {
+   "cn": "英勇灵气",
+   "maxLevel": 15,
+   "en": "Fearless Spirit"
+  },
+  "2746520096": {
+   "cn": "变幻自如的妖剑士",
+   "maxLevel": 15,
+   "en": "Swordmaster's Art"
+  },
+  "2765535360": {
+   "cn": "强健甘露",
+   "maxLevel": 50,
+   "en": "0xA4D6B880"
+  },
+  "2788919757": {
+   "cn": "斩姬武艺",
+   "maxLevel": 15,
+   "en": "Butterfly's Valor"
+  },
+  "2809291152": {
+   "cn": "天星之煌",
+   "maxLevel": 15,
+   "en": "Celestial Lumen"
+  },
+  "2812567336": {
+   "cn": "连击收招",
+   "maxLevel": 30,
+   "en": "Combo Finisher DMG"
+  },
+  "2828591747": {
+   "cn": "天星之雪",
+   "maxLevel": 15,
+   "en": "Celestial Aqua"
+  },
+  "2829110271": {
+   "cn": "黑龙之觉醒",
+   "maxLevel": 15
+  },
+  "2829260347": {
+   "cn": "刀上舞",
+   "maxLevel": 15,
+   "en": "Glass Cannon"
+  },
+  "2849079125": {
+   "cn": "Overdrive特效",
+   "maxLevel": 30,
+   "en": "Overdrive Assassin"
+  },
+  "2860774728": {
+   "cn": "老兵的智慧",
+   "maxLevel": 15,
+   "en": "Veteran's Insight"
+  },
+  "2895541441": {
+   "cn": "破防特效",
+   "maxLevel": 30,
+   "en": "Break Assassin"
+  },
+  "2935927228": {
+   "cn": "伤害上限·苍天",
+   "maxLevel": 15,
+   "en": "DMG Cap Cobalt"
+  },
+  "2941336221": {
+   "cn": "极致真理",
+   "maxLevel": 15,
+   "en": "Founder's Truth"
+  },
+  "2943961735": {
+   "cn": "躲避距离",
+   "maxLevel": 15,
+   "en": "Untouchable"
+  },
+  "2959386164": {
+   "cn": "异能之心",
+   "maxLevel": 15,
+   "en": "Versalis Heart"
+  },
+  "3009445917": {
+   "cn": "集中炮火",
+   "maxLevel": 30,
+   "en": "Concentrated Fire"
+  },
+  "3029266248": {
+   "cn": "魔法师的心愿",
+   "maxLevel": 15,
+   "en": "Mage's Aspiration"
+  },
+  "3048357634": {
+   "cn": "体力",
+   "maxLevel": 15
+  },
+  "3053428691": {
+   "cn": "激昂",
+   "maxLevel": 45,
+   "en": "Uplift"
+  },
+  "3068338038": {
+   "cn": "不动",
+   "maxLevel": 30,
+   "en": "Firm Stance"
+  },
+  "3092382396": {
+   "cn": "圣骑士的战气",
+   "maxLevel": 15,
+   "en": "Holy Knight's Warpath"
+  },
+  "3109276702": {
+   "cn": "群青的战气",
+   "maxLevel": 15,
+   "en": "Ultramarine's Warpath"
+  },
+  "3123234844": {
+   "cn": "转世的跃动",
+   "maxLevel": 15
+  },
+  "3125822983": {
+   "cn": "王者的战气",
+   "maxLevel": 15,
+   "en": "Lord's Warpath"
+  },
+  "3151461427": {
+   "cn": "超凡强击",
+   "maxLevel": 15,
+   "en": "Unbound Strike"
+  },
+  "3191080121": {
+   "cn": "雷狼的慧眼",
+   "maxLevel": 15,
+   "en": "Thunderwolf's Acuity"
+  },
+  "3212377084": {
+   "cn": "可怕的漆黑钳蟹因子",
+   "maxLevel": 20,
+   "en": "Immortal Shell"
+  },
+  "3221316531": {
+   "cn": "魔法师的战气",
+   "maxLevel": 15,
+   "en": "Mage's Warpath"
+  },
+  "3231160855": {
+   "cn": "暴击伤害",
+   "maxLevel": 30,
+   "en": "Critical Hit DMG"
+  },
+  "3265578921": {
+   "cn": "玫瑰缤纷",
+   "maxLevel": 15,
+   "en": "Rose's Profusion"
+  },
+  "3277525275": {
+   "cn": "蓄力会心",
+   "maxLevel": 20,
+   "en": "Lucky Charge"
+  },
+  "3352525297": {
+   "cn": "屠龙者的战气",
+   "maxLevel": 15,
+   "en": "Dragonslayer's Warpath"
+  },
+  "3362730114": {
+   "cn": "获得金币",
+   "maxLevel": 15,
+   "en": "Rupie Tycoon"
+  },
+  "3439526504": {
+   "cn": "英勇神速",
+   "maxLevel": 15,
+   "en": "Fearless Drive"
+  },
+  "3440525669": {
+   "cn": "冥暗自若",
+   "maxLevel": 15,
+   "en": "Ebony's Poise"
+  },
+  "3440945021": {
+   "cn": "万能药",
+   "maxLevel": 30,
+   "en": "Potent Greens"
+  },
+  "3454759926": {
+   "cn": "修炼甘露",
+   "maxLevel": 50,
+   "en": "0xCDEB73F6"
+  },
+  "3468099822": {
+   "cn": "昏厥",
+   "maxLevel": 45,
+   "en": "Stun Power"
+  },
+  "3484714882": {
+   "cn": "奥义封印抗性",
+   "maxLevel": 15,
+   "en": "SBA Sealed Resistance"
+  },
+  "3492412936": {
+   "cn": "浪迹天涯",
+   "maxLevel": 15,
+   "en": "Fatebreaker"
+  },
+  "3500263141": {
+   "cn": "攻击机会",
+   "maxLevel": 15,
+   "en": "0xD0A1C6E5"
+  },
+  "3506515340": {
+   "cn": "白龙的荣耀",
+   "maxLevel": 15,
+   "en": "White Dragon's Glory"
+  },
+  "3514225250": {
+   "cn": "群青的剑光",
+   "maxLevel": 15,
+   "en": "Ultramarine's Flash"
+  },
+  "3533494496": {
+   "cn": "天星之界",
+   "maxLevel": 15
+  },
+  "3536380170": {
+   "cn": "明镜止水",
+   "maxLevel": 30,
+   "en": "Nimble Onslaught"
+  },
+  "3544212764": {
+   "cn": "自动复活",
+   "maxLevel": 15
+  },
+  "3552100895": {
+   "cn": "终极钳蟹因子",
+   "maxLevel": 45,
+   "en": "Crabmiration"
+  },
+  "3557629595": {
+   "cn": "天司长的灵威",
+   "maxLevel": 15,
+   "en": "Supreme Primarch's Awe"
+  },
+  "3557916659": {
+   "cn": "群青的逆境",
+   "maxLevel": 15
+  },
+  "3578760359": {
+   "cn": "泥沙抗性",
+   "maxLevel": 15,
+   "en": "Sandtomb Resistance"
+  },
+  "3614395684": {
+   "cn": "舵手的战气",
+   "maxLevel": 15,
+   "en": "Helmsman's Warpath"
+  },
+  "3623467912": {
+   "cn": "冥暗的战气",
+   "maxLevel": 15,
+   "en": "Ebony's Warpath"
+  },
+  "3634652401": {
+   "cn": "刃姬之觉醒",
+   "maxLevel": 15
+  },
+  "3636860167": {
+   "cn": "雷狼的战气",
+   "maxLevel": 15
+  },
+  "3640028188": {
+   "cn": "勇士的战气",
+   "maxLevel": 15,
+   "en": "Hero's Warpath"
+  },
+  "3641188925": {
+   "cn": "幽幻之谊",
+   "maxLevel": 15,
+   "en": "Phantasm's Concord"
+  },
+  "3671987420": {
+   "cn": "英勇之心",
+   "maxLevel": 15,
+   "en": "Fearless Heart"
+  },
+  "3673144103": {
+   "cn": "变换自如的战气",
+   "maxLevel": 15,
+   "en": "Swordmaster's Warpath"
+  },
+  "3684800360": {
+   "cn": "狼王的战气",
+   "maxLevel": 15,
+   "en": "Gladiator's Warpath"
+  },
+  "3689011061": {
+   "cn": "α秘纹",
+   "maxLevel": 30,
+   "en": "Alpha"
+  },
+  "3693239446": {
+   "cn": "修罗",
+   "maxLevel": 30,
+   "en": "Power Hungry"
+  },
+  "3696775008": {
+   "cn": "伤害上限",
+   "maxLevel": 65,
+   "en": "DMG Cap"
+  },
+  "3697311093": {
+   "cn": "匿踪",
+   "maxLevel": 15,
+   "en": "Low Profile"
+  },
+  "3712643102": {
+   "cn": "异能耐受",
+   "maxLevel": 15,
+   "en": "Darkflame Resistance"
+  },
+  "3769368062": {
+   "cn": "守护",
+   "maxLevel": 45,
+   "en": "Aegis"
+  },
+  "3779990936": {
+   "cn": "天星之雪",
+   "maxLevel": 15
+  },
+  "3859444572": {
+   "cn": "王者行进",
+   "maxLevel": 15,
+   "en": "Lord's Procession"
+  },
+  "3868870292": {
+   "cn": "豪胆",
+   "maxLevel": 20,
+   "en": "Guts"
+  },
+  "3870895668": {
+   "cn": "极致的战气",
+   "maxLevel": 15,
+   "en": "Founder's Warpath"
+  },
+  "3872242332": {
+   "cn": "坚守",
+   "maxLevel": 45,
+   "en": "Garrison"
+  },
+  "3898603744": {
+   "cn": "魔眼的万箭",
+   "maxLevel": 15,
+   "en": "Dark Huntress's Volley"
+  },
+  "3940753899": {
+   "cn": "能力伤害",
+   "maxLevel": 30,
+   "en": "Skilled Assault"
+  },
+  "3950407047": {
+   "cn": "刃姬的战气",
+   "maxLevel": 15
+  },
+  "3961284473": {
+   "cn": "摇曳步",
+   "maxLevel": 15,
+   "en": "Flight over Fight"
+  },
+  "3963416948": {
+   "cn": "极致谋略",
+   "maxLevel": 15,
+   "en": "Founder's Strategy"
+  },
+  "3969908343": {
+   "cn": "刃姬的小夜曲",
+   "maxLevel": 15
+  },
+  "3985476312": {
+   "cn": "黑龙的折跃",
+   "maxLevel": 15,
+   "en": "The Black's Impulse"
+  },
+  "4001746207": {
+   "cn": "狂战士",
+   "maxLevel": 15,
+   "en": "Berserker Echo"
+  },
+  "4010142797": {
+   "cn": "涯之七星",
+   "maxLevel": 15,
+   "en": "Seven-Star Boundary"
+  },
+  "4051194041": {
+   "cn": "连击加成",
+   "maxLevel": 30,
+   "en": "Combo Booster"
+  },
+  "4057324496": {
+   "cn": "真红翔舞",
+   "maxLevel": 15,
+   "en": "Crimson's Flight"
+  },
+  "4061398193": {
+   "cn": "狼王的大轮转",
+   "maxLevel": 15
+  },
+  "4067143333": {
+   "cn": "分歧",
+   "maxLevel": 15,
+   "en": "Divergence"
+  },
+  "4084396182": {
+   "cn": "体力",
+   "maxLevel": 50,
+   "en": "HP"
+  },
+  "4136093167": {
+   "cn": "获得经验值",
+   "maxLevel": 15,
+   "en": "Fast Learner"
+  },
+  "4146039191": {
+   "cn": "自动药水",
+   "maxLevel": 15,
+   "en": "Auto Potion"
+  },
+  "4165559094": {
+   "cn": "守护者的骄傲",
+   "maxLevel": 15,
+   "en": "Guardian's Honor"
+  },
+  "4184122570": {
+   "cn": "雷狼的弹匣",
+   "maxLevel": 15
+  },
+  "4216792705": {
+   "cn": "冰冻抗性",
+   "maxLevel": 15,
+   "en": "Glaciate Resistance"
+  },
+  "4258376996": {
+   "cn": "斩姬的战气",
+   "maxLevel": 15,
+   "en": "Butterfly's Warpath"
+  },
+  "4294496100": {
+   "cn": "伤害上限·疾天",
+   "maxLevel": 15,
+   "en": "DMG Cap Sage"
+  }
+ },
+ "sub_params": {
+  "13726176": {
+   "cn": "暴击率（低·最高20%）",
+   "en": "",
+   "maxLevel": 9,
+   "isPercent": true,
+   "values": [
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20
+   ]
+  },
+  "577813568": {
+   "cn": "HP回复上限（低·最高50%）",
+   "en": "",
+   "maxLevel": 9,
+   "isPercent": true,
+   "values": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50
+   ]
+  },
+  "782879360": {
+   "cn": "HP回复上限（高·最高75%）",
+   "en": "",
+   "maxLevel": 9,
+   "isPercent": true,
+   "values": [
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    55,
+    60,
+    75
+   ]
+  },
+  "804999327": {
+   "cn": "能力伤害上限（低·最高50%）",
+   "en": "",
+   "maxLevel": 9,
+   "isPercent": true,
+   "values": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50
+   ]
+  },
+  "868275468": {
+   "cn": "奥义伤害（高·最高30%）",
+   "en": "",
+   "maxLevel": 9,
+   "isPercent": true,
+   "values": [
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20,
+    22,
+    25,
+    30
+   ]
+  },
+  "1420859959": {
+   "cn": "奥义连锁伤害（高·最高100%）",
+   "en": "",
+   "maxLevel": 9,
+   "isPercent": true,
+   "values": [
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    60,
+    80,
+    100
+   ]
+  },
+  "1511861385": {
+   "cn": "奥义伤害上限（高·最高100%）",
+   "en": "",
+   "maxLevel": 9,
+   "isPercent": true,
+   "values": [
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    60,
+    80,
+    100
+   ]
+  },
+  "1513740315": {
+   "cn": "奥义连锁伤害（低·最高50%）",
+   "en": "",
+   "maxLevel": 9,
+   "isPercent": true,
+   "values": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50
+   ]
+  },
+  "1716424242": {
+   "cn": "能力伤害（低·最高20%）",
+   "en": "",
+   "maxLevel": 9,
+   "isPercent": true,
+   "values": [
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20
+   ]
+  },
+  "1964215585": {
+   "cn": "奥义伤害（低·最高20%）",
+   "en": "",
+   "maxLevel": 9,
+   "isPercent": true,
+   "values": [
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20
+   ]
+  },
+  "2454052772": {
+   "cn": "普通攻击伤害上限（高·最高100%）",
+   "en": "",
+   "maxLevel": 9,
+   "isPercent": true,
+   "values": [
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    60,
+    80,
+    100
+   ]
+  },
+  "2692000103": {
+   "cn": "暴击率（高·最高30%）",
+   "en": "",
+   "maxLevel": 9,
+   "isPercent": true,
+   "values": [
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20,
+    22,
+    25,
+    30
+   ]
+  },
+  "2740166587": {
+   "cn": "奥义伤害上限（低·最高50%）",
+   "en": "",
+   "maxLevel": 9,
+   "isPercent": true,
+   "values": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50
+   ]
+  },
+  "2749708209": {
+   "cn": "攻击力（高·最高3000）",
+   "en": "",
+   "maxLevel": 9,
+   "isPercent": false,
+   "values": [
+    800,
+    1000,
+    1200,
+    1400,
+    1600,
+    1800,
+    2000,
+    2200,
+    2500,
+    3000
+   ]
+  },
+  "2791457225": {
+   "cn": "普通攻击伤害上限（低·最高50%）",
+   "en": "",
+   "maxLevel": 9,
+   "isPercent": true,
+   "values": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50
+   ]
+  },
+  "2828012672": {
+   "cn": "攻击力（低·最高2000）",
+   "en": "",
+   "maxLevel": 9,
+   "isPercent": false,
+   "values": [
+    200,
+    400,
+    600,
+    800,
+    1000,
+    1200,
+    1400,
+    1600,
+    1800,
+    2000
+   ]
+  },
+  "2939790331": {
+   "cn": "能力伤害（高·最高30%）",
+   "en": "",
+   "maxLevel": 9,
+   "isPercent": true,
+   "values": [
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20,
+    22,
+    25,
+    30
+   ]
+  },
+  "3159265995": {
+   "cn": "体力（低·最高2000）",
+   "en": "",
+   "maxLevel": 9,
+   "isPercent": false,
+   "values": [
+    200,
+    400,
+    600,
+    800,
+    1000,
+    1200,
+    1400,
+    1600,
+    1800,
+    2000
+   ]
+  },
+  "3463497098": {
+   "cn": "能力伤害上限（高·最高100%）",
+   "en": "",
+   "maxLevel": 9,
+   "isPercent": true,
+   "values": [
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    60,
+    80,
+    100
+   ]
+  },
+  "4042750913": {
+   "cn": "昏厥（高·最高2）",
+   "en": "",
+   "maxLevel": 9,
+   "isPercent": false,
+   "values": [
+    0.5,
+    0.6,
+    0.7,
+    0.9,
+    1.1,
+    1.3,
+    1.5,
+    1.6,
+    1.8,
+    2
+   ]
+  },
+  "4062539332": {
+   "cn": "体力（高·最高5000）",
+   "en": "",
+   "maxLevel": 9,
+   "isPercent": false,
+   "values": [
+    800,
+    1000,
+    1200,
+    1400,
+    1600,
+    1800,
+    2000,
+    2500,
+    3000,
+    5000
+   ]
+  },
+  "4155519343": {
+   "cn": "昏厥（低·最高1.5）",
+   "en": "",
+   "maxLevel": 9,
+   "isPercent": false,
+   "values": [
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.9,
+    1.1,
+    1.3,
+    1.5
+   ]
+  }
+ }
+}

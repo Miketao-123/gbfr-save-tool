@@ -41,8 +41,14 @@ python gbfr_cheat_tool.py [--save 存档路径] <命令>
 | `chars equip <PLxxxx> <因子槽号或名称>` | 把因子装备到角色 |
 | `chars unequip <PLxxxx> <槽号>` | 从角色卸下因子 |
 | `chars clear <PLxxxx>` | 卸下该角色全部因子 |
-| `summons list` | 列出召唤石 |
-| `summons set <槽号> [--chara PLxxxx] [--level N]` | 修改召唤石(装备角色/等级) |
+| GUI 角色页 | 输入查看因子时显示的槽号，点「卸下指定」可只卸下该因子 |
+| `summons list [关键词] [--all]` | 列出召唤石背包(真实名称,★=已装备) |
+| `summons show <槽号>` | 查看单个召唤石详情 |
+| `summons set <槽号> [--type 种类] [--main 主加护] [--sub 副词条] [--main-level N] [--sub-level N] [--rank N]` | 修改召唤石(换种类自动重建 SlotID 并迁移装备引用) |
+| `summons add <种类> [--main 主加护] [--sub 副词条] [--main-level N] [--sub-level N] [--rank N] [--equip 1-4] [--dry-run]` | **新增召唤石** |
+| `summons equip <1-4> <槽号>` / `summons unequip <1-4>` | 装备/卸下 4 个召唤石槽 |
+| `summons catalog / traits / subparams [关键词]` | 列出召唤石种类(189)/主加护(243)/副词条(22)目录 |
+| `summons legacy list` | 旧版 3101-3115 记录(只读展示) |
 | `loadout list / save <名> <PLxxxx> / restore <名>` | 保存/恢复某角色的因子配装方案 |
 | `wrightstone list` | 列出 4 种武器祝福类型 |
 | `wrightstone traits [关键词]` | 列出祝福可用词条(71 种,存档实测合法) |
@@ -105,6 +111,49 @@ python gbfr_cheat_tool.py wrightstone add 活力祝福 --traits "体力:20" --dr
 工具输出会给出「显示值(含星级)」和「存档值/1023」,与游戏内界面一致。
 | `crab [--wee N] [--dark N] [--statue] [--count 20]` | 小钳蟹功能:改普通/漆黑小钳蟹数量、漆黑蟹像=1、完成收集任务 |
 
+## 召唤石(v1.3, DLC 2.0 背包系统)
+
+> 存档 `1451-1460` 的召唤石背包(游戏内"召唤石"菜单)。旧版 3101-3115 记录
+> 含义未确认,保留在 `summons legacy list` 只读展示。
+> **所有哈希均已反差为真实名称**(目录逆向自 GBFR PE Patch Tool 的
+> summons.json / summon_skills.json / summon_sub_params.json +
+> DLC 2.0.2 summon.tbl 天然规则,见 `catalog_summon.json`)。
+
+```bash
+# 列出背包(★ = 已装备)
+python gbfr_cheat_tool.py summons list
+
+# 查看某只召唤石(槽号 = 列表第一列)
+python gbfr_cheat_tool.py summons show 223
+
+# 改词条/等级/阶级
+python gbfr_cheat_tool.py summons set 223 --main 属性克制转换 --sub "奥义伤害（高·最高30%）" --main-level 15 --sub-level 5 --rank 2
+
+# 换成别的种类(自动重建 SlotID 并迁移 4 槽装备引用)
+python gbfr_cheat_tool.py summons set 223 --type "路西法 · 传说 · 特殊"
+
+# 新增一只(不指定 --main/--sub 时自动用该种类天然词池第一项)
+python gbfr_cheat_tool.py summons add 路西法 --equip 2
+
+# 只预览不写入
+python gbfr_cheat_tool.py summons add 罗兰 --dry-run
+
+# 装备/卸下
+python gbfr_cheat_tool.py summons equip 1 223
+python gbfr_cheat_tool.py summons unequip 1
+
+# 查目录(种类 189 / 主加护 243 / 副词条 22)
+python gbfr_cheat_tool.py summons catalog 路西法
+python gbfr_cheat_tool.py summons traits 伤害上限
+python gbfr_cheat_tool.py summons subparams 攻击力
+```
+
+- 种类带 `档位II/III` 与 `随机/固定` 模式;同一名字可能有多档(如 路西法 有
+  `0x6E5968FC` 随机 / `0x90BD4AC0` 固定),目录输出带 0x 哈希可区分;
+- 等级上限:主加护 ≤ min(目录 maxLevel, 15),副词条档位 ≤ 目录 maxLevel,阶级 0-3;
+- 组合不在该种类的 2.0.2 天然词池时会**警告但不拒绝**(与 PE Patch Tool 一致);
+- 换种类会按物品新增语义分配新 SlotID,1451 装备引用自动迁移。
+
 ## 示例
 
 ```bash
@@ -140,11 +189,17 @@ python gbfr_cheat_tool.py overmastery set PL0000 1 暴击率 512
 
 # 小钳蟹:两种小钳蟹数量 + 漆黑蟹像 + 完成任务
 python gbfr_cheat_tool.py crab --wee 20 --dark 20 --statue
+
+# 召唤石:查看背包 / 新增一只满级路西法并装备到槽2 / 预览
+python gbfr_cheat_tool.py summons list
+python gbfr_cheat_tool.py summons add 路西法 --equip 2
+python gbfr_cheat_tool.py summons add 罗兰 --dry-run
 ```
 
 ## 合法性说明
 
 - `sigils add` 生成的是**游戏真实存在的因子**:主词条固定为游戏数据中该因子的主词条;
+  少数 V+ 因子(如 万能药＋/霸体＋/自动药水＋)在 gem.tbl 的 `SkillId1` 是无功能占位技能,工具会自动修正为同名无+版的真实主词条;
 - `--secondary` 指定的副词条会**严格校验**是否在该因子的合法副词条池内,非法组合会被拒绝;
 - 合法副词条区间(取自游戏 `system/table` 权威数据 + 游戏内实测,见 `gem_legality.json`):
   1. **固定副词条**:该因子自带 SkillId2(如旧版 `+` 因子的固定词条);

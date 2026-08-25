@@ -82,6 +82,25 @@ for g in gems:
         'rarity': g['Rarity'],
     }
 
+# 部分 V+ 因子(如 万能药＋/霸体＋/自动药水＋)在 gem.tbl 的 SkillId1 是无功能占位技能
+# SKILL_023_00 (0xCAC6AFF2),真正的同名主词条在无 + 版因子上。这里把占位主词条修正为同名无 + 版的主词条。
+DUMMY_SKILL_HASH = 0xCAC6AFF2
+def _strip_plus(name):
+    if name.endswith('＋'):
+        return name[:-1]
+    if name.endswith('+'):
+        return name[:-1]
+    return name
+
+for key, info in sigil_info.items():
+    if info['primary'] == DUMMY_SKILL_HASH:
+        base_name = _strip_plus(info['name'])
+        if base_name and base_name != info['name']:
+            for k2, e2 in sigil_info.items():
+                if k2 != key and e2['name'] == base_name and e2['primary'] != DUMMY_SKILL_HASH:
+                    info['primary'] = e2['primary']
+                    break
+
 # trait max level from skill_status
 trait_max = {}
 for st in skill_status:

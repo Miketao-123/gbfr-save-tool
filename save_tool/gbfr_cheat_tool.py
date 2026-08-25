@@ -6,13 +6,13 @@ if _sys.stdout and hasattr(_sys.stdout, "reconfigure"):
     except Exception:
         pass
 r"""
-GBFR 简易作弊器 (本地存档修改)
-===============================
+GBFR 简易作弊器 (本地存档修改)  v1.3
+====================================
 功能：
   1) 物品数量修改        : items set <名称/ID> <数量>
   2) 定向生成合法因子    : sigils add <名称/ID> [--level N] [--secondary 词条] [--equip PLxxxx]
   3) 角色因子配装        : chars sigils/equip/unequip/clear
-  4) 召唤石              : summons list / summons set
+  4) 召唤石(DLC 2.0 背包) : summons list/set/add/equip/catalog/traits/subparams (真实名称显示)
   5) 配装方案(工具侧)    : loadout save/restore (保存/恢复某角色的因子配装)
 
 用法示例：
@@ -22,6 +22,9 @@ GBFR 简易作弊器 (本地存档修改)
   python gbfr_cheat_tool.py sigils add 可怕的漆黑钳蟹因子 --level 20
   python gbfr_cheat_tool.py sigils add "Glass Cannon V+" --secondary 攻击力 --equip PL0000
   python gbfr_cheat_tool.py chars sigils PL0000
+  python gbfr_cheat_tool.py summons list
+  python gbfr_cheat_tool.py summons catalog 路西法
+  python gbfr_cheat_tool.py summons add 路西法 --main 攻击力 --sub "攻击力（高·最高3000）" --main-level 15 --sub-level 9 --rank 3
   python gbfr_cheat_tool.py loadout save 我的配装 PL0000
   python gbfr_cheat_tool.py loadout restore 我的配装
 """
@@ -54,9 +57,29 @@ ID_2701, ID_2702, ID_2703, ID_2704, ID_2706, ID_2707 = 2701, 2702, 2703, 2704, 2
 ID_1701, ID_1702 = 1701, 1702
 GEM_SLOT_BASE = 30000
 TRAIT_REC_BASE = 120000000
-# summon vectors
+# summon vectors (旧版 3101-3115, 保留只读展示)
 ID_SUM_CHARA, ID_SUM_LEVEL, ID_SUM_TYPE = 3101, 3102, 3113
 SUMMON_UNIT_BASE = 10100
+
+# ---- 召唤石 (DLC 2.0 背包系统, id_type 布局与 GBFR PE Patch Tool 一致) ----
+#   1451 uint[4] @0       已装备的 4 个召唤石 (SlotID; 0 = 空槽)
+#   1452 uint   @0..299   登记目录: 已知召唤石种类哈希 (300 行)
+#   1453 uint   @0..299   登记标志 0/1 (对应 1452 行)
+#   1454 uint   @0        最大 SlotID
+#   1455 uint   @0        召唤系统解锁 0/1
+#   1456 uint   @0..999   SlotID (0 = 空记录)
+#   1457 uint   @0..999   种类哈希 (0x887AE0B0 = 空)
+#   1458 uint[2] @0..999  [主加护哈希, 副词条哈希]
+#   1459 int[2]  @0..999  [主加护等级, 副词条档位]
+#   1460 uint   @0..999   阶级 0-3
+ID_SUM_EQUIPPED, ID_SUM_CATALOG, ID_SUM_REGISTERED = 1451, 1452, 1453
+ID_SUM_MAXSLOT, ID_SUM_UNLOCKED = 1454, 1455
+ID_SUM_SLOT, ID_SUM_TYPE2, ID_SUM_TRAITS, ID_SUM_LEVELS, ID_SUM_RANK = 1456, 1457, 1458, 1459, 1460
+SUMMON_CAPACITY = 1000
+SUMMON_CATALOG_ROWS = 300
+SUMMON_EMPTY_LEVEL = 0xFFFFFFFF   # 空记录的等级占位
+SUMMON_MAX_MAIN_LEVEL = 15        # 2.0.2 summon_curve 主加护等级上限
+SUMMON_MAX_RANK = 3               # 阶级 0-3
 
 # ------- catalogs -------
 def _load(path):
@@ -105,6 +128,416 @@ def chara_label_by_hash(h):
     """角色哈希(int) -> 显示名;找不到时显示 0x 哈希。"""
     gid = chara_gid_by_hash(h)
     return chara_label(gid) if gid else f'0x{int(h) & 0xFFFFFFFF:08X}'
+
+# ---- 召唤石目录 (catalog_summon.json, 逆向自 GBFR PE Patch Tool) ----
+SUMCAT = _load('catalog_summon.json') if os.path.exists(os.path.join(BASE, 'catalog_summon.json')) else {}
+SUMCAT_TYPES = SUMCAT.get('types', {})          # str(hash) -> {cn,en,baseName,code,cost,typeName,tier,mode,...}
+SUMCAT_MAIN = SUMCAT.get('main_traits', {})     # str(hash) -> {cn,en,maxLevel}
+SUMCAT_SUB = SUMCAT.get('sub_params', {})       # str(hash) -> {cn,maxLevel,isPercent,values}
+
+
+def _sum_key(h):
+    return str(int(h) & 0xFFFFFFFF)
+
+
+def summon_type_name(h, with_en=False):
+    """召唤石种类哈希 -> 中文名(可带英文)。未知时返回 0x 哈希。"""
+    e = SUMCAT_TYPES.get(_sum_key(h))
+    if not e:
+        return f'0x{int(h) & 0xFFFFFFFF:08X}'
+    cn = e.get('cn') or e.get('en') or f'0x{int(h) & 0xFFFFFFFF:08X}'
+    if with_en and e.get('en'):
+        return f'{cn} ({e["en"]})'
+    return cn
+
+
+def summon_trait_name(h, with_en=False):
+    """主加护(技能)哈希 -> 中文名(可带英文)。未知时返回 0x 哈希。"""
+    e = SUMCAT_MAIN.get(_sum_key(h))
+    if not e:
+        return f'0x{int(h) & 0xFFFFFFFF:08X}'
+    cn = e.get('cn') or e.get('en') or f'0x{int(h) & 0xFFFFFFFF:08X}'
+    if with_en and e.get('en'):
+        return f'{cn} ({e["en"]})'
+    return cn
+
+
+def summon_sub_name(h):
+    """副词条哈希 -> 中文名。未知时返回 0x 哈希。"""
+    e = SUMCAT_SUB.get(_sum_key(h))
+    if not e:
+        return f'0x{int(h) & 0xFFFFFFFF:08X}'
+    return e.get('cn') or f'0x{int(h) & 0xFFFFFFFF:08X}'
+
+
+def summon_main_max_level(h):
+    """主加护等级上限(目录 maxLevel, 再被 2.0.2 曲线上限 15 钳制)。"""
+    e = SUMCAT_MAIN.get(_sum_key(h))
+    ml = int(e.get('maxLevel', 15) or 15) if e else 15
+    return max(0, min(ml, SUMMON_MAX_MAIN_LEVEL))
+
+
+def summon_sub_max_level(h):
+    """副词条档位上限(目录 maxLevel)。"""
+    e = SUMCAT_SUB.get(_sum_key(h))
+    return max(0, int(e.get('maxLevel', 9) or 9)) if e else 9
+
+
+def _extract_hash(q0):
+    """从输入中提取内嵌 0x 哈希(如 '路西法 · 传说 · 特殊 (Lucilius) [0x6E5968FC]')。"""
+    import re
+    m = re.search(r'0[xX][0-9A-Fa-f]{8}', q0)
+    return int(m.group(0), 16) & 0xFFFFFFFF if m else None
+
+
+def _split_label(q0):
+    """把 '中文 (English)' 拆成 (中文, English);带 [0x...] 时先去掉。"""
+    import re
+    s = re.sub(r'\s*\[0[xX][0-9A-Fa-f]{8}\]', '', q0).strip()
+    if ' (' in s and s.endswith(')'):
+        i = s.index(' (')
+        return s[:i].strip(), s[i + 2:-1].strip()
+    return s, None
+
+
+def summon_find_type(q):
+    """按名称(中文/英文/baseName)/code/0x哈希 解析召唤石种类 -> 哈希。失败返回 None。"""
+    q0 = (q or '').strip()
+    if not q0:
+        return None
+    hx = _extract_hash(q0)
+    if hx is not None:
+        return hx if _sum_key(hx) in SUMCAT_TYPES else None
+    if q0.lower().startswith('0x'):
+        return int(q0, 16) & 0xFFFFFFFF
+    core, en_part = _split_label(q0)
+    ql = q0.lower()
+    core_l = (core or '').lower()
+    en_l = (en_part or '').lower()
+    hits = []
+    for hk, e in SUMCAT_TYPES.items():
+        cn = (e.get('cn') or '').lower()
+        en = (e.get('en') or '').lower()
+        bn = (e.get('baseName') or '').lower()
+        code = (e.get('code') or '').lower()
+        if cn == ql or en == ql or (core_l and cn == core_l) or (en_l and en == en_l) or (core_l and bn == core_l) or ql == code:
+            return int(hk) & 0xFFFFFFFF
+        if (core_l and cn and core_l in cn) or (core_l and bn and core_l in bn):
+            hits.append((int(hk) & 0xFFFFFFFF, e))
+    if not hits:
+        return None
+    def score(item):
+        h, e = item
+        cn = (e.get('cn') or '').lower(); bn = (e.get('baseName') or '').lower()
+        if cn == core_l or bn == core_l:
+            return 0
+        if bn and core_l in bn:
+            return 1
+        return 2
+    return min(hits, key=score)[0]
+
+
+def summon_find_main(q):
+    """按名称/0x哈希 解析主加护 -> 哈希。失败返回 None。"""
+    q0 = (q or '').strip()
+    if not q0:
+        return None
+    hx = _extract_hash(q0)
+    if hx is not None:
+        return hx if _sum_key(hx) in SUMCAT_MAIN else None
+    if q0.lower().startswith('0x'):
+        return int(q0, 16) & 0xFFFFFFFF
+    core, en_part = _split_label(q0)
+    ql = q0.lower()
+    core_l = (core or '').lower()
+    en_l = (en_part or '').lower()
+    best = None
+    best_len = None
+    for hk, e in SUMCAT_MAIN.items():
+        cn = (e.get('cn') or '').lower()
+        en = (e.get('en') or '').lower()
+        if cn == ql or (core_l and cn == core_l) or (en_l and en == en_l):
+            return int(hk) & 0xFFFFFFFF
+        if core_l and cn and (core_l in cn or cn in core_l):
+            if best_len is None or len(cn) < best_len:
+                best = int(hk) & 0xFFFFFFFF
+                best_len = len(cn)
+    return best
+
+
+def summon_find_sub(q):
+    """按名称/0x哈希 解析副词条 -> 哈希。失败返回 None。"""
+    q0 = (q or '').strip()
+    if not q0:
+        return None
+    hx = _extract_hash(q0)
+    if hx is not None:
+        return hx if _sum_key(hx) in SUMCAT_SUB else None
+    if q0.lower().startswith('0x'):
+        return int(q0, 16) & 0xFFFFFFFF
+    core, _ = _split_label(q0)
+    ql = q0.lower()
+    core_l = (core or '').lower()
+    best = None
+    best_len = None
+    for hk, e in SUMCAT_SUB.items():
+        cn = (e.get('cn') or '').lower()
+        if cn == ql or (core_l and cn == core_l):
+            return int(hk) & 0xFFFFFFFF
+        if core_l and (core_l in cn or cn in core_l):
+            if best_len is None or len(cn) < best_len:
+                best = int(hk) & 0xFFFFFFFF
+                best_len = len(cn)
+    return best
+
+
+def summon_empty_state():
+    """空记录状态(与 PE Patch Tool 判定一致)。"""
+    return (EMPTY, EMPTY, EMPTY, SUMMON_EMPTY_LEVEL, SUMMON_EMPTY_LEVEL, 0)
+
+
+def summon_maps(save):
+    """一次性构建召唤石背包映射(5 个 id_type),避免逐 unit 全表扫描。"""
+    m1456 = vm(save, ID_SUM_SLOT)
+    m1457 = vm(save, ID_SUM_TYPE2)
+    m1458 = {r.unit_id: list(save.get_values(r)) for r in save.find(id_type=ID_SUM_TRAITS)}
+    m1459 = {r.unit_id: list(save.get_values(r)) for r in save.find(id_type=ID_SUM_LEVELS)}
+    m1460 = vm(save, ID_SUM_RANK)
+    return m1456, m1457, m1458, m1459, m1460
+
+
+def summon_record_from_maps(maps, unit):
+    """从预构建映射读 unit 的记录;空记录返回 None。"""
+    m1456, m1457, m1458, m1459, m1460 = maps
+    slot = int(m1456.get(unit, 0) or 0) & 0xFFFFFFFF
+    th = int(m1457.get(unit, 0) or 0) & 0xFFFFFFFF
+    tv = m1458.get(unit, [0, 0])
+    lv = m1459.get(unit, [0, 0])
+    state = (th, int(tv[0]) & 0xFFFFFFFF, int(tv[1]) & 0xFFFFFFFF,
+             int(lv[0]) & 0xFFFFFFFF, int(lv[1]) & 0xFFFFFFFF,
+             int(m1460.get(unit, 0) or 0) & 0xFFFFFFFF)
+    if slot == 0 and state == summon_empty_state():
+        return None
+    return {
+        'unit': unit,
+        'slot': slot,
+        'type_hash': th,
+        'main_hash': int(tv[0]) & 0xFFFFFFFF,
+        'sub_hash': int(tv[1]) & 0xFFFFFFFF,
+        'main_level': int(lv[0]),
+        'sub_level': int(lv[1]),
+        'rank': int(m1460.get(unit, 0) or 0) & 0xFFFFFFFF,
+    }
+
+
+def summon_read_record(save, unit):
+    """读取 unit(0-999) 的召唤石记录。返回 dict 或 None(空记录)。"""
+    return summon_record_from_maps(summon_maps(save), unit)
+
+
+def summon_inventory(save):
+    """读取完整召唤石背包。返回 (records, equipped, max_slot, unlocked)。
+    records 按 SlotID 升序;equipped = 1451 的 4 个 SlotID 列表。"""
+    maps = summon_maps(save)
+    m1454 = vm(save, ID_SUM_MAXSLOT)
+    m1455 = vm(save, ID_SUM_UNLOCKED)
+    records = []
+    for unit in range(SUMMON_CAPACITY):
+        rec = summon_record_from_maps(maps, unit)
+        if rec:
+            records.append(rec)
+    records.sort(key=lambda r: r['slot'])
+    eq_recs = save.find(id_type=ID_SUM_EQUIPPED)
+    equipped = list(save.get_values(eq_recs[0])) if eq_recs else []
+    equipped = [int(v) & 0xFFFFFFFF for v in equipped]
+    while len(equipped) < 4:
+        equipped.append(0)
+    return records, equipped, int(m1454.get(0, 0) or 0) & 0xFFFFFFFF, bool(m1455.get(0, 0))
+
+
+def summon_register_type(save, type_hash):
+    """确保种类已登记进 1452/1453 目录(找不到空行则返回错误消息)。"""
+    type_hash = int(type_hash) & 0xFFFFFFFF
+    m1452 = vm(save, ID_SUM_CATALOG)
+    for u, h in m1452.items():
+        if (int(h) & 0xFFFFFFFF) == type_hash:
+            set_first(save, ID_SUM_REGISTERED, u, 1, 'uint')
+            return None
+    for u, h in sorted(m1452.items()):
+        if (int(h) & 0xFFFFFFFF) == EMPTY:
+            set_first(save, ID_SUM_CATALOG, u, type_hash, 'uint')
+            set_first(save, ID_SUM_REGISTERED, u, 1, 'uint')
+            return None
+    return f'登记目录已满({SUMMON_CATALOG_ROWS} 行),无法登记新种类 0x{type_hash:08X}'
+
+
+def summon_write_state(save, unit, type_hash, main_hash, sub_hash, main_level, sub_level, rank):
+    """写 1457/1458/1459/1460 四个字段。"""
+    set_first(save, ID_SUM_TYPE2, unit, int(type_hash) & 0xFFFFFFFF, 'uint')
+    trec = save.find_first('uint', ID_SUM_TRAITS, unit)
+    if trec is None:
+        raise RuntimeError(f'缺少 id_type={ID_SUM_TRAITS} unit={unit} 记录')
+    save.set_values(trec, [int(main_hash) & 0xFFFFFFFF, int(sub_hash) & 0xFFFFFFFF])
+    lrec = save.find_first('int', ID_SUM_LEVELS, unit)
+    if lrec is None:
+        raise RuntimeError(f'缺少 id_type={ID_SUM_LEVELS} unit={unit} 记录')
+    save.set_values(lrec, [int(main_level), int(sub_level)])
+    set_first(save, ID_SUM_RANK, unit, int(rank) & 0xFFFFFFFF, 'uint')
+
+
+def summon_validate_draft(type_hash, main_hash, sub_hash, main_level, sub_level, rank,
+                          natural_warn=True, extra_ok=None):
+    """校验召唤石配置。返回 (错误消息 or None, 警告列表)。
+    - 种类必须在目录;主加护/副词条必须在目录
+    - 等级:主加护 <= min(maxLevel,15);副词条 <= maxLevel
+    - 阶级 0-3
+    - natural_warn=True 时,若组合不在该种类的 2.0.2 天然词池/等级池则给出警告
+    """
+    warns = []
+    if _sum_key(type_hash) not in SUMCAT_TYPES:
+        return f'未知召唤石种类 0x{int(type_hash) & 0xFFFFFFFF:08X}(可用 "summons catalog" 查看)', warns
+    if _sum_key(main_hash) not in SUMCAT_MAIN and int(main_hash) & 0xFFFFFFFF != EMPTY:
+        return f'未知主加护 0x{int(main_hash) & 0xFFFFFFFF:08X}(可用 "summons traits" 查看)', warns
+    if _sum_key(sub_hash) not in SUMCAT_SUB:
+        return f'未知副词条 0x{int(sub_hash) & 0xFFFFFFFF:08X}(可用 "summons subparams" 查看)', warns
+    ml = int(main_level)
+    if ml < 0 or ml > summon_main_max_level(main_hash):
+        return f'主加护等级 {ml} 超出上限 {summon_main_max_level(main_hash)}', warns
+    sl = int(sub_level)
+    if sl < 0 or sl > summon_sub_max_level(sub_hash):
+        return f'副词条档位 {sl} 超出上限 {summon_sub_max_level(sub_hash)}', warns
+    if int(rank) < 0 or int(rank) > SUMMON_MAX_RANK:
+        return f'阶级必须为 0-{SUMMON_MAX_RANK},收到 {rank}', warns
+    if natural_warn:
+        te = SUMCAT_TYPES.get(_sum_key(type_hash), {})
+        pool_m = set(int(x) & 0xFFFFFFFF for x in te.get('mainTraitHashes', []))
+        pool_s = set(int(x) & 0xFFFFFFFF for x in te.get('subParamHashes', []))
+        lv_m = set(int(x) for x in te.get('mainTraitLevels', []))
+        lv_s = set(int(x) for x in te.get('subParamLevels', []))
+        if pool_m and (int(main_hash) & 0xFFFFFFFF) not in pool_m:
+            warns.append(f'主加护「{summon_trait_name(main_hash)}」不在「{summon_type_name(type_hash)}」的天然词池')
+        if pool_s and (int(sub_hash) & 0xFFFFFFFF) not in pool_s:
+            warns.append(f'副词条「{summon_sub_name(sub_hash)}」不在「{summon_type_name(type_hash)}」的天然词池')
+        if lv_m and ml not in lv_m:
+            warns.append(f'主加护等级 {ml} 不在该种类的天然等级集合 {sorted(lv_m)}')
+        if lv_s and sl not in lv_s:
+            warns.append(f'副词条档位 {sl} 不在该种类的天然档位集合 {sorted(lv_s)}')
+    return None, warns
+
+
+def summon_create(save, type_hash, main_hash, sub_hash, main_level, sub_level, rank,
+                  dry=False, natural_warn=True):
+    """新增一个召唤石(写入第一个空 unit, SlotID = max+1, 更新 1454, 登记 1452)。
+    返回 (错误消息 or None, 新记录 dict or None)。"""
+    err, warns = summon_validate_draft(type_hash, main_hash, sub_hash, main_level, sub_level, rank,
+                                       natural_warn=natural_warn)
+    if err:
+        return err, None
+    records, equipped, max_slot, unlocked = summon_inventory(save)
+    if not unlocked:
+        return '存档中召唤系统(1455)未解锁,无法新增召唤石', None
+    if max_slot == 0xFFFFFFFF:
+        return 'MaxSlotID 已溢出,无法新增', None
+    target = None
+    for unit in range(SUMMON_CAPACITY):
+        if summon_read_record(save, unit) is None:
+            target = unit
+            break
+    if target is None:
+        return f'召唤石背包已满({SUMMON_CAPACITY} 槽)', None
+    new_slot = max_slot + 1
+    if dry:
+        return None, {'unit': target, 'slot': new_slot, 'type_hash': int(type_hash) & 0xFFFFFFFF,
+                      'main_hash': int(main_hash) & 0xFFFFFFFF, 'sub_hash': int(sub_hash) & 0xFFFFFFFF,
+                      'main_level': int(main_level), 'sub_level': int(sub_level), 'rank': int(rank)}
+    err = summon_register_type(save, type_hash)
+    if err:
+        return err, None
+    summon_write_state(save, target, type_hash, main_hash, sub_hash, main_level, sub_level, rank)
+    set_first(save, ID_SUM_SLOT, target, new_slot, 'uint')
+    set_first(save, ID_SUM_MAXSLOT, 0, new_slot, 'uint')
+    return None, {'unit': target, 'slot': new_slot, 'type_hash': int(type_hash) & 0xFFFFFFFF,
+                  'main_hash': int(main_hash) & 0xFFFFFFFF, 'sub_hash': int(sub_hash) & 0xFFFFFFFF,
+                  'main_level': int(main_level), 'sub_level': int(sub_level), 'rank': int(rank)}
+
+
+def summon_update(save, unit, type_hash, main_hash, sub_hash, main_level, sub_level, rank,
+                  natural_warn=True):
+    """修改已有召唤石(unit 0-999)。
+    种类不变:直接改 1457-1460。
+    种类改变:按 PE Patch Tool 语义重建 SlotID(max+1),并把 1451 装备引用迁移到新 SlotID。
+    返回 (错误消息 or None, 更新后记录 dict or None)。"""
+    cur = summon_read_record(save, unit)
+    if cur is None:
+        return f'unit {unit} 不是有效的召唤石记录(先 "summons list" 查看)', None
+    err, warns = summon_validate_draft(type_hash, main_hash, sub_hash, main_level, sub_level, rank,
+                                       natural_warn=natural_warn)
+    if err:
+        return err, None
+    type_hash = int(type_hash) & 0xFFFFFFFF
+    if type_hash == cur['type_hash']:
+        err = summon_register_type(save, type_hash)
+        if err:
+            return err, None
+        summon_write_state(save, unit, type_hash, main_hash, sub_hash, main_level, sub_level, rank)
+        return None, summon_read_record(save, unit)
+    # 换种类:分配新 SlotID,迁移 1451 装备引用
+    records, equipped, max_slot, unlocked = summon_inventory(save)
+    if max_slot == 0xFFFFFFFF:
+        return 'MaxSlotID 已溢出,无法更换种类', None
+    new_slot = max_slot + 1
+    err = summon_register_type(save, type_hash)
+    if err:
+        return err, None
+    summon_write_state(save, unit, type_hash, main_hash, sub_hash, main_level, sub_level, rank)
+    set_first(save, ID_SUM_SLOT, unit, new_slot, 'uint')
+    set_first(save, ID_SUM_MAXSLOT, 0, new_slot, 'uint')
+    # 迁移装备引用:旧 SlotID -> 新 SlotID
+    eq_recs = save.find(id_type=ID_SUM_EQUIPPED)
+    if eq_recs:
+        eq = list(save.get_values(eq_recs[0]))
+        changed = False
+        for i, v in enumerate(eq):
+            if (int(v) & 0xFFFFFFFF) == cur['slot']:
+                eq[i] = new_slot
+                changed = True
+        if changed:
+            save.set_values(eq_recs[0], eq)
+    return None, summon_read_record(save, unit)
+
+
+def summon_set_equipped(save, idx, slot_id):
+    """设置 1451 装备槽 idx(0-3) 为 SlotID(0=卸下)。"""
+    if not (0 <= idx < 4):
+        return f'装备槽必须是 1-4,收到 {idx + 1}'
+    eq_recs = save.find(id_type=ID_SUM_EQUIPPED)
+    if not eq_recs:
+        return '存档缺少 1451 装备字段'
+    eq = list(save.get_values(eq_recs[0]))
+    while len(eq) < 4:
+        eq.append(0)
+    eq[idx] = int(slot_id) & 0xFFFFFFFF
+    save.set_values(eq_recs[0], eq)
+    return None
+
+
+def summon_slot_by_unit(records, unit):
+    for r in records:
+        if r['unit'] == unit:
+            return r['slot']
+    return None
+
+
+def summon_locate(save, slot_or_unit):
+    """按槽号(列表第一列,优先)或 unit 定位召唤石记录;找不到返回 None。"""
+    n = int(slot_or_unit)
+    rec = summon_read_record(save, n)
+    if rec is not None:
+        return rec
+    for r in summon_inventory(save)[0]:
+        if r['slot'] == n:
+            return r
+    return None
 
 # ---- 上限突破 (Overmastery) ----
 # 存档:id 1606=效果哈希, 1607=数值;unit = 10000000 + 角色组×1000 + 槽位(0-3)
@@ -335,6 +768,45 @@ def _can_mix(sigil_hash):
            GEMCAT['sigil_info'].get(str(sigil_hash), {}).get('name') or ''
     return '＋' in name or '+' in name
 
+DUMMY_SKILL_HASH = 0xCAC6AFF2
+
+def _strip_plus_name(name):
+    if name.endswith('＋'):
+        return name[:-1]
+    if name.endswith('+'):
+        return name[:-1]
+    return name
+
+def sigil_primary_hash(sigil_hash, info=None):
+    """返回该因子真正的主词条哈希。
+
+    gem.tbl 中少数 V+ 因子(如 万能药＋/霸体＋/自动药水＋)的 SkillId1 是
+    无功能占位技能 0xCAC6AFF2,直接写入存档会导致游戏内因子主词条错误。
+    这里先查完整目录中的 primaryTraitId,再退回同名无+版因子的主词条。
+    """
+    if info is None:
+        info = GEMCAT.get('sigil_info', {}).get(str(sigil_hash), {})
+    primary = info.get('primary', EMPTY)
+    if primary != DUMMY_SKILL_HASH:
+        return primary
+    # catalog_sigils_full.json 的 primaryTraitId 是 item_id.csv 的权威映射
+    for e in SIGILS_FULL.get('sigils', []):
+        h = e.get('hash')
+        if h and (int(h, 16) & 0xFFFFFFFF) == (sigil_hash & 0xFFFFFFFF):
+            pid = e.get('primaryTraitId')
+            if pid:
+                return gbfr_hash(pid)
+    # 兜底:同名无+版因子
+    name = info.get('name') or ''
+    base_name = _strip_plus_name(name)
+    if base_name and base_name != name:
+        for hk, e in GEMCAT.get('sigil_info', {}).items():
+            if int(hk) & 0xFFFFFFFF != (sigil_hash & 0xFFFFFFFF) and e.get('name') == base_name:
+                bp = e.get('primary')
+                if bp and bp != DUMMY_SKILL_HASH:
+                    return bp
+    return primary
+
 def find_item(q):
     q = q.strip().lower()
     if q.startswith('0x'):
@@ -346,7 +818,8 @@ def find_item(q):
     return None
 
 def _norm(q):
-    return q.replace('V+', 'Ⅴ＋').replace('v+', 'Ⅴ＋').strip().lower()
+    # 把用户输入的半角 + 也归一化为中文目录里的全角 ＋(例如 万能药+ -> 万能药＋)
+    return q.replace('V+', 'Ⅴ＋').replace('v+', 'Ⅴ＋').replace('+', '＋').strip().lower()
 
 def find_sigil(q):
     q = q.strip().lower()
@@ -372,10 +845,16 @@ def find_sigil(q):
     return min(hits, key=score)
 
 def find_trait(q):
-    q = q.strip().lower()
-    if q.startswith('0x'):
-        h = int(q, 16) & 0xFFFFFFFF
+    q0 = (q or '').strip()
+    if not q0:
+        return None
+    # 兼容下拉框的 “中文 (English)”、“0xHASH (English)” 等格式
+    core, _ = _split_label(q0)
+    core_l = (core or q0).lower()
+    if core_l.startswith('0x'):
+        h = int(core, 16) & 0xFFFFFFFF
         return GEMCAT['trait_info'].get(str(h))
+    q = q0.lower()
     qn = _norm(q)
     hits = []
     for hk, e in GEMCAT['trait_info'].items():
@@ -383,6 +862,8 @@ def find_trait(q):
         if q in cn or q in en or (qn and (qn in cn or qn in en)):
             hits.append(e)
     if not hits:
+        if core and core.lower() != q:
+            return find_trait(core)
         return None
     def score(e):
         cn = (e.get('cn') or '').lower(); en = (e.get('name') or '').lower()
@@ -738,7 +1219,9 @@ def cmd_wrightstone(args):
                 if t2 is not None:
                     th = next((int(hk) for hk, x in GEMCAT['trait_info'].items() if x is t2), None)
                 else:
-                    th = int(tname, 16) & 0xFFFFFFFF if tname.lower().startswith('0x') else None
+                    core, _ = _split_label(tname)
+                    hex_part = core if core and core.lower().startswith('0x') else tname
+                    th = int(hex_part, 16) & 0xFFFFFFFF if hex_part.lower().startswith('0x') else None
                 if th is None:
                     print(f'[错误] 找不到词条: {tname}(可用: wrightstone traits 查看)'); return
                 traits.append((th, lv))
@@ -783,6 +1266,9 @@ def legal_secondary_ids(sigil_hash):
     return allowed
 
 def add_sigil_to_save(save, gem_hash, level, trait1_hash, trait2_hash, worn=None, dry=False):
+    # 安全网:即使调用方传入了 gem.tbl 的占位主词条,也改成真正的主词条
+    if trait1_hash == DUMMY_SKILL_HASH:
+        trait1_hash = sigil_primary_hash(gem_hash)
     slot = find_empty_sigil_slot(save)
     idx = slot - GEM_SLOT_BASE
     m2701 = vm(save, ID_2701)
@@ -876,7 +1362,7 @@ def cmd_sigils(args):
         if gem_hash is None:
             print('[错误] 因子目录异常'); return
         info = GEMCAT['sigil_info'][str(gem_hash)]
-        primary = info['primary']
+        primary = sigil_primary_hash(gem_hash, info)
         fixed_sec = info['secondary']
         # level check
         mx = GEMCAT['trait_info'].get(str(primary), {}).get('max_level', 20)
@@ -999,26 +1485,211 @@ def cmd_chars(args):
         print(f'[完成] 槽{slot} 已装备到 {chara_label(gid)}')
 
 def cmd_summons(args):
+    """召唤石(DLC 2.0 背包)命令: list / show / set / add / equip / unequip /
+    catalog / traits / subparams / legacy。所有显示均为真实名称(哈希已反差)。"""
     save = open_save(args.save)
-    m3101 = vm(save, 3101); m3102 = vm(save, 3102); m3113 = vm(save, 3113)
-    units = sorted(set(m3101) | set(m3102) | set(m3113))
-    if args.action == 'list':
-        print('=== 召唤石 ===')
+    if args.action == 'catalog':
+        q = (args.query or '').lower()
+        print('=== 召唤石种类目录(%d 种) ===' % len(SUMCAT_TYPES))
+        for hk, e in sorted(SUMCAT_TYPES.items()):
+            cn = e.get('cn') or ''
+            en = e.get('en') or ''
+            if q and q not in cn.lower() and q not in en.lower() and q not in f'0x{int(hk)&0xFFFFFFFF:08X}'.lower():
+                continue
+            tier = e.get('tier') or ''
+            mode = e.get('mode') or ''
+            print('  %-30s %-20s 档位%s %s 0x%08X' % (
+                cn, ('(%s)' % en) if en else '', tier, ('[%s]' % mode) if mode else '', int(hk) & 0xFFFFFFFF))
+        print(f'[信息] 种类目录共 {len(SUMCAT_TYPES)} 种')
+        return
+    if args.action == 'traits':
+        q = (args.query or '').lower()
+        print('=== 主加护目录(%d 种) ===' % len(SUMCAT_MAIN))
+        for hk, e in sorted(SUMCAT_MAIN.items()):
+            cn = e.get('cn') or ''
+            en = e.get('en') or ''
+            if q and q not in cn.lower() and q not in en.lower() and q not in f'0x{int(hk)&0xFFFFFFFF:08X}'.lower():
+                continue
+            print('  %-16s %-26s 等级上限%d 0x%08X' % (cn, ('(%s)' % en) if en else '',
+                                                      e.get('maxLevel', 15), int(hk) & 0xFFFFFFFF))
+        print(f'[信息] 主加护目录共 {len(SUMCAT_MAIN)} 种')
+        return
+    if args.action == 'subparams':
+        q = (args.query or '').lower()
+        print('=== 副词条目录(%d 种) ===' % len(SUMCAT_SUB))
+        for hk, e in sorted(SUMCAT_SUB.items()):
+            cn = e.get('cn') or ''
+            if q and q not in cn.lower() and q not in f'0x{int(hk)&0xFFFFFFFF:08X}'.lower():
+                continue
+            print('  %-30s 档位上限%d %s 0x%08X' % (cn, e.get('maxLevel', 9),
+                                                    ('百分比' if e.get('isPercent') else '数值'), int(hk) & 0xFFFFFFFF))
+        print(f'[信息] 副词条目录共 {len(SUMCAT_SUB)} 种')
+        return
+    if args.action == 'legacy':
+        print('=== 旧版 3101-3115 记录(含义未完全确认,只读展示) ===')
+        m3101 = vm(save, 3101); m3102 = vm(save, 3102); m3113 = vm(save, 3113)
+        m3114 = vm(save, 3114); m3115 = vm(save, 3115)
+        units = sorted(set(m3101) | set(m3102) | set(m3113) | set(m3114) | set(m3115))
         for u in units:
             worn = m3101.get(u)
-            ch = chara_label_by_hash(worn) if worn and worn != EMPTY else '未装备'
+            ch = chara_label_by_hash(worn) if worn and (worn & 0xFFFFFFFF) != EMPTY else '未装备'
             t = m3113.get(u)
-            print(f'  槽{u}: 装备={ch} 等级={m3102.get(u,0)} typeHash=0x{(t or 0):08X}')
+            print(f'  槽{u}: 角色={ch} 等级={m3102.get(u,0)} 3113[0]=0x{int(t or 0)&0xFFFFFFFF:08X} '
+                  f'3114=0x{int(m3114.get(u,0))&0xFFFFFFFF:08X} 3115={m3115.get(u,0)}')
         return
+
+    records, equipped, max_slot, unlocked = summon_inventory(save)
+    if args.action == 'list':
+        q = (args.query or '').lower()
+        show_all = getattr(args, 'all', False)
+        print('=== 召唤石背包(%d/%d%s) ===' % (
+            len(records), SUMMON_CAPACITY, ' · 已解锁' if unlocked else ' · 未解锁'))
+        if show_all:
+            print('   (--all: 显示全部 1000 行,含空位)')
+        eq_set = set(int(v) & 0xFFFFFFFF for v in equipped if v)
+        for r in records:
+            if q and q not in summon_type_name(r['type_hash']).lower() and \
+                    q not in summon_trait_name(r['main_hash']).lower() and \
+                    q not in summon_sub_name(r['sub_hash']).lower() and \
+                    q not in f'0x{r["type_hash"]:08X}'.lower():
+                continue
+            mark = '★' if r['slot'] in eq_set else ' '
+            print('  %s槽%-4d %-32s 主:%s Lv%-2d 副:%s 档%-2d 阶级%d 0x%08X' % (
+                mark, r['slot'], summon_type_name(r['type_hash']),
+                summon_trait_name(r['main_hash']), r['main_level'],
+                summon_sub_name(r['sub_hash']), r['sub_level'], r['rank'], r['type_hash']))
+        if show_all:
+            maps = summon_maps(save)
+            empty_rows = [u for u in range(SUMMON_CAPACITY) if summon_record_from_maps(maps, u) is None]
+            print(f'   (空 unit {len(empty_rows)} 个: {",".join(str(u) for u in empty_rows[:20])}...)')
+        return
+    if args.action == 'show':
+        r = summon_locate(save, args.unit)
+        if r is None:
+            print(f'[错误] 找不到槽/unit {args.unit}(先 "summons list" 查看)'); return
+        eq_set = set(int(v) & 0xFFFFFFFF for v in equipped if v)
+        print(f'unit {r["unit"]} (槽 {r["slot"]})')
+        print(f'  种类  : {summon_type_name(r["type_hash"], with_en=True)} 0x{r["type_hash"]:08X}')
+        print(f'  主加护: {summon_trait_name(r["main_hash"], with_en=True)} Lv{r["main_level"]} 0x{r["main_hash"]:08X}')
+        print(f'  副词条: {summon_sub_name(r["sub_hash"])} 档{r["sub_level"]} 0x{r["sub_hash"]:08X}')
+        print(f'  阶级  : {r["rank"]}  装备: {"是(装备槽 " + ",".join(str(i+1) for i, v in enumerate(equipped) if (int(v) & 0xFFFFFFFF) == r["slot"]) + ")" if r["slot"] in eq_set else "否"}')
+        return
+
+    def _resolve_main_sub(args2, cur):
+        """解析 --main/--sub(可空 = 沿用现有值)。返回 (main_hash, sub_hash) 或错误。"""
+        main_h, sub_h = cur['main_hash'], cur['sub_hash']
+        if getattr(args2, 'main', None):
+            mh = summon_find_main(args2.main)
+            if mh is None:
+                print(f'[错误] 找不到主加护: {args2.main}(可用 "summons traits" 查看)'); return None, None
+            main_h = mh
+        if getattr(args2, 'sub', None):
+            sh = summon_find_sub(args2.sub)
+            if sh is None:
+                print(f'[错误] 找不到副词条: {args2.sub}(可用 "summons subparams" 查看)'); return None, None
+            sub_h = sh
+        return main_h, sub_h
+
+    def _levels(args2, cur):
+        ml = cur['main_level'] if getattr(args2, 'main_level', None) is None else int(args2.main_level)
+        sl = cur['sub_level'] if getattr(args2, 'sub_level', None) is None else int(args2.sub_level)
+        return ml, sl
+
     if args.action == 'set':
-        u = args.unit
-        if args.chara:
-            ch, gid = find_chara(args.chara)
-            set_first(save, ID_SUM_CHARA, u, ch, 'uint')
-        if args.level is not None:
-            set_first(save, ID_SUM_LEVEL, u, args.level, 'int')
-        save_and_backup(save, args.save, 'summon')
-        print(f'[完成] 召唤石槽{u} 已更新')
+        cur = summon_locate(save, args.unit)
+        if cur is None:
+            print(f'[错误] 找不到槽/unit {args.unit}(先 "summons list" 查看)'); return
+        type_h = cur['type_hash']
+        if getattr(args, 'type', None):
+            th = summon_find_type(args.type)
+            if th is None:
+                print(f'[错误] 找不到召唤石种类: {args.type}(可用 "summons catalog" 查看)'); return
+            type_h = th
+        main_h, sub_h = _resolve_main_sub(args, cur)
+        if main_h is None:
+            return
+        ml, sl = _levels(args, cur)
+        rank = cur['rank'] if getattr(args, 'rank', None) is None else int(args.rank)
+        err, warns = summon_validate_draft(type_h, main_h, sub_h, ml, sl, rank, natural_warn=True)
+        if err:
+            print(f'[错误] {err}'); return
+        for w in warns:
+            print(f'[警告] {w}')
+        unit = cur['unit']
+        err2, updated = summon_update(save, unit, type_h, main_h, sub_h, ml, sl, rank)
+        if err2:
+            print(f'[错误] {err2}'); return
+        bak = save_and_backup(save, args.save, 'summon')
+        print(f'[完成] unit {unit} 已更新(槽 {updated["slot"]}) 备份:{os.path.basename(bak)}')
+        print(f'  {summon_type_name(updated["type_hash"])} 主:{summon_trait_name(updated["main_hash"])} Lv{updated["main_level"]} '
+              f'副:{summon_sub_name(updated["sub_hash"])} 档{updated["sub_level"]} 阶级{updated["rank"]}')
+        return
+    if args.action == 'add':
+        th = summon_find_type(args.type)
+        if th is None:
+            print(f'[错误] 找不到召唤石种类: {args.type}(可用 "summons catalog" 查看)'); return
+        te = SUMCAT_TYPES.get(_sum_key(th), {})
+        # 默认主加护/副词条:该种类 2.0.2 天然词池第一项
+        dummy = {'main_hash': EMPTY, 'sub_hash': 0, 'main_level': 0, 'sub_level': 0}
+        main_h, sub_h = _resolve_main_sub(args, dummy)
+        if main_h is None:
+            return
+        if main_h == EMPTY:
+            pool_m = [int(x) & 0xFFFFFFFF for x in te.get('mainTraitHashes', [])]
+            main_h = pool_m[0] if pool_m else None
+            if main_h is None:
+                print('[错误] 需要指定 --main 主加护(目录中无默认)'); return
+        if sub_h == 0 or sub_h == EMPTY:
+            pool_s = [int(x) & 0xFFFFFFFF for x in te.get('subParamHashes', [])]
+            sub_h = pool_s[0] if pool_s else None
+            if sub_h is None:
+                print('[错误] 需要指定 --sub 副词条(目录中无默认)'); return
+        ml = args.main_level if getattr(args, 'main_level', None) is not None else summon_main_max_level(main_h)
+        sl = args.sub_level if getattr(args, 'sub_level', None) is not None else summon_sub_max_level(sub_h)
+        rank = args.rank if getattr(args, 'rank', None) is not None else 3
+        err, warns = summon_validate_draft(th, main_h, sub_h, ml, sl, rank, natural_warn=True)
+        if err:
+            print(f'[错误] {err}'); return
+        for w in warns:
+            print(f'[警告] {w}')
+        dry = getattr(args, 'dry_run', False)
+        err2, rec = summon_create(save, th, main_h, sub_h, ml, sl, rank, dry=dry)
+        if err2:
+            print(f'[错误] {err2}'); return
+        if dry:
+            print(f'[dry] 将新增: {summon_type_name(rec["type_hash"])} 主:{summon_trait_name(rec["main_hash"])} Lv{rec["main_level"]} '
+                  f'副:{summon_sub_name(rec["sub_hash"])} 档{rec["sub_level"]} 阶级{rec["rank"]} (槽{rec["slot"]}, unit {rec["unit"]})')
+            return
+        # 装备(可选 --equip 1-4)
+        if getattr(args, 'equip', None):
+            idx = int(args.equip) - 1
+            e = summon_set_equipped(save, idx, rec['slot'])
+            if e:
+                print(f'[错误] {e}'); return
+        bak = save_and_backup(save, args.save, 'summon')
+        print(f'[完成] 已新增: {summon_type_name(rec["type_hash"])} (槽{rec["slot"]}, unit {rec["unit"]}) 备份:{os.path.basename(bak)}')
+        print(f'  主:{summon_trait_name(rec["main_hash"])} Lv{rec["main_level"]} 副:{summon_sub_name(rec["sub_hash"])} '
+              f'档{rec["sub_level"]} 阶级{rec["rank"]}' + (f' 已装备到槽{args.equip}' if getattr(args, 'equip', None) else ''))
+        return
+    if args.action == 'equip':
+        idx = int(args.slot) - 1
+        r = summon_locate(save, args.unit)
+        if r is None:
+            print(f'[错误] 找不到槽/unit {args.unit}(先 "summons list" 查看)'); return
+        err = summon_set_equipped(save, idx, r['slot'])
+        if err:
+            print(f'[错误] {err}'); return
+        bak = save_and_backup(save, args.save, 'summon_equip')
+        print(f'[完成] 装备槽{args.slot} <- {summon_type_name(r["type_hash"])} (槽{r["slot"]}) 备份:{os.path.basename(bak)}')
+        return
+    if args.action == 'unequip':
+        idx = int(args.slot) - 1
+        err = summon_set_equipped(save, idx, 0)
+        if err:
+            print(f'[错误] {err}'); return
+        bak = save_and_backup(save, args.save, 'summon_unequip')
+        print(f'[完成] 装备槽{args.slot} 已卸下 备份:{os.path.basename(bak)}')
+        return
 
 def cmd_loadout(args):
     save = open_save(args.save)
@@ -1190,9 +1861,42 @@ def main():
         if act in ('equip', 'unequip'):
             pp.add_argument('sigil')
 
-    p = sub.add_parser('summons'); pa = p.add_subparsers(dest='action')
-    p1 = pa.add_parser('list')
-    p2 = pa.add_parser('set'); p2.add_argument('unit', type=int); p2.add_argument('--chara'); p2.add_argument('--level', type=int)
+    p = sub.add_parser('summons', help='召唤石(DLC 2.0 背包): 列表/修改/新增/装备,真实名称显示')
+    pa = p.add_subparsers(dest='action')
+    p1 = pa.add_parser('list', help='列出背包中的召唤石(真实名称)')
+    p1.add_argument('query', nargs='?', help='关键词过滤(名称/0x)')
+    p1.add_argument('--all', action='store_true', help='显示全部 1000 行(含空位)')
+    p2 = pa.add_parser('show', help='查看单个召唤石详情')
+    p2.add_argument('unit', type=int)
+    p3 = pa.add_parser('set', help='修改已有召唤石: set <unit> [--type 种类] [--main 主加护] [--sub 副词条] [--main-level N] [--sub-level N] [--rank N]')
+    p3.add_argument('unit', type=int)
+    p3.add_argument('--type', help='新种类(留空 = 不变;换种类会重建 SlotID 并迁移装备引用)')
+    p3.add_argument('--main', help='主加护(留空 = 不变)')
+    p3.add_argument('--sub', help='副词条(留空 = 不变)')
+    p3.add_argument('--main-level', type=int)
+    p3.add_argument('--sub-level', type=int)
+    p3.add_argument('--rank', type=int)
+    p4 = pa.add_parser('add', help='新增召唤石: add <种类> [--main 主加护] [--sub 副词条] [--main-level N] [--sub-level N] [--rank N] [--equip 1-4] [--dry-run]')
+    p4.add_argument('type')
+    p4.add_argument('--main')
+    p4.add_argument('--sub')
+    p4.add_argument('--main-level', type=int)
+    p4.add_argument('--sub-level', type=int)
+    p4.add_argument('--rank', type=int)
+    p4.add_argument('--equip', type=int, help='新增后直接装备到槽 1-4')
+    p4.add_argument('--dry-run', action='store_true')
+    p5 = pa.add_parser('equip', help='装备: equip <1-4> <unit>')
+    p5.add_argument('slot', type=int)
+    p5.add_argument('unit', type=int)
+    p6 = pa.add_parser('unequip', help='卸下装备槽: unequip <1-4>')
+    p6.add_argument('slot', type=int)
+    p7 = pa.add_parser('catalog', help='列出召唤石种类目录(189 种,真实名称)')
+    p7.add_argument('query', nargs='?')
+    p8 = pa.add_parser('traits', help='列出主加护目录')
+    p8.add_argument('query', nargs='?')
+    p9 = pa.add_parser('subparams', help='列出副词条目录')
+    p9.add_argument('query', nargs='?')
+    p10 = pa.add_parser('legacy', help='旧版 3101-3115 记录(只读)')
 
     p = sub.add_parser('loadout'); pa = p.add_subparsers(dest='action')
     p1 = pa.add_parser('list')

@@ -13,6 +13,7 @@ description: 了解或修改 GBFR(碧蓝幻想 Relink)存档修改器项目代�
 - **每次写入自动备份原档 + 重算 xxHash64 校验和**;写入前可用 `--dry-run` 预览,写入后会重新打开存档验证校验和。
 - 存档格式:`SaveGameFile` 包装头 + FlatBuffers(`SaveDataBinary`)。校验和位于文件末尾 u32 指向的 10 个 u64 哈希槽,用 `uint:1003`(种子 0x2F1A43EBCD)选择激活槽。
 - 功能:物品数量、**生成合法因子**(自动校验副词条组合合法性)、角色因子配装/卸下、召唤石、配装方案保存恢复、上限突破(Overmastery,数值 0–1023)、小钳蟹收集、武器祝福(Wrightstone)生成。
+- **v1.3 召唤石自定义**:DLC 2.0 召唤石背包(id_type 1451-1460)完整编辑,种类/主加护/副词条/等级/阶级/4 槽装备全部以**真实名称**显示(哈希已逆向,目录 `catalog_summon.json`,逆向自 GBFR PE Patch Tool 的 summons.json / summon_skills.json / summon_sub_params.json + 2.0.2 summon.tbl 天然规则)。
 - v1.1+ 起所有涉及角色的命令支持**游戏内角色名**(中文精确/包含匹配、英文不区分大小写),并兼容 `PLxxxx` 代码与 `0x` 哈希;列表输出统一为 `欧根 (Eugen) [PL0500]` 形式。部分预留槽(PL2000、PL3000~PL3900)游戏文本中无名,仍显示 PL 代码。
 - 环境:Python 3.10+,依赖 `msgpack`(目录构建脚本用);打包需 PyInstaller。**修改存档前请完全退出游戏(含 Steam 云同步)**,避免被覆盖。
 
@@ -24,8 +25,8 @@ description: 了解或修改 GBFR(碧蓝幻想 Relink)存档修改器项目代�
 
 | 文件 | 规模 | 职责 |
 |---|---|---|
-| `gbfr_gui.py` | ~890 行 | **GUI 入口**(tkinter,标题 "GBFR 存档修改器 v1.1")。是 `gbfr_cheat_tool.py`(导入为 `gct`)的薄封装:`App` 类 + `ttk.Notebook`,每个功能区一个标签页(物品/因子/角色/召唤石/配装方案/上限突破/小钳蟹/祝福);各按钮的 `cmd_*` 方法把输入框组装成 argparse Namespace 后调用对应 `gct.cmd_*(args)`;`LogCapture` 类把 `print` 重定向到界面日志框。含 PyInstaller frozen 兼容(`sys._MEIPASS`) |
-| `gbfr_cheat_tool.py` | ~1240 行 | **CLI 核心,全部存档修改逻辑所在**。子命令:`items / sigils / chars / summons / loadout / overmastery / crab / wrightstone`(注册在文件末尾 `main()`)。关键常量:`EMPTY=0x887AE0B0`;id_type 1801/1802(物品哈希/数量)、2701–2707(因子槽)、1701/1702(词条 id/等级);`GEM_SLOT_BASE=30000`、`TRAIT_REC_BASE=120000000`;召唤石 3101/3102/3113。导入时加载全部目录 JSON(CAT/GEMCAT/CHARSCAT/SIGILS_FULL/LEGAL/CHAR_NAMES),并 `sys.path.insert` 引入上游核心 |
+| `gbfr_gui.py` | ~1000 行 | **GUI 入口**(tkinter,标题 "GBFR 存档修改器 v1.3")。是 `gbfr_cheat_tool.py`(导入为 `gct`)的薄封装:`App` 类 + `ttk.Notebook`,每个功能区一个标签页(物品/因子/角色/召唤石/配装方案/上限突破/小钳蟹/祝福);各按钮的 `cmd_*` 方法把输入框组装成 argparse Namespace 后调用对应 `gct.cmd_*(args)`;`LogCapture` 类把 `print` 重定向到界面日志框。含 PyInstaller frozen 兼容(`sys._MEIPASS`) |
+| `gbfr_cheat_tool.py` | ~1500 行 | **CLI 核心,全部存档修改逻辑所在**。子命令:`items / sigils / chars / summons / loadout / overmastery / crab / wrightstone`(注册在文件末尾 `main()`)。关键常量:`EMPTY=0x887AE0B0`;id_type 1801/1802(物品哈希/数量)、2701–2707(因子槽)、1701/1702(词条 id/等级);`GEM_SLOT_BASE=30000`、`TRAIT_REC_BASE=120000000`;召唤石新系统 **1451-1460**(装备/登记/种类/主加护/副词条/等级/阶级),旧版 3101/3102/3113 仅 `summons legacy` 只读展示。导入时加载全部目录 JSON(CAT/GEMCAT/CHARSCAT/SIGILS_FULL/LEGAL/CHAR_NAMES/SUMCAT),并 `sys.path.insert` 引入上游核心 |
 | `gbfr_crab_tool.py` | ~215 行 | 独立小工具:改普通/漆黑小钳蟹数量、漆黑蟹像=1(等价完成 DLC 收集链)、置位蟹收集任务(0x290002~0x290015)完成标志。文件头 docstring 有存档格式原理说明 |
 | `gbfr_sigil_tool.py` | ~161 行 | 独立小工具:向 GemManager 空槽注入「可怕的漆黑钳蟹因子」(GEEN_301_00,`--plus` 为 +版 GEEN_301_10),演示了完整的"找空槽→写各字段→备份→重算校验和→重开验证"流程 |
 | `gbfr_datai.py` | ~155 行 | 游戏数据归档工具:GBFR 自定义 **XXHash64**(`gbfr_file_hash`,对路径小写做 xxh64)实现 + 最小 FlatBuffers 读取器,解析 `data.i` 索引并定位/提取表文件(是逆向工作基础) |
@@ -58,6 +59,7 @@ description: 了解或修改 GBFR(碧蓝幻想 Relink)存档修改器项目代�
 | `gem_mix_pool.json` | ~8KB | V+ 合成池明细 |
 | `catalog_chars.json` | <1KB | 角色哈希 → PLxxxx(PL0000~PL3900) |
 | `chara_names.json` | ~2KB | PLxxxx → {cn, en},取自游戏本体 text_chara.msg(中英双语) |
+| `catalog_summon.json` | ~180KB | **召唤石逆向目录(v1.3)**:`types`(189 种,含 cn/en/baseName/code/cost/typeName/档位/模式/天然词池)、`main_traits`(243 种主加护)、`sub_params`(22 种副词条,含档位数值表)。来源:GBFR PE Patch Tool 数据 + DLC 2.0.2 summon.tbl 天然规则;构建脚本 `build_summon_catalog.py` |
 | `wrightstone_traits.json` | ~25KB | 武器祝福可用词条池:存档中实测合法的 71 种 `{internalId, hash, displayName, maxLevel}`;等级上限 20(游戏实测) |
 | `system_table_skill.tbl.json` / `_skill_status` / `_gem` | skill_status **~1.9MB** | 从 game data.i 提取的原始表行(JSON);skill_status 不要整体读取 |
 | `GBFRDataTools_filelist.txt` | **~20MB**、另两个 GBFRDataTools_*.txt 数百 KB | 上游数据工具的文件清单/ID 清单,**绝不要整体读取**,只 grep |
@@ -83,18 +85,18 @@ description: 了解或修改 GBFR(碧蓝幻想 Relink)存档修改器项目代�
   ```
   python -m PyInstaller GBFR存档修改器.spec --clean
   ```
-- spec 要点:入口脚本 `gbfr_gui.py`;`datas` = 7 个 JSON(catalog.json、catalog_chars/gem/sigils_full、chara_names、gem_legality、gem_mix_pool)+ 上游核心目录 `gbfr-save-editor/GBFR-Save-Editor-main/gbfr_editor/core`(保持原相对路径,与代码里 `sys.path.insert` 的位置一致);`hiddenimports = ['gbfr_cheat_tool','gbfr_save','hashing']`;单文件 EXE、`console=False`(无黑框)、UPX。
+- spec 要点:入口脚本 `gbfr_gui.py`;`datas` = 8 个 JSON(catalog.json、catalog_chars/gem/sigils_full/**summon**、chara_names、gem_legality、gem_mix_pool)+ 上游核心目录 `gbfr-save-editor/GBFR-Save-Editor-main/gbfr_editor/core`(保持原相对路径,与代码里 `sys.path.insert` 的位置一致);`hiddenimports = ['gbfr_cheat_tool','gbfr_save','hashing']`;单文件 EXE、`console=False`(无黑框)、UPX。
 - 产物:`dist\GBFR存档修改器.exe`(`build\` 为中间产物可清理)。`dist\GBFR存档修改器_原版备份.exe` 是旧版 exe 的备份,别删错。
 - 打包后务必用真实存档跑一遍 GUI(尤其确认 JSON 与上游 core 被正确内嵌——漏数据文件时目录会加载为空 `{}`/None)。
 
 ### 4. CLI 命令速览(`python gbfr_cheat_tool.py [--save 路径] <命令>`)
-`items list/set` · `sigils list/add`(add: `--level --secondary --equip --dry-run`)· `chars list/sigils/equip/unequip/clear` · `summons list/set` · `loadout list/save/restore` · `wrightstone list/traits/add` · `overmastery list/set/clear` · `crab [--wee N] [--dark N] [--statue]`。详见 `save_tool\README.md`(含上限突破 0~1023→星级映射表与合法性说明)。
+`items list/set` · `sigils list/add`(add: `--level --secondary --equip --dry-run`)· `chars list/sigils/equip/unequip/clear` · `summons list/show/set/add/equip/unequip/catalog/traits/subparams/legacy` · `loadout list/save/restore` · `wrightstone list/traits/add` · `overmastery list/set/clear` · `crab [--wee N] [--dark N] [--statue]`。详见 `save_tool\README.md`(含上限突破 0~1023→星级映射表、召唤石 v1.2 说明与合法性)。
 
 ## 五、注意事项
 
 - **大文件不要整体读取**:优先 grep/按行区间读。黑名单:`GBFRDataTools_filelist.txt`(~20MB)、`system_table_skill_status.tbl.json`(~1.9MB)、`catalog_sigils_full.json`(520KB)、`gem_legality.json`(285KB);大 `.msg` 转储同理。
 - **修改存档前先备份**:工具每次写入自动备份并修校验和,但仍建议保留手动副本;操作前**完全退出游戏(含 Steam 云同步)**——游戏运行时写档可能被覆盖或触发强制写入风险(GUI 有"强制写入"勾选项,慎用)。回退方式:把 `SaveData1.dat.<tag>_<时间戳>` 备份改回 `SaveData1.dat`。
-- **防闪退/越界红线**:角色因子装备上限默认 12(点亮天赋盘"因子栏位解锁"效果 0x7B727910 后为 13),**超过会闪退**(工具已自动检查并拒绝);上限突破数值限 0–1023;副词条必须在该因子的合法池内(`gem_legality.json`),等级不超过该词条合法上限。
+- **防闪退/越界红线**:角色因子装备上限默认 12(点亮天赋盘"因子栏位解锁"效果 0x7B727910 后为 13),**超过会闪退**(工具已自动检查并拒绝);上限突破数值限 0–1023;副词条必须在该因子的合法池内(`gem_legality.json`),等级不超过该词条合法上限。召唤石:主加护等级 ≤ min(目录 maxLevel,15)、副词条档位 ≤ 目录 maxLevel、阶级 0-3;组合不在该种类 2.0.2 天然词池时工具只警告不拒绝(与 PE Patch Tool 一致),换种类会重建 SlotID 并自动迁移 1451 装备引用。
 - **装备因子要双写**:游戏判定"已装备"既看 2706(归属)也要求把因子 2702 序列号登记进角色 1403 装备列表;工具在 equip/unequip 时自动登记/注销——自己改存档逻辑时别漏。
 - **上游核心 `gbfr_save.py` / `hashing.py` 是开源已验证代码,不要修改**;需要新行为就扩展本项目的工具层。
 - `_*.py/_*.msg/_*.txt`(下划线前缀)是历史逆向产物,不是运行时依赖;构建/打包时也不在 spec 里。
