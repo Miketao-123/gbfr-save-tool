@@ -844,6 +844,14 @@ def find_sigil(q):
         return 3
     return min(hits, key=score)
 
+def sigil_trait_label(h):
+    """因子词条哈希 -> 中文显示名(副槽为空时显示“无”)。"""
+    h = int(h) & 0xFFFFFFFF
+    if h == EMPTY:
+        return '无'
+    e = GEMCAT['trait_info'].get(str(h), {})
+    return e.get('cn') or e.get('name') or f'0x{h:08X}'
+
 def find_trait(q):
     q0 = (q or '').strip()
     if not q0:
@@ -1436,8 +1444,14 @@ def cmd_chars(args):
             g = m2703.get(u)
             e = GEMCAT['sigil_info'].get(str(g))
             t1 = m1701.get(TRAIT_REC_BASE + idx * 100)
+            t2 = m1701.get(TRAIT_REC_BASE + idx * 100 + 1)
             name = (e.get('cn') or e.get('name')) if e else f'0x{g:08X}'
-            print(f'  槽{u}: {name:<28} lv{m2704.get(u)}')
+            line = f'  槽{u}: {name:<24} lv{m2704.get(u)}'
+            if t1:
+                line += f'  主:{sigil_trait_label(t1)}'
+            if t2:
+                line += f'  副:{sigil_trait_label(t2)}'
+            print(line)
         return
     if args.action == 'clear':
         changed = 0

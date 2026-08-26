@@ -651,8 +651,14 @@ class App:
             g = m2703.get(u)
             e = gct.GEMCAT['sigil_info'].get(str(g))
             t1 = m1701.get(gct.TRAIT_REC_BASE + idx * 100)
+            t2 = m1701.get(gct.TRAIT_REC_BASE + idx * 100 + 1)
             name = (e.get('cn') or e.get('name')) if e else f'0x{g:08X}'
-            lines.append(f'  槽{u}: {name:<26} lv{m2704.get(u)}')
+            line = f'  槽{u}: {name:<24} lv{m2704.get(u)}'
+            if t1:
+                line += f'  主:{gct.sigil_trait_label(t1)}'
+            if t2:
+                line += f'  副:{gct.sigil_trait_label(t2)}'
+            lines.append(line)
         self._set_text(self.chars_out, '\n'.join(lines) if len(lines) > 1 else f'{gct.chara_label(gid)} 未装备因子')
 
     def cmd_chars_unequip(self):
