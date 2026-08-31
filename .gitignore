@@ -48,3 +48,6 @@ Desktop.ini
 .vscode/
 .idea/
 *.log
+
+_tmp/
+*.backup.*

@@ -129,8 +129,19 @@ buff增伤 = max{ min[(1+Σ攻up)(1+Σ防down)(1+强壮)(1+逆境), 2]×(1-攻do
 
 ### 3.6 上限与额外伤害(问题四)
 - 攻击 up/防御 down 会被上限机制约束(buff 增伤区的上限检测)。
-- 天星之雪(Celestial Aqua, SKILL_324_00)= 对 Break 敌人/连锁中伤害 +15%,属于上限内伤害乘区;不影响独立追击段;受上限截断。
-- 追击段只受专属率参数影响(weakElementAddDamageRate_ 等),不被主伤害乘区(如天星之雪)放大。
+- **天星之雪(Celestial Aqua, SKILL_324_00, Key 2828591747)— v4.1 修正:走"上限外增伤(额外伤害)乘区"的 `(1+Σ造成伤害up)` 因子,乘在 `min(可造成伤害, 上限)` 之后,不被伤害上限截断**(此前版本标"上限内/受截断",系仅凭文本字面推断,作废)。
+  - 官方文本(中): "对破防状态的敌人造成的伤害量提升;连锁时域和奥义连锁中造成的伤害量提升";(EN): "Boosts the damage dealt to foes in Break, including link time attacks and chain bursts";Explain 模板 `DMG Dealt +{0:.1f}%`(=造成的伤害+15%, L15)。
+  - 证据链(代码/数据层):
+    1. **单倍率单修饰器**: skill_status 每级仅 LevelValue1 非零(1→15),破防/连锁时域/奥义连锁三个触发条件共用同一倍率;数据层不存在"时域单独走另一乘区"的第二参数。
+    2. **同模板家族**: Explain 模板与 OD刺客(SKILL_030)/破防刺客(SKILL_031)/天星之止息(SKILL_326)完全相同(`DMG Dealt +{0:.1f}%`);skill.tbl 中 324/326 同为 `Unk11=7`(030/031 为 -1);同族 326 已实测为上限外增伤。
+    3. **奥义连锁独立管线(决定性结构证据)**: 连锁走 `ChainBurstATKRate_FullChain/3Chain/2Chain` + `chainBurstDamageLimit_=9999999`,无视防御、不暴击、不吃常规伤害上升/上限UP;若天星之雪为上限内乘区修饰器,对连锁必然无效——但官方文本明确"奥义连锁中造成的伤害量提升",故其倍率只能挂在 `min()` 截断之后。
+    4. **连锁伤害率是独立通道**: SKILL_009(Linked Together)有专用 `Chain Burst DMG +{3}–{5}%` 参数槽;324 无此参数,其单倍率只能经通用 DMG-Dealt 通道(上限外 `1+Σ造成伤害up`)同时覆盖破防/时域/连锁。
+  - **连锁时域专项结论**: 时域期间天星之雪**作用于额外伤害(上限外)乘区**。时域本身不改公式结构(代码层仅 linktime 曲线=时域条累积速率、魔晶石词条 `link_time_disable`/`link_time_no_drain`,无"时域改上限/加乘区"参数);时域只是让其触发条件成立。已达上限的攻击时域内仍 ×1.15;未达上限同样 ×1.15(上限外因子无上限检测);对 OD 缩放<1 的 Boss 依然全额有效(对比 buff 增伤 OD 期间恒 0)。
+  - 与其他 DMG-Dealt 源在 Σ 内**加算**(如同时带天星之止息: 1+0.15+0.10=1.25)。
+  - 置信度: 结构证据强;最终判定建议实机 A/B(木桩普攻稳定贴上限→进时域 ×1.15 即证实,不动则证伪)。
+- 天星之雪与追击段: 不直接相乘(不加追击率/追击伤害%),但追击段 = 最终主伤害 × Σ追击伤害%,主伤害被 ×1.15 后追击段同步跟随 ×1.15(间接,非公式内相乘)。
+- 追击段只受专属率参数影响(weakElementAddDamageRate_ 等),不被主伤害上限内乘区放大。
+- 残存不确定: 030 OD刺客/031 破防刺客同 Explain 模板,按同规则推定同样走上限外,待逐项实测。
 
 ### 3.7 减伤机制(问题五,保留)
 - 玩家基础防御 = 0;受伤 = 怪原伤害 ×(1-攻down)×(1-特防)×(1-防up)×(1-霸体30%)×(1-特减)×(1-减伤%)。
@@ -152,7 +163,7 @@ buff增伤 = max{ min[(1+Σ攻up)(1+Σ防down)(1+强壮)(1+逆境), 2]×(1-攻do
 ---
 
 ## 五、文件索引
-- Excel 交付物:`GBFR伤害公式_v3_代码解包版.xlsx`(27 表:7 张问题/机制表 + 数据参考表)
+- Excel 交付物:`GBFR伤害公式_v4_代码解包版.xlsx`(30 表;v4.1 已修正天星之雪乘区归属,见 3.6)
 - 解包中间产物:`_dmg_data/json/*.json`(55+ 表)、`_dmg_data/headers/*.headers`、`_dmg_data/curves/*`、`_dmg_data/web/*`(社区资料)
 - 关键脚本:`_dmg_data/extract_tables.py`(表提取+版本门控)、`parse_curves.py`(曲线)、`resolve_names.py`(名称反解)、`extract_exe_strings.py`(exe 字符串)、`build_quest_roster.py`(关卡怪物)、`map_quest_em.py`(任务→Boss)、`build_xlsx3.py`(Excel 生成)
 - 网络资料:碧蓝幻想relink吧 voltskyghost《无尽黄昏伤害计算公式解析》(2026-08)、3DM ted1985、游民星空 M_Eve0、escapist 追击/上限详解
