@@ -24,7 +24,7 @@ from tkinter import ttk, filedialog
 
 import gui_theme as th  # 暗色主题模块(翻新新增)
 
-APP_TITLE = "GBFR 存档修改器 v1.3"
+APP_TITLE = "GBFR 存档修改器 v1.4"
 
 
 def _chara_choices():
@@ -168,7 +168,7 @@ class App:
             top = ttk.Frame(self.root, padding=(8, 6, 8, 2))
             top.pack(fill="x")
             ttk.Label(top, text=APP_TITLE, font=th.font(12, bold=True), foreground=th.ACCENT).pack(side="left")
-            ttk.Label(top, text="v1.3", foreground=th.FG_DIM).pack(side="right")
+            ttk.Label(top, text="v1.4", foreground=th.FG_DIM).pack(side="right")
 
             row = ttk.Frame(self.root, padding=(8, 2, 8, 6))
             row.pack(fill="x")

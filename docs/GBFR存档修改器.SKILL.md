@@ -25,7 +25,7 @@ description: 了解或修改 GBFR(碧蓝幻想 Relink)存档修改器项目代�
 
 | 文件 | 规模 | 职责 |
 |---|---|---|
-| `gbfr_gui.py` | ~1000 行 | **GUI 入口**(tkinter,标题 "GBFR 存档修改器 v1.3")。是 `gbfr_cheat_tool.py`(导入为 `gct`)的薄封装:`App` 类 + `ttk.Notebook`,每个功能区一个标签页(物品/因子/角色/召唤石/配装方案/上限突破/小钳蟹/祝福);各按钮的 `cmd_*` 方法把输入框组装成 argparse Namespace 后调用对应 `gct.cmd_*(args)`;`LogCapture` 类把 `print` 重定向到界面日志框。含 PyInstaller frozen 兼容(`sys._MEIPASS`) |
+| `gbfr_gui.py` | ~1000 行 | **GUI 入口**(tkinter,标题 "GBFR 存档修改器 v1.4")。是 `gbfr_cheat_tool.py`(导入为 `gct`)的薄封装:`App` 类 + `ttk.Notebook`,每个功能区一个标签页(物品/因子/角色/召唤石/配装方案/上限突破/小钳蟹/祝福);各按钮的 `cmd_*` 方法把输入框组装成 argparse Namespace 后调用对应 `gct.cmd_*(args)`;`LogCapture` 类把 `print` 重定向到界面日志框。含 PyInstaller frozen 兼容(`sys._MEIPASS`) |
 | `gbfr_cheat_tool.py` | ~1500 行 | **CLI 核心,全部存档修改逻辑所在**。子命令:`items / sigils / chars / summons / loadout / overmastery / crab / wrightstone`(注册在文件末尾 `main()`)。关键常量:`EMPTY=0x887AE0B0`;id_type 1801/1802(物品哈希/数量)、2701–2707(因子槽)、1701/1702(词条 id/等级);`GEM_SLOT_BASE=30000`、`TRAIT_REC_BASE=120000000`;召唤石新系统 **1451-1460**(装备/登记/种类/主加护/副词条/等级/阶级),旧版 3101/3102/3113 仅 `summons legacy` 只读展示。导入时加载全部目录 JSON(CAT/GEMCAT/CHARSCAT/SIGILS_FULL/LEGAL/CHAR_NAMES/SUMCAT),并 `sys.path.insert` 引入上游核心 |
 | `gbfr_crab_tool.py` | ~215 行 | 独立小工具:改普通/漆黑小钳蟹数量、漆黑蟹像=1(等价完成 DLC 收集链)、置位蟹收集任务(0x290002~0x290015)完成标志。文件头 docstring 有存档格式原理说明 |
 | `gbfr_sigil_tool.py` | ~161 行 | 独立小工具:向 GemManager 空槽注入「可怕的漆黑钳蟹因子」(GEEN_301_00,`--plus` 为 +版 GEEN_301_10),演示了完整的"找空槽→写各字段→备份→重算校验和→重开验证"流程 |
