@@ -508,7 +508,10 @@ class App:
         rec = save.find_first('int', gct.ID_ITEM_COUNT, slot)
         old = save.get_first_value(rec)
         save.set_first_value(rec, cnt)
-        bak = gct.save_and_backup(save, self.save_path.get(), 'item', force=self.var_force.get())
+        bak, _save_err = gct.try_save_and_backup(save, self.save_path.get(), 'item', force=self.var_force.get())
+        if _save_err:
+            self._note(f'[错误] {_save_err}')
+            return
         self._invalidate()
         self._note(f'[完成] {e.get("cn") or e.get("en") or e.get("id")}: {old} -> {cnt} (槽{slot}) 备份:{os.path.basename(bak)}')
         self._items_list(save)
@@ -598,7 +601,10 @@ class App:
             self._note(f'[预览] 槽{slot}: {e.get("cn") or e.get("name")} lv{level} 副词条=0x{trait2:08X} '
                        f'装备={gct.chara_label(gid) if worn else "无"}')
             return
-        bak = gct.save_and_backup(save, self.save_path.get(), 'sigil', force=self.var_force.get())
+        bak, _save_err = gct.try_save_and_backup(save, self.save_path.get(), 'sigil', force=self.var_force.get())
+        if _save_err:
+            self._note(f'[错误] {_save_err}')
+            return
         self._invalidate()
         self._note(f'[完成] 已生成 {e.get("cn") or e.get("name")} (槽{slot}, 等级{level}) 备份:{os.path.basename(bak)}')
         self._sigils_list(save)
@@ -679,7 +685,10 @@ class App:
             self._note(f'[错误] 槽 {slot} 不是 {gct.chara_label(gid)} 的因子'); return
         gct.set_first(save, gct.ID_2706, slot, gct.EMPTY, 'uint')
         gct.sigil_equip_unregister(save, ch_hash, m2702.get(slot, 0))
-        bak = gct.save_and_backup(save, self.save_path.get(), 'unequip', force=self.var_force.get())
+        bak, _save_err = gct.try_save_and_backup(save, self.save_path.get(), 'unequip', force=self.var_force.get())
+        if _save_err:
+            self._note(f'[错误] {_save_err}')
+            return
         self._invalidate()
         self._note(f'[完成] 槽{slot} 已从 {gct.chara_label(gid)} 卸下 备份:{os.path.basename(bak)}')
 
@@ -697,7 +706,10 @@ class App:
             gct.set_first(save, gct.ID_2706, u, gct.EMPTY, 'uint')
             gct.sigil_equip_unregister(save, ch_hash, m2702.get(u, 0))
             changed += 1
-        bak = gct.save_and_backup(save, self.save_path.get(), 'unequip', force=self.var_force.get())
+        bak, _save_err = gct.try_save_and_backup(save, self.save_path.get(), 'unequip', force=self.var_force.get())
+        if _save_err:
+            self._note(f'[错误] {_save_err}')
+            return
         self._invalidate()
         self._note(f'[完成] 已卸下 {gct.chara_label(gid)} 的 {changed} 个因子 备份:{os.path.basename(bak)}')
 
@@ -863,7 +875,10 @@ class App:
         err2, upd = gct.summon_update(save, self._sum_cur['unit'], th, mh, sh, ml, sl, rank)
         if err2:
             self._note(f'[错误] {err2}'); return
-        bak = gct.save_and_backup(save, self.save_path.get(), 'summon', force=self.var_force.get())
+        bak, _save_err = gct.try_save_and_backup(save, self.save_path.get(), 'summon', force=self.var_force.get())
+        if _save_err:
+            self._note(f'[错误] {_save_err}')
+            return
         self._invalidate()
         self._note('[完成] 槽%d 已更新: %s 主:%s Lv%d 副:%s 档%d 阶级%d 备份:%s' % (
             upd['slot'], gct.summon_type_name(upd['type_hash']),
@@ -898,7 +913,10 @@ class App:
                 rec['main_level'], gct.summon_sub_name(rec['sub_hash']), rec['sub_level'],
                 rec['rank'], rec['slot']))
             return
-        bak = gct.save_and_backup(save, self.save_path.get(), 'summon', force=self.var_force.get())
+        bak, _save_err = gct.try_save_and_backup(save, self.save_path.get(), 'summon', force=self.var_force.get())
+        if _save_err:
+            self._note(f'[错误] {_save_err}')
+            return
         self._invalidate()
         self._note('[完成] 已新增: %s (槽%d) 备份:%s' % (
             gct.summon_type_name(rec['type_hash']), rec['slot'], os.path.basename(bak)))
@@ -925,7 +943,10 @@ class App:
         if not eq_recs:
             self._note('[错误] 存档缺少 1451 装备字段'); return
         save.set_values(eq_recs[0], new_eq)
-        bak = gct.save_and_backup(save, self.save_path.get(), 'summon_equip', force=self.var_force.get())
+        bak, _save_err = gct.try_save_and_backup(save, self.save_path.get(), 'summon_equip', force=self.var_force.get())
+        if _save_err:
+            self._note(f'[错误] {_save_err}')
+            return
         self._invalidate()
         names = {r['slot']: gct.summon_type_name(r['type_hash']) for r in self._sum_records}
         self._note('[完成] 装备已更新: ' + ' | '.join(
@@ -942,7 +963,10 @@ class App:
         if not eq_recs:
             self._note('[错误] 存档缺少 1451 装备字段'); return
         save.set_values(eq_recs[0], [0, 0, 0, 0])
-        bak = gct.save_and_backup(save, self.save_path.get(), 'summon_unequip', force=self.var_force.get())
+        bak, _save_err = gct.try_save_and_backup(save, self.save_path.get(), 'summon_unequip', force=self.var_force.get())
+        if _save_err:
+            self._note(f'[错误] {_save_err}')
+            return
         self._invalidate()
         self._note(f'[完成] 4 个装备槽已全部卸下 备份:{os.path.basename(bak)}')
         self._sum_refresh(save)
@@ -1009,7 +1033,10 @@ class App:
                 gct.set_first(save, gct.ID_2707, u, (m2707.get(u, 0) & ~3) | 2, 'uint')
                 gct.sigil_equip_register(save, ch_hash, m2702.get(u, 0))
                 ok += 1
-        bak = gct.save_and_backup(save, self.save_path.get(), 'loadout', force=self.var_force.get())
+        bak, _save_err = gct.try_save_and_backup(save, self.save_path.get(), 'loadout', force=self.var_force.get())
+        if _save_err:
+            self._note(f'[错误] {_save_err}')
+            return
         self._invalidate()
         self._note(f'[完成] 已恢复配装 {name} 到 {gct.chara_label(gid)} (装备 {ok}/{len(data.get("sigils",[]))}) 备份:{os.path.basename(bak)}')
 
@@ -1084,7 +1111,10 @@ class App:
         err = gct.set_overmastery(save, ch, lane, self.var_om_effect.get().strip(), int(val))
         if err:
             self._note(f'[错误] {err}'); return
-        bak = gct.save_and_backup(save, self.save_path.get(), 'overmastery', force=self.var_force.get())
+        bak, _save_err = gct.try_save_and_backup(save, self.save_path.get(), 'overmastery', force=self.var_force.get())
+        if _save_err:
+            self._note(f'[错误] {_save_err}')
+            return
         self._invalidate()
         _, _gid = gct.find_chara(ch)
         disp = gct.chara_label(_gid) if _gid else ch
@@ -1102,7 +1132,10 @@ class App:
         err = gct.set_overmastery(save, ch, int(lane), '', 0)
         if err:
             self._note(f'[错误] {err}'); return
-        bak = gct.save_and_backup(save, self.save_path.get(), 'overmastery', force=self.var_force.get())
+        bak, _save_err = gct.try_save_and_backup(save, self.save_path.get(), 'overmastery', force=self.var_force.get())
+        if _save_err:
+            self._note(f'[错误] {_save_err}')
+            return
         self._invalidate()
         _, _gid = gct.find_chara(ch)
         disp = gct.chara_label(_gid) if _gid else ch
@@ -1116,7 +1149,10 @@ class App:
         ch = self.var_om_chara.get().strip()
         for lane in range(4):
             gct.set_overmastery(save, ch, lane, '', 0)
-        bak = gct.save_and_backup(save, self.save_path.get(), 'overmastery', force=self.var_force.get())
+        bak, _save_err = gct.try_save_and_backup(save, self.save_path.get(), 'overmastery', force=self.var_force.get())
+        if _save_err:
+            self._note(f'[错误] {_save_err}')
+            return
         self._invalidate()
         _, _gid = gct.find_chara(ch)
         disp = gct.chara_label(_gid) if _gid else ch
@@ -1156,7 +1192,10 @@ class App:
         if self.var_crab_quest.get():
             hit, changed = gct.complete_crab_quests(save)
             self._note(f'[任务] 命中的蟹任务 {hit} 个,改动 {changed} 个标志')
-        bak = gct.save_and_backup(save, self.save_path.get(), 'crab', force=self.var_force.get())
+        bak, _save_err = gct.try_save_and_backup(save, self.save_path.get(), 'crab', force=self.var_force.get())
+        if _save_err:
+            self._note(f'[错误] {_save_err}')
+            return
         self._invalidate()
         self._note(f'[完成] 小钳蟹功能已写入 备份:{os.path.basename(bak)}')
 
@@ -1245,7 +1284,10 @@ class App:
             self._note(f'[预览] 将生成 {wt[0]} (槽{slot}, 序列号=当前+1) '
                        f'词条: {"; ".join("%s lv%s" % (gct.GEMCAT["trait_info"].get(str(th), {}).get("cn") or "0x%08X" % th, lv) for th, lv in traits)}')
             return
-        bak = gct.save_and_backup(save, self.save_path.get(), 'wrightstone', force=self.var_force.get())
+        bak, _save_err = gct.try_save_and_backup(save, self.save_path.get(), 'wrightstone', force=self.var_force.get())
+        if _save_err:
+            self._note(f'[错误] {_save_err}')
+            return
         self._invalidate()
         m2103 = self._vm(gct.WRIGHT_SERIAL_FIELD)
         self._note(f'[完成] 已生成 {wt[0]} (槽{slot}, 序列号={m2103.get(slot)}) 备份:{os.path.basename(bak)}')

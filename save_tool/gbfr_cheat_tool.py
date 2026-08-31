@@ -1317,6 +1317,18 @@ def save_and_backup(save, path, tag, force=False):
         print('[警告] 强制写入完成,但游戏仍在运行——退出游戏时存档可能被游戏覆盖,修改可能丢失!')
     return bak
 
+
+def try_save_and_backup(save, path, tag, force=False):
+    """GUI 用:保存并备份,失败(游戏运行中/写入失败)返回 (None, 错误消息),不抛异常。"""
+    try:
+        return save_and_backup(save, path, tag, force=force), None
+    except RuntimeError as exc:
+        msg = {
+            'game_running': '检测到游戏正在运行,无法安全写入存档!\n请先完全退出游戏(含 Steam 云同步)后再修改。',
+            'write_failed': '写入失败(存档可能被游戏占用或被其他程序锁定)。',
+        }.get(str(exc), str(exc))
+        return None, msg
+
 # ------- commands -------
 def cmd_items(args):
     save = open_save(args.save)
@@ -1944,14 +1956,24 @@ def main():
     args = ap.parse_args()
     if not args.cmd:
         ap.print_help(); return
-    if args.cmd == 'items': cmd_items(args)
-    elif args.cmd == 'sigils': cmd_sigils(args)
-    elif args.cmd == 'chars': cmd_chars(args)
-    elif args.cmd == 'summons': cmd_summons(args)
-    elif args.cmd == 'loadout': cmd_loadout(args)
-    elif args.cmd == 'overmastery': cmd_overmastery(args)
-    elif args.cmd == 'crab': cmd_crab(args)
-    elif args.cmd == 'wrightstone': cmd_wrightstone(args)
+    try:
+        if args.cmd == 'items': cmd_items(args)
+        elif args.cmd == 'sigils': cmd_sigils(args)
+        elif args.cmd == 'chars': cmd_chars(args)
+        elif args.cmd == 'summons': cmd_summons(args)
+        elif args.cmd == 'loadout': cmd_loadout(args)
+        elif args.cmd == 'overmastery': cmd_overmastery(args)
+        elif args.cmd == 'crab': cmd_crab(args)
+        elif args.cmd == 'wrightstone': cmd_wrightstone(args)
+    except RuntimeError as exc:
+        # save_and_backup 的安全错误统一在此转成友好提示(不再抛 Traceback)
+        msg = {
+            'game_running': '检测到游戏正在运行,无法安全写入存档!\n'
+                            '       请先完全退出游戏(含 Steam 云同步)后再修改。',
+            'write_failed': '写入失败(存档可能被游戏占用或被其他程序锁定)。',
+        }.get(str(exc), str(exc))
+        print(f'[错误] {msg}')
+        sys.exit(2)
 
 if __name__ == '__main__':
     main()
