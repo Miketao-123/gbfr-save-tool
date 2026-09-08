@@ -1152,6 +1152,7 @@ class App:
         ttk.Label(edit, text="状态/数值(1=点亮):").pack(side="left", padx=(8, 0))
         ttk.Entry(edit, textvariable=self.var_mt_value, width=12).pack(side="left", padx=4)
         ttk.Button(edit, text="写入选中行", command=self.cmd_mastery_apply).pack(side="left", padx=8)
+        ttk.Button(edit, text="激活选中", style="Accent.TButton", command=self.cmd_mastery_activate).pack(side="left", padx=4)
 
 
     def _tab_crab(self, nb):
@@ -1367,7 +1368,7 @@ class App:
         x_offsets = (type_w * 0.32, type_w * 0.68)
 
         c.create_text(left, 12, anchor="w", fill="#c9d1d9",
-                      text="暗色=未点亮/0  亮色=已习得/1或更高  点击选择,双击切换")
+                      text="暗色=未点亮/0  亮色=已习得/1或更高  单击未点亮=激活  双击=切换  滚轮=滚动")
         c.create_text(left, 30, anchor="w", fill="#8b949e",
                       text=f"当前角色专精技能 {len(rows)} 个 · 每行 2 个")
 
@@ -1414,8 +1415,42 @@ class App:
         tags = self.mastery_node_canvas.gettags(item[0])
         for tag in tags:
             if tag.startswith("node_"):
-                self._mastery_set_selected(int(tag.split("_", 1)[1]))
+                index = int(tag.split("_", 1)[1])
+                self._mastery_set_selected(index)
+                # 单击未点亮节点 = 直接激活对应专精技能
+                meta = self._selected_mastery_meta()
+                if meta is not None and int(meta['value'] or 0) == 0:
+                    self._mastery_activate_selected()
                 return
+
+    def _mastery_activate_selected(self):
+        save = self._open()
+        if save is None:
+            return
+        meta = self._selected_mastery_meta()
+        if meta is None:
+            return
+        ch = self.var_mt_chara.get().strip()
+        if not self._mastery_unit_belongs_to_chara(save, ch, meta['unit']):
+            self._note('[错误] 当前选中行不属于下拉中的角色,请先重新读取专精技能'); return
+        if int(meta['value'] or 0) > 0:
+            return
+        err = gct.set_mastery_state(save, meta['unit'], 1)
+        if err:
+            self._note(f'[错误] {err}'); return
+        bak, save_err = gct.try_save_and_backup(save, self.save_path.get(), 'mastery', force=self.var_force.get())
+        if save_err:
+            self._note(f'[错误] {save_err}'); return
+        self._invalidate()
+        name = meta.get('name') or gct.mastery_effect_name(meta['effect'])
+        self._note(f'[完成] 已激活专精技能: {name} 备份:{os.path.basename(bak)}')
+        keep = self._mastery_selected_index
+        self._mastery_refresh(save)
+        if keep is not None and 0 <= keep < len(self._mastery_rows):
+            self._mastery_set_selected(keep)
+
+    def cmd_mastery_activate(self):
+        self._mastery_activate_selected()
 
     def _mastery_node_select(self, index):
         self._mastery_set_selected(index)
@@ -1423,7 +1458,7 @@ class App:
     def _mastery_canvas_double(self, _event=None):
         if not self.mastery_node_canvas.find_withtag("current"):
             return
-        self.cmd_mastery_toggle()
+        self._note('[提示] 单击未点亮节点即可激活;取消激活请选中后点“清空选中行”')
 
     def _mastery_on_mousewheel(self, event):
         # Windows 滚轮 delta 通常为 120 的倍数;向下滚为负
