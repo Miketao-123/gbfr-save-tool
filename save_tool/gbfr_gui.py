@@ -20,7 +20,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import gbfr_cheat_tool as gct  # noqa: E402
 
 import tkinter as tk
-from tkinter import ttk, filedialog
+from tkinter import ttk, filedialog, messagebox
 
 import gui_theme as th  # 暗色主题模块(翻新新增)
 
@@ -1130,14 +1130,12 @@ class App:
             highlightthickness=0,
             height=420,
         )
-        self.mastery_node_canvas.configure(yscrollincrement=26)
         self._mastery_canvas_vsb = ttk.Scrollbar(node_frame, orient="vertical", command=self.mastery_node_canvas.yview)
         self._mastery_canvas_hsb = ttk.Scrollbar(node_frame, orient="horizontal", command=self.mastery_node_canvas.xview)
         self.mastery_node_canvas.configure(xscrollcommand=self._mastery_canvas_hsb.set, yscrollcommand=self._mastery_canvas_vsb.set)
         self._mastery_canvas_hsb.pack(side="bottom", fill="x")
         self._mastery_canvas_vsb.pack(side="right", fill="y")
         self.mastery_node_canvas.pack(side="left", fill="both", expand=True)
-        self.mastery_node_canvas.bind("<Configure>", lambda e: self._mastery_update_scroll())
         self.mastery_node_canvas.bind("<Button-1>", self._mastery_canvas_click)
         self.mastery_node_canvas.bind("<Double-1>", self._mastery_canvas_double)
         self.mastery_node_canvas.bind("<MouseWheel>", self._mastery_on_mousewheel)
@@ -1426,12 +1424,11 @@ class App:
                                          tags=("mastery_node", f"node_{i}"))
                     self._mastery_node_items.append(item)
                     name = self._mastery_strip_style_prefix(r.get('name'))
-                    label = name or gct.mastery_value_label(r['value'])
-                    color = "#d7dee8" if name else "#8b949e"
-                    c.create_text(x + 14, y_node, anchor="w", fill=color,
-                                  text=label, font=("Microsoft YaHei UI", 8))
-                    # 点击热区:节点 + 右侧文字
-                    hit_w = max(28, len(label) * 11 + 28)
+                    if name:
+                        c.create_text(x + 14, y_node, anchor="w", fill="#d7dee8",
+                                      text=name, font=("Microsoft YaHei UI", 8))
+                    # 点击热区:节点 + 右侧文字(仅有名字的节点才加宽)
+                    hit_w = max(28, len(name) * 11 + 28) if name else 30
                     self._mastery_node_hit.append((i, x, y_node, hit_w, 16))
                 y += ((len(cell) + 1) // 2) * row_h + group_gap
             # 列边框只描边,不遮挡阶分组横条
@@ -1468,10 +1465,14 @@ class App:
             return
         err = gct.set_mastery_state(save, meta['unit'], 1)
         if err:
-            self._note(f'[错误] {err}'); return
+            self._note(f'[错误] {err}')
+            messagebox.showerror('激活失败', err)
+            return
         bak, save_err = gct.try_save_and_backup(save, self.save_path.get(), 'mastery', force=self.var_force.get())
         if save_err:
-            self._note(f'[错误] {save_err}'); return
+            self._note(f'[错误] {save_err}')
+            messagebox.showerror('写入存档失败', save_err + '\n\n请关闭游戏/Steam云同步,或以管理员身份运行本工具后重试。')
+            return
         self._invalidate()
         name = self._mastery_strip_style_prefix(meta.get('name')) or gct.mastery_effect_name(meta['effect'])
         self._note(f'[完成] 已激活专精技能: {name} 备份:{os.path.basename(bak)}')
