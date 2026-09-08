@@ -135,6 +135,8 @@ class App:
         self._mastery_rows = []
         self._mastery_selected_index = None
         self._mastery_saving = False
+        self._mastery_pending = {}
+        self._mastery_pending_old = {}
         # 小钳蟹页
         self.var_crab_wee = tk.StringVar(value='20')
         self.var_crab_dark = tk.StringVar(value='20')
@@ -1477,6 +1479,78 @@ class App:
             fill, outline, width = self._mastery_node_color(self._mastery_rows[index])
             self.mastery_node_canvas.itemconfigure(item, fill=fill, outline=outline, width=width)
 
+    def _mastery_index_by_unit(self, unit):
+        unit = int(unit)
+        for i, r in enumerate(self._mastery_rows):
+            if int(r['unit']) == unit:
+                return i
+        return None
+
+    def _mastery_queue_state(self, index, value):
+        """把状态变更加入待写队列,并立即更新界面。"""
+        try:
+            index = int(index)
+        except (TypeError, ValueError):
+            return
+        if not (0 <= index < len(self._mastery_rows)):
+            return
+        r = self._mastery_rows[index]
+        unit = int(r['unit'])
+        if unit not in self._mastery_pending_old:
+            self._mastery_pending_old[unit] = int(r['value'] or 0)
+        self._mastery_pending[unit] = int(value)
+        self._mastery_apply_visual_state(index, value)
+
+    def _mastery_discard_pending(self):
+        """写档失败时丢弃尚未写入的排队变更,并恢复界面状态。"""
+        for unit, old in self._mastery_pending_old.items():
+            idx = self._mastery_index_by_unit(unit)
+            if idx is not None:
+                self._mastery_apply_visual_state(idx, old)
+        self._mastery_pending = {}
+        self._mastery_pending_old = {}
+        self._mastery_on_select()
+
+    def _mastery_flush_pending(self):
+        """把队列中的变更写入内存存档,并启动后台写档。"""
+        if getattr(self, '_mastery_saving', False):
+            return
+        if not self._mastery_pending:
+            return
+        save = self._open()
+        if save is None:
+            return
+        batch = self._mastery_pending
+        batch_old = self._mastery_pending_old
+        self._mastery_pending = {}
+        self._mastery_pending_old = {}
+        for unit, value in batch.items():
+            err = gct.set_mastery_state(save, unit, value)
+            if err:
+                # 内存写入失败,回滚已应用的部分
+                for u, v in batch_old.items():
+                    idx = self._mastery_index_by_unit(u)
+                    if idx is not None:
+                        self._mastery_apply_visual_state(idx, v)
+                self._note(f'[错误] {err}')
+                return
+        self.root.update_idletasks()
+
+        def done(bak, save_err):
+            if save_err:
+                for unit, old in batch_old.items():
+                    idx = self._mastery_index_by_unit(unit)
+                    if idx is not None:
+                        self._mastery_apply_visual_state(idx, old)
+                self._mastery_on_select()
+                self._note(f'[错误] {save_err}')
+                messagebox.showerror('写入存档失败', save_err + '\n\n请关闭游戏/Steam云同步,或以管理员身份运行本工具后重试。')
+                return
+            self._invalidate()
+            self._note(f'[完成] 已写入 {len(batch)} 个专精技能变更 备份:{os.path.basename(bak)}')
+
+        self._mastery_save_async(save, 'mastery', done)
+
     def _mastery_save_async(self, save, tag, callback):
         """后台线程写档,避免 23MB 存档写入时主界面卡死。"""
         if getattr(self, '_mastery_saving', False):
@@ -1512,6 +1586,13 @@ class App:
         self._mastery_save_callback = None
         if callback is not None:
             callback(bak, err)
+        if err:
+            # 写档失败:丢弃写入期间新排队的变更,避免反复弹窗
+            if self._mastery_pending:
+                self._mastery_discard_pending()
+        elif self._mastery_pending:
+            # 写入期间用户又点了别的节点,写完后自动继续下一批
+            self._mastery_flush_pending()
 
 
     def _mastery_activate_selected(self):
@@ -1524,34 +1605,19 @@ class App:
         ch = self.var_mt_chara.get().strip()
         if not self._mastery_unit_belongs_to_chara(save, ch, meta['unit']):
             self._note('[错误] 当前选中行不属于下拉中的角色,请先重新读取专精技能'); return
-        old_value = int(meta['value'] or 0)
-        if old_value > 0:
+        if int(meta['value'] or 0) > 0:
             return
         index = self._mastery_selected_index
-        err = gct.set_mastery_state(save, meta['unit'], 1)
-        if err:
-            self._note(f'[错误] {err}')
-            messagebox.showerror('激活失败', err)
+        if index is None:
             return
-        # 先立即更新界面,再后台写档,避免 23MB 存档写入时界面卡住
-        self._mastery_apply_visual_state(index, 1)
-        self._mastery_on_select()
-        self.root.update_idletasks()
         name = self._mastery_strip_style_prefix(meta.get('name')) or gct.mastery_effect_name(meta['effect'])
-
-        def done(bak, save_err):
-            if save_err:
-                self._mastery_apply_visual_state(index, old_value)
-                self._mastery_on_select()
-                self._note(f'[错误] {save_err}')
-                messagebox.showerror('写入存档失败', save_err + '\n\n请关闭游戏/Steam云同步,或以管理员身份运行本工具后重试。')
-                return
-            self._invalidate()
-            self._note(f'[完成] 已激活专精技能: {name} 备份:{os.path.basename(bak)}')
-
-        if not self._mastery_save_async(save, 'mastery', done):
-            self._mastery_apply_visual_state(index, old_value)
-            self._mastery_on_select()
+        self._mastery_queue_state(index, 1)
+        self._mastery_on_select()
+        if self._mastery_saving:
+            self._note(f'[信息] 已加入写入队列: {name}(当前写档完成后自动保存)')
+        else:
+            self._note(f'[信息] 已激活: {name}(后台写入中...)')
+        self._mastery_flush_pending()
 
     def cmd_mastery_activate(self):
         self._mastery_activate_selected()
@@ -1569,33 +1635,11 @@ class App:
             self._note('[信息] 当前角色没有已激活的专精技能'); return
         if not messagebox.askyesno('确认清空', f'确定清空 {ch} 的全部专精技能吗?\n共 {len(active)} 个已激活节点。'):
             return
-        old = [(i, int(r['value'] or 0)) for i, r in active]
         for i, r in active:
-            err = gct.set_mastery_state(save, r['unit'], 0)
-            if err:
-                self._note(f'[错误] {err}')
-                for j, v in old:
-                    self._mastery_apply_visual_state(j, v)
-                return
-            self._mastery_apply_visual_state(i, 0)
-        self.root.update_idletasks()
-
-        def done(bak, save_err):
-            if save_err:
-                for j, v in old:
-                    self._mastery_apply_visual_state(j, v)
-                self._mastery_on_select()
-                self._note(f'[错误] {save_err}')
-                messagebox.showerror('写入存档失败', save_err + '\n\n请关闭游戏/Steam云同步,或以管理员身份运行本工具后重试。')
-                return
-            self._invalidate()
-            self._mastery_on_select()
-            self._note(f'[完成] 已清空 {ch} 的 {len(active)} 个专精技能 备份:{os.path.basename(bak)}')
-
-        if not self._mastery_save_async(save, 'mastery_clear', done):
-            for j, v in old:
-                self._mastery_apply_visual_state(j, v)
-            self._mastery_on_select()
+            self._mastery_queue_state(i, 0)
+        self._mastery_on_select()
+        self._note(f'[信息] 已加入清空队列: {ch} 共 {len(active)} 个专精技能')
+        self._mastery_flush_pending()
 
     def _mastery_node_select(self, index):
         self._mastery_set_selected(index)
@@ -1613,6 +1657,9 @@ class App:
             self.mastery_node_canvas.yview_scroll(2, "units")
 
     def _mastery_refresh(self, save):
+        if self._mastery_saving or self._mastery_pending:
+            self._note('[信息] 正在写入/有待写入的专精技能,暂时不重新读取')
+            return
         ch = self.var_mt_chara.get().strip()
         rows, err = gct.get_skillboard_rows(save, ch)
         if err:
@@ -1658,6 +1705,8 @@ class App:
         ch = self.var_mt_chara.get().strip()
         if not self._mastery_unit_belongs_to_chara(save, ch, meta['unit']):
             self._note('[错误] 当前选中行不属于下拉中的角色,请先重新「读取该角色专精/天赋」'); return
+        if self._mastery_saving or self._mastery_pending:
+            self._note('[信息] 正在写入或有待写入的专精技能,请稍后再用写入选中行'); return
         effect_q = self.var_mt_effect.get().strip()
         if not effect_q:
             effect_q = f'0x{meta["effect"]:08X}' if meta['effect'] not in (0, gct.EMPTY) else ''
@@ -1692,15 +1741,9 @@ class App:
             self._note('[错误] 该行为空效果,不能直接点亮;请先写入效果'); return
         cur = int(meta['value'] or 0)
         new_val = 0 if cur > 0 else 1
-        err = gct.set_mastery_state(save, meta['unit'], new_val)
-        if err:
-            self._note(f'[错误] {err}'); return
-        bak, save_err = gct.try_save_and_backup(save, self.save_path.get(), 'mastery', force=self.var_force.get())
-        if save_err:
-            self._note(f'[错误] {save_err}'); return
-        self._invalidate()
-        self._note(f'[完成] 已双击切换 unit={meta["unit"]} -> {new_val}(1=点亮/0=取消) 备份:{os.path.basename(bak)}')
-        self.cmd_mastery_list()
+        self._mastery_queue_state(self._mastery_selected_index, new_val)
+        self._mastery_on_select()
+        self._mastery_flush_pending()
 
     def cmd_mastery_clear(self):
         save = self._open()
@@ -1712,15 +1755,9 @@ class App:
         ch = self.var_mt_chara.get().strip()
         if not self._mastery_unit_belongs_to_chara(save, ch, meta['unit']):
             self._note('[错误] 当前选中行不属于下拉中的角色,请先重新「读取该角色专精/天赋」'); return
-        err = gct.set_mastery_state(save, meta['unit'], 0)
-        if err:
-            self._note(f'[错误] {err}'); return
-        bak, save_err = gct.try_save_and_backup(save, self.save_path.get(), 'mastery', force=self.var_force.get())
-        if save_err:
-            self._note(f'[错误] {save_err}'); return
-        self._invalidate()
-        self._note(f'[完成] 已取消点亮 unit={meta["unit"]}(1602=0) 备份:{os.path.basename(bak)}')
-        self.cmd_mastery_list()
+        self._mastery_queue_state(self._mastery_selected_index, 0)
+        self._mastery_on_select()
+        self._mastery_flush_pending()
 
     def cmd_mastery_enable_slot(self):
         save = self._open()
@@ -1910,7 +1947,7 @@ class App:
 
 
     def _on_close(self):
-        if getattr(self, '_mastery_saving', False):
+        if getattr(self, '_mastery_saving', False) or getattr(self, '_mastery_pending', None):
             messagebox.showinfo('正在写入', '存档正在写入,请等待写入完成后再关闭窗口。')
             return
         state = {"geometry": self.root.geometry()}
