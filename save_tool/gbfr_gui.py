@@ -1084,8 +1084,14 @@ class App:
         cb.bind('<<ComboboxSelected>>', lambda e: self.cmd_mastery_list())
         ttk.Button(top, text="读取该角色专精/天赋", style="Accent.TButton", command=self.cmd_mastery_list).pack(side="left", padx=4)
         ttk.Button(top, text="选中行写入", command=self.cmd_mastery_apply).pack(side="left", padx=4)
-        ttk.Button(top, text="清空选中行", style="Danger.TButton", command=self.cmd_mastery_clear).pack(side="left", padx=4)
         ttk.Button(top, text="一键点亮因子栏位解锁(13格)", command=self.cmd_mastery_enable_slot).pack(side="left", padx=4)
+
+        # 专精技能常用操作(单独一行,避免窗口窄时按钮被挤到屏幕外)
+        ops = ttk.Frame(t)
+        ops.pack(fill="x", pady=(0, 4))
+        ttk.Button(ops, text="激活选中", style="Accent.TButton", command=self.cmd_mastery_activate).pack(side="left", padx=4)
+        ttk.Button(ops, text="清空选中行", style="Danger.TButton", command=self.cmd_mastery_clear).pack(side="left", padx=4)
+        ttk.Button(ops, text="一键清空当前角色专精技能", style="Danger.TButton", command=self.cmd_mastery_clear_all).pack(side="left", padx=4)
 
         # 视图切换:默认“节点图”,需要看原始字段可切“列表”
         view = ttk.Frame(t)
@@ -1153,8 +1159,6 @@ class App:
         ttk.Label(edit, text="状态/数值(1=点亮):").pack(side="left", padx=(8, 0))
         ttk.Entry(edit, textvariable=self.var_mt_value, width=12).pack(side="left", padx=4)
         ttk.Button(edit, text="写入选中行", command=self.cmd_mastery_apply).pack(side="left", padx=8)
-        ttk.Button(edit, text="激活选中", style="Accent.TButton", command=self.cmd_mastery_activate).pack(side="left", padx=4)
-        ttk.Button(edit, text="一键清空当前角色", style="Danger.TButton", command=self.cmd_mastery_clear_all).pack(side="left", padx=4)
 
 
     def _tab_crab(self, nb):
