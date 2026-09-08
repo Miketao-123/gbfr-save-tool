@@ -5,7 +5,7 @@ a = Analysis(
     ['gbfr_gui.py'],
     pathex=[],
     binaries=[],
-    datas=[('catalog.json', '.'), ('catalog_chars.json', '.'), ('catalog_gem.json', '.'), ('catalog_sigils_full.json', '.'), ('catalog_summon.json', '.'), ('chara_names.json', '.'), ('gem_legality.json', '.'), ('gem_mix_pool.json', '.'), ('gbfr-save-editor/GBFR-Save-Editor-main/gbfr_editor/core', 'gbfr-save-editor/GBFR-Save-Editor-main/gbfr_editor/core')],
+    datas=[('catalog.json', '.'), ('catalog_chars.json', '.'), ('catalog_gem.json', '.'), ('catalog_sigils_full.json', '.'), ('catalog_summon.json', '.'), ('chara_names.json', '.'), ('gem_legality.json', '.'), ('gem_mix_pool.json', '.'), ('skillboard_nodes.json', '.'), ('gbfr-save-editor/GBFR-Save-Editor-main/gbfr_editor/core', 'gbfr-save-editor/GBFR-Save-Editor-main/gbfr_editor/core'), ('gbfr-save-editor/GBFR-Save-Editor-main/gbfr_editor/resources/mastery_mod_ids_downloaded.csv', 'gbfr-save-editor/GBFR-Save-Editor-main/gbfr_editor/resources'), ('gbfr-save-editor/GBFR-Save-Editor-main/gbfr_editor/resources/mastery_mod_ids_seed.csv', 'gbfr-save-editor/GBFR-Save-Editor-main/gbfr_editor/resources'), ('gbfr-save-editor/GBFR-Save-Editor-main/gbfr_editor/resources/mastery_mod_ids_sheet_raw.csv', 'gbfr-save-editor/GBFR-Save-Editor-main/gbfr_editor/resources')],
     hiddenimports=['gbfr_cheat_tool', 'gbfr_save', 'hashing', 'gui_theme'],
     hookspath=[],
     hooksconfig={},

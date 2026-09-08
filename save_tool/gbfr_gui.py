@@ -126,6 +126,13 @@ class App:
         self.var_om_lane = tk.StringVar(value='0')
         self.var_om_effect = tk.StringVar(value='攻击力')
         self.var_om_value = tk.StringVar(value='1023')
+        # 专精/天赋盘页
+        self.var_mt_chara = tk.StringVar(value=_default_chara())
+        self.var_mt_effect = tk.StringVar()
+        self.var_mt_value = tk.StringVar(value='1')
+        self.var_mastery_view = tk.StringVar(value='nodes')
+        self._mastery_rows = []
+        self._mastery_selected_index = None
         # 小钳蟹页
         self.var_crab_wee = tk.StringVar(value='20')
         self.var_crab_dark = tk.StringVar(value='20')
@@ -201,6 +208,7 @@ class App:
             self._tab_summons(nb)
             self._tab_loadout(nb)
             self._tab_overmastery(nb)
+            self._tab_mastery(nb)
             self._tab_crab(nb)
             self._tab_wrightstone(nb)
             self.nb = nb
@@ -443,6 +451,7 @@ class App:
         self._sum_refresh(save)
         self._summons_list(save)
         self._ld_list()
+        self._mastery_refresh(save)
         self._note('--- 已刷新 ---')
         self._status_msg.set('已加载并刷新 ✓')
 
@@ -1061,6 +1070,90 @@ class App:
             self.om_out = self._mk_out(t, 14)
 
 
+    def _tab_mastery(self, nb):
+        t = ttk.Frame(nb, padding=8)
+        nb.add(t, text=" 专精/天赋 ")
+        top = ttk.Frame(t)
+        top.pack(fill="x", pady=(0, 6))
+        ttk.Label(top, text="角色:").pack(side="left")
+        cb = self._chara_cb(top, self.var_mt_chara, 16)
+        if cb is not None and not cb.winfo_manager():
+            cb.pack(side="left", padx=4)
+        cb.bind('<<ComboboxSelected>>', lambda e: self.cmd_mastery_list())
+        ttk.Button(top, text="读取该角色专精/天赋", style="Accent.TButton", command=self.cmd_mastery_list).pack(side="left", padx=4)
+        ttk.Button(top, text="选中行写入", command=self.cmd_mastery_apply).pack(side="left", padx=4)
+        ttk.Button(top, text="清空选中行", style="Danger.TButton", command=self.cmd_mastery_clear).pack(side="left", padx=4)
+        ttk.Button(top, text="一键点亮因子栏位解锁(13格)", command=self.cmd_mastery_enable_slot).pack(side="left", padx=4)
+
+        # 视图切换:默认“节点图”,需要看原始字段可切“列表”
+        view = ttk.Frame(t)
+        view.pack(fill="x", pady=(0, 4))
+        ttk.Label(view, text="视图:").pack(side="left")
+        ttk.Radiobutton(view, text="节点图(游戏感)", variable=self.var_mastery_view, value="nodes", command=self._mastery_show_view).pack(side="left", padx=4)
+        ttk.Radiobutton(view, text="原始列表", variable=self.var_mastery_view, value="table", command=self._mastery_show_view).pack(side="left", padx=4)
+        self.mastery_node_info = ttk.Label(view, text="点击节点选择,双击/下方按钮写入。", foreground=th.FG_DIM)
+        self.mastery_node_info.pack(side="right")
+
+        # 表格:列出存档中已存在的 1606/1607 天赋行,双击可直接点亮/取消
+        body = ttk.Frame(t)
+        body.pack(fill="both", expand=True, pady=(0, 4))
+        cols = ("no", "node", "effect", "state", "slotinfo", "hash", "unit")
+        tree_frame = ttk.Frame(body)
+        self.mastery_tree_frame = tree_frame
+        self.mastery_tree = ttk.Treeview(tree_frame, columns=cols, show="headings", height=12)
+        headings = {
+            "no": "行",
+            "node": "节点",
+            "effect": "效果/天赋",
+            "state": "状态/数值",
+            "slotinfo": "1601槽键",
+            "hash": "1606哈希",
+            "unit": "Save Unit",
+        }
+        widths = {"no": 40, "node": 55, "effect": 260, "state": 110, "slotinfo": 120, "hash": 90, "unit": 90}
+        for c in cols:
+            self.mastery_tree.heading(c, text=headings[c])
+            self.mastery_tree.column(c, width=widths[c], anchor="w", stretch=(c in ("effect", "slotinfo")))
+        self._mastery_vsb = ttk.Scrollbar(tree_frame, orient="vertical", command=self.mastery_tree.yview)
+        self.mastery_tree.configure(yscrollcommand=self._mastery_vsb.set)
+        self._mastery_vsb.pack(side="right", fill="y")
+        self.mastery_tree.pack(side="left", fill="both", expand=True)
+        self.mastery_tree.bind("<<TreeviewSelect>>", self._mastery_on_select)
+        self.mastery_tree.bind("<Double-1>", lambda e: self.cmd_mastery_toggle())
+
+        # 节点图:用 Canvas 画可点击的“天赋球”,越接近游戏里一眼看状态
+        node_frame = ttk.Frame(body)
+        self.mastery_node_frame = node_frame
+        self.mastery_node_canvas = tk.Canvas(
+            node_frame,
+            bg=th.BG_TEXT,
+            highlightthickness=0,
+            height=420,
+        )
+        self.mastery_node_canvas.configure(yscrollincrement=26)
+        self._mastery_canvas_vsb = ttk.Scrollbar(node_frame, orient="vertical", command=self.mastery_node_canvas.yview)
+        self._mastery_canvas_hsb = ttk.Scrollbar(node_frame, orient="horizontal", command=self.mastery_node_canvas.xview)
+        self.mastery_node_canvas.configure(xscrollcommand=self._mastery_canvas_hsb.set, yscrollcommand=self._mastery_canvas_vsb.set)
+        self._mastery_canvas_hsb.pack(side="bottom", fill="x")
+        self._mastery_canvas_vsb.pack(side="right", fill="y")
+        self.mastery_node_canvas.pack(side="left", fill="both", expand=True)
+        self.mastery_node_canvas.bind("<Configure>", lambda e: self._mastery_update_scroll())
+        self.mastery_node_canvas.bind("<Double-1>", self._mastery_canvas_double)
+        self.mastery_node_canvas.bind("<MouseWheel>", self._mastery_on_mousewheel)
+        self.mastery_node_canvas.bind("<Button-4>", lambda e: self.mastery_node_canvas.yview_scroll(-2, "units"))
+        self.mastery_node_canvas.bind("<Button-5>", lambda e: self.mastery_node_canvas.yview_scroll(2, "units"))
+
+        self._mastery_show_view()
+
+        edit = ttk.Frame(t)
+        edit.pack(fill="x", pady=(4, 0))
+        ttk.Label(edit, text="效果(留空=保持当前,0x哈希/中文/英文):").pack(side="left")
+        ttk.Entry(edit, textvariable=self.var_mt_effect, width=34).pack(side="left", padx=4)
+        ttk.Label(edit, text="状态/数值(1=点亮):").pack(side="left", padx=(8, 0))
+        ttk.Entry(edit, textvariable=self.var_mt_value, width=12).pack(side="left", padx=4)
+        ttk.Button(edit, text="写入选中行", command=self.cmd_mastery_apply).pack(side="left", padx=8)
+
+
     def _tab_crab(self, nb):
         t = ttk.Frame(nb, padding=8);nb.add(t, text=" 小钳蟹 ")
         top = ttk.Frame(t)
@@ -1158,6 +1251,313 @@ class App:
         disp = gct.chara_label(_gid) if _gid else ch
         self._note(f'[完成] {disp} 全部 4 槽上限突破已清空 备份:{os.path.basename(bak)}')
         self.cmd_om_list()
+
+    # ------------------------------------------------------------ 专精/天赋
+    def _selected_mastery_meta(self):
+        if self._mastery_selected_index is not None:
+            try:
+                return self._mastery_rows[self._mastery_selected_index]
+            except (ValueError, IndexError):
+                pass
+        sel = self.mastery_tree.selection()
+        if sel:
+            try:
+                return self._mastery_rows[int(sel[0])]
+            except (ValueError, IndexError):
+                pass
+        return None
+
+    def _mastery_set_selected(self, index):
+        try:
+            index = int(index)
+        except (TypeError, ValueError):
+            return
+        if not (0 <= index < len(self._mastery_rows)):
+            return
+        self._mastery_selected_index = index
+        try:
+            self.mastery_tree.selection_set(str(index))
+        except Exception:
+            pass
+        self._mastery_on_select()
+
+    def _mastery_on_select(self, _event=None):
+        if self.var_mastery_view.get() == 'table':
+            sel = self.mastery_tree.selection()
+            if sel:
+                try:
+                    self._mastery_selected_index = int(sel[0])
+                except (ValueError, IndexError):
+                    pass
+        meta = self._selected_mastery_meta()
+        if meta is None:
+            return
+        self.var_mt_effect.set(f'0x{meta["effect"]:08X}' if meta['effect'] not in (0, gct.EMPTY) else '')
+        self.var_mt_value.set(str(meta['value']))
+        if hasattr(self, 'mastery_node_info'):
+            eff = meta.get('name') or gct.mastery_effect_name(meta['effect'])
+            cat = gct.SKILLBOARD_CAT_NAMES[meta['cat']] if 0 <= int(meta['cat']) < 3 else str(meta['cat'])
+            self.mastery_node_info.configure(text=f'当前: {cat} · {eff} · {gct.mastery_value_label(meta["value"])} · unit {meta["unit"]}')
+
+    def _mastery_unit_belongs_to_chara(self, save, ch, unit):
+        """防止切换下拉后误把上一个角色的行写进新角色。"""
+        group = gct.char_group(ch, save=save)
+        if group is None:
+            return False
+        base = gct.mastery_board_base(group)
+        return base <= int(unit) < base + gct.MASTERY_BOARD_SLOT_COUNT
+
+    def _mastery_show_view(self):
+        mode = self.var_mastery_view.get()
+        if mode == 'table':
+            self.mastery_node_frame.pack_forget()
+            self.mastery_tree_frame.pack(fill="both", expand=True, pady=(0, 4))
+        else:
+            self.mastery_tree_frame.pack_forget()
+            self.mastery_node_frame.pack(fill="both", expand=True, pady=(0, 4))
+        if self._mastery_rows:
+            self._mastery_draw_nodes(self._mastery_rows)
+
+    def _mastery_update_scroll(self):
+        box = self.mastery_node_canvas.bbox("all")
+        if box:
+            self.mastery_node_canvas.configure(scrollregion=box)
+
+    def _mastery_node_color(self, r):
+        h = int(r['effect'] or 0) & 0xFFFFFFFF
+        val = int(r['value'] or 0)
+        if h in (0, gct.EMPTY):
+            base = "#4a5263"
+        elif h == gct.SIGIL_SLOT_UNLOCK_EFFECT:
+            base = "#e8c84a"
+        elif h in (0x43B7581D, 0x4A4C093D, 0x9C555433, 0x1D58B743, 0x3D094C4A, 0x3354559C):
+            base = "#b48ae0"
+        elif h in (0xC4925BD7, 0x9A97C049, 0x6CB38EF3, 0x4E42646B, 0x45C65767, 0x68B39018,
+                   0xD75B92C4, 0x1890B368, 0x6757C645, 0x6B64424E, 0x49C0979A, 0xF38EB36C):
+            base = "#e08a7a"
+        elif h in (0x52A207B5, 0x54929589, 0xB507A252, 0x89959254):
+            base = "#6ab7e8"
+        else:
+            base = "#8a94a6"
+        if val == 1:
+            return base, "#1e2a36", 2
+        if val == 0:
+            return "#15191f", base, 1
+        return "#ff9f43", "#1e2a36", 2
+
+    def _mastery_draw_nodes(self, rows):
+        c = self.mastery_node_canvas
+        c.delete("all")
+        self._mastery_node_items = []
+        rows = [(i, r) for i, r in enumerate(rows)]
+        if not rows:
+            if hasattr(self, 'mastery_node_info'):
+                self.mastery_node_info.configure(text="没有可显示的专精技能")
+            return
+        # 专精技能:纵向=觉醒/真谛/秘义, 每个类型内每行只排 2 个技能
+        type_names = gct.SKILLBOARD_CAT_NAMES
+        type_count = 3
+        left = 92
+        top = 90
+        type_w = 300
+        type_gap = 16
+        row_h = 42
+        radius = 9
+        # 两个节点的横向位置(在列内左右分布)
+        x_offsets = (type_w * 0.32, type_w * 0.68)
+
+        c.create_text(left, 12, anchor="w", fill="#c9d1d9",
+                      text="暗色=未点亮/0  亮色=已习得/1或更高  点击选择,双击切换")
+        c.create_text(left, 30, anchor="w", fill="#8b949e",
+                      text=f"当前角色专精技能 {len(rows)} 个 · 每行 2 个")
+
+        max_rows = 0
+        for t in range(type_count):
+            cat_rows = sorted([(i, r) for i, r in rows if int(r['cat']) == t], key=lambda x: (int(x[1]['pos']), x[0]))
+            if not cat_rows:
+                continue
+            line_count = (len(cat_rows) + 1) // 2
+            max_rows = max(max_rows, line_count)
+            x0 = left + t * (type_w + type_gap)
+            x1 = x0 + type_w
+            c.create_text(x0 + type_w / 2, top - 30, anchor="n", fill="#e6edf3",
+                          text=type_names[t])
+            c.create_rectangle(x0, top, x1, top + line_count * row_h + 10,
+                               outline="#3a4454", fill="#1c222c", width=1)
+            for n, (i, r) in enumerate(cat_rows):
+                line = n // 2
+                col = n % 2
+                y = top + 16 + line * row_h
+                x = x0 + x_offsets[col]
+                fill, outline, width = self._mastery_node_color(r)
+                item = c.create_oval(x - radius, y - radius, x + radius, y + radius,
+                                     fill=fill, outline=outline, width=width,
+                                     tags=("mastery_node", f"node_{i}"))
+                self._mastery_node_items.append(item)
+                if r.get('name'):
+                    c.create_text(x + 14, y, anchor="w", fill="#d7dee8",
+                                  text=r['name'], font=("Microsoft YaHei UI", 8))
+                # 非主节点用右侧小字显示状态文字,避免空白
+                if not r.get('name'):
+                    c.create_text(x + 14, y, anchor="w", fill="#8b949e",
+                                  text=gct.mastery_value_label(r['value']), font=("Microsoft YaHei UI", 8))
+
+        c.tag_bind("mastery_node", "<Button-1>", self._mastery_node_click)
+        width = left + type_count * (type_w + type_gap) + 120
+        height = top + max(1, max_rows) * row_h + 40
+        c.configure(scrollregion=(0, 0, width, height))
+
+    def _mastery_node_click(self, event):
+        item = self.mastery_node_canvas.find_withtag("current")
+        if not item:
+            return
+        tags = self.mastery_node_canvas.gettags(item[0])
+        for tag in tags:
+            if tag.startswith("node_"):
+                self._mastery_set_selected(int(tag.split("_", 1)[1]))
+                return
+
+    def _mastery_node_select(self, index):
+        self._mastery_set_selected(index)
+
+    def _mastery_canvas_double(self, _event=None):
+        if not self.mastery_node_canvas.find_withtag("current"):
+            return
+        self.cmd_mastery_toggle()
+
+    def _mastery_on_mousewheel(self, event):
+        # Windows 滚轮 delta 通常为 120 的倍数;向下滚为负
+        if event.delta > 0:
+            self.mastery_node_canvas.yview_scroll(-2, "units")
+        else:
+            self.mastery_node_canvas.yview_scroll(2, "units")
+
+    def _mastery_refresh(self, save):
+        ch = self.var_mt_chara.get().strip()
+        rows, err = gct.get_skillboard_rows(save, ch)
+        if err:
+            self._note(f'[错误] {err}'); return
+        self._mastery_rows = rows
+        self._mastery_selected_index = None
+        self.mastery_tree.delete(*self.mastery_tree.get_children())
+        for i, r in enumerate(rows):
+            cat_name = gct.SKILLBOARD_CAT_NAMES[r['cat']] if 0 <= int(r['cat']) < 3 else str(r['cat'])
+            disp_name = r.get('name') or gct.mastery_effect_name(r['effect'])
+            self.mastery_tree.insert('', 'end', iid=str(i), values=(
+                i + 1,
+                f'{r["pos"]}',
+                disp_name,
+                gct.mastery_value_label(r['value']),
+                cat_name,
+                f'0x{r["effect"]:08X}' if r['effect'] not in (0, gct.EMPTY) else '',
+                r['unit'],
+            ))
+        _, _gid = gct.find_chara(ch)
+        disp = gct.chara_label(_gid) if _gid else ch
+        self._note(f'[信息] {disp}: 专精技能记录 {len(rows)} 行')
+        self._mastery_draw_nodes(rows)
+        if rows:
+            self._mastery_set_selected(0)
+        else:
+            self.var_mt_effect.set('')
+            self.var_mt_value.set('1')
+
+    def cmd_mastery_list(self):
+        save = self._open()
+        if save is None:
+            return
+        self._mastery_refresh(save)
+
+    def cmd_mastery_apply(self):
+        save = self._open()
+        if save is None:
+            return
+        meta = self._selected_mastery_meta()
+        if meta is None:
+            self._note('[错误] 请先在专精/天赋表中选择一行'); return
+        ch = self.var_mt_chara.get().strip()
+        if not self._mastery_unit_belongs_to_chara(save, ch, meta['unit']):
+            self._note('[错误] 当前选中行不属于下拉中的角色,请先重新「读取该角色专精/天赋」'); return
+        effect_q = self.var_mt_effect.get().strip()
+        if not effect_q:
+            effect_q = f'0x{meta["effect"]:08X}' if meta['effect'] not in (0, gct.EMPTY) else ''
+        val_s = self.var_mt_value.get().strip()
+        if not val_s:
+            val_s = str(meta['value'])
+        try:
+            value = int(val_s)
+        except ValueError:
+            self._note(f'[错误] 状态/数值必须是整数: {val_s}'); return
+        err = gct.set_mastery_row(save, ch, meta['unit'], effect_q, value)
+        if err:
+            self._note(f'[错误] {err}'); return
+        bak, save_err = gct.try_save_and_backup(save, self.save_path.get(), 'mastery', force=self.var_force.get())
+        if save_err:
+            self._note(f'[错误] {save_err}'); return
+        self._invalidate()
+        self._note(f'[完成] 已写入专精/天赋 unit={meta["unit"]} (值={value}) 备份:{os.path.basename(bak)}')
+        self.cmd_mastery_list()
+
+    def cmd_mastery_toggle(self):
+        save = self._open()
+        if save is None:
+            return
+        meta = self._selected_mastery_meta()
+        if meta is None:
+            self._note('[错误] 请先在专精/天赋表中选择一行'); return
+        ch = self.var_mt_chara.get().strip()
+        if not self._mastery_unit_belongs_to_chara(save, ch, meta['unit']):
+            self._note('[错误] 当前选中行不属于下拉中的角色,请先重新「读取该角色专精/天赋」'); return
+        if meta['effect'] in (0, gct.EMPTY):
+            self._note('[错误] 该行为空效果,不能直接点亮;请先写入效果'); return
+        cur = int(meta['value'] or 0)
+        new_val = 0 if cur > 0 else 1
+        err = gct.set_mastery_state(save, meta['unit'], new_val)
+        if err:
+            self._note(f'[错误] {err}'); return
+        bak, save_err = gct.try_save_and_backup(save, self.save_path.get(), 'mastery', force=self.var_force.get())
+        if save_err:
+            self._note(f'[错误] {save_err}'); return
+        self._invalidate()
+        self._note(f'[完成] 已双击切换 unit={meta["unit"]} -> {new_val}(1=点亮/0=取消) 备份:{os.path.basename(bak)}')
+        self.cmd_mastery_list()
+
+    def cmd_mastery_clear(self):
+        save = self._open()
+        if save is None:
+            return
+        meta = self._selected_mastery_meta()
+        if meta is None:
+            self._note('[错误] 请先在专精/天赋表中选择一行'); return
+        ch = self.var_mt_chara.get().strip()
+        if not self._mastery_unit_belongs_to_chara(save, ch, meta['unit']):
+            self._note('[错误] 当前选中行不属于下拉中的角色,请先重新「读取该角色专精/天赋」'); return
+        err = gct.set_mastery_state(save, meta['unit'], 0)
+        if err:
+            self._note(f'[错误] {err}'); return
+        bak, save_err = gct.try_save_and_backup(save, self.save_path.get(), 'mastery', force=self.var_force.get())
+        if save_err:
+            self._note(f'[错误] {save_err}'); return
+        self._invalidate()
+        self._note(f'[完成] 已取消点亮 unit={meta["unit"]}(1602=0) 备份:{os.path.basename(bak)}')
+        self.cmd_mastery_list()
+
+    def cmd_mastery_enable_slot(self):
+        save = self._open()
+        if save is None:
+            return
+        ch = self.var_mt_chara.get().strip()
+        err = gct.enable_sigil_slot_unlock(save, ch)
+        if err:
+            self._note(f'[错误] {err}'); return
+        bak, save_err = gct.try_save_and_backup(save, self.save_path.get(), 'mastery', force=self.var_force.get())
+        if save_err:
+            self._note(f'[错误] {save_err}'); return
+        self._invalidate()
+        _, _gid = gct.find_chara(ch)
+        disp = gct.chara_label(_gid) if _gid else ch
+        self._note(f'[完成] {disp} 已点亮因子栏位解锁(13格) 备份:{os.path.basename(bak)}')
+        self.cmd_mastery_list()
 
     # ------------------------------------------------------------ 小钳蟹
     def cmd_crab_run(self):

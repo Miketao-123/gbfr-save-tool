@@ -94,6 +94,9 @@ SIGILS_FULL = _load('catalog_sigils_full.json') if os.path.exists(os.path.join(B
 LEGAL = _load('gem_legality.json') if os.path.exists(os.path.join(BASE, 'gem_legality.json')) else None
 # 角色名表(PLxxxx -> {cn, en},来源:游戏本体 system/table/text/{cs,en}/text_chara.msg)
 CHAR_NAMES = _load('chara_names.json') if os.path.exists(os.path.join(BASE, 'chara_names.json')) else {}
+# 专精技能(Skill Board)映射: PLxxxx -> [{h,cat,grp,pos,name}],来源 skillboard_effect/layout + text_skillboard.msg
+SKILLBOARD_NODES = _load('skillboard_nodes.json') if os.path.exists(os.path.join(BASE, 'skillboard_nodes.json')) else {}
+SKILLBOARD_CAT_NAMES = ['觉醒', '真谛', '秘义']
 
 
 def chara_name(pl):
@@ -1068,6 +1071,273 @@ def sigil_equip_unregister(save, chash, serial):
     if serial in vals:
         vals[vals.index(serial)] = 0
         save.set_values(rec, vals)
+
+# ---- 角色专精/天赋盘 (Mastery) ----
+# 实测存档结构:
+#   1601 = 天赋节点 ID(Slot Key / 布局键)
+#   1602 = 该节点的习得/等级状态(0=未点亮, 非0=已点亮/已有等级)
+#   unit = 10000000 + 名册组*1000 + 槽(0-399)
+# 上限突破(Overmastery)另用同一 8 位 unit 段的 1606/1607,共 4 条。
+MASTERY_NODE_FIELD = 1601
+MASTERY_NODE_STATE_FIELD = 1602
+MASTERY_FIELD_EFFECT = 1606   # 上限突破效果/ID
+MASTERY_FIELD_VALUE = 1607    # 上限突破数值
+MASTERY_BOARD_UNIT_BASE = 10000000
+MASTERY_BOARD_GROUP_STRIDE = 1000
+MASTERY_BOARD_SLOT_COUNT = 400
+
+
+def _load_mastery_csv_names():
+    """尽量从 vendored 上游资源的 mastery CSV 读取效果名;失败留空不影响功能。"""
+    import csv
+    out = {}
+    rels = (
+        'gbfr-save-editor/GBFR-Save-Editor-main/gbfr_editor/resources/mastery_mod_ids_downloaded.csv',
+        'gbfr-save-editor/GBFR-Save-Editor-main/gbfr_editor/resources/mastery_mod_ids_seed.csv',
+        'gbfr-save-editor/GBFR-Save-Editor-main/gbfr_editor/resources/mastery_mod_ids_sheet_raw.csv',
+    )
+    for rel in rels:
+        pth = os.path.join(RES_DIR, rel)
+        if not os.path.exists(pth):
+            continue
+        try:
+            with open(pth, encoding='utf-8-sig', newline='') as f:
+                for row in csv.DictReader(f):
+                    text = str(row.get('Hash') or row.get('hash') or '').strip()
+                    if not text:
+                        continue
+                    try:
+                        h = int(text, 16) & 0xFFFFFFFF
+                    except ValueError:
+                        continue
+                    name = str(row.get('Name') or row.get('name') or '').strip()
+                    if h and name:
+                        out.setdefault(h, name)
+        except Exception:
+            continue
+    return out
+
+
+MASTERY_CSV_NAMES = _load_mastery_csv_names()
+
+
+def mastery_char_unit(group):
+    return 10000 + int(group)
+
+
+def mastery_board_base(group):
+    return MASTERY_BOARD_UNIT_BASE + int(group) * MASTERY_BOARD_GROUP_STRIDE
+
+
+def mastery_board_unit(group, slot, socket=0):
+    """普通专精/天赋节点对应的 1601/1602 unit。socket 参数仅为兼容旧调用保留。"""
+    return mastery_board_base(group) + int(slot)
+
+
+def mastery_slotinfo_unit(group, slot):
+    """1601 天赋节点 unit(与普通专精行一致)。"""
+    return mastery_board_unit(group, slot)
+
+
+def mastery_effect_name(h):
+    """节点/效果哈希 -> 可读名。未知返回 0x 形式。"""
+    try:
+        h = int(h) & 0xFFFFFFFF
+    except (TypeError, ValueError):
+        return str(h)
+    if h in (0, EMPTY):
+        return '空'
+    if h == SIGIL_SLOT_UNLOCK_EFFECT:
+        return '因子栏位解锁'
+    if h == 0x280B6CB0:
+        return '普通因子槽键'
+    if h == 0xFF460600:
+        return '专精锚点标记'
+    if h in OM_EFFECTS_BY_HASH:
+        return OM_EFFECTS_BY_HASH[h]
+    e = MASTERY_CSV_NAMES.get(h)
+    if e:
+        return e
+    t = GEMCAT.get('trait_info', {}).get(str(h))
+    if t:
+        return t.get('cn') or t.get('name') or f'0x{h:08X}'
+    return f'0x{h:08X}'
+
+
+def mastery_value_label(v):
+    """1602 习得/状态 -> 常用含义文字。"""
+    try:
+        raw = int(v or 0)
+    except (TypeError, ValueError):
+        return str(v)
+    if raw == 0:
+        return '0(未点亮)'
+    if raw == 1:
+        return '1(已点亮)'
+    return f'{raw}(已点亮/等级)'
+
+
+def resolve_mastery_effect(q):
+    """把中文/英文/CSV 名称或 0x 哈希解析为哈希。失败返回 None。"""
+    q = (q or '').strip()
+    if not q:
+        return None
+    if q.lower().startswith('0x'):
+        try:
+            return int(q, 16) & 0xFFFFFFFF
+        except ValueError:
+            return None
+    ql = q.lower()
+    for cn, h in OM_EFFECTS.items():
+        if cn == q or cn.lower() == ql:
+            return h & 0xFFFFFFFF
+    for h, name in MASTERY_CSV_NAMES.items():
+        if name.lower() == ql:
+            return h & 0xFFFFFFFF
+    for h, name in MASTERY_CSV_NAMES.items():
+        if ql in name.lower():
+            return h & 0xFFFFFFFF
+    for hk, t in GEMCAT.get('trait_info', {}).items():
+        name = (t.get('cn') or '') + ' ' + (t.get('name') or '')
+        if ql in name.lower():
+            return int(hk) & 0xFFFFFFFF
+    return None
+
+
+def get_mastery_rows(save, gid):
+    """读取某角色普通专精/天赋盘行(不含 4 条上限突破)。
+
+    返回 (rows, err)。row 字段: unit/slot/socket/effect/value/slotinfo。
+    仅列出存档中实际存在的 1601/1602 记录,不新建行。
+    """
+    group = char_group(gid, save=save)
+    if group is None:
+        return [], f'无法识别角色: {gid}'
+    base = mastery_board_base(group)
+    hi = base + MASTERY_BOARD_SLOT_COUNT
+    m1601 = vm(save, MASTERY_NODE_FIELD)
+    m1602 = vm(save, MASTERY_NODE_STATE_FIELD)
+    units = set(m1601.keys()) | set(m1602.keys())
+    rows = []
+    for u in sorted(units):
+        if not (base <= u < hi):
+            continue
+        node = int(m1601.get(u, EMPTY) or EMPTY) & 0xFFFFFFFF
+        if node == EMPTY:
+            continue
+        state = m1602.get(u, 0)
+        rows.append({
+            'unit': u,
+            'slot': u - base,
+            'socket': 0,
+            'effect': node,
+            'value': state,
+            'slotinfo': node,
+        })
+    return rows, None
+
+
+def get_skillboard_rows(save, gid):
+    """读取某角色的专精技能(Skill Board)节点。
+
+    只返回 skillboard_effect/layout 中存在的 1601/1602 节点,并按
+    觉醒/真谛/秘义分类。row 额外含 cat/grp/pos/name。
+    """
+    if not SKILLBOARD_NODES:
+        return [], '缺少 skillboard_nodes.json 映射文件'
+    rows, err = get_mastery_rows(save, gid)
+    if err:
+        return [], err
+    _, pl = find_chara(gid)
+    if pl not in SKILLBOARD_NODES:
+        return [], f'暂无私货专精技能映射: {gid}'
+    by_h = {}
+    for e in SKILLBOARD_NODES[pl]:
+        by_h.setdefault(int(e['h']) & 0xFFFFFFFF, e)
+    out = []
+    for r in rows:
+        e = by_h.get(int(r['effect']) & 0xFFFFFFFF)
+        if not e:
+            continue
+        r = dict(r)
+        r['cat'] = int(e.get('cat', 0))
+        r['grp'] = int(e.get('grp', 0))
+        r['pos'] = int(e.get('pos', 0))
+        r['name'] = e.get('name', '')
+        out.append(r)
+    return out, None
+
+
+
+def set_mastery_state(save, unit, value):
+    """直接写 1602 天赋节点状态/等级;不检查角色。返回错误串或 None。"""
+    rec = save.find_first('int', MASTERY_NODE_STATE_FIELD, int(unit))
+    if rec is None:
+        rec = save.find_first('uint', MASTERY_NODE_STATE_FIELD, int(unit))
+    if rec is None:
+        return f'存档缺少 1602 记录 unit={unit}'
+    save.set_first_value(rec, int(value))
+    return None
+
+
+def set_mastery_row(save, gid, unit, effect_q, value):
+    """写普通专精行:1601 节点ID + 1602 状态/等级。
+
+    effect_q 为空时表示把 1601 节点清空(置 EMPTY);'0x...' 或已有节点哈希均可。
+    """
+    unit = int(unit)
+    group = char_group(gid, save=save)
+    if group is None:
+        return f'无法识别角色: {gid}'
+    base = mastery_board_base(group)
+    if not (base <= unit < base + MASTERY_BOARD_SLOT_COUNT):
+        return f'unit={unit} 不属于角色 {gid} 的普通专精/天赋行'
+    rec = save.find_first('uint', MASTERY_NODE_FIELD, unit)
+    if rec is None:
+        return f'存档缺少 1601 记录 unit={unit}'
+    state_rec = save.find_first('int', MASTERY_NODE_STATE_FIELD, unit)
+    if state_rec is None:
+        state_rec = save.find_first('uint', MASTERY_NODE_STATE_FIELD, unit)
+    if state_rec is None:
+        return f'存档缺少 1602 记录 unit={unit}'
+    q = (effect_q or '').strip()
+    if not q:
+        h = EMPTY
+    else:
+        h = resolve_mastery_effect(q)
+        if h is None:
+            return f'无法识别节点/效果哈希: {effect_q}'
+    save.set_first_value(rec, h & 0xFFFFFFFF)
+    save.set_first_value(state_rec, int(value))
+    return None
+
+
+def enable_sigil_slot_unlock(save, gid):
+    """尝试点亮天赋盘中的因子栏位解锁节点。
+
+    若存档使用 1601/1602 天赋节点结构,会查找已知节点哈希并置 1602=1;
+    找不到对应节点时返回提示,避免乱改其它天赋。
+    """
+    group = char_group(gid, save=save)
+    if group is None:
+        return f'无法识别角色: {gid}'
+    base = mastery_board_base(group)
+    hi = base + MASTERY_BOARD_SLOT_COUNT
+    m1601 = vm(save, MASTERY_NODE_FIELD)
+    m1602 = vm(save, MASTERY_NODE_STATE_FIELD)
+    known = (SIGIL_SLOT_UNLOCK_EFFECT, 0x280B6CB0)
+    for u in range(base, hi):
+        if u not in m1601:
+            continue
+        node = int(m1601.get(u, 0) or 0) & 0xFFFFFFFF
+        if node in known:
+            state = int(m1602.get(u, 0) or 0)
+            if state != 1:
+                err = set_mastery_state(save, u, 1)
+                if err:
+                    return err
+            return None
+    return f'角色 {chara_label_by_hash(chara_hash_of(gid)) if chara_hash_of(gid) else gid} 的天赋盘中未找到已知的因子栏位解锁节点'
 
 # ---- 武器祝福 (Wrightstone) ----
 # 存档布局(实测): 2102=物品哈希 2103=序列号 2104=bool 2105=2,槽位 50000~54999
