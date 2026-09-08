@@ -97,6 +97,8 @@ CHAR_NAMES = _load('chara_names.json') if os.path.exists(os.path.join(BASE, 'cha
 # 专精技能(Skill Board)映射: PLxxxx -> [{h,cat,grp,pos,name}],来源 skillboard_effect/layout + text_skillboard.msg
 SKILLBOARD_NODES = _load('skillboard_nodes.json') if os.path.exists(os.path.join(BASE, 'skillboard_nodes.json')) else {}
 SKILLBOARD_CAT_NAMES = ['觉醒', '真谛', '秘义']
+# 专精阶大节点自动激活阈值:同一类型同一阶已激活的普通技能数 >= 阈值
+SKILLBOARD_MAIN_THRESHOLDS = {0x68DE92AC: 3, 0xA96D9EBC: 5, 0x4A5DDC7B: 5}
 
 
 def chara_name(pl):

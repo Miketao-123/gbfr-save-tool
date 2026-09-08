@@ -1428,8 +1428,14 @@ class App:
                     col = n % 2
                     y_node = y + 16 + line * row_h
                     x = x0 + x_offsets[col]
+                    is_main = (n == 0)
+                    rr = 12 if is_main else radius
                     fill, outline, width = self._mastery_node_color(r)
-                    item = c.create_oval(x - radius, y_node - radius, x + radius, y_node + radius,
+                    if is_main:
+                        # 专精阶大节点:外圈高亮
+                        c.create_oval(x - rr - 4, y_node - rr - 4, x + rr + 4, y_node + rr + 4,
+                                      outline="#f0b64c", width=2, fill="")
+                    item = c.create_oval(x - rr, y_node - rr, x + rr, y_node + rr,
                                          fill=fill, outline=outline, width=width,
                                          tags=("mastery_node", f"node_{i}"))
                     self._mastery_node_items.append(item)
@@ -1457,6 +1463,9 @@ class App:
         for index, cx, cy, hw, hh in reversed(getattr(self, '_mastery_node_hit', [])):
             if abs(x - cx) <= hw and abs(y - cy) <= hh:
                 self._mastery_set_selected(index)
+                if self._mastery_is_main(index):
+                    self._note('[信息] 专精阶大节点由该阶已激活技能数自动决定,无需手动点击')
+                    return "break"
                 meta = self._selected_mastery_meta()
                 if meta is not None and int(meta['value'] or 0) == 0:
                     self._mastery_activate_selected()
@@ -1486,20 +1495,62 @@ class App:
                 return i
         return None
 
-    def _mastery_queue_state(self, index, value):
+    def _mastery_main_index(self, index):
+        """返回该节点所在专精阶的第一个大节点索引;找不到返回 None。"""
+        try:
+            index = int(index)
+        except (TypeError, ValueError):
+            return None
+        if not (0 <= index < len(self._mastery_rows)):
+            return None
+        r = self._mastery_rows[index]
+        cat = int(r['cat']); grp = int(r['grp'])
+        sub = [(i, x) for i, x in enumerate(self._mastery_rows)
+               if int(x['cat']) == cat and int(x['grp']) == grp]
+        if not sub:
+            return None
+        return min(sub, key=lambda x: (int(x[1]['pos']), x[0]))[0]
+
+    def _mastery_is_main(self, index):
+        return self._mastery_main_index(index) == int(index)
+
+    def _mastery_update_main_nodes(self):
+        """根据同一类型同一阶已激活的普通技能数,自动重算大节点状态。"""
+        changed = 0
+        for cat in range(3):
+            for grp, threshold in gct.SKILLBOARD_MAIN_THRESHOLDS.items():
+                sub = sorted(
+                    [(i, r) for i, r in enumerate(self._mastery_rows)
+                     if int(r['cat']) == cat and int(r['grp']) == grp],
+                    key=lambda x: (int(x[1]['pos']), x[0]))
+                if not sub:
+                    continue
+                main_i, main_r = sub[0]
+                count = sum(1 for _, r in sub[1:] if int(r['value'] or 0) > 0)
+                expected = 1 if count >= int(threshold) else 0
+                if int(main_r['value'] or 0) != expected:
+                    if self._mastery_queue_state(main_i, expected, auto=True):
+                        changed += 1
+        return changed
+
+    def _mastery_queue_state(self, index, value, auto=False):
         """把状态变更加入待写队列,并立即更新界面。"""
         try:
             index = int(index)
         except (TypeError, ValueError):
-            return
+            return False
         if not (0 <= index < len(self._mastery_rows)):
-            return
+            return False
+        if self._mastery_is_main(index) and not auto:
+            self._note('[信息] 专精阶大节点由该阶已激活技能数自动决定,无需手动点击')
+            return False
         r = self._mastery_rows[index]
         unit = int(r['unit'])
         if unit not in self._mastery_pending_old:
             self._mastery_pending_old[unit] = int(r['value'] or 0)
         self._mastery_pending[unit] = int(value)
         self._mastery_apply_visual_state(index, value)
+        return True
 
     def _mastery_discard_pending(self):
         """写档失败时丢弃尚未写入的排队变更,并恢复界面状态。"""
@@ -1611,7 +1662,9 @@ class App:
         if index is None:
             return
         name = self._mastery_strip_style_prefix(meta.get('name')) or gct.mastery_effect_name(meta['effect'])
-        self._mastery_queue_state(index, 1)
+        if not self._mastery_queue_state(index, 1):
+            return
+        self._mastery_update_main_nodes()
         self._mastery_on_select()
         if self._mastery_saving:
             self._note(f'[信息] 已加入写入队列: {name}(当前写档完成后自动保存)')
@@ -1636,7 +1689,8 @@ class App:
         if not messagebox.askyesno('确认清空', f'确定清空 {ch} 的全部专精技能吗?\n共 {len(active)} 个已激活节点。'):
             return
         for i, r in active:
-            self._mastery_queue_state(i, 0)
+            self._mastery_queue_state(i, 0, auto=True)
+        self._mastery_update_main_nodes()
         self._mastery_on_select()
         self._note(f'[信息] 已加入清空队列: {ch} 共 {len(active)} 个专精技能')
         self._mastery_flush_pending()
@@ -1741,7 +1795,9 @@ class App:
             self._note('[错误] 该行为空效果,不能直接点亮;请先写入效果'); return
         cur = int(meta['value'] or 0)
         new_val = 0 if cur > 0 else 1
-        self._mastery_queue_state(self._mastery_selected_index, new_val)
+        if not self._mastery_queue_state(self._mastery_selected_index, new_val):
+            return
+        self._mastery_update_main_nodes()
         self._mastery_on_select()
         self._mastery_flush_pending()
 
@@ -1755,7 +1811,9 @@ class App:
         ch = self.var_mt_chara.get().strip()
         if not self._mastery_unit_belongs_to_chara(save, ch, meta['unit']):
             self._note('[错误] 当前选中行不属于下拉中的角色,请先重新「读取该角色专精/天赋」'); return
-        self._mastery_queue_state(self._mastery_selected_index, 0)
+        if not self._mastery_queue_state(self._mastery_selected_index, 0):
+            return
+        self._mastery_update_main_nodes()
         self._mastery_on_select()
         self._mastery_flush_pending()
 
