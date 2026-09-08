@@ -1103,14 +1103,14 @@ class App:
         self.mastery_tree = ttk.Treeview(tree_frame, columns=cols, show="headings", height=12)
         headings = {
             "no": "行",
-            "node": "节点",
-            "effect": "效果/天赋",
+            "node": "专精阶",
+            "effect": "专精技能",
             "state": "状态/数值",
-            "slotinfo": "1601槽键",
-            "hash": "1606哈希",
+            "slotinfo": "流派",
+            "hash": "节点哈希",
             "unit": "Save Unit",
         }
-        widths = {"no": 40, "node": 55, "effect": 260, "state": 110, "slotinfo": 120, "hash": 90, "unit": 90}
+        widths = {"no": 40, "node": 80, "effect": 240, "state": 100, "slotinfo": 70, "hash": 90, "unit": 90}
         for c in cols:
             self.mastery_tree.heading(c, text=headings[c])
             self.mastery_tree.column(c, width=widths[c], anchor="w", stretch=(c in ("effect", "slotinfo")))
@@ -1138,6 +1138,7 @@ class App:
         self._mastery_canvas_vsb.pack(side="right", fill="y")
         self.mastery_node_canvas.pack(side="left", fill="both", expand=True)
         self.mastery_node_canvas.bind("<Configure>", lambda e: self._mastery_update_scroll())
+        self.mastery_node_canvas.bind("<Button-1>", self._mastery_canvas_click)
         self.mastery_node_canvas.bind("<Double-1>", self._mastery_canvas_double)
         self.mastery_node_canvas.bind("<MouseWheel>", self._mastery_on_mousewheel)
         self.mastery_node_canvas.bind("<Button-4>", lambda e: self.mastery_node_canvas.yview_scroll(-2, "units"))
@@ -1296,10 +1297,10 @@ class App:
         self.var_mt_effect.set(f'0x{meta["effect"]:08X}' if meta['effect'] not in (0, gct.EMPTY) else '')
         self.var_mt_value.set(str(meta['value']))
         if hasattr(self, 'mastery_node_info'):
-            eff = meta.get('name') or gct.mastery_effect_name(meta['effect'])
+            eff = self._mastery_strip_style_prefix(meta.get('name')) or gct.mastery_effect_name(meta['effect'])
             cat = gct.SKILLBOARD_CAT_NAMES[meta['cat']] if 0 <= int(meta['cat']) < 3 else str(meta['cat'])
-            self.mastery_node_info.configure(text=f'当前: {cat} · {eff} · {gct.mastery_value_label(meta["value"])} · unit {meta["unit"]}')
-
+            grp = self._mastery_grp_label(meta['grp'])
+            self.mastery_node_info.configure(text=f'当前: {cat}  {grp}  {eff}  {gct.mastery_value_label(meta["value"])}  unit {meta["unit"]}')
     def _mastery_unit_belongs_to_chara(self, save, ch, unit):
         """防止切换下拉后误把上一个角色的行写进新角色。"""
         group = gct.char_group(ch, save=save)
@@ -1346,82 +1347,112 @@ class App:
             return "#15191f", base, 1
         return "#ff9f43", "#1e2a36", 2
 
+    @staticmethod
+    def _mastery_grp_label(grp):
+        return {
+            0x68DE92AC: '专精阶 I',
+            0xA96D9EBC: '专精阶 II',
+            0x4A5DDC7B: '专精阶 III',
+            0x3B99904D: 'EX',
+        }.get(int(grp) & 0xFFFFFFFF, f'阶 {int(grp) & 0xFFFFFFFF:08X}')
+
+    @staticmethod
+    def _mastery_strip_style_prefix(name):
+        if not name:
+            return ''
+        for prefix in ('觉醒：', '真谛：', '秘义：'):
+            if name.startswith(prefix):
+                return name[len(prefix):]
+        return name
+
     def _mastery_draw_nodes(self, rows):
         c = self.mastery_node_canvas
         c.delete("all")
         self._mastery_node_items = []
+        self._mastery_node_hit = []
         rows = [(i, r) for i, r in enumerate(rows)]
         if not rows:
             if hasattr(self, 'mastery_node_info'):
                 self.mastery_node_info.configure(text="没有可显示的专精技能")
             return
-        # 专精技能:纵向=觉醒/真谛/秘义, 每个类型内每行只排 2 个技能
+        # 专精技能:纵向=觉醒/真谛/秘义, 横向按专精阶分组,每个阶内每行 2 个技能
         type_names = gct.SKILLBOARD_CAT_NAMES
         type_count = 3
-        left = 92
-        top = 90
-        type_w = 300
-        type_gap = 16
-        row_h = 42
+        grp_order = [0x68DE92AC, 0xA96D9EBC, 0x4A5DDC7B, 0x3B99904D]
+        left = 96
+        top = 96
+        type_w = 320
+        type_gap = 18
+        row_h = 40
+        group_h = 28
+        group_gap = 10
         radius = 9
-        # 两个节点的横向位置(在列内左右分布)
-        x_offsets = (type_w * 0.32, type_w * 0.68)
+        x_offsets = (type_w * 0.28, type_w * 0.72)
 
         c.create_text(left, 12, anchor="w", fill="#c9d1d9",
-                      text="暗色=未点亮/0  亮色=已习得/1或更高  单击未点亮=激活  双击=切换  滚轮=滚动")
+                      text="暗色=未点亮/0  亮色=已习得/1或更高  单击未点亮=激活  滚轮=滚动")
         c.create_text(left, 30, anchor="w", fill="#8b949e",
-                      text=f"当前角色专精技能 {len(rows)} 个 · 每行 2 个")
+                      text=f"当前角色专精技能 {len(rows)} 个  每行 2 个  行上按专精阶分组")
 
-        max_rows = 0
+        max_bottom = top
         for t in range(type_count):
-            cat_rows = sorted([(i, r) for i, r in rows if int(r['cat']) == t], key=lambda x: (int(x[1]['pos']), x[0]))
+            cat_rows = sorted([(i, r) for i, r in rows if int(r['cat']) == t],
+                              key=lambda x: (int(x[1]['pos']), x[0]))
             if not cat_rows:
                 continue
-            line_count = (len(cat_rows) + 1) // 2
-            max_rows = max(max_rows, line_count)
             x0 = left + t * (type_w + type_gap)
             x1 = x0 + type_w
             c.create_text(x0 + type_w / 2, top - 30, anchor="n", fill="#e6edf3",
                           text=type_names[t])
-            c.create_rectangle(x0, top, x1, top + line_count * row_h + 10,
-                               outline="#3a4454", fill="#1c222c", width=1)
-            for n, (i, r) in enumerate(cat_rows):
-                line = n // 2
-                col = n % 2
-                y = top + 16 + line * row_h
-                x = x0 + x_offsets[col]
-                fill, outline, width = self._mastery_node_color(r)
-                item = c.create_oval(x - radius, y - radius, x + radius, y + radius,
-                                     fill=fill, outline=outline, width=width,
-                                     tags=("mastery_node", f"node_{i}"))
-                self._mastery_node_items.append(item)
-                if r.get('name'):
-                    c.create_text(x + 14, y, anchor="w", fill="#d7dee8",
-                                  text=r['name'], font=("Microsoft YaHei UI", 8))
-                # 非主节点用右侧小字显示状态文字,避免空白
-                if not r.get('name'):
-                    c.create_text(x + 14, y, anchor="w", fill="#8b949e",
-                                  text=gct.mastery_value_label(r['value']), font=("Microsoft YaHei UI", 8))
+            y = top
+            for grp in grp_order:
+                cell = [(i, r) for i, r in cat_rows if int(r['grp']) == grp]
+                if not cell:
+                    continue
+                # 专精阶分组横条
+                c.create_rectangle(x0, y, x1, y + group_h,
+                                   outline="#2d3744", fill="#222a36")
+                c.create_text(x0 + 12, y + group_h / 2, anchor="w", fill="#c9d1d9",
+                              text=self._mastery_grp_label(grp))
+                y += group_h
+                for n, (i, r) in enumerate(cell):
+                    line = n // 2
+                    col = n % 2
+                    y_node = y + 16 + line * row_h
+                    x = x0 + x_offsets[col]
+                    fill, outline, width = self._mastery_node_color(r)
+                    item = c.create_oval(x - radius, y_node - radius, x + radius, y_node + radius,
+                                         fill=fill, outline=outline, width=width,
+                                         tags=("mastery_node", f"node_{i}"))
+                    self._mastery_node_items.append(item)
+                    name = self._mastery_strip_style_prefix(r.get('name'))
+                    label = name or gct.mastery_value_label(r['value'])
+                    color = "#d7dee8" if name else "#8b949e"
+                    c.create_text(x + 14, y_node, anchor="w", fill=color,
+                                  text=label, font=("Microsoft YaHei UI", 8))
+                    # 点击热区:节点 + 右侧文字
+                    hit_w = max(28, len(label) * 11 + 28)
+                    self._mastery_node_hit.append((i, x, y_node, hit_w, 16))
+                y += ((len(cell) + 1) // 2) * row_h + group_gap
+            # 列边框只描边,不遮挡阶分组横条
+            c.create_rectangle(x0, top - 4, x1, y + 4,
+                               outline="#3a4454", fill="", width=1)
+            max_bottom = max(max_bottom, y + 4)
 
-        c.tag_bind("mastery_node", "<Button-1>", self._mastery_node_click)
         width = left + type_count * (type_w + type_gap) + 120
-        height = top + max(1, max_rows) * row_h + 40
+        height = max_bottom + 40
         c.configure(scrollregion=(0, 0, width, height))
 
-    def _mastery_node_click(self, event):
-        item = self.mastery_node_canvas.find_withtag("current")
-        if not item:
-            return
-        tags = self.mastery_node_canvas.gettags(item[0])
-        for tag in tags:
-            if tag.startswith("node_"):
-                index = int(tag.split("_", 1)[1])
+    def _mastery_canvas_click(self, event):
+        x = self.mastery_node_canvas.canvasx(event.x)
+        y = self.mastery_node_canvas.canvasy(event.y)
+        for index, cx, cy, hw, hh in reversed(getattr(self, '_mastery_node_hit', [])):
+            if abs(x - cx) <= hw and abs(y - cy) <= hh:
                 self._mastery_set_selected(index)
-                # 单击未点亮节点 = 直接激活对应专精技能
                 meta = self._selected_mastery_meta()
                 if meta is not None and int(meta['value'] or 0) == 0:
                     self._mastery_activate_selected()
-                return
+                return "break"
 
     def _mastery_activate_selected(self):
         save = self._open()
@@ -1442,7 +1473,7 @@ class App:
         if save_err:
             self._note(f'[错误] {save_err}'); return
         self._invalidate()
-        name = meta.get('name') or gct.mastery_effect_name(meta['effect'])
+        name = self._mastery_strip_style_prefix(meta.get('name')) or gct.mastery_effect_name(meta['effect'])
         self._note(f'[完成] 已激活专精技能: {name} 备份:{os.path.basename(bak)}')
         keep = self._mastery_selected_index
         self._mastery_refresh(save)
@@ -1477,10 +1508,10 @@ class App:
         self.mastery_tree.delete(*self.mastery_tree.get_children())
         for i, r in enumerate(rows):
             cat_name = gct.SKILLBOARD_CAT_NAMES[r['cat']] if 0 <= int(r['cat']) < 3 else str(r['cat'])
-            disp_name = r.get('name') or gct.mastery_effect_name(r['effect'])
+            disp_name = self._mastery_strip_style_prefix(r.get('name')) or gct.mastery_effect_name(r['effect'])
             self.mastery_tree.insert('', 'end', iid=str(i), values=(
                 i + 1,
-                f'{r["pos"]}',
+                self._mastery_grp_label(r['grp']),
                 disp_name,
                 gct.mastery_value_label(r['value']),
                 cat_name,
