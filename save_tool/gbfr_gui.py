@@ -1423,19 +1423,38 @@ class App:
                 c.create_text(x0 + 12, y + group_h / 2, anchor="w", fill="#c9d1d9",
                               text=self._mastery_grp_label(grp))
                 y += group_h
-                for n, (i, r) in enumerate(cell):
+                # I/II/III 阶的大节点单独放在阶标题下方居中,不占两列节点位
+                if grp in gct.SKILLBOARD_MAIN_THRESHOLDS:
+                    big_i, big_r = cell[0]
+                    sub_cell = cell[1:]
+                    bx = x0 + type_w / 2
+                    by = y + 26
+                    br = 13
+                    fill, outline, width = self._mastery_node_color(big_r)
+                    c.create_oval(bx - br - 5, by - br - 5, bx + br + 5, by + br + 5,
+                                  outline="#f0b64c", width=2, fill="")
+                    item = c.create_oval(bx - br, by - br, bx + br, by + br,
+                                         fill=fill, outline=outline, width=width,
+                                         tags=("mastery_node", f"node_{big_i}"))
+                    self._mastery_node_items.append(item)
+                    self._mastery_node_item_by_index[big_i] = item
+                    self._mastery_node_hit.append((big_i, bx, by, 30, 20))
+                    big_name = self._mastery_strip_style_prefix(big_r.get('name'))
+                    if big_name:
+                        c.create_text(bx, by + 26, anchor="n", fill="#d7dee8",
+                                      text=big_name, font=("Microsoft YaHei UI", 8))
+                        y += 64
+                    else:
+                        y += 50
+                else:
+                    sub_cell = cell
+                for n, (i, r) in enumerate(sub_cell):
                     line = n // 2
                     col = n % 2
                     y_node = y + 16 + line * row_h
                     x = x0 + x_offsets[col]
-                    is_main = (n == 0)
-                    rr = 12 if is_main else radius
                     fill, outline, width = self._mastery_node_color(r)
-                    if is_main:
-                        # 专精阶大节点:外圈高亮
-                        c.create_oval(x - rr - 4, y_node - rr - 4, x + rr + 4, y_node + rr + 4,
-                                      outline="#f0b64c", width=2, fill="")
-                    item = c.create_oval(x - rr, y_node - rr, x + rr, y_node + rr,
+                    item = c.create_oval(x - radius, y_node - radius, x + radius, y_node + radius,
                                          fill=fill, outline=outline, width=width,
                                          tags=("mastery_node", f"node_{i}"))
                     self._mastery_node_items.append(item)
@@ -1444,10 +1463,9 @@ class App:
                     if name:
                         c.create_text(x + 14, y_node, anchor="w", fill="#d7dee8",
                                       text=name, font=("Microsoft YaHei UI", 8))
-                    # 点击热区:节点 + 右侧文字(仅有名字的节点才加宽)
                     hit_w = max(28, len(name) * 11 + 28) if name else 30
                     self._mastery_node_hit.append((i, x, y_node, hit_w, 16))
-                y += ((len(cell) + 1) // 2) * row_h + group_gap
+                y += ((len(sub_cell) + 1) // 2) * row_h + group_gap
             # 列边框只描边,不遮挡阶分组横条
             c.create_rectangle(x0, top - 4, x1, y + 4,
                                outline="#3a4454", fill="", width=1)
@@ -1505,6 +1523,8 @@ class App:
             return None
         r = self._mastery_rows[index]
         cat = int(r['cat']); grp = int(r['grp'])
+        if grp not in gct.SKILLBOARD_MAIN_THRESHOLDS:
+            return None
         sub = [(i, x) for i, x in enumerate(self._mastery_rows)
                if int(x['cat']) == cat and int(x['grp']) == grp]
         if not sub:
